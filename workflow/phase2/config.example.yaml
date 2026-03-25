@@ -1,0 +1,25 @@
+# =============================================================================
+# Antah Asti Prarambh — Phase 2 Configuration TEMPLATE
+# =============================================================================
+# Copy this file to config.yaml and edit the paths below for your system.
+#
+#   cp config.example.yaml config.yaml
+#   # Then edit project_dir, phase1_dir, chainsaw.install_dir, foldx.binary
+#
+# The four paths you MUST change are marked with <EDIT THIS>.
+# =============================================================================
+
+# -- Project paths (<EDIT THIS>) ---------------------------------------------
+project_dir: "/path/to/your/Antah_Asti_Prarambh"     # <EDIT THIS>
+phase1_dir: "/path/to/your/Antah_Asti_Prarambh"       # <EDIT THIS> (same as above if co-located)
+
+# -- External tools (<EDIT THIS>) --------------------------------------------
+# Chainsaw: git clone https://github.com/JudeWells/chainsaw.git
+# FoldX: obtain license from https://foldxsuite.crg.eu/
+chainsaw:
+  install_dir: "/path/to/chainsaw"                     # <EDIT THIS>
+foldx:
+  binary: "/path/to/foldx5/foldx"                     # <EDIT THIS>
+
+# -- Everything below can usually be left as-is -------------------------------
+# See config.yaml for full documentation of all parameters.

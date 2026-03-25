@@ -1,0 +1,32 @@
+name: proteomics
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.9
+  # Core scientific stack
+  - pandas=2.2.2
+  - numpy
+  - scipy=1.9.2
+  - matplotlib
+  - seaborn
+  # Bioinformatics
+  - biopython=1.78
+  - mmseqs2=18.8cc5c
+  - foldseek=10.941cd33
+  - dssp  # mkdssp for secondary structure
+  # File I/O
+  - openpyxl
+  - pyyaml
+  - requests
+  - tqdm
+  # Optional: CIF parsing (for FoldX CIF→PDB conversion)
+  - gemmi
+  # Workflow
+  - snakemake=7.32.4
+  # Pip-only packages
+  - pip
+  - pip:
+    - statsmodels
+    - python-pptx  # presentation generation

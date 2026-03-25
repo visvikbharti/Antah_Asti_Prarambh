@@ -12,7 +12,7 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 
 # === CONFIGURATION ===
-BASE = "/Users/vishalbharti/Downloads/Antah_Asti_Prarambh"
+BASE = os.path.dirname(os.path.abspath(__file__))
 FIG_DIR = os.path.join(BASE, "results/phase2/figures")
 OUT_FILE = os.path.join(BASE, "Antah_Asti_Prarambh_Presentation.pptx")
 

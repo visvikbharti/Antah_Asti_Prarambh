@@ -1,0 +1,17 @@
+# Antah Asti Prarambh — Python dependencies (pip)
+# For full environment including bioinformatics tools, use environment.yml with conda.
+# This file covers pip-installable packages only.
+
+pandas>=2.2.2
+numpy
+scipy>=1.9.2
+matplotlib
+seaborn
+biopython>=1.78
+openpyxl
+pyyaml
+requests
+tqdm
+statsmodels
+python-pptx
+gemmi
