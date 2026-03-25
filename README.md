@@ -384,13 +384,6 @@ bash scripts/download_external_data.sh
 ---
 
 ## Citation
-
-*Manuscript in preparation.*
-
-If you use this pipeline or data, please cite:
-
-> Bharti, V. (2026). Antah Asti Prarambh: Comparative structural proteomics of chaperonin substrates reveals universal N-terminal folding complexity. *In preparation.*
-
 And the key data sources:
 - Kerner et al. (2005) Proteome-wide analysis of chaperonin-dependent protein folding in *Escherichia coli*. *Cell* 122(2):209-220.
 - Bruderer et al. (2020) The HSPD1 interactome. *Mol Cell Proteomics*.
