@@ -1,0 +1,526 @@
+uniprot_id	gene_symbol	protein_name	mitocarta_score	sub_mito_localization	pathways	is_matrix	is_im	is_ims	is_om
+P08559	PDHA1	pyruvate dehydrogenase E1 subunit alpha 1	42.5705	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+P52815	MRPL12	mitochondrial ribosomal protein L12	42.0393	Matrix	Mitochondrial central dogma > mtRNA metabolism > Transcription | Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q86U28	ISCA2	iron-sulfur cluster assembly 2	41.9677	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+O75439	PMPCB	peptidase, mitochondrial processing subunit beta	41.6397	Matrix	Protein import, sorting and homeostasis > Protein import and sorting > Preprotein cleavage | Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q02218	OGDH	oxoglutarate dehydrogenase	40.5677	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+P11177	PDHB	pyruvate dehydrogenase E1 subunit beta	40.5677	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+P82673	MRPS35	mitochondrial ribosomal protein S35	39.6435	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q96EL3	MRPL53	mitochondrial ribosomal protein L53	39.3103	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P11182	DBT	dihydrolipoamide branched chain transacylase E2	39.2448	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Branched-chain amino acid dehydrogenase complex	1	0	0	0
+P40926	MDH2	malate dehydrogenase 2	38.3734	Matrix	Metabolism > Carbohydrate metabolism > Gluconeogenesis | Metabolism > Carbohydrate metabolism > Malate-aspartate shuttle | Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q92552	MRPS27	mitochondrial ribosomal protein S27	38.3207	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+O75390	CS	citrate synthase	37.826	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q9HAV7	GRPEL1	GrpE like 1, mitochondrial	37.8199	Matrix	Protein import, sorting and homeostasis > Protein import and sorting > Import motor | Metabolism > Metals and cofactors > Fe-S cluster biosynthesis	1	0	0	0
+P10515	DLAT	dihydrolipoamide S-acetyltransferase	37.7551	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+P42704	LRPPRC	leucine rich pentatricopeptide repeat containing	37.7054	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay | Mitochondrial central dogma > Translation	1	0	0	0
+P36957	DLST	dihydrolipoamide S-succinyltransferase	37.6758	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle | Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+O00330	PDHX	pyruvate dehydrogenase complex component X	37.6758	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+Q96RP9	GFM1	G elongation factor mitochondrial 1	37.4426	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q9H2W6	MRPL46	mitochondrial ribosomal protein L46	36.7746	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9Y3D9	MRPS23	mitochondrial ribosomal protein S23	36.0922	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P07954	FH	fumarate hydratase	35.7616	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q10713	PMPCA	peptidase, mitochondrial processing subunit alpha	35.653	Matrix	Protein import, sorting and homeostasis > Protein import and sorting > Preprotein cleavage | Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q5VUM1	SDHAF4	succinate dehydrogenase complex assembly factor 4	35.5098	Matrix	OXPHOS > Complex II > CII assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q9BUE6	ISCA1	iron-sulfur cluster assembly 1	35.264	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q9P2R7	SUCLA2	succinate-CoA ligase ADP-forming subunit beta	34.9705	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle | Metabolism > Carbohydrate metabolism > Itaconate metabolism | Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q9NSE4	IARS2	isoleucyl-tRNA synthetase 2, mitochondrial	34.7064	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+P82914	MRPS15	mitochondrial ribosomal protein S15	34.6309	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P50213	IDH3A	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha	34.6301	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q9BQ48	MRPL34	mitochondrial ribosomal protein L34	34.3813	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q5T653	MRPL2	mitochondrial ribosomal protein L2	34.3013	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P30084	ECHS1	enoyl-CoA hydratase, short chain 1	33.7065	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+P13804	ETFA	electron transfer flavoprotein subunit alpha	33.492	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Lysine metabolism | Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Vitamin metabolism > Choline and betaine metabolism | Metabolism > Electron carriers > Q-linked reactions, other	1	0	0	0
+O43837	IDH3B	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta	32.7553	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q15031	LARS2	leucyl-tRNA synthetase 2, mitochondrial	32.7536	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+P16219	ACADS	acyl-CoA dehydrogenase short chain	32.6104	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q13825	AUH	AU RNA binding methylglutaconyl-CoA hydratase	32.2168	Matrix	Metabolism > Carbohydrate metabolism > Itaconate metabolism | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+P53597	SUCLG1	succinate-CoA ligase GDP/ADP-forming subunit alpha	32.1445	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle | Metabolism > Carbohydrate metabolism > Itaconate metabolism | Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q8N983	MRPL43	mitochondrial ribosomal protein L43	31.8312	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q8NFV4	ABHD11	abhydrolase domain containing 11	31.7324	Matrix	Metabolism > Carbohydrate metabolism > TCA-associated	1	0	0	0
+P36776	LONP1	lon peptidase 1, mitochondrial	31.5043	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+P09622	DLD	dihydrolipoamide dehydrogenase	31.2307	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism | Metabolism > Carbohydrate metabolism > TCA cycle | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Branched-chain amino acid dehydrogenase complex | Metabolism > Amino acid metabolism > Lysine metabolism | Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Amino acid metabolism > Glycine cleavage system	1	0	0	0
+Q96DC8	ECHDC3	enoyl-CoA hydratase domain containing 3	31.1711	Matrix	0	1	0	0	0
+Q7Z7H8	MRPL10	mitochondrial ribosomal protein L10	30.9719	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q96E11	MRRF	mitochondrial ribosome recycling factor	30.7726	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+P11310	ACADM	acyl-CoA dehydrogenase medium chain	30.6075	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q99798	ACO2	aconitase 2	30.2787	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q8IYB8	SUPV3L1	Suv3 like RNA helicase	30.2238	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+P46199	MTIF2	mitochondrial translational initiation factor 2	30.1806	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q6NVY1	HIBCH	3-hydroxyisobutyryl-CoA hydrolase	29.7511	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+Q9Y399	MRPS2	mitochondrial ribosomal protein S2	29.6278	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P38646	HSPA9	heat shock protein family A (Hsp70) member 9	29.5541	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis	1	0	0	0
+P30048	PRDX3	peroxiredoxin 3	29.4787	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q8N442	GUF1	GUF1 homolog, GTPase	29.2547	Matrix	Mitochondrial central dogma > Translation	1	0	0	0
+Q9HD34	LYRM4	LYR motif containing 4	29.009	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis	1	0	0	0
+Q9NX20	MRPL16	mitochondrial ribosomal protein L16	28.9266	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9NQ50	MRPL40	mitochondrial ribosomal protein L40	28.9054	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P51553	IDH3G	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit gamma	28.8516	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q9NX18	SDHAF2	succinate dehydrogenase complex assembly factor 2	28.7556	Matrix	OXPHOS > Complex II > CII assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+P30042	GATD3A	glutamine amidotransferase like class 1 domain containing 3A	28.6694	Matrix	0	1	0	0	0
+Q99757	TXN2	thioredoxin 2	28.4589	Matrix	Metabolism > Vitamin metabolism > Vitamin C metabolism | Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q9NVS2	MRPS18A	mitochondrial ribosomal protein S18A	28.4066	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9BYD6	MRPL1	mitochondrial ribosomal protein L1	28.231	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P04179	SOD2	superoxide dismutase 2	28.1817	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q16740	CLPP	caseinolytic mitochondrial matrix peptidase proteolytic subunit	28.0803	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q16836	HADH	hydroxyacyl-CoA dehydrogenase	28.0734	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+P24752	ACAT1	acetyl-CoA acetyltransferase 1	28.0146	Matrix	Metabolism > Carbohydrate metabolism > Ketone metabolism | Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+Q96EH3	MALSU1	mitochondrial assembly of ribosomal large subunit 1	27.9861	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+O76031	CLPX	caseinolytic mitochondrial matrix peptidase chaperone subunit X	27.9372	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q9BYD3	MRPL4	mitochondrial ribosomal protein L4	27.8641	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q07021	C1QBP	complement C1q binding protein	27.8211	Matrix	Signaling > Immune response	1	0	0	0
+Q5JRX3	PITRM1	pitrilysin metallopeptidase 1	27.8125	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q7Z7F7	MRPL55	mitochondrial ribosomal protein L55	27.7157	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q6IN84	MRM1	mitochondrial rRNA methyltransferase 1	27.7075	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q9BV79	MECR	mitochondrial trans-2-enoyl-CoA reductase	27.6896	Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis	1	0	0	0
+Q9H9J2	MRPL44	mitochondrial ribosomal protein L44	27.6748	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q6YN16	HSDL2	hydroxysteroid dehydrogenase like 2	27.6655	Matrix	0	1	0	0	0
+O60783	MRPS14	mitochondrial ribosomal protein S14	27.6264	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q8N5M1	ATPAF2	ATP synthase mitochondrial F1 complex assembly factor 2	27.4512	Matrix	OXPHOS > Complex V > CV assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+O00411	POLRMT	RNA polymerase mitochondrial	27.372	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid | Mitochondrial central dogma > mtRNA metabolism > Transcription	1	0	0	0
+Q9H1K1	ISCU	iron-sulfur cluster assembly enzyme	27.3227	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q8WWV3	RTN4IP1	reticulon 4 interacting protein 1	27.2801	Matrix	0	1	0	0	0
+Q9ULD0	OGDHL	oxoglutarate dehydrogenase L	27.2563	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+O14874	BCKDK	branched chain keto acid dehydrogenase kinase	27.1808	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Branched-chain amino acid dehydrogenase complex	1	0	0	0
+Q969S9	GFM2	GTP dependent ribosome recycling factor mitochondrial 2	27.1233	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q8IVS2	MCAT	malonyl-CoA-acyl carrier protein transacylase	26.9414	Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis	1	0	0	0
+Q5T440	IBA57	iron-sulfur cluster assembly factor IBA57	26.9414	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis	1	0	0	0
+P51398	DAP3	death associated protein 3	26.8817	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+A6NFY7	SDHAF1	succinate dehydrogenase complex assembly factor 1	26.7868	Matrix	OXPHOS > Complex II > CII assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q9Y2R5	MRPS17	mitochondrial ribosomal protein S17	26.7669	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q8IWW8	ADHFE1	alcohol dehydrogenase iron containing 1	26.7588	Matrix	Metabolism > Amino acid metabolism > GABA metabolism	1	0	0	0
+Q9Y697	NFS1	NFS1 cysteine desulfurase	26.7525	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q9NRX2	MRPL17	mitochondrial ribosomal protein L17	26.6519	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9BSH4	TACO1	translational activator of cytochrome c oxidase I	26.649	Matrix	Mitochondrial central dogma > Translation > Translation factors | OXPHOS > Complex IV > CIV assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q8NI37	PPTC7	protein phosphatase targeting COQ7	26.5342	Matrix	Signaling	1	0	0	0
+Q9Y3B7	MRPL11	mitochondrial ribosomal protein L11	26.5037	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9BYD1	MRPL13	mitochondrial ribosomal protein L13	26.3504	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P55809	OXCT1	3-oxoacid CoA-transferase 1	26.3333	Matrix	Metabolism > Carbohydrate metabolism > Ketone metabolism	1	0	0	0
+Q15119	PDK2	pyruvate dehydrogenase kinase 2	26.3227	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+P13196	ALAS1	5'-aminolevulinate synthase 1	26.3146	Matrix	Metabolism > Metals and cofactors > Heme synthesis and processing	1	0	0	0
+O75394	MRPL33	mitochondrial ribosomal protein L33	26.309	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9Y2Z2	MTO1	mitochondrial tRNA translation optimization 1	26.3081	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+O43766	LIAS	lipoic acid synthetase	26.2921	Matrix	Metabolism > Lipid metabolism > Lipoate insertion | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q96I99	SUCLG2	succinate-CoA ligase GDP-forming subunit beta	26.2777	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle | Metabolism > Carbohydrate metabolism > Itaconate metabolism | Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+P10109	FDX1	ferredoxin 1	26.2764	Matrix	Metabolism > Lipid metabolism > Cholesterol, bile acid, steroid synthesis | Metabolism > Metals and cofactors > Heme synthesis and processing | Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins | Metabolism > Vitamin metabolism > Vitamin D metabolism	1	0	0	0
+Q9Y2Q9	MRPS28	mitochondrial ribosomal protein S28	26.2202	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q13011	ECH1	enoyl-CoA hydratase 1	25.9632	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+O75879	GATB	glutamyl-tRNA amidotransferase subunit B	25.9072	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+O75616	ERAL1	Era like 12S mitochondrial rRNA chaperone 1	25.6968	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q13084	MRPL28	mitochondrial ribosomal protein L28	25.5595	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P43897	TSFM	Ts translation elongation factor, mitochondrial	25.5449	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q16595	FXN	frataxin	25.5447	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis	1	0	0	0
+Q9UMS0	NFU1	NFU1 iron-sulfur cluster scaffold	25.5447	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q9Y2Z4	YARS2	tyrosyl-tRNA synthetase 2	25.5447	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q7Z2W9	MRPL21	mitochondrial ribosomal protein L21	25.5447	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P30038	ALDH4A1	aldehyde dehydrogenase 4 family member A1	25.5079	Matrix	Metabolism > Amino acid metabolism > Proline metabolism | Metabolism > Amino acid metabolism > Glyoxylate metabolism	1	0	0	0
+P45954	ACADSB	acyl-CoA dehydrogenase short/branched chain	25.3309	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+P82933	MRPS9	mitochondrial ribosomal protein S9	25.2372	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9P015	MRPL15	mitochondrial ribosomal protein L15	25.0806	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q96A35	MRPL24	mitochondrial ribosomal protein L24	25.0642	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P10809	HSPD1	heat shock protein family D (Hsp60) member 1	25.0621	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Chaperones	1	0	0	0
+Q9UIJ7	AK3	adenylate kinase 3	25.0021	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q99797	MIPEP	mitochondrial intermediate peptidase	24.9354	Matrix	Protein import, sorting and homeostasis > Protein import and sorting > Preprotein cleavage | Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q5U5X0	LYRM7	LYR motif containing 7	24.9269	Matrix	OXPHOS > Complex III > CIII assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+P05166	PCCB	propionyl-CoA carboxylase subunit beta	24.8143	Matrix	Metabolism > Carbohydrate metabolism > Propanoate metabolism | Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q9Y2R9	MRPS7	mitochondrial ribosomal protein S7	24.5906	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P09001	MRPL3	mitochondrial ribosomal protein L3	24.5294	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P05165	PCCA	propionyl-CoA carboxylase subunit alpha	24.4144	Matrix	Metabolism > Carbohydrate metabolism > Propanoate metabolism | Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Vitamin metabolism > Biotin utilizing proteins	1	0	0	0
+Q96RQ3	MCCC1	methylcrotonoyl-CoA carboxylase 1	24.4144	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Vitamin metabolism > Biotin utilizing proteins	1	0	0	0
+O15235	MRPS12	mitochondrial ribosomal protein S12	24.3808	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q15118	PDK1	pyruvate dehydrogenase kinase 1	24.2522	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+Q13405	MRPL49	mitochondrial ribosomal protein L49	24.1026	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q86YB7	ECHDC2	enoyl-CoA hydratase domain containing 2	24.0959	Matrix	0	1	0	0	0
+P31937	HIBADH	3-hydroxyisobutyrate dehydrogenase	24.0796	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+P49406	MRPL19	mitochondrial ribosomal protein L19	24.0496	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9P0J6	MRPL36	mitochondrial ribosomal protein L36	24.0424	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+O95363	FARS2	phenylalanyl-tRNA synthetase 2, mitochondrial	23.8332	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+P49189	ALDH9A1	aldehyde dehydrogenase 9 family member A1	23.4278	Matrix	Metabolism > Amino acid metabolism > GABA metabolism | Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q9Y3D5	MRPS18C	mitochondrial ribosomal protein S18C	23.3634	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q96GW9	MARS2	methionyl-tRNA synthetase 2, mitochondrial	23.2841	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+P22570	FDXR	ferredoxin reductase	23.1029	Matrix	Metabolism > Lipid metabolism > Cholesterol, bile acid, steroid synthesis | Metabolism > Metals and cofactors > Heme synthesis and processing | Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Vitamin metabolism > Vitamin D metabolism	1	0	0	0
+O43716	GATC	glutamyl-tRNA amidotransferase subunit C	23.092	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q12931	TRAP1	TNF receptor associated protein 1	23.0794	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Chaperones	1	0	0	0
+Q9UKU7	ACAD8	acyl-CoA dehydrogenase family member 8	22.9279	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+P05091	ALDH2	aldehyde dehydrogenase 2 family member	22.8635	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+P30405	PPIF	peptidylprolyl isomerase F	22.852	Matrix	Signaling > Calcium homeostasis > Mitochondrial permeability transition pore	1	0	0	0
+P26440	IVD	isovaleryl-CoA dehydrogenase	22.807	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+O95571	ETHE1	ETHE1 persulfide dioxygenase	22.7142	Matrix	Metabolism > Sulfur metabolism	1	0	0	0
+Q9BYC9	MRPL20	mitochondrial ribosomal protein L20	22.6882	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P82921	MRPS21	mitochondrial ribosomal protein S21	22.6171	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P42765	ACAA2	acetyl-CoA acyltransferase 2	22.5372	Matrix	Metabolism > Carbohydrate metabolism > Ketone metabolism | Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+Q8TCC3	MRPL30	mitochondrial ribosomal protein L30	22.4329	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q96EY1	DNAJA3	DnaJ heat shock protein family (Hsp40) member A3	22.3735	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Chaperones	1	0	0	0
+P82930	MRPS34	mitochondrial ribosomal protein S34	22.2978	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P38117	ETFB	electron transfer flavoprotein subunit beta	22.2803	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Lysine metabolism | Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Vitamin metabolism > Choline and betaine metabolism | Metabolism > Electron carriers > Q-linked reactions, other	1	0	0	0
+Q9UII2	ATP5IF1	ATP synthase inhibitory factor subunit 1	22.1189	Matrix	OXPHOS > Complex V > CV subunits | OXPHOS > OXPHOS subunits	1	0	0	0
+Q4G176	ACSF3	acyl-CoA synthetase family member 3	22.0114	Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis	1	0	0	0
+Q9Y2S7	POLDIP2	DNA polymerase delta interacting protein 2	22.0081	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid	1	0	0	0
+Q15120	PDK3	pyruvate dehydrogenase kinase 3	21.9161	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+Q16798	ME3	malic enzyme 3	21.8086	Matrix	Metabolism > Carbohydrate metabolism > TCA-associated	1	0	0	0
+Q9NWU5	MRPL22	mitochondrial ribosomal protein L22	21.7952	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P48735	IDH2	isocitrate dehydrogenase (NADP(+)) 2	21.7892	Matrix	Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q92947	GCDH	glutaryl-CoA dehydrogenase	21.6769	Matrix	Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+Q9HD33	MRPL47	mitochondrial ribosomal protein L47	21.6672	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9H2U2	PPA2	inorganic pyrophosphatase 2	21.6578	Matrix	Mitochondrial central dogma > mtDNA maintenance | Mitochondrial central dogma > mtRNA metabolism | Mitochondrial central dogma > Translation | Metabolism > Nucleotide metabolism	1	0	0	0
+Q9BYD2	MRPL9	mitochondrial ribosomal protein L9	21.6235	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9UGM6	WARS2	tryptophanyl tRNA synthetase 2, mitochondrial	21.6195	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q8N4T8	CBR4	carbonyl reductase 4	21.6019	Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis	1	0	0	0
+Q16775	HAGH	hydroxyacylglutathione hydrolase	21.5442	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q9BT17	MTG1	mitochondrial ribosome associated GTPase 1	21.5122	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9Y3D3	MRPS16	mitochondrial ribosomal protein S16	21.4649	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q49AM1	MTERF2	mitochondrial transcription termination factor 2	21.4143	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid	1	0	0	0
+Q6IPR1	ETFRF1	electron transfer flavoprotein regulatory factor 1	21.348	Matrix	Metabolism > Electron carriers > Q-linked reactions, other	1	0	0	0
+Q9GZT3	SLIRP	SRA stem-loop interacting RNA binding protein	21.211	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay | Mitochondrial central dogma > Translation	1	0	0	0
+Q96HY7	DHTKD1	dehydrogenase E1 and transketolase domain containing 1	20.7995	Matrix	Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+Q96GK7	FAHD2A	fumarylacetoacetate hydrolase domain containing 2A	20.747	Matrix	0	1	0	0	0
+Q92506	HSD17B8	hydroxysteroid 17-beta dehydrogenase 8	20.727	Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis | Metabolism > Lipid metabolism > Cholesterol, bile acid, steroid synthesis	1	0	0	0
+Q9BX68	HINT2	histidine triad nucleotide binding protein 2	20.727	Matrix	Metabolism > Lipid metabolism > Cholesterol, bile acid, steroid synthesis	1	0	0	0
+P82675	MRPS5	mitochondrial ribosomal protein S5	20.6794	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q5SQH8	C6orf136	chromosome 6 open reading frame 136	20.67	Matrix	0	1	0	0	0
+Q8WW59	SPRYD4	SPRY domain containing 4	20.623	Matrix	0	1	0	0	0
+A6NK58	LIPT2	lipoyl(octanoyl) transferase 2	20.6189	Matrix	Metabolism > Lipid metabolism > Lipoate insertion	1	0	0	0
+Q16698	DECR1	2,4-dienoyl-CoA reductase 1	20.6061	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q9BYN8	MRPS26	mitochondrial ribosomal protein S26	20.5582	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q86WA6	BPHL	biphenyl hydrolase like	20.4068	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q9Y3D2	MSRB2	methionine sulfoxide reductase B2	20.2816	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism | Metabolism > Sulfur metabolism	1	0	0	0
+Q6JQN1	ACAD10	acyl-CoA dehydrogenase family member 10	20.1818	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+A3KMH1	VWA8	von Willebrand factor A domain containing 8	20.1591	Matrix	0	1	0	0	0
+Q9BT30	ALKBH7	alkB homolog 7	20.0806	Matrix	0	1	0	0	0
+P23378	GLDC	glycine decarboxylase	20.0566	Matrix	Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Amino acid metabolism > Glycine cleavage system	1	0	0	0
+Q04837	SSBP1	single stranded DNA binding protein 1	19.9351	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid	1	0	0	0
+Q9P0M9	MRPL27	mitochondrial ribosomal protein L27	19.9351	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q8IWL3	HSCB	HscB mitochondrial iron-sulfur cluster cochaperone	19.9351	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis	1	0	0	0
+P82664	MRPS10	mitochondrial ribosomal protein S10	19.918	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P27144	AK4	adenylate kinase 4	19.9135	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q9BZE1	MRPL37	mitochondrial ribosomal protein L37	19.8663	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9NNW7	TXNRD2	thioredoxin reductase 2	19.853	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism | Metabolism > Detoxification > Selenoproteins	1	0	0	0
+Q6NUN0	ACSM5	acyl-CoA synthetase medium chain family member 5	19.853	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q8IXM3	MRPL41	mitochondrial ribosomal protein L41	19.7869	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P82932	MRPS6	mitochondrial ribosomal protein S6	19.7396	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q16540	MRPL23	mitochondrial ribosomal protein L23	19.7219	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q6UB35	MTHFD1L	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like	19.7152	Matrix	Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+O75521	ECI2	enoyl-CoA delta isomerase 2	19.6922	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q9HCC0	MCCC2	methylcrotonoyl-CoA carboxylase 2	19.6753	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+Q96PE7	MCEE	methylmalonyl-CoA epimerase	19.672	Matrix	Metabolism > Carbohydrate metabolism > Propanoate metabolism | Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q9NZB8	MOCS1	molybdenum cofactor synthesis 1	19.6691	Matrix	Metabolism > Metals and cofactors > Molybdenum cofactor synthesis and proteins	1	0	0	0
+P22033	MMUT	methylmalonyl-CoA mutase	19.6453	Matrix	Metabolism > Carbohydrate metabolism > Propanoate metabolism | Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Vitamin metabolism > Vitamin B12 metabolism	1	0	0	0
+Q96HP4	OXNAD1	oxidoreductase NAD binding domain containing 1	19.3897	Matrix	0	1	0	0	0
+Q9H4K7	MTG2	mitochondrial ribosome associated GTPase 2	19.3602	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q6PI48	DARS2	aspartyl-tRNA synthetase 2, mitochondrial	19.3589	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q4U2R6	MRPL51	mitochondrial ribosomal protein L51	19.3408	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P11498	PC	pyruvate carboxylase	19.3217	Matrix	Metabolism > Carbohydrate metabolism > Gluconeogenesis | Metabolism > Carbohydrate metabolism > TCA-associated | Metabolism > Vitamin metabolism > Biotin utilizing proteins	1	0	0	0
+Q8N0X4	CLYBL	citramalyl-CoA lyase	19.28	Matrix	Metabolism > Carbohydrate metabolism > Itaconate metabolism	1	0	0	0
+O95822	MLYCD	malonyl-CoA decarboxylase	19.2305	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+Q9BYC8	MRPL32	mitochondrial ribosomal protein L32	19.1186	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q6P4F2	FDX2	ferredoxin 2	18.774	Matrix	Metabolism > Metals and cofactors > Heme synthesis and processing | Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+P23368	ME2	malic enzyme 2	18.7687	Matrix	Metabolism > Carbohydrate metabolism > TCA-associated	1	0	0	0
+P49411	TUFM	Tu translation elongation factor, mitochondrial	18.7687	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q5SXM8	DNLZ	DNL-type zinc finger	18.6742	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Chaperones	1	0	0	0
+Q08AH1	ACSM1	acyl-CoA synthetase medium chain family member 1	18.4477	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+P82663	MRPS25	mitochondrial ribosomal protein S25	18.2617	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9NPJ3	ACOT13	acyl-CoA thioesterase 13	18.1718	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+Q9BTZ2	DHRS4	dehydrogenase/reductase 4	18.0707	Matrix	Metabolism > Vitamin metabolism > Vitamin A metabolism	1	0	0	0
+Q9HA77	CARS2	cysteinyl-tRNA synthetase 2, mitochondrial	18.0124	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+O75323	NIPSNAP2	nipsnap homolog 2	18.0086	Matrix	Mitochondrial dynamics and surveillance > Mitophagy | Mitochondrial dynamics and surveillance > Autophagy	1	0	0	0
+Q9NS18	GLRX2	glutaredoxin 2	17.9483	Matrix	Metabolism > Metals and cofactors > Fe-S-containing proteins | Metabolism > Vitamin metabolism > Vitamin C metabolism | Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q9NP92	MRPS30	mitochondrial ribosomal protein S30	17.9441	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q99714	HSD17B10	hydroxysteroid 17-beta dehydrogenase 10	17.883	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications | Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Lipid metabolism > Cholesterol, bile acid, steroid synthesis | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+Q96I59	NARS2	asparaginyl-tRNA synthetase 2, mitochondrial	17.8532	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q6P087	RPUSD3	RNA pseudouridine synthase D3	17.8532	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q9UL12	SARDH	sarcosine dehydrogenase	17.7797	Matrix	Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Vitamin metabolism > Choline and betaine metabolism | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+P52758	RIDA	reactive intermediate imine deaminase A homolog	17.7683	Matrix	0	1	0	0	0
+Q9H0U6	MRPL18	mitochondrial ribosomal protein L18	17.6657	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P30837	ALDH1B1	aldehyde dehydrogenase 1 family member B1	17.6418	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q96Q11	TRNT1	tRNA nucleotidyl transferase 1	17.5943	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+P14735	IDE	insulin degrading enzyme	17.5759	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q9Y2Q3	GSTK1	glutathione S-transferase kappa 1	17.5601	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q5ST30	VARS2	valyl-tRNA synthetase 2, mitochondrial	17.5169	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+P61604	HSPE1	heat shock protein family E (Hsp10) member 1	17.479	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Chaperones	1	0	0	0
+Q6P161	MRPL54	mitochondrial ribosomal protein L54	17.4674	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q96DV4	MRPL38	mitochondrial ribosomal protein L38	17.4383	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q14197	MRPL58	mitochondrial ribosomal protein L58	17.4104	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome | Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q96EY7	PTCD3	pentatricopeptide repeat domain 3	17.2962	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9HC36	MRM3	mitochondrial rRNA methyltransferase 3	17.2624	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9NZE8	MRPL35	mitochondrial ribosomal protein L35	17.0797	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+0	FMC1	formation of mitochondrial complex V assembly factor 1 homolog	16.9759	Matrix	OXPHOS > Complex V > CV assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q53FZ2	ACSM3	acyl-CoA synthetase medium chain family member 3	16.9674	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q86SX6	GLRX5	glutaredoxin 5	16.8965	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q86Y79	PTRH1	peptidyl-tRNA hydrolase 1 homolog	16.8566	Matrix	0	1	0	0	0
+P82912	MRPS11	mitochondrial ribosomal protein S11	16.8275	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9NQH7	XPNPEP3	X-prolyl aminopeptidase 3	16.7746	Matrix	Protein import, sorting and homeostasis > Protein import and sorting > Preprotein cleavage | Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+P42126	ECI1	enoyl-CoA delta isomerase 1	16.6712	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q9NRP4	SDHAF3	succinate dehydrogenase complex assembly factor 3	16.6673	Matrix	OXPHOS > Complex II > CII assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q9Y3B8	REXO2	RNA exonuclease 2	16.5842	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+P50440	GATM	glycine amidinotransferase	16.5759	Matrix	Metabolism > Nucleotide metabolism > Creatine metabolism	1	0	0	0
+Q9NP81	SARS2	seryl-tRNA synthetase 2, mitochondrial	16.4733	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q9BQC6	MRPL57	mitochondrial ribosomal protein L57	16.449	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q6P1X6	C8orf82	chromosome 8 open reading frame 82	16.4463	Matrix	0	1	0	0	0
+Q5JPH6	EARS2	glutamyl-tRNA synthetase 2, mitochondrial	16.3581	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q9UBQ7	GRHPR	glyoxylate and hydroxypyruvate reductase	16.3466	Matrix	Metabolism > Amino acid metabolism > Glyoxylate metabolism	1	0	0	0
+Q96DP5	MTFMT	mitochondrial methionyl-tRNA formyltransferase	16.2791	Matrix	Mitochondrial central dogma > Translation > fMet processing | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+Q8WV60	PTCD2	pentatricopeptide repeat domain 2	16.2788	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing	1	0	0	0
+P49590	HARS2	histidyl-tRNA synthetase 2, mitochondrial	16.1202	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q8NCW5	NAXE	NAD(P)HX epimerase	16.0079	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+Q9BVL4	SELENOO	selenoprotein O	15.9471	Matrix	Metabolism > Detoxification > Selenoproteins	1	0	0	0
+Q8N159	NAGS	N-acetylglutamate synthase	15.9375	Matrix	Metabolism > Amino acid metabolism > Urea cycle	1	0	0	0
+P04181	OAT	ornithine aminotransferase	15.9076	Matrix	Metabolism > Amino acid metabolism > Proline metabolism	1	0	0	0
+Q8N5N7	MRPL50	mitochondrial ribosomal protein L50	15.8783	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q5T160	RARS2	arginyl-tRNA synthetase 2, mitochondrial	15.794	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q53H82	LACTB2	lactamase beta 2	15.7502	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+Q9NWT8	AURKAIP1	aurora kinase A interacting protein 1	15.6543	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P34897	SHMT2	serine hydroxymethyltransferase 2	15.6448	Matrix	Metabolism > Amino acid metabolism > Serine metabolism | Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+P13995	MTHFD2	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase	15.5945	Matrix	Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+P31327	CPS1	carbamoyl-phosphate synthase 1	15.5621	Matrix	Metabolism > Amino acid metabolism > Urea cycle	1	0	0	0
+Q6P1L8	MRPL14	mitochondrial ribosomal protein L14	15.5546	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9P0P8	MTRES1	mitochondrial transcription rescue factor 1	15.423	Matrix	Mitochondrial central dogma > mtRNA metabolism > Transcription | Mitochondrial central dogma > Translation	1	0	0	0
+Q96GJ1	TRMT2B	tRNA methyltransferase 2 homolog B	15.4155	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q96EL2	MRPS24	mitochondrial ribosomal protein S24	15.3646	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P00390	GSR	glutathione-disulfide reductase	15.3163	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+O15382	BCAT2	branched chain amino acid transaminase 2	15.2627	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+Q96QE5	TEFM	transcription elongation factor, mitochondrial	15.0986	Matrix	Mitochondrial central dogma > mtRNA metabolism > Transcription	1	0	0	0
+Q96CM8	ACSF2	acyl-CoA synthetase family member 2	15.0953	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+O75648	TRMU	tRNA mitochondrial 2-thiouridylase	15.0407	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+P82650	MRPS22	mitochondrial ribosomal protein S22	15.0324	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P28838	LAP3	leucine aminopeptidase 3	15.0096	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+P00367	GLUD1	glutamate dehydrogenase 1	14.9838	Matrix	Metabolism > Amino acid metabolism > Glutamate metabolism | Metabolism > Amino acid metabolism > GABA metabolism	1	0	0	0
+P35914	HMGCL	3-hydroxy-3-methylglutaryl-CoA lyase	14.9768	Matrix	Metabolism > Carbohydrate metabolism > Ketone metabolism | Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism	1	0	0	0
+P49789	FHIT	fragile histidine triad diadenosine triphosphatase	14.9656	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q9Y291	MRPS33	mitochondrial ribosomal protein S33	14.9601	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q8TB37	NUBPL	nucleotide binding protein like	14.9062	Matrix	OXPHOS > Complex I > CI assembly factors | Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q9NU23	LYRM2	LYR motif containing 2	14.8599	Matrix	OXPHOS > Complex I > CI assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q8TAE8	GADD45GIP1	GADD45G interacting protein 1	14.8305	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q00059	TFAM	transcription factor A, mitochondrial	14.8274	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid | Mitochondrial central dogma > mtRNA metabolism > Transcription	1	0	0	0
+P54886	ALDH18A1	aldehyde dehydrogenase 18 family member A1	14.6874	Matrix	Metabolism > Amino acid metabolism > Proline metabolism	1	0	0	0
+Q9NWU1	OXSM	3-oxoacyl-ACP synthase, mitochondrial	14.6313	Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis	1	0	0	0
+Q6YP21	KYAT3	kynurenine aminotransferase 3	14.6313	Matrix	Metabolism > Amino acid metabolism > Kynurenine metabolism | Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+Q9BW92	TARS2	threonyl-tRNA synthetase 2, mitochondrial	14.6313	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q969Z0	TBRG4	transforming growth factor beta regulator 4	14.6312	Matrix	Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+P30044	PRDX5	peroxiredoxin 5	14.4942	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q8WWC4	MAIP1	matrix AAA peptidase interacting protein 1	14.4625	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Chaperones	1	0	0	0
+Q9Y2D0	CA5B	carbonic anhydrase 5B	14.1358	Matrix	Metabolism > Amino acid metabolism > Urea cycle	1	0	0	0
+Q13057	COASY	Coenzyme A synthase	14.1358	Matrix	Metabolism > Metals and cofactors > Coenzyme A metabolism	1	0	0	0
+P0C7P0	CISD3	CDGSH iron sulfur domain 3	14.1358	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+O43708	GSTZ1	glutathione S-transferase zeta 1	14.1262	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q9HC38	GLOD4	glyoxalase domain containing 4	14.0669	Matrix	0	1	0	0	0
+Q9HBH1	PDF	peptide deformylase, mitochondrial	14.0367	Matrix	Mitochondrial central dogma > Translation > fMet processing | Protein import, sorting and homeostasis > Protein homeostasis	1	0	0	0
+P48728	AMT	aminomethyltransferase	13.9633	Matrix	Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Amino acid metabolism > Glycine cleavage system | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+Q8NCN5	PDPR	pyruvate dehydrogenase phosphatase regulatory subunit	13.9633	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+Q9BYT8	NLN	neurolysin	13.9633	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q9Y3E2	BOLA1	bolA family member 1	13.9219	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+P22557	ALAS2	5'-aminolevulinate synthase 2	13.85	Matrix	Metabolism > Metals and cofactors > Heme synthesis and processing	1	0	0	0
+Q8TAA5	GRPEL2	GrpE like 2, mitochondrial	13.8497	Matrix	Protein import, sorting and homeostasis > Protein import and sorting > Import motor | Metabolism > Metals and cofactors > Fe-S cluster biosynthesis	1	0	0	0
+P49419	ALDH7A1	aldehyde dehydrogenase 7 family member A1	13.8432	Matrix	Metabolism > Amino acid metabolism > Lysine metabolism | Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Vitamin metabolism > Choline and betaine metabolism | Metabolism > Vitamin metabolism > Folate and 1-C metabolism | Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q9BXW7	HDHD5	haloacid dehalogenase like hydrolase domain containing 5	13.8432	Matrix	0	1	0	0	0
+Q9NYK5	MRPL39	mitochondrial ribosomal protein L39	13.7805	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q8N5Z0	AADAT	aminoadipate aminotransferase	13.7676	Matrix	Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+P29803	PDHA2	pyruvate dehydrogenase E1 subunit alpha 2	13.7592	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+Q9UGC7	MTRF1L	mitochondrial translational release factor 1 like	13.7285	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q969Y2	GTPBP3	GTP binding protein 3, mitochondrial	13.7285	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+Q9H903	MTHFD2L	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like	13.7285	Matrix	Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+P49753	ACOT2	acyl-CoA thioesterase 2	13.6365	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+Q96EY8	MMAB	metabolism of cobalamin associated B	13.5461	Matrix	Metabolism > Vitamin metabolism > Vitamin B12 metabolism	1	0	0	0
+Q9NTG7	SIRT3	sirtuin 3	13.5038	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism | Signaling	1	0	0	0
+B4DEF8	MRPL45	mitochondrial ribosomal protein L45	13.4907	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9H3J6	C12orf65	chromosome 12 open reading frame 65	13.4869	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+P54098	POLG	DNA polymerase gamma, catalytic subunit	13.4692	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid | Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+Q5TC12	ATPAF1	ATP synthase mitochondrial F1 complex assembly factor 1	13.4272	Matrix	OXPHOS > Complex V > CV assembly factors | OXPHOS > OXPHOS assembly factors	1	0	0	0
+Q3SY69	ALDH1L2	aldehyde dehydrogenase 1 family member L2	13.3962	Matrix	Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+Q9UDR5	AASS	aminoadipate-semialdehyde synthase	13.1893	Matrix	Metabolism > Amino acid metabolism > Lysine metabolism	1	0	0	0
+Q9BYV1	AGXT2	alanine--glyoxylate aminotransferase 2	13.0867	Matrix	Metabolism > Amino acid metabolism > Glyoxylate metabolism	1	0	0	0
+Q9UI32	GLS2	glutaminase 2	13.0829	Matrix	Metabolism > Amino acid metabolism > Glutamate metabolism	1	0	0	0
+A6NC05	C5orf63	chromosome 5 open reading frame 63	13.0459	Matrix	0	1	0	0	0
+Q86XE5	HOGA1	4-hydroxy-2-oxoglutarate aldolase 1	13.0192	Matrix	Metabolism > Amino acid metabolism > Glyoxylate metabolism	1	0	0	0
+Q9NPE2	NGRN	neugrin, neurite outgrowth associated	12.9259	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q8N3R3	TCAIM	T cell activation inhibitor, mitochondrial	12.9201	Matrix	0	1	0	0	0
+P23434	GCSH	glycine cleavage system protein H	12.8668	Matrix	Metabolism > Lipid metabolism > Lipoate insertion | Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Amino acid metabolism > Glycine cleavage system	1	0	0	0
+Q9NXA8	SIRT5	sirtuin 5	12.8138	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+Q8TD30	GPT2	glutamic--pyruvic transaminase 2	12.7592	Matrix	Metabolism > Amino acid metabolism > Glutamate metabolism	1	0	0	0
+Q9BQ69	MACROD1	mono-ADP ribosylhydrolase 1	12.6904	Matrix	Signaling	1	0	0	0
+Q16762	TST	thiosulfate sulfurtransferase	12.6585	Matrix	Metabolism > Detoxification > Xenobiotic metabolism | Metabolism > Sulfur metabolism	1	0	0	0
+Q9UI17	DMGDH	dimethylglycine dehydrogenase	12.558	Matrix	Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Vitamin metabolism > Choline and betaine metabolism | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+Q86X76	NIT1	nitrilase 1	12.2585	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism	1	0	0	0
+Q6P587	FAHD1	fumarylacetoacetate hydrolase domain containing 1	12.2255	Matrix	Metabolism > Carbohydrate metabolism > TCA-associated	1	0	0	0
+Q53R41	FASTKD1	FAST kinase domains 1	12.021	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+Q92665	MRPS31	mitochondrial ribosomal protein S31	11.9827	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+O75891	ALDH1L1	aldehyde dehydrogenase 1 family member L1	11.9576	Matrix	Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+O75127	PTCD1	pentatricopeptide repeat domain 1	11.8591	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules	1	0	0	0
+Q9H3H1	TRIT1	tRNA isopentenyltransferase 1	11.7935	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q8IVS8	GLYCTK	glycerate kinase	11.7394	Matrix	Metabolism > Carbohydrate metabolism	1	0	0	0
+Q5JTZ9	AARS2	alanyl-tRNA synthetase 2, mitochondrial	11.6455	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q9BQ52	ELAC2	elaC ribonuclease Z 2	11.57	Matrix	Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing	1	0	0	0
+P07203	GPX1	glutathione peroxidase 1	11.5396	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism | Metabolism > Detoxification > Selenoproteins	1	0	0	0
+Q9Y5R4	HEMK1	HemK methyltransferase family member 1	11.3146	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q9NRN9	METTL5	methyltransferase like 5	10.934	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q9UJ68	MSRA	methionine sulfoxide reductase A	10.9177	Matrix	Metabolism > Detoxification > ROS and glutathione metabolism | Metabolism > Sulfur metabolism	1	0	0	0
+Q8WV74	NUDT8	nudix hydrolase 8	10.9177	Matrix	Metabolism > Metals and cofactors > Coenzyme A metabolism	1	0	0	0
+Q96T66	NMNAT3	nicotinamide nucleotide adenylyltransferase 3	10.9177	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+P53396	ACLY	ATP citrate lyase	10.8771	Matrix	Metabolism > Carbohydrate metabolism > TCA-associated	1	0	0	0
+Q8NFF5	FLAD1	flavin adenine dinucleotide synthetase 1	10.8723	Matrix	Metabolism > Vitamin metabolism > Vitamin B2 metabolism	1	0	0	0
+Q9Y234	LIPT1	lipoyltransferase 1	10.853	Matrix	Metabolism > Lipid metabolism > Lipoate insertion	1	0	0	0
+Q7Z3D6	DGLUCY	D-glutamate cyclase	10.8	Matrix	Metabolism > Amino acid metabolism	1	0	0	0
+Q16822	PCK2	phosphoenolpyruvate carboxykinase 2, mitochondrial	10.7634	Matrix	Metabolism > Carbohydrate metabolism > Gluconeogenesis | Metabolism > Carbohydrate metabolism > TCA-associated	1	0	0	0
+Q4G0N4	NADK2	NAD kinase 2, mitochondrial	10.7634	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+Q86X67	NUDT13	nudix hydrolase 13	10.7449	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+Q13085	ACACA	acetyl-CoA carboxylase alpha	10.6893	Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis | Metabolism > Vitamin metabolism > Biotin utilizing proteins	1	0	0	0
+P80404	ABAT	4-aminobutyrate aminotransferase	10.6859	Matrix	Metabolism > Amino acid metabolism > GABA metabolism | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+P54868	HMGCS2	3-hydroxy-3-methylglutaryl-CoA synthase 2	10.6859	Matrix	Metabolism > Carbohydrate metabolism > Ketone metabolism	1	0	0	0
+P51649	ALDH5A1	aldehyde dehydrogenase 5 family member A1	10.6859	Matrix	Metabolism > Amino acid metabolism > GABA metabolism	1	0	0	0
+Q16774	GUK1	guanylate kinase 1	10.4839	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q8N465	D2HGDH	D-2-hydroxyglutarate dehydrogenase	10.4683	Matrix	Metabolism > Carbohydrate metabolism > TCA-associated	1	0	0	0
+O14832	PHYH	phytanoyl-CoA 2-hydroxylase	10.361	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+Q9Y6G3	MRPL42	mitochondrial ribosomal protein L42	10.2285	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9NUJ1	ABHD10	abhydrolase domain containing 10, depalmitoylase	9.9467	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q9H4B0	OSGEPL1	O-sialoglycoprotein endopeptidase like 1	9.8639	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+P50583	NUDT2	nudix hydrolase 2	9.8196	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q12849	GRSF1	G-rich RNA sequence binding factor 1	9.8097	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9Y676	MRPS18B	mitochondrial ribosomal protein S18B	9.7734	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q16854	DGUOK	deoxyguanosine kinase	9.7551	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q969G6	RFK	riboflavin kinase	9.7512	Matrix	Metabolism > Vitamin metabolism > Vitamin B2 metabolism	1	0	0	0
+O43488	AKR7A2	aldo-keto reductase family 7 member A2	9.6694	Matrix	Metabolism > Amino acid metabolism > GABA metabolism | Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+P33316	DUT	deoxyuridine triphosphatase	9.607	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+O75570	MTRF1	mitochondrial translation release factor 1	9.5152	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+Q9NPB1	NT5M	5',3'-nucleotidase, mitochondrial	9.4427	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+P49914	MTHFS	methenyltetrahydrofolate synthetase	9.3094	Matrix	Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+Q9NVS9	PNPO	pyridoxamine 5'-phosphate oxidase	9.3059	Matrix	Metabolism > Vitamin metabolism > Vitamin B6 metabolism	1	0	0	0
+Q9H0R6	QRSL1	glutaminyl-tRNA amidotransferase subunit QRSL1	9.164	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q9BPW8	NIPSNAP1	nipsnap homolog 1	9.1051	Matrix	Mitochondrial dynamics and surveillance > Mitophagy | Mitochondrial dynamics and surveillance > Autophagy	1	0	0	0
+P41250	GARS1	glycyl-tRNA synthetase 1	9.0665	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q08AH3	ACSM2A	acyl-CoA synthetase medium chain family member 2A	9.0362	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation | Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q7L3T8	PARS2	prolyl-tRNA synthetase 2, mitochondrial	8.9079	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+Q86TS9	MRPL52	mitochondrial ribosomal protein L52	8.8594	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+Q9Y606	PUS1	pseudouridine synthase 1	8.8588	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+Q05932	FPGS	folylpolyglutamate synthase	8.3701	Matrix	Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+Q9GZT8	NIF3L1	NGG1 interacting factor 3 like 1	8.1782	Matrix	0	1	0	0	0
+Q8N0Z8	PUSL1	pseudouridine synthase like 1	8.1744	Matrix	Mitochondrial central dogma > Translation	1	0	0	0
+Q9H7H0	METTL17	methyltransferase like 17	8.0113	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+P78540	ARG2	arginase 2	7.9705	Matrix	Metabolism > Amino acid metabolism	1	0	0	0
+Q9NVV4	MTPAP	mitochondrial poly(A) polymerase	7.9277	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mt-mRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+Q9HAC7	SUGCT	succinyl-CoA:glutarate-CoA transferase	7.8716	Matrix	Metabolism > Amino acid metabolism	1	0	0	0
+O43847	NRDC	nardilysin convertase	7.7642	Matrix	Protein import, sorting and homeostasis > Protein homeostasis > Chaperones | Protein import, sorting and homeostasis > Protein import and sorting	1	0	0	0
+Q96CB9	NSUN4	NOP2/Sun RNA methyltransferase 4	7.744	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9H6R3	ACSS3	acyl-CoA synthetase short chain family member 3	7.6981	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+Q8N0V3	RBFA	ribosome binding factor A	7.663	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q6UB28	METAP1D	methionyl aminopeptidase type 1D, mitochondrial	7.6531	Matrix	Mitochondrial central dogma > Translation > fMet processing | Protein import, sorting and homeostasis > Protein homeostasis > Proteases	1	0	0	0
+Q9UFN0	NIPSNAP3A	nipsnap homolog 3A	7.6248	Matrix	0	1	0	0	0
+O75828	CBR3	carbonyl reductase 3	7.4373	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q7Z6M4	MTERF4	mitochondrial transcription termination factor 4	7.4107	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+A8MXV4	NUDT19	nudix hydrolase 19	7.4095	Matrix	Metabolism > Metals and cofactors > Coenzyme A metabolism	1	0	0	0
+P23919	DTYMK	deoxythymidylate kinase	7.3701	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q15046	KARS1	lysyl-tRNA synthetase 1	7.3221	Matrix	Mitochondrial central dogma > Translation > mt-tRNA synthetases	1	0	0	0
+P00480	OTC	ornithine carbamoyltransferase	7.1641	Matrix	Metabolism > Amino acid metabolism > Urea cycle	1	0	0	0
+Q96E29	MTERF3	mitochondrial transcription termination factor 3	7.1079	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q8IYQ7	THNSL1	threonine synthase like 1	6.9426	Matrix	0	1	0	0	0
+Q13907	IDI1	isopentenyl-diphosphate delta isomerase 1	6.8633	Matrix	Metabolism > Lipid metabolism > Cholesterol-associated	1	0	0	0
+Q13472	TOP3A	DNA topoisomerase III alpha	6.7725	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication	1	0	0	0
+Q8N4E7	FTMT	ferritin mitochondrial	6.7693	Matrix	Metabolism > Metals and cofactors > Iron homeostasis	1	0	0	0
+Q9BYZ2	LDHAL6B	lactate dehydrogenase A like 6B	6.7613	Matrix	Metabolism > Carbohydrate metabolism	1	0	0	0
+Q7L0Y3	TRMT10C	tRNA methyltransferase 10C, mitochondrial RNase P subunit	6.654	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+O00154	ACOT7	acyl-CoA thioesterase 7	6.6503	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+Q8WVM0	TFB1M	transcription factor B1, mitochondrial	6.6493	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q96RR1	TWNK	twinkle mtDNA helicase	6.6296	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid	1	0	0	0
+Q9H3L0	MMADHC	metabolism of cobalamin associated D	6.6165	Matrix	Metabolism > Vitamin metabolism > Vitamin B12 metabolism	1	0	0	0
+Q96C36	PYCR2	pyrroline-5-carboxylate reductase 2	6.537	Matrix	Metabolism > Amino acid metabolism > Proline metabolism	1	0	0	0
+O94761	RECQL4	RecQ like helicase 4	6.4021	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+Q9H2K0	MTIF3	mitochondrial translational initiation factor 3	6.3646	Matrix	Mitochondrial central dogma > Translation > Translation factors	1	0	0	0
+P13051	UNG	uracil DNA glycosylase	6.3004	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+Q6IB77	GLYAT	glycine-N-acyltransferase	6.2978	Matrix	Metabolism > Amino acid metabolism > Glycine metabolism | Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q96AB3	ISOC2	isochorismatase domain containing 2	6.2195	Matrix	0	1	0	0	0
+P09417	QDPR	quinoid dihydropteridine reductase	6.1455	Matrix	Metabolism > Metals and cofactors > Tetrahydrobiopterin synthesis | Metabolism > Vitamin metabolism > Folate and 1-C metabolism	1	0	0	0
+A4D1E9	GTPBP10	GTP binding protein 10	6.1454	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9NXH9	TRMT1	tRNA methyltransferase 1	6.1111	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+P82909	MRPS36	mitochondrial ribosomal protein S36	6.0327	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome | Metabolism > Carbohydrate metabolism > TCA cycle	1	0	0	0
+Q9P2J9	PDP2	pyruvate dehyrogenase phosphatase catalytic subunit 2	6.0269	Matrix	Metabolism > Carbohydrate metabolism > Pyruvate metabolism	1	0	0	0
+Q53S33	BOLA3	bolA family member 3	5.6344	Matrix	Metabolism > Metals and cofactors > Fe-S cluster biosynthesis | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q9NYY8	FASTKD2	FAST kinase domains 2	5.5345	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9H611	PIF1	PIF1 5'-to-3' DNA helicase	5.4414	Matrix	Mitochondrial central dogma > mtDNA maintenance	1	0	0	0
+O94903	PLPBP	pyridoxal phosphate binding protein	5.3618	Matrix	Metabolism > Vitamin metabolism > Vitamin B6 metabolism	1	0	0	0
+Q8TCS8	PNPT1	polyribonucleotide nucleotidyltransferase 1	5.3413	Matrix|IMS	Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	1	0
+Q969P6	TOP1MT	DNA topoisomerase I mitochondrial	5.3339	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtRNA metabolism > Transcription	1	0	0	0
+O60930	RNASEH1	ribonuclease H1	5.327	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+Q86UY8	NT5DC3	5'-nucleotidase domain containing 3	5.2887	Matrix	0	1	0	0	0
+P58557	YBEY	ybeY metalloendoribonuclease	5.2315	Matrix	Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+O00142	TK2	thymidine kinase 2	5.1181	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q9BSE5	AGMAT	agmatinase	4.986	Matrix	Metabolism > Amino acid metabolism	1	0	0	0
+Q5EBM0	CMPK2	cytidine/uridine monophosphate kinase 2	4.9286	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q7Z4W1	DCXR	dicarbonyl and L-xylulose reductase	4.7874	Matrix	Metabolism > Carbohydrate metabolism	1	0	0	0
+Q9BW91	NUDT9	nudix hydrolase 9	4.7857	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q9UHK6	AMACR	alpha-methylacyl-CoA racemase	4.7681	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+P53370	NUDT6	nudix hydrolase 6	4.6489	Matrix	0	1	0	0	0
+Q9UI43	MRM2	mitochondrial rRNA methyltransferase 2	4.5096	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q96GC5	MRPL48	mitochondrial ribosomal protein L48	4.5081	Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome	1	0	0	0
+P21549	AGXT	alanine--glyoxylate and serine--pyruvate aminotransferase	4.4755	Matrix	Metabolism > Amino acid metabolism > Serine metabolism | Metabolism > Amino acid metabolism > Glyoxylate metabolism	1	0	0	0
+Q9NUL7	DDX28	DEAD-box helicase 28	4.4365	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q9UIF7	MUTYH	mutY DNA glycosylase	4.3575	Matrix	Mitochondrial central dogma > mtDNA maintenance	1	0	0	0
+O43824	GTPBP6	GTP binding protein 6 (putative)	4.3575	Matrix	0	1	0	0	0
+Q9H825	METTL8	methyltransferase like 8	4.282	Matrix	Mitochondrial central dogma > mtRNA metabolism	1	0	0	0
+Q96CM3	RPUSD4	RNA pseudouridine synthase D4	4.104	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+O75414	NME6	NME/NM23 nucleoside diphosphate kinase 6	3.9472	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+P0C7M7	ACSM4	acyl-CoA synthetase medium chain family member 4	3.8935	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q86UT6	NLRX1	NLR family member X1	3.7937	Matrix	Signaling > Immune response	1	0	0	0
+Q9H5Q4	TFB2M	transcription factor B2, mitochondrial	3.7684	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtRNA metabolism > Transcription	1	0	0	0
+Q8N3J5	PPM1K	protein phosphatase, Mg2+/Mn2+ dependent 1K	3.7684	Matrix	Metabolism > Amino acid metabolism > Branched-chain amino acid metabolism | Metabolism > Amino acid metabolism > Branched-chain amino acid dehydrogenase complex	1	0	0	0
+Q8WXI4	ACOT11	acyl-CoA thioesterase 11	3.398	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q9BS92	NIPSNAP3B	nipsnap homolog 3B	3.3827	Matrix	0	1	0	0	0
+Q32P41	TRMT5	tRNA methyltransferase 5	3.1785	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+O15527	OGG1	8-oxoguanine DNA glycosylase	3.1054	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+A6NK06	ACOD1	aconitate decarboxylase 1	3.0634	Matrix	Metabolism > Carbohydrate metabolism > Itaconate metabolism | Signaling > Immune response	1	0	0	0
+Q9BXR0	QTRT1	queuine tRNA-ribosyltransferase catalytic subunit 1	3.0298	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+A6NNL5	C15orf61	chromosome 15 open reading frame 61	2.5925	Matrix	0	1	0	0	0
+O75417	POLQ	DNA polymerase theta	2.5592	Matrix	Mitochondrial central dogma > mtDNA maintenance	1	0	0	0
+Q08257	CRYZ	crystallin zeta	2.4163	Matrix	0	1	0	0	0
+P32322	PYCR1	pyrroline-5-carboxylate reductase 1	2.4163	Matrix	Metabolism > Amino acid metabolism > Proline metabolism	1	0	0	0
+Q9NVH6	TMLHE	trimethyllysine hydroxylase, epsilon	2.2595	Matrix	Metabolism > Metals and cofactors > Carnitine synthesis and transport	1	0	0	0
+Q86U90	YRDC	yrdC N6-threonylcarbamoyltransferase domain containing	2.1517	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+Q13268	DHRS2	dehydrogenase/reductase 2	2.0214	Matrix	Metabolism > Detoxification > Xenobiotic metabolism	1	0	0	0
+Q8IVH4	MMAA	metabolism of cobalamin associated A	1.9744	Matrix	Metabolism > Vitamin metabolism > Vitamin B12 metabolism	1	0	0	0
+Q9NQG6	MIEF1	mitochondrial elongation factor 1	1.9593	MOM|Matrix	Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly | Mitochondrial dynamics and surveillance > Fission	1	0	0	1
+P49916	LIG3	DNA ligase 3	1.8977	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+Q7L8L6	FASTKD5	FAST kinase domains 5	1.5509	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+Q9Y6E7	SIRT4	sirtuin 4	1.4323	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+Q6L8Q7	PDE12	phosphodiesterase 12	1.4323	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-mRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+Q7L2E3	DHX30	DExH-box helicase 30	1.3968	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+A6NJ78	METTL15	methyltransferase like 15	1.3644	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q9UK39	NOCT	nocturnin	1.3533	Matrix	Metabolism > Metals and cofactors > NAD biosynthesis and metabolism	1	0	0	0
+P35218	CA5A	carbonic anhydrase 5A	1.2151	Matrix	Metabolism > Amino acid metabolism > Urea cycle	1	0	0	0
+Q9H857	NT5DC2	5'-nucleotidase domain containing 2	1.168	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+O95900	TRUB2	TruB pseudouridine synthase family member 2	1.081	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q6P1S2	C3orf33	chromosome 3 open reading frame 33	0.7152	Matrix	0	1	0	0	0
+P49448	GLUD2	glutamate dehydrogenase 2	0.4661	Matrix	Metabolism > Amino acid metabolism > Glutamate metabolism | Metabolism > Amino acid metabolism > GABA metabolism	1	0	0	0
+Q5VTE6	ANGEL2	angel homolog 2	0.3556	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-mRNA modifications	1	0	0	0
+Q96SZ6	CDK5RAP1	CDK5 regulatory subunit associated protein 1	0.1441	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+P22234	PAICS	phosphoribosylaminoimidazole carboxylase and phosphoribosylaminoimidazolesuccinocarboxamide synthase	0.08	Matrix	Metabolism > Nucleotide metabolism > Nucleotide synthesis and processing	1	0	0	0
+Q9BSH5	HDHD3	haloacid dehalogenase like hydrolase domain containing 3	0.0417	Matrix	0	1	0	0	0
+Q96I51	RCC1L	RCC1 like	-0.1485	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications	1	0	0	0
+Q8N0U4	FAM185A	family with sequence similarity 185 member A	-0.32	Matrix	0	1	0	0	0
+Q9UHN1	POLG2	DNA polymerase gamma 2, accessory subunit	-0.9827	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid	1	0	0	0
+Q8N1Q8	THEM5	thioesterase superfamily member 5	-0.9827	Matrix	Metabolism > Lipid metabolism	1	0	0	0
+Q99551	MTERF1	mitochondrial transcription termination factor 1	-1.0247	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA nucleoid | Mitochondrial central dogma > mtRNA metabolism > Transcription	1	0	0	0
+Q86UA3	MYG1	MYG1 exonuclease	-1.3152	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mt-mRNA modifications	1	0	0	0
+Q8TB22	SPATA20	spermatogenesis associated 20	-1.3348	Matrix	0	1	0	0	0
+Q9BYC2	OXCT2	3-oxoacid CoA-transferase 2	-1.406	Matrix	Metabolism > Carbohydrate metabolism > Ketone metabolism	1	0	0	0
+Q68CK6	ACSM2B	acyl-CoA synthetase medium chain family member 2B	-1.8699	Matrix	Metabolism > Lipid metabolism > Fatty acid oxidation	1	0	0	0
+Q9BQP7	MGME1	mitochondrial genome maintenance exonuclease 1	-2.2856	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Mitochondrial central dogma > mtDNA maintenance > mtDNA stability and decay	1	0	0	0
+P27695	APEX1	apurinic/apyrimidinic endodeoxyribonuclease 1	-2.5406	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+Q9NX74	DUS2	dihydrouridine synthase 2	-3.2256	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+O15091	PRORP	protein only RNase P catalytic subunit	-3.6264	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing	1	0	0	0
+Q9NVH0	EXD2	exonuclease 3'-5' domain containing 2	-3.8147	Matrix	Mitochondrial central dogma > Translation	1	0	0	0
+Q9NWX6	THG1L	tRNA-histidine guanylyltransferase 1 like	-4.4408	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+Q4J6C6	PREPL	prolyl endopeptidase like	-4.592	Matrix	0	1	0	0	0
+Q14CZ7	FASTKD3	FAST kinase domains 3	-4.7007	Matrix	Mitochondrial central dogma > mtRNA metabolism > Polycistronic mtRNA processing | Mitochondrial central dogma > mtRNA metabolism > mtRNA stability and decay	1	0	0	0
+Q8NE22	SETD9	SET domain containing 9	-5.5827	Matrix	0	1	0	0	0
+A8MUP2	CSKMT	citrate synthase lysine methyltransferase	-5.6193	Matrix	Signaling	1	0	0	0
+P49247	RPIA	ribose 5-phosphate isomerase A	-5.8466	Matrix	Metabolism > Carbohydrate metabolism	1	0	0	0
+P51530	DNA2	DNA replication helicase/nuclease 2	-6.2297	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA replication | Metabolism > Metals and cofactors > Fe-S-containing proteins	1	0	0	0
+Q13686	ALKBH1	alkB homolog 1, histone H2A dioxygenase	-6.2297	Matrix	Mitochondrial central dogma > mtRNA metabolism > mtRNA granules | Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+Q9Y6J8	STYXL1	serine/threonine/tyrosine interacting like 1	-6.2297	Matrix	Mitochondrial dynamics and surveillance > Apoptosis	1	0	0	0
+Q08J23	NSUN2	NOP2/Sun RNA methyltransferase 2	-6.2297	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+Q9H649	NSUN3	NOP2/Sun RNA methyltransferase 3	-6.2297	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications	1	0	0	0
+Q96DU9	PABPC5	poly(A) binding protein cytoplasmic 5	-6.2297	Matrix	0	1	0	0	0
+Q96LW4	PRIMPOL	primase and DNA directed polymerase	-6.2297	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+Q9BVS5	TRMT61B	tRNA methyltransferase 61B	-6.9601	Matrix	Mitochondrial central dogma > mtRNA metabolism > mt-tRNA modifications | Mitochondrial central dogma > mtRNA metabolism > mt-rRNA modifications | Mitochondrial central dogma > Translation > Mitochondrial ribosome assembly	1	0	0	0
+Q8IXQ9	ETFBKMT	electron transfer flavoprotein subunit beta lysine methyltransferase	-7.3264	Matrix	Metabolism > Electron carriers > Q-linked reactions, other	1	0	0	0
+Q8N8R5	C2orf69	chromosome 2 open reading frame 69	-8.0704	Matrix	0	1	0	0	0
+P06746	POLB	DNA polymerase beta	-10.6961	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA repair	1	0	0	0
+Q8N3J2	METTL4	methyltransferase like 4	-10.6961	Matrix	Mitochondrial central dogma > mtDNA maintenance > mtDNA modifications	1	0	0	0
+P86397	HTD2	hydroxyacyl-thioester dehydratase type 2		Matrix	Metabolism > Lipid metabolism > Type II fatty acid synthesis	1	0	0	0

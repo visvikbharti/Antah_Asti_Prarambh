@@ -1,0 +1,29 @@
+======================================================================
+D4: Structure Quality Validation Report
+======================================================================
+
+Total structures validated: 1382
+Missing structures: 8 (P07203, P30042, P36969, Q16881, Q5THJ4, Q86UA3, Q9BVL4, Q9NNW7)
+
+Quality Tier Distribution:
+  Tier          Count  Percent      pLDDT Range
+  very_high       536    38.8%             >=90
+  high            533    38.6%            80-90
+  moderate        227    16.4%            70-80
+  low              82     5.9%            50-70
+  very_low          4     0.3%              <50
+
+Proteins with quality flags: 63 (4.6%)
+  Flag criteria:
+    - Very low pLDDT: mean pLDDT < 50 (model mostly unreliable)
+    - Majority unreliable: mean pLDDT < 70 AND >50% residues below 70
+    - Few usable: <30% of residues have pLDDT > 70
+
+Recommendation:
+  63 flagged proteins — consider sensitivity analysis excluding these.
+
+Output files:
+  results/structures/structure_quality_validation.tsv (1382 proteins)
+  results/structures/flagged_low_quality_structures.tsv (63 proteins)
+  results/structures/quality_per_dataset.tsv (4 datasets)
+======================================================================

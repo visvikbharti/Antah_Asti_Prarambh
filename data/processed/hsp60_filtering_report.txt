@@ -1,0 +1,350 @@
+========================================================================
+HSP60 INTERACTOME FILTERING REPORT
+========================================================================
+
+Total proteins in dataset: 325
+
+--- NDIC (Not Detected In Control) counts per SILAC column ---
+  silac_ratio_coIP1: 93 NDIC values
+    Imputation value (2x 95th pctl): 80.3386
+  silac_ratio_coIP2: 25 NDIC values
+    Imputation value (2x 95th pctl): 80.6358
+  silac_ratio_coIP3: 122 NDIC values
+    Imputation value (2x 95th pctl): 91.0113
+
+--- Proteins per flag category ---
+  bait: 2
+  co_chaperone: 4
+  likely_contaminant: 4
+  low_enrichment: 0
+  no_quantitative_data: 0
+  candidate_substrate: 315
+  TOTAL: 325
+
+--- Proteins per quality tier ---
+  Tier 1: 266
+  Tier 2: 49
+  Tier 3: 0
+  Excluded: 10
+  Low Enrichment: 0
+  No Data: 0
+  TOTAL: 325
+
+--- Median SILAC ratio (imputed) distribution per tier ---
+  Tier 1 (n=266):
+    Min:    5.1299
+    25th:   10.9880
+    Median: 22.2212
+    75th:   57.4070
+    Max:    91.0113
+  Tier 2 (n=49):
+    Min:    2.9572
+    25th:   5.0325
+    Median: 8.6525
+    75th:   56.3380
+    Max:    85.8236
+  Tier 3: no quantitative data
+  Excluded (n=10):
+    Min:    4.7459
+    25th:   6.4368
+    Median: 21.9298
+    75th:   59.8285
+    Max:    85.8236
+  Low Enrichment: no quantitative data
+  No Data: no quantitative data
+
+--- MitoCarta annotation per tier ---
+  Tier 1: 266/266 MitoCarta (100.0%)
+  Tier 2: 6/49 MitoCarta (12.2%)
+  Tier 3: 0 proteins
+  Excluded: 6/10 MitoCarta (60.0%)
+  Low Enrichment: 0 proteins
+  No Data: 0 proteins
+
+--- Percent occupancy statistics (proteins with data) ---
+  N proteins with percent_occupancy: 218
+    Min:    0.0000
+    25th:   0.0004
+    Median: 0.0012
+    75th:   0.0031
+    Max:    0.0924
+
+--- Heat stress response (present_-HS vs present_+HS) ---
+  Present in both -HS and +HS: 231
+  Present only in -HS (lost in HS): 84
+  Present only in +HS (gained in HS): 10
+  Present in neither: 0
+
+--- Tier 1 substrates (n=266) ---
+  gene_name       uniprot_id   median_silac   n_reps   functional_category
+  --------------- ------------ -------------- -------- ------------------------------
+  MRPL38          Q96DV4       91.01          3        mitochondrial protein synthesis
+  CBR4            Q8N4T8       85.82          2        lipid metabolism
+  DCXR            Q7Z4W1       85.82          2        sugar metabolism
+  MRPS25          P82663       85.67          2        mitochondrial protein synthesis
+  ERAL1           O75616       85.67          2        mitochondrial protein synthesis
+  HSD17B8         Q92506       85.67          2        lipid metabolism
+  MRPL48          Q96GC5       85.67          2        mitochondrial protein synthesis
+  AK4             P27144       85.67          2        nucleoside metabolism
+  MRPS5           P82675       85.67          2        mitochondrial protein synthesis
+  IDH3G           P51553       85.67          2        tricarboxylic acid cycle
+  GLRX5           Q86SX6       85.67          2        enzyme co-factor metabolism
+  TAMM41          Q96BW9       80.64          3        cardiolipin biosynthesis
+  NDUFB1          O75438       80.64          3        respiratory chain
+  PPA2            Q9H2U2       80.64          3        phosphate metabolism
+  HAGH            Q16775       80.64          3        secondary metabolite metabolism
+  ARL2            P36404       80.64          3        regulator cofactor
+  COX7A2L         O14548       80.64          3        respiratory chain
+  HINT2           Q9BX68       80.64          3        lipid metabolism?
+  NDUFA6          P56556       80.64          3        respiratory chain
+  ABHD11          Q8NFV4       80.64          3        ?
+  QRSL1           Q9H0R6       80.64          3        mitochondrial protein synthesis
+  ALDH5A1         P51649       80.64          3        amino acid metabolism
+  MRPS35          P82673       80.34          3        mitochondrial protein synthesis
+  SUCLG1          P53597       80.34          3        tricarboxylic acid cycle
+  TRMU            O75648       80.34          3        mitochondrial protein synthesis
+  FAHD1           Q6P587       80.34          3        ?
+  ATP5L           O75964       80.34          3        respiratory chain
+  SUPV3L1         Q8IYB8       80.34          3        RNA metabolism
+  MRPS34          P82930       80.34          3        mitochondrial protein synthesis
+  NDUFAF3         Q9BU61       80.34          3        respiratory chain
+  MRPL44          Q9H9J2       80.34          3        mitochondrial protein synthesis
+  KIAA0391        O15091       80.34          3        mitochondrial protein synthesis
+  MRPL45          A0A087WU62   80.34          3        mitochondrial protein synthesis
+  CCDC90B         Q9GZT6       80.34          3        phosphate metabolism
+  MRPS12          O15235       80.34          3        mitochondrial protein synthesis
+  AKR7A2          O43488       80.34          3        detoxification?
+  MRPL9           Q9BYD2       80.34          3        mitochondrial protein synthesis
+  MRPL15          Q9P015       80.34          3        mitochondrial protein synthesis
+  COX4I1          P13073       80.34          3        respiratory chain
+  AK2             P54819       80.34          3        adenine metabolism
+  ICT1            Q14197       80.34          3        mitochondrial protein synthesis
+  MRPS36          P82909       80.34          3        mitochondrial protein synthesis
+  C21orf33        P0DPI2       80.34          3        ?
+  MTO1            Q9Y2Z2       80.34          3        tRNA modification
+  LETM1           O95202       80.34          3        proton/calcium exchanger
+  NDUFB10         O96000       80.34          3        respiratory chain
+  SAMM50          Q9Y512       80.34          3        protein import and sorting
+  SOD2            P04179       80.34          3        antioxidant enzyme
+  NFS1            Q9Y697       80.34          3        amino acid and sulfur metabolism
+  PCCB            P05166       80.34          3        metabolic intermediate metabolism
+  SPRYD4          Q8WW59       80.34          3        ?
+  MRPL16          Q9NX20       80.34          3        mitochondrial protein synthesis
+  BCS1L           Q9Y276       80.34          3        respiratory chain
+  ECHDC1          Q9NTX5       80.34          3        detoxification?
+  TBRG4           Q969Z0       80.34          3        mRNA processing
+  MTG1            Q9BT17       80.34          3        mitochondrial protein synthesis
+  MRPS15          P82914       80.34          3        mitochondrial protein synthesis
+  ATP5H           O75947       80.34          3        respiratory chain
+  BCAT2           O15382       80.34          3        amino acid metabolism
+  FDXR            P22570       80.34          3        cholesterol and steroid metabolism
+  ABHD10          Q9NUJ1       80.34          3        detoxification?
+  FASTKD5         Q7L8L6       80.34          3        mRNA processing
+  LYRM7           Q5U5X0       78.01          2        respiratory chain
+  HARS2           P49590       68.72          2        mitochondrial protein synthesis
+  MMAB            Q96EY8       65.72          2        enzyme co-factor metabolism
+  ZADH2           Q8N4Q0       60.47          2        hormone metabolism
+  TIMM13          Q9Y5L4       57.53          2        protein import and sorting
+  GSR             P00390       57.03          2        antioxidant enzyme
+  GUF1            Q8N442       54.90          2        mitochondrial protein synthesis
+  ACAD9           Q9H845       54.48          2        respiratory chain
+  SUCLA2          Q9P2R7       54.00          2        tricarboxylic acid cycle
+  MTHFD2          P13995       53.56          3        one carbon metabolism
+  MT-ATP6         P00846       51.20          3        respiratory chain
+  TIMM8B          Q9Y5J9       50.76          2        protein import and sorting
+  AK3             Q9UIJ7       50.22          2        enzyme co-factor metabolism
+  HADH            Q16836       50.21          2        lipid metabolism
+  TRUB2           O95900       49.77          2        mRNA processing
+  hCG_1984214     Q9Y2R5       49.51          3        mitochondrial protein synthesis
+  NME4            O00746       48.97          2        nucleoside metabolism
+  PDK2            Q15119       48.80          2        pyruvate metabolism
+  GCAT            O75600       48.48          2        amino acid metabolism
+  RNMTL1          Q9HC36       47.14          2        mitochondrial protein synthesis
+  GSTK1           Q9Y2Q3       47.07          2        antioxidant enzyme
+  CHCHD1          Q96BP2       45.35          2        mitochondrial protein synthesis
+  MRPS30          Q9NP92       44.53          2        mitochondrial protein synthesis
+  NDUFS4          O43181       44.52          2        respiratory chain
+  GPT2            Q8TD30       44.21          2        amino acid metabolism
+  ATP5C1          P36542       43.62          3        respiratory chain
+  ACOT13          Q9NPJ3       43.54          2        enzyme co-factor metabolism
+  MRPS33          Q9Y291       43.49          2        mitochondrial protein synthesis
+  C1QBP           Q07021       42.72          3        Multifunctional protein
+  MTPAP           Q9NVV4       42.29          2        mRNA processing
+  NARS2           Q96I59       42.08          2        mitochondrial protein synthesis
+  MRPL14          Q6P1L8       41.93          2        mitochondrial protein synthesis
+  NDUFA8          P51970       41.67          2        respiratory chain
+  MRPS23          Q9Y3D9       39.96          3        mitochondrial protein synthesis
+  PRDX3           P30048       39.75          3        antioxidant enzyme
+  IDH3A           P50213       39.43          3        tricarboxylic acid cycle
+  DLAT            P10515       35.96          3        pyruvate metabolism
+  ATAD3B          Q5T9A4       35.22          3        nucleoid binding?
+  PHB             P35232       33.51          3        mitochondrial inner mebrane organization
+  CPT2            P23786       32.77          2        lipid metabolism
+  NADK2           Q4G0N4       31.39          2        enzyme co-factor metabolism
+  MRPS27          Q92552       30.44          3        mitochondrial protein synthesis
+  PHB2            Q99623       30.31          3        mitochondrial inner mebrane organization
+  NT5DC2          Q9H857       30.20          3        ?
+  GLUD1           P00367       29.89          3        amino acid metabolism
+  ATP5A1          P25705       28.50          3        respiratory chain
+  SLIRP           Q9GZT3       28.46          2        RNA-binding protein
+  OAT             P04181       28.30          3        amino acid metabolism
+  OGDH            Q02218       28.25          3        tricarboxylic acid cycle
+  MRPS26          Q9BYN8       26.93          3        mitochondrial protein synthesis
+  ATP5B           P06576       26.74          3        respiratory chain
+  CECR5           Q9BXW7       26.37          3        ?
+  SHMT2           P34897       25.98          3        one carbon metabolism
+  GOT2            P00505       25.94          3        amino acid metabolism
+  MRPL19          P49406       25.90          3        mitochondrial protein synthesis
+  SDHA            P31040       25.09          2        respiratory chain
+  ECH1            Q13011       24.69          3        lipid metabolism
+  NIPSNAP3A       Q9UFN0       24.22          3        ?
+  POLDIP2         Q9Y2S7       24.19          3        ?
+  SSBP1           Q04837       24.17          3        mitochondrial DNA replication
+  PNPT1           Q8TCS8       24.12          3        RNA-binding
+  CPOX            P36551       23.68          3        enzyme co-factor metabolism
+  GADD45GIP1      Q8TAE8       23.42          3        mitochondrial protein synthesis
+  MRPL49          Q13405       23.08          3        mitochondrial protein synthesis
+  MRPL47          Q9HD33       23.03          3        mitochondrial protein synthesis
+  ATP5O           P48047       22.99          3        respiratory chain
+  ALDH9A1         P49189       22.78          2        carnitine, amine and polyamine biosynthesis
+  ATP5D           P30049       22.51          3        respiratory chain
+  NDUFA13         Q9P0J0       22.46          2        respiratory chain
+  GRSF1           Q12849       22.46          3        mitochondrial protein synthesis
+  MT-CO2          P00403       22.24          3        respiratory chain
+  POLG            P54098       22.20          3        DNA polymerase
+  ATP5F1          P24539       21.89          3        respiratory chain
+  PMPCA           Q10713       21.57          3        transit peptide processing
+  HADHA           P40939       20.90          3        lipid metabolism
+  MDH2            P40926       20.50          3        tricarboxylic acid cycle
+  PTCD3           Q96EY7       20.36          3        mitochondrial protein synthesis
+  RPS18           P62269       19.46          2        cytosolic protein synthesis
+  YARS2           Q9Y2Z4       19.02          3        mitochondrial protein synthesis
+  MRPL39          Q9NYK5       17.81          3        mitochondrial protein synthesis
+  TIMM44          O43615       17.75          3        membrane traffic
+  SUCLG2          Q96I99       17.48          2        tricarboxylic acid cycle
+  ALDH18A1        P54886       17.37          3        amino acid metabolism
+  ETFA            P13804       17.28          3        lipid, amino acid and cholin metabolism
+  DAP3            P51398       17.25          3        mitochondrial protein synthesis
+  UQCRC1          P31930       17.23          3        respiratory chain
+  RPS15A          P62244       16.71          3        cytosolic protein synthesis
+  NDUFV1          P49821       16.51          3        respiratory chain
+  MRPS9           P82933       16.10          2        mitochondrial protein synthesis
+  NDUFS2          O75306       16.04          3        respiratory chain
+  MRPS2           Q9Y399       15.67          3        mitochondrial protein synthesis
+  PDHA1           P08559       15.53          3        pyruvate metabolism
+  ECI1            P42126       15.20          3        lipid metabolism
+  HADHB           P55084       15.17          2        lipid metabolism
+  MRPL4           Q9BYD3       15.12          3        mitochondrial protein synthesis
+  MRPL22          Q9NWU5       15.09          3        mitochondrial protein synthesis
+  BCKDHA          P12694       14.88          3        amino acid metabolism
+  LONP1           P36776       14.80          3        protein quality control
+  LRPPRC          P42704       14.78          3        RNA metabolism?
+  CS              O75390       14.77          3        tricarboxylic acid cycle
+  PDHX            O00330       14.72          3        pyruvate metabolism
+  SLC25A5         P05141       14.52          3        ATP/ADP transporter
+  NDUFS1          P28331       14.36          3        respiratory chain
+  MRPL37          Q9BZE1       14.28          2        mitochondrial protein synthesis
+  P4HB            P07237       14.19          3        multifunctional enzyme
+  ALDH2           P05091       14.09          2        ethanol degradation
+  DHX30           Q7L2E3       13.91          3        mitochondrial protein synthesis
+  AIFM1           O95831       13.78          3        apoptosis
+  ACAA2           P42765       13.78          3        lipid metabolism
+  IDH2            P48735       13.55          3        tricarboxylic acid cycle
+  TACO1           Q9BSH4       13.53          2        mitochondrial protein synthesis
+  GLS             O94925       13.35          2        amino acid metabolism
+  UQCRFS1         P47985       13.11          3        respiratory chain
+  MTHFD1L         Q6UB35       13.06          3        one carbon metabolism?
+  BCKDHB          P21953       13.02          2        amino acid metabolism
+  IBA57           Q5T440       12.95          2        enzyme co-factor metabolism
+  ACADVL          P49748       12.82          3        lipid metabolism
+  PCK2            Q16822       12.45          3        pyruvate metabolism
+  GFM2            Q969S9       12.42          2        mitochondrial protein synthesis
+  MRPS31          Q92665       12.35          3        mitochondrial protein synthesis
+  MRPL3           P09001       12.33          3        mitochondrial protein synthesis
+  MCCC2           Q9HCC0       12.21          3        amino acid metabolism
+  MRPS22          P82650       12.19          3        mitochondrial protein synthesis
+  POLRMT          O00411       12.12          3        mitochondrial DNA transcription
+  DARS2           Q6PI48       12.10          3        mitochondrial protein synthesis
+  PMPCB           O75439       12.04          3        transit peptide processing
+  AFG3L2          Q9Y4W6       12.02          3        protein quality control
+  ACAT1           P24752       11.93          3        lipid metabolism
+  SLC25A6         P12236       11.86          3        ATP/ADP transporter
+  DLST            P36957       11.84          2        tricarboxylic acid cycle
+  ADCK4           Q96D53       11.80          2        enzyme co-factor metabolism
+  AARS2           Q5JTZ9       11.69          2        mitochondrial protein synthesis
+  ME2             P23368       11.53          3        pyruvate metabolism
+  CLPX            O76031       11.45          3        protein quality control
+  NFU1            Q9UMS0       11.32          2        enzyme co-factor metabolism
+  FOXRED1         Q96CU9       11.21          3        respiratory chain
+  NDUFV2          P19404       11.15          3        respiratory chain
+  NDUFS3          O75489       10.94          3        respiratory chain
+  STOML2          Q9UJZ1       10.92          3        mitochondrial biogenesis
+  PRDX4           Q13162       10.81          3        antioxidant enzyme
+  NDUFA9          Q16795       10.71          3        respiratory chain
+  TUFM            P49411       10.66          3        mitochondrial protein synthesis
+  XPNPEP3         Q9NQH7       10.56          3        aminopeptidase
+  NDUFA4          O00483       10.38          2        respiratory chain
+  UQCRC2          P22695       10.36          3        respiratory chain
+  ETFB            P38117       10.10          3        lipid, amino acid and cholin metabolism
+  ADCK3           Q8NI60       10.01          3        enzyme co-factor metabolism
+  TST             Q16762       9.78           3        sulfur metabolism
+  ECHS1           P30084       9.52           3        lipid metabolism
+  TSFM            P43897       9.52           3        mitochondrial protein synthesis
+  FLAD1           Q8NFF5       9.52           3        enzyme co-factor metabolism
+  ATP5J2-PTCD1    G3V325       9.40           3        ?
+  MRPL13          Q9BYD1       9.35           3        mitochondrial protein synthesis
+  ALDH1B1         P30837       9.28           3        ethanol degradation
+  HSD17B10        Q99714       9.13           3        lipid metabolism
+  GFM1            Q96RP9       9.12           3        mitochondrial protein synthesis
+  PITRM1          Q5JRX3       9.07           3        transit peptide degradation
+  IARS2           Q9NSE4       8.97           3        mitochondrial protein synthesis
+  PTPMT1          Q8WUK0       8.93           3        lipid metabolism
+  FH              P07954       8.80           2        tricarboxylic acid cycle
+  CYC1            P08574       8.62           3        respiratory chain
+  HIBCH           Q6NVY1       8.58           3        amino acid metabolism
+  ECI2            O75521       8.58           3        lipid metabolism
+  TARS2           Q9BW92       8.27           3        mitochondrial protein synthesis
+  NDUFA10         O95299       8.27           3        respiratory chain
+  FECH            P22830       8.18           2        enzyme co-factor metabolism
+  LAP3            P28838       8.15           3        aminopeptidase
+  NIPSNAP1        Q9BPW8       8.08           3        neurotransmitter binding
+  PDK3            Q15120       8.04           2        pyruvate metabolism
+  ACO2            Q99798       7.90           3        tricarboxylic acid cycle
+  PPIF            P30405       7.76           3        protein folding
+  PGAM5           Q96HS1       7.73           3        necrosis
+  NUDT19          A8MXV4       7.71           2        CoA ester hydrolysis
+  BCKDK           O14874       7.68           3        amino acid metabolism
+  ATAD3A          Q9NVI7       7.57           3        mitochondrial protein synthesis?
+  PDK1            Q15118       7.56           3        pyruvate metabolism
+  DLD             P09622       7.53           3        tricarboxylic acid cycle
+  PPOX            P50336       7.21           3        enzyme co-factor metabolism
+  ALDH7A1         P49419       7.16           3        Detoxification?
+  SLC25A13        Q9UJS0       7.13           3        glutamate/aspartate carrier
+  PYCR2           Q96C36       7.10           3        amino acid metabolism
+  CARS2           Q9HA77       7.06           2        mitochondrial protein synthesis
+  EARS2           Q5JPH6       7.06           3        mitochondrial protein synthesis
+  MRPS6           P82932       7.01           2        mitochondrial protein synthesis
+  PC              P11498       7.00           2        pyruvate metabolism
+  RPUSD3          Q6P087       6.91           2        mitochondrial protein synthesis
+  MARS2           Q96GW9       6.60           3        mitochondrial protein synthesis
+  NSUN4           Q96CB9       6.34           3        mitochondrial protein synthesis
+  MRPS16          Q9Y3D3       6.34           3        mitochondrial protein synthesis
+  MGME1           Q9BQP7       6.32           3        DNA repair
+  RSAD1           Q9HA92       6.32           2        enzyme co-factor metabolism
+  ACSF3           Q4G176       6.25           3        lipid metabolism
+  PEO1            Q96RR1       6.18           3        mitochondrial DNA replication
+  METTL17         Q9H7H0       6.10           2        ?
+  MRPL53          Q96EL3       6.06           3        mitochondrial protein synthesis
+  NDUFA2          O43678       6.05           3        respiratory chain
+  MRPL10          Q7Z7H8       5.77           1        mitochondrial protein synthesis
+  SDHB            P21912       5.76           2        respiratory chain
+  PDHB            P11177       5.55           3        pyruvate metabolism
+  MRPL23          Q16540       5.54           2        mitochondrial protein synthesis
+  NDUFAF7         Q7L592       5.46           3        respiratory chain
+  SARS2           Q9NP81       5.36           3        mitochondrial protein synthesis
+  CLPP            Q16740       5.27           3        protein quality control
+  MIPEP           Q99797       5.13           2        transit peptide processing 
+
+========================================================================
+END OF REPORT
+========================================================================

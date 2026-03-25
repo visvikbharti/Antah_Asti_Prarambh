@@ -1,0 +1,75 @@
+# ============================================
+# Antah Asti Prarambh - .gitignore
+# ============================================
+
+# --- Large data files (AlphaFold structures) ---
+data/raw/alphafold/
+results/phase2/structures/
+
+# --- Large result files ---
+results/structures/dssp/
+results/structures/dssp_per_residue.tsv
+results/phase2/foldx/per_protein/
+results/phase2/foldx/chunks/
+results/phase2/foldseek/foldseek_db*
+results/phase2/foldseek/tmp/
+
+# --- Raw external data (large, downloadable) ---
+data/raw/uniprot/*.fasta
+data/raw/mitocarta/*.xls
+
+# --- FoldX software (licensed, not redistributable) ---
+foldx5_Linux.zip
+foldx5/
+rotabase.txt
+
+# --- Binary / generated files ---
+*.pptx
+*.docx
+*.xlsx
+
+# --- Duplicate root-level data files (originals in data/raw/custom/) ---
+/hsp60_interactome_clean.tsv
+/kerner_2005_groel_interactors_clean.csv
+/kerner_2005_groel_interactors_table_s3.csv
+
+# --- CATH checkpoint (regenerable) ---
+results/domains/_cath_checkpoint.json
+
+# --- MMseqs2 / Foldseek intermediate databases (regenerable) ---
+results/homology/_mmseqs_ortho_work/
+results/domains/foldseek/
+
+# --- Logs ---
+logs/
+slurm-*.out
+*.log
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+*.egg
+.ipynb_checkpoints/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Conda/env ---
+.conda/
+*.conda
+environment.lock
+
+# --- Temporary files ---
+*.tmp
+*.bak
+*~

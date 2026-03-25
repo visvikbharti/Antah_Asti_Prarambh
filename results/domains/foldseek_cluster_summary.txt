@@ -1,0 +1,202 @@
+======================================================================
+  FOLDSEEK STRUCTURAL CLUSTERING — SUMMARY REPORT
+  Module E, Step E4
+======================================================================
+
+CLUSTERING PARAMETERS:
+  Method:               Foldseek cluster (cascaded, set-cover)
+  Min sequence identity: 0.3 (30%)
+  Coverage threshold:    0.5 (50%)
+  E-value threshold:     0.01 (cluster), 0.001 (search)
+
+OVERALL STATISTICS:
+  Total proteins:        1382
+  Total clusters:        1155
+  Singletons (size=1):   999 (86.5%)
+  Small (2-5):           149 (12.9%)
+  Medium (6-20):         7 (0.6%)
+  Large (>20):           0 (0.0%)
+
+CLUSTER SIZE DISTRIBUTION:
+    Size   Count    Proteins
+  ------  ------  ----------
+       1     999         999
+       2     121         242
+       3      19          57
+       4       8          32
+       5       1           5
+       6       3          18
+       7       3          21
+       8       1           8
+
+TOP 20 LARGEST CLUSTERS:
+  Rank  ClusterID   Size   Representative  Members
+  ----  ---------  -----  ---------------  ----------------------------------------
+     1          1      8           P16219  P11310, P16219, P26440, P28330, P45954, P49748, Q9H845, Q9UKU7
+     2          2      7           P49189  O75891, P05091, P30837, P37685, P49189, P51649, Q3SY69
+     3          3      7           Q8N4T8  P0AEK2, Q13268, Q7Z4W1, Q8N4T8, Q92506, Q99714, Q9BTZ2
+     4          4      7           Q8N8R3  O43772, Q6Q0C1, Q6ZT89, Q8N413, Q8N8R3, Q9H2D1, Q9Y619
+     5          5      6           O95847  O95258, O95847, P25874, P55851, P55916, Q5SVS4
+     6          6      6           Q53FZ2  P0C7M7, Q08AH1, Q08AH3, Q53FZ2, Q68CK6, Q6NUN0
+     7          7      6           Q9BV35  P16260, Q6KCM7, Q6NUK1, Q86VD7, Q8N5S1, Q9BV35
+     8          8      5           P21151  P09110, P21151, P24752, P42765, P55084
+     9          9      4           O75600  O75600, P12998, P13196, P22557
+    10         10      4           P0AE08  P0AE08, P30048, P32119, Q13162
+    11         11      4           P12236  P05141, P12235, P12236, Q9H0C2
+    12         12      4           P30084  P30084, Q13825, Q86YB7, Q96DC8
+    13         13      4           Q02218  P0AFG3, Q02218, Q96HY7, Q9ULD0
+    14         14      4           Q15119  Q15118, Q15119, Q15120, Q16654
+    15         15      4           Q9BWM7  Q8TD22, Q96NB2, Q9BWM7, Q9H9B4
+    16         16      4           Q9P291  Q7L311, Q8N2F6, Q9P291, Q9UH62
+    17         17      3           O15528  O15528, Q02318, Q07973
+    18         18      3           O75127  B4DJ38, G3V325, O75127
+    19         19      3           P05496  P05496, P48201, Q06055
+    20         20      3           P0A6M8  P0A6M8, Q969S9, Q96RP9
+
+ALL-VS-ALL SEARCH STATISTICS:
+  Total hits (incl. self): 11664
+  Non-self hits:           10282
+  Proteins with hits:      969
+  Mean % identity:         18.8%
+  Median % identity:       16.2%
+  Mean query coverage:     0.780
+  Mean target coverage:    0.775
+
+PER-DATASET BREAKDOWN:
+     Dataset    Proteins    Clusters    Coverage
+  ----------  ----------  ----------  ----------
+       groel         252         241       20.9%
+       hsp60         266         242       21.0%
+        mito        1124         944       81.7%
+      matrix         519         464       40.2%
+
+  TOP 10 CLUSTERS FOR GROEL:
+    ClusterID   #Proteins  ClusterSize  Representative
+    ---------  ----------  -----------  ---------------
+           21           3            3  P0A8J8
+           91           2            2  P77735
+           46           2            2  P02931
+           23           2            3  P0AC41
+           22           2            3  P0A953
+           70           2            2  P23836
+          123           2            2  Q99390
+           63           2            2  P0AFI2
+           59           2            2  P0A9R7
+           89           2            2  P76071
+
+  TOP 10 CLUSTERS FOR HSP60:
+    ClusterID   #Proteins  ClusterSize  Representative
+    ---------  ----------  -----------  ---------------
+            2           4            7  P49189
+            3           4            7  Q8N4T8
+           27           3            3  P27144
+            8           3            5  P21151
+           14           3            4  Q15119
+           11           2            4  P12236
+           38           2            2  O00330
+           28           2            3  P50213
+           20           2            3  P0A6M8
+          119           2            2  Q96D53
+
+  TOP 10 CLUSTERS FOR MITO:
+    ClusterID   #Proteins  ClusterSize  Representative
+    ---------  ----------  -----------  ---------------
+            1           8            8  P16219
+            4           7            7  Q8N8R3
+            5           6            6  O95847
+            3           6            7  Q8N4T8
+            6           6            6  Q53FZ2
+            7           6            6  Q9BV35
+            2           6            7  P49189
+           16           4            4  Q9P291
+            8           4            5  P21151
+           15           4            4  Q9BWM7
+
+  TOP 10 CLUSTERS FOR MATRIX:
+    ClusterID   #Proteins  ClusterSize  Representative
+    ---------  ----------  -----------  ---------------
+            3           6            7  Q8N4T8
+            6           6            6  Q53FZ2
+            2           6            7  P49189
+            1           5            8  P16219
+           12           4            4  P30084
+           28           3            3  P50213
+           34           3            3  Q9UL12
+           14           3            4  Q15119
+           13           3            4  Q02218
+            9           2            4  O75600
+
+SHARED STRUCTURAL CLUSTERS: GroEL substrates & HSP60 interactors
+  GroEL-only clusters:   217
+  HSP60-only clusters:   218
+  Shared clusters:       24
+
+  SHARED CLUSTER DETAILS (clusters containing both GroEL and HSP60 members):
+    ClusterID   Size   #GroEL   #HSP60  Representative
+    ---------  -----  -------  -------  ---------------
+            2      7        1        4  P49189
+            3      7        1        4  Q8N4T8
+            8      5        1        3  P21151
+            9      4        1        1  O75600
+           10      4        1        2  P0AE08
+           13      4        1        1  Q02218
+           20      3        1        2  P0A6M8
+           23      3        2        1  P0AC41
+           43      2        1        1  O75306
+           47      2        1        1  P05055
+           50      2        1        1  P0A6B7
+           51      2        1        1  P0A6U3
+           54      2        1        1  P0A825
+           55      2        1        1  P0A8M0
+           56      2        1        1  P0A8M3
+           57      2        1        1  P0A9M0
+           58      2        1        1  P0A9P0
+           60      2        1        1  P0AC69
+           61      2        1        1  P0AFD1
+           62      2        1        1  P0AFG6
+           75      2        1        1  P31979
+           87      2        1        1  P68767
+           88      2        1        1  P75736
+           90      2        1        1  P77581
+
+    Cluster 2 (rep=P49189, size=7):
+      GroEL members: P37685
+      HSP60 members: P05091, P30837, P49189, P51649
+
+    Cluster 3 (rep=Q8N4T8, size=7):
+      GroEL members: P0AEK2
+      HSP60 members: Q7Z4W1, Q8N4T8, Q92506, Q99714
+
+    Cluster 8 (rep=P21151, size=5):
+      GroEL members: P21151
+      HSP60 members: P24752, P42765, P55084
+
+    Cluster 10 (rep=P0AE08, size=4):
+      GroEL members: P0AE08
+      HSP60 members: P30048, Q13162
+
+    Cluster 20 (rep=P0A6M8, size=3):
+      GroEL members: P0A6M8
+      HSP60 members: Q969S9, Q96RP9
+
+    Cluster 23 (rep=P0AC41, size=3):
+      GroEL members: P00363, P0AC41
+      HSP60 members: P31040
+
+    Cluster 9 (rep=O75600, size=4):
+      GroEL members: P12998
+      HSP60 members: O75600
+
+    Cluster 13 (rep=Q02218, size=4):
+      GroEL members: P0AFG3
+      HSP60 members: Q02218
+
+    Cluster 43 (rep=O75306, size=2):
+      GroEL members: P33599
+      HSP60 members: O75306
+
+    Cluster 47 (rep=P05055, size=2):
+      GroEL members: P05055
+      HSP60 members: Q8TCS8
+
+======================================================================

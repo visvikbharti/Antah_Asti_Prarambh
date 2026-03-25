@@ -1,0 +1,253 @@
+original_accession	current_accession	accession_status	entry_name	gene_symbol	protein_name	organism	length	reviewed	groel_class	mass_kDa	subcellular_location	location_category	scop_folds	description_clean
+P33636	P0AGG4	demerged	THIO2_ECOLI	trxC	Thioredoxin 2	Escherichia coli (strain K12)	139	reviewed	I	15.6	Cytoplasm	cytoplasmic	c.47	Thioredoxin 2 (EC 1.8.1.8) (Protein-disulfide
+P37901	P0A862	demerged	TPX_ECOLI	tpx	Thiol peroxidase	Escherichia coli (strain K12)	168	reviewed	I	17.7	Periplasm; Cytoplasm	periplasmic	c.47	Thiol peroxidase (EC 1.11.1.-) (Scavengase
+P08837	P69783	demerged	PTGA_ECOLI	crr	PTS system glucose-specific EIIA component	Escherichia coli (strain K12)	169	reviewed	I	18.1	Cytoplasm	cytoplasmic	b.84	PTS system, glucose-specific IIA component
+P18391	P0A6Q3	demerged	FABA_ECOLI	fabA	3-hydroxydecanoyl-[acyl-carrier-protein] dehydratase	Escherichia coli (strain K12)	172	reviewed	I	18.8	Cytoplasm	cytoplasmic	d.38	3-hydroxydecanoyl-[acyl-carrier-protein]
+P17288	P0A7A9	demerged	IPYR_ECOLI	ppa	Inorganic pyrophosphatase	Escherichia coli (strain K12)	176	reviewed	I	19.6	Cytoplasm	cytoplasmic	b.40	Inorganic pyrophosphatase (EC 3.6.1.1)
+P26427	P0AE08	demerged	AHPC_ECOLI	ahpC	Alkyl hydroperoxide reductase C	Escherichia coli (strain K12)	187	reviewed	I	20.6	Cytoplasm	cytoplasmic	c.47	Alkyl hydroperoxide reductase subunit C (EC
+P16174	P0A805	demerged	RRF_ECOLI	frr	Ribosome-recycling factor	Escherichia coli (strain K12)	185	reviewed	I	20.6	Cytoplasm	cytoplasmic	d.67	Ribosome recycling factor (Ribosome releasing
+P09372	P09372	current	GRPE_ECOLI	grpE	Protein GrpE	Escherichia coli (strain K12)	197	reviewed	I	21.8	Cytoplasm	cytoplasmic	b.73	GrpE protein (HSP-70 cofactor) (Heat shock
+P09743	P0ABP8	demerged	DEOD_ECOLI	deoD	Purine nucleoside phosphorylase DeoD-type	Escherichia coli (strain K12)	239	reviewed	I	25.8	Cytoplasm [from Kerner 2005]	cytoplasmic	c.56; c.48	Purine nucleoside phosphorylase (EC 2.4.2.1)
+P30139	P30139	current	THIG_ECOLI	thiG	Thiazole synthase	Escherichia coli (strain K12)	256	reviewed	I	26.9	Cytoplasm	cytoplasmic	c.1	Thiazole biosynthesis protein thiG.
+P00882	P0A6L0	demerged	DEOC_ECOLI	deoC	Deoxyribose-phosphate aldolase	Escherichia coli (strain K12)	259	reviewed	I	27.7	Cytoplasm	cytoplasmic	c.1	Deoxyribose-phosphate aldolase (EC 4.1.2.4)
+P31057	P31057	current	PANB_ECOLI	panB	3-methyl-2-oxobutanoate hydroxymethyltransferase	Escherichia coli (strain K12)	264	reviewed	I	28.2	Cytoplasm	cytoplasmic	c.78; c.1	3-methyl-2-oxobutanoate
+P31217	P62707	demerged	GPMA_ECOLI	gpmA	2,3-bisphosphoglycerate-dependent phosphoglycerate mutase	Escherichia coli (strain K12)	250	reviewed	I	28.4		unknown	c.60	2,3-bisphosphoglycerate-dependent
+P02997	P0A6P1	demerged	EFTS_ECOLI	tsf	Elongation factor Ts	Escherichia coli (strain K12)	283	reviewed	I	30.3	Cytoplasm	cytoplasmic	d.43; a.5	Elongation factor Ts (EF-Ts).
+P02925	P02925	current	RBSB_ECOLI	rbsB	Ribose import binding protein RbsB	Escherichia coli (strain K12)	296	reviewed	I	31.0	Periplasm	periplasmic	c.93	D-ribose-binding periplasmic protein precursor.
+P00810	P62593	demerged	BLAT_ECOLX	bla; blaT-3; blaT-4; blaT-5; blaT-6	Beta-lactamase TEM	Escherichia coli	286	reviewed	I	31.5	Periplasm [from Kerner 2005]	periplasmic	e.3	Beta-lactamase TEM precursor (EC 3.5.2.6)
+P06977	P0A9B2	demerged	G3P1_ECOLI	gapA	Glyceraldehyde-3-phosphate dehydrogenase A	Escherichia coli (strain K12)	331	reviewed	I	35.4	Cytoplasm	cytoplasmic	c.2; d.81	Glyceraldehyde 3-phosphate dehydrogenase A
+P00574	P0A7Z4	demerged	RPOA_ECOLI	rpoA	DNA-directed RNA polymerase subunit alpha	Escherichia coli (strain K12)	329	reviewed	I	36.5	Cytoplasm [from Kerner 2005]	cytoplasmic	a.60; d.74; d.181	DNA-directed RNA polymerase alpha chain
+P02934	P0A910	demerged	OMPA_ECOLI	ompA	Outer membrane protein A	Escherichia coli (strain K12)	346	reviewed	I	37.2	Cell outer membrane	outer_membrane	f.4	Outer membrane protein A precursor (Outer
+P76116	P76116	current	YNCE_ECOLI	yncE	Uncharacterized protein YncE	Escherichia coli (strain K12)	353	reviewed	I	38.6		unknown	b.69; b.70; b.68	Hypothetical protein yncE precursor.
+P06996	P06996	current	OMPC_ECOLI	ompC	Outer membrane porin C	Escherichia coli (strain K12)	367	reviewed	I	40.4	Cell outer membrane	outer_membrane	f.4	Outer membrane protein C precursor (Porin
+P11665	P0A799	demerged	PGK_ECOLI	pgk	Phosphoglycerate kinase	Escherichia coli (strain K12)	387	reviewed	I	41.0	Cytoplasm	cytoplasmic	c.86	Phosphoglycerate kinase (EC 2.7.2.3).
+P14926	P0A953	demerged	FABB_ECOLI	fabB	3-oxoacyl-[acyl-carrier-protein] synthase 1	Escherichia coli (strain K12)	406	reviewed	I	42.6	Cytoplasm	cytoplasmic	c.95	3-oxoacyl-[acyl-carrier-protein] synthase I (EC
+P15046	P0A6A3	demerged	ACKA_ECOLI	ackA	Acetate kinase	Escherichia coli (strain K12)	400	reviewed	I	43.3	Cytoplasm	cytoplasmic	c.55	Acetate kinase (EC 2.7.2.1) (Acetokinase).
+P08328	P0A9T0	demerged	SERA_ECOLI	serA	D-3-phosphoglycerate dehydrogenase	Escherichia coli (strain K12)	410	reviewed	I	44.0	Cytoplasm [from Kerner 2005]	cytoplasmic	c.2; d.58; c.23	D-3-phosphoglycerate dehydrogenase (EC
+P00477	P0A825	demerged	GLYA_ECOLI	glyA	Serine hydroxymethyltransferase	Escherichia coli (strain K12)	417	reviewed	I	45.3	Cytoplasm	cytoplasmic	c.67	Serine hydroxymethyltransferase (EC 2.1.2.1)
+P08324	P0A6P9	demerged	ENO_ECOLI	eno	Enolase	Escherichia coli (strain K12)	432	reviewed	I	45.5	Cytoplasm; Cytoplasm, cytoskeleton; Secreted; Cell surface	secreted	d.54; c.1	Enolase (EC 4.2.1.11) (2-phosphoglycerate
+P12283	P0A7D4	demerged	PURA_ECOLI	purA	Adenylosuccinate synthetase	Escherichia coli (strain K12)	432	reviewed	I	47.2	Cytoplasm	cytoplasmic	c.37	Adenylosuccinate synthetase (EC 6.3.4.4)
+P22257	P0A850	demerged	TIG_ECOLI	tig	Trigger factor	Escherichia coli (strain K12)	432	reviewed	I	48.2	Cytoplasm	cytoplasmic	d.26	Trigger factor (TF).
+P14178	P0AD61	demerged	KPYK1_ECOLI	pykF	Pyruvate kinase I	Escherichia coli (strain K12)	470	reviewed	I	50.7		unknown	b.58; c.49; c.1	Pyruvate kinase I (EC 2.7.1.40) (PK-1).
+P00350	P00350	current	6PGD_ECOLI	gnd	6-phosphogluconate dehydrogenase, decarboxylating	Escherichia coli (strain K12)	468	reviewed	I	51.5		unknown	c.2; a.100	6-phosphogluconate dehydrogenase,
+P17242	P0A8M0	demerged	SYN_ECOLI	asnS	Asparagine--tRNA ligase	Escherichia coli (strain K12)	466	reviewed	I	52.4	Cytoplasm	cytoplasmic	b.40; d.104	Asparaginyl-tRNA synthetase (EC 6.1.1.22)
+P23843	P23843	current	OPPA_ECOLI	oppA	Periplasmic oligopeptide-binding protein OppA	Escherichia coli (strain K12)	543	reviewed	I	60.9	Periplasm	periplasmic	c.94	Periplasmic oligopeptide-binding protein
+P06959	P06959	current	ODP2_ECOLI	aceF	Dihydrolipoyllysine-residue acetyltransferase component of pyruvate dehydrogenase complex	Escherichia coli (strain K12)	630	reviewed	I	66.0	Cytoplasm [from Kerner 2005]	cytoplasmic	b.84; a.9; c.43	Dihydrolipoamide acetyltransferase component
+P17315	P17315	current	CIRA_ECOLI	cirA	Colicin I receptor	Escherichia coli (strain K12)	663	reviewed	I	73.9	Cell outer membrane	outer_membrane	f.4	Colicin I receptor precursor.
+P05055	P05055	current	PNP_ECOLI	pnp	Polyribonucleotide nucleotidyltransferase	Escherichia coli (strain K12)	711	reviewed	I	77.1	Cytoplasm	cytoplasmic	d.51; d.14; d.101; d.52; b.40; a.4	Polyribonucleotide nucleotidyltransferase (EC
+P02996	P0A6M8	demerged	EFG_ECOLI	fusA	Elongation factor G	Escherichia coli (strain K12)	704	reviewed	I	77.5	Cytoplasm	cytoplasmic	d.14; c.37; d.58; b.43	Elongation factor G (EF-G).
+P06958	P0AFG8	demerged	ODP1_ECOLI	aceE	Pyruvate dehydrogenase E1 component	Escherichia coli (strain K12)	887	reviewed	I	99.5		unknown	c.48; c.36	Pyruvate dehydrogenase E1 component (EC
+P02937	P69776	demerged	LPP_ECOLI	lpp	Major outer membrane lipoprotein Lpp	Escherichia coli (strain K12)	78	reviewed	I or II	8.3	Cell outer membrane; Secreted, cell wall; Cell outer membrane	outer_membrane		Major outer membrane lipoprotein precursor
+P02999	P0A707	demerged	IF3_ECOLI	infC	Translation initiation factor IF-3	Escherichia coli (strain K12)	180	reviewed	I or II	20.6	Cytoplasm	cytoplasmic	d.15; d.68	Translation initiation factor IF-3.
+P46847	P63020	demerged	NFUA_ECOLI	nfuA	Fe/S biogenesis protein NfuA	Escherichia coli (strain K12)	191	reviewed	I or II	21.0	Cytoplasm [from Kerner 2005]	cytoplasmic		Protein yhgI.
+P00391	P0A9P0	demerged	DLDH_ECOLI	lpdA	Dihydrolipoyl dehydrogenase	Escherichia coli (strain K12)	474	reviewed	I or II	50.6	Cytoplasm; Cell inner membrane	inner_membrane	c.3; d.87; c.4	Dihydrolipoamide dehydrogenase (EC 1.8.1.4)
+P39159	P0A9L5	demerged	PPIC_ECOLI	ppiC	Peptidyl-prolyl cis-trans isomerase C	Escherichia coli (strain K12)	93	reviewed	II	10.1	Cytoplasm	cytoplasmic	d.26	Peptidyl-prolyl cis-trans isomerase C (EC
+P76424	P64530	demerged	RCNR_ECOLI	rcnR	Transcriptional repressor RcnR	Escherichia coli (strain K12)	90	reviewed	II	10.1	Cytoplasm	cytoplasmic		Hypothetical protein yohL.
+P37010	P0AC69	demerged	GLRX4_ECOLI	grxD	Glutaredoxin 4	Escherichia coli (strain K12)	115	reviewed	II	12.9	Cytoplasm	cytoplasmic	c.47	Protein ydhD.
+P28910	P0A6Z6	demerged	NIKR_ECOLI	nikR	Nickel-responsive regulator	Escherichia coli (strain K12)	133	reviewed	II	15.1	Cytoplasm [from Kerner 2005]	cytoplasmic		Nickel responsive regulator.
+P32698	P0AF48	demerged	YJBQ_ECOLI	yjbQ	UPF0047 protein YjbQ	Escherichia coli (strain K12)	138	reviewed	II	15.7	Cytoplasm [from Kerner 2005]	cytoplasmic		Hypothetical protein yjbQ.
+P39177	P39177	current	USPG_ECOLI	uspG	Universal stress protein UP12	Escherichia coli (strain K12)	142	reviewed	II	15.9	Cytoplasm [from Kerner 2005]	cytoplasmic	c.29	Universal stress protein G.
+P30747	P0A738	demerged	MOAC_ECOLI	moaC	Cyclic pyranopterin monophosphate synthase	Escherichia coli (strain K12)	161	reviewed	II	17.3		unknown	d.58	Molybdenum cofactor biosynthesis protein C.
+P77484	P0AGK8	demerged	ISCR_ECOLI	iscR	HTH-type transcriptional regulator IscR	Escherichia coli (strain K12)	162	reviewed	II	17.3		unknown		Hypothetical protein yfhP.
+P21346	P0A6W5	demerged	GREA_ECOLI	greA	Transcription elongation factor GreA	Escherichia coli (strain K12)	158	reviewed	II	17.6	Cytoplasm [from Kerner 2005]	cytoplasmic	a.2; d.26	Transcription elongation factor greA
+P23869	P23869	current	PPIB_ECOLI	ppiB	Peptidyl-prolyl cis-trans isomerase B	Escherichia coli (strain K12)	164	reviewed	II	18.2	Cytoplasm	cytoplasmic	b.62	Peptidyl-prolyl cis-trans isomerase B (EC
+P30746	P0AEZ9	demerged	MOAB_ECOLI	moaB	Molybdenum cofactor biosynthesis protein B	Escherichia coli (strain K12)	170	reviewed	II	18.5	Cytoplasm [from Kerner 2005]	cytoplasmic	c.57	Molybdenum cofactor biosynthesis protein B.
+P27430	P0ABT2	demerged	DPS_ECOLI	dps	DNA protection during starvation protein	Escherichia coli (strain K12)	167	reviewed	II	18.6	Cytoplasm, nucleoid	cytoplasmic	a.25	DNA protection during starvation protein.
+P33601	P0AFD1	demerged	NUOE_ECOLI	nuoE	NADH-quinone oxidoreductase subunit E	Escherichia coli (strain K12)	166	reviewed	II	18.6	Cytoplasm [from Kerner 2005]	cytoplasmic	c.47	NADH-quinone oxidoreductase chain E (EC
+P43342	P0A9H1	demerged	MUG_ECOLI	mug	G/U mismatch-specific DNA glycosylase	Escherichia coli (strain K12)	168	reviewed	II	18.7	Cytoplasm	cytoplasmic	c.18	G/U mismatch-specific DNA glycosylase (EC
+P45578	P45578	current	LUXS_ECOLI	luxS	S-ribosylhomocysteine lyase	Escherichia coli (strain K12)	171	reviewed	II	19.3	Cytoplasm [from Kerner 2005]	cytoplasmic	d.185	S-ribosylhomocysteinase (EC 3.13.1.-)
+P24167	P0A6D7	demerged	AROK_ECOLI	aroK	Shikimate kinase 1	Escherichia coli (strain K12)	173	reviewed	II	19.4	Cytoplasm	cytoplasmic	c.37	Shikimate kinase I (EC 2.7.1.71) (SKI).
+P76492	P0A8W8	demerged	YFBU_ECOLI	yfbU	UPF0304 protein YfbU	Escherichia coli (strain K12)	164	reviewed	II	19.5	Cytoplasm [from Kerner 2005]	cytoplasmic		Protein yfbU.
+P36658	P0AFY8	demerged	SEQA_ECOLI	seqA	Negative modulator of initiation of replication	Escherichia coli (strain K12)	181	reviewed	II	20.3	Cytoplasm	cytoplasmic		SeqA protein.
+P16921	P0AFG0	demerged	NUSG_ECOLI	nusG	Transcription termination/antitermination protein NusG	Escherichia coli (strain K12)	181	reviewed	II	20.4	Cytoplasm [from Kerner 2005]	cytoplasmic		Transcription antitermination protein nusG.
+P21504	P0A7X6	demerged	RIMM_ECOLI	rimM	Ribosome maturation factor RimM	Escherichia coli (strain K12)	182	reviewed	II	20.6	Cytoplasm	cytoplasmic		16S rRNA processing protein rimM (21K).
+P13857	P13857	current	RIML_ECOLI	rimL	Ribosomal-protein-serine acetyltransferase	Escherichia coli (strain K12)	179	reviewed	II	20.7	Cytoplasm	cytoplasmic	d.108	Ribosomal-protein-serine acetyltransferase (EC
+Q46930	P0A776	demerged	RPPH_ECOLI	rppH	RNA pyrophosphohydrolase	Escherichia coli (strain K12)	176	reviewed	II	20.8		unknown	d.113	(Di)nucleoside polyphosphate hydrolase (EC
+P23932	P0A7D1	demerged	PTH_ECOLI	pth	Peptidyl-tRNA hydrolase	Escherichia coli (strain K12)	194	reviewed	II	21.1	Cytoplasm	cytoplasmic	c.56	Peptidyl-tRNA hydrolase (EC 3.1.1.29) (PTH).
+P27863	P0ACB4	demerged	HEMG_ECOLI	hemG	Protoporphyrinogen IX dehydrogenase [quinone]	Escherichia coli (strain K12)	181	reviewed	II	21.2	Cell inner membrane	inner_membrane	c.23	Protoporphyrinogen oxidase (EC 1.3.3.4)
+P25397	P25397	current	TEHB_ECOLI	tehB	Tellurite methyltransferase	Escherichia coli (strain K12)	197	reviewed	II	22.5	Cytoplasm	cytoplasmic	c.66	Tellurite resistance protein tehB.
+P32145	P0A8Y3	demerged	YIHX_ECOLI	yihX	Alpha-D-glucose 1-phosphate phosphatase YihX	Escherichia coli (strain K12)	199	reviewed	II	22.7	Cytoplasm [from Kerner 2005]	cytoplasmic	c.108	Hypothetical protein yihX.
+P30137	P30137	current	THIE_ECOLI	thiE	Thiamine-phosphate synthase	Escherichia coli (strain K12)	211	reviewed	II	23.0		unknown	c.1	Thiamine-phosphate pyrophosphorylase (EC
+P45847	P0AFR4	demerged	YCIO_ECOLI	yciO	Threonylcarbamoyl-AMP synthase YciO	Escherichia coli (strain K12)	206	reviewed	II	23.2	Cytoplasm [from Kerner 2005]	cytoplasmic	d.115	Protein yciO.
+P24253	P0A6P7	demerged	ENGB_ECOLI	engB	Probable GTP-binding protein EngB	Escherichia coli (strain K12)	210	reviewed	II	23.6		unknown	c.37	Probable GTP-binding protein engB.
+P14374	P69408	demerged	RCSB_ECOL6	rcsB	Transcriptional regulatory protein RcsB	Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC)	216	reviewed	II	23.7	Cytoplasm [from Kerner 2005]	cytoplasmic	c.23; a.4	Capsular synthesis regulator component B.
+P75849	P75849	current	GLO22_ECOLI	gloC	Hydroxyacylglutathione hydrolase GloC	Escherichia coli (strain K12)	215	reviewed	II	23.8		unknown	d.157	Hypothetical protein ycbL.
+P07027	P0AED5	demerged	UVRY_ECOLI	uvrY	Response regulator UvrY	Escherichia coli (strain K12)	218	reviewed	II	23.9	Cytoplasm	cytoplasmic	c.23; a.4	Response regulator uvrY.
+P39811	P0AC59	demerged	GLRX2_ECOLI	grxB	Glutaredoxin 2	Escherichia coli (strain K12)	215	reviewed	II	24.4		unknown	c.47; a.45	Glutaredoxin 2 (Grx2).
+P76344	P76344	current	ZINT_ECOLI	zinT	Metal-binding protein ZinT	Escherichia coli (strain K12)	216	reviewed	II	24.8	Cytoplasm; Periplasm	periplasmic		Protein yodA.
+P36857	P61517	demerged	CAN_ECOLI	can	Carbonic anhydrase 2	Escherichia coli (strain K12)	220	reviewed	II	25.1	Cytoplasm [from Kerner 2005]	cytoplasmic	c.53	Protein yadF.
+P03813	P03813	current	YGEA_ECOLI	ygeA	Broad specificity amino-acid racemase YgeA	Escherichia coli (strain K12)	230	reviewed	II	25.2	Cytoplasm [from Kerner 2005]	cytoplasmic	c.78	Hypothetical protein ygeA.
+P27294	P27294	current	INAA_ECOLI	inaA	Protein InaA	Escherichia coli (strain K12)	216	reviewed	II	25.3	Cytoplasm [from Kerner 2005]	cytoplasmic		Protein inaA.
+P19396	P0AGJ2	demerged	TRMH_ECOLI	trmH	tRNA (guanosine(18)-2'-O)-methyltransferase	Escherichia coli (strain K12)	229	reviewed	II	25.3	Cytoplasm [from Kerner 2005]	cytoplasmic	c.116	tRNA (Guanosine-2'-O-)-methyltransferase (EC
+P08203	P08203	current	ARAD_ECOLI	araD	L-ribulose-5-phosphate 4-epimerase AraD	Escherichia coli (strain K12)	231	reviewed	II	25.5		unknown	c.74	L-ribulose-5-phosphate 4-epimerase (EC
+P23836	P23836	current	PHOP_ECOLI	phoP	Transcriptional regulatory protein PhoP	Escherichia coli (strain K12)	223	reviewed	II	25.5	Cytoplasm	cytoplasmic	c.23; a.4	Transcriptional regulatory protein phoP.
+P25716	P0AEK2	demerged	FABG_ECOLI	fabG	3-oxoacyl-[acyl-carrier-protein] reductase FabG	Escherichia coli (strain K12)	244	reviewed	II	25.6	Cytoplasm [from Kerner 2005]	cytoplasmic	c.2	3-oxoacyl-[acyl-carrier protein] reductase (EC
+P45577	P45577	current	PROQ_ECOLI	proQ	RNA chaperone ProQ	Escherichia coli (strain K12)	232	reviewed	II	25.9	Cytoplasm	cytoplasmic	a.136	ProP effector.
+P16244	P0AE88	demerged	CPXR_ECOLI	cpxR	Transcriptional regulatory protein CpxR	Escherichia coli (strain K12)	232	reviewed	II	26.3	Cytoplasm	cytoplasmic	c.23; a.4	Transcriptional regulatory protein cpxR.
+P08244	P08244	current	PYRF_ECOLI	pyrF	Orotidine 5'-phosphate decarboxylase	Escherichia coli (strain K12)	245	reviewed	II	26.4		unknown	c.1	Orotidine 5'-phosphate decarboxylase (EC
+P03025	P0AA16	demerged	OMPR_ECOLI	ompR	DNA-binding dual transcriptional regulator OmpR	Escherichia coli (strain K12)	239	reviewed	II	27.4	Cytoplasm	cytoplasmic	c.23; a.4	Transcriptional regulatory protein ompR.
+P10440	P0A722	demerged	LPXA_ECOLI	lpxA	Acyl-[acyl-carrier-protein]--UDP-N-acetylglucosamine O-acyltransferase	Escherichia coli (strain K12)	262	reviewed	II	28.1	Cytoplasm	cytoplasmic	b.81	Acyl-[acyl-carrier-protein]--UDP-N-
+P75736	P75736	current	YBFF_ECOLI	ybfF	Esterase YbfF	Escherichia coli (strain K12)	254	reviewed	II	28.4		unknown	c.69	Putative esterase/lipase ybfF (EC 3.1.-.-).
+P07655	P0AAH0	demerged	PSTB_ECOLI	pstB	Phosphate import ATP-binding protein PstB	Escherichia coli (strain K12)	257	reviewed	II	28.9	Cell inner membrane	inner_membrane	c.37	Phosphate import ATP-binding protein pstB
+P39408	P39408	current	YJJV_ECOLI	yjjV	Uncharacterized metal-dependent hydrolase YjjV	Escherichia coli (strain K12)	259	reviewed	II	28.9	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Putative deoxyribonuclease yjjV (EC 3.1.21.-).
+P05796	P0A9D4	demerged	CYSE_ECOLI	cysE	Serine acetyltransferase	Escherichia coli (strain K12)	273	reviewed	II	29.3	Cytoplasm	cytoplasmic	b.81	Serine acetyltransferase (EC 2.3.1.30) (SAT).
+P17579	P0A715	demerged	KDSA_ECOLI	kdsA	2-dehydro-3-deoxyphosphooctonate aldolase	Escherichia coli (strain K12)	284	reviewed	II	30.8	Cytoplasm	cytoplasmic	c.1	2-dehydro-3-deoxyphosphooctonate aldolase
+P76550	P76550	current	YFFS_ECOLI	yffS	Uncharacterized protein YffS	Escherichia coli (strain K12)	269	reviewed	II	31.0	Cytoplasm [from Kerner 2005]	cytoplasmic		Hypothetical protein yffS.
+Q99390	Q99390	current	YPT2_ECOLX	ypt2	Uncharacterized 31.7 kDa protein in traX-finO intergenic region	Escherichia coli	286	reviewed	II	31.7		unknown	c.69	Hypothetical 31.7 kDa protein in TRAX-FINO
+P77395	P77395	current	CNOX_ECOLI	cnoX	Chaperedoxin	Escherichia coli (strain K12)	284	reviewed	II	31.8	Cytoplasm [from Kerner 2005]	cytoplasmic	a.118; c.47	Protein ybbN.
+P32677	P32677	current	YIJO_ECOLI	yijO	Uncharacterized HTH-type transcriptional regulator YijO	Escherichia coli (strain K12)	283	reviewed	II	32.1	Cytoplasm [from Kerner 2005]	cytoplasmic	a.4	Hypothetical transcriptional regulator yijO.
+P77739	P77739	current	KT3K_ECOLI	yniA	Probable ketoamine kinase YniA	Escherichia coli (strain K12)	286	reviewed	II	32.5		unknown	d.144	Hypothetical protein yniA.
+P45803	P0A6Y5	demerged	HSLO_ECOLI	hslO	33 kDa chaperonin	Escherichia coli (strain K12)	292	reviewed	II	32.5	Cytoplasm	cytoplasmic	d.193	33 kDa chaperonin (Heat shock protein 33)
+P37765	P37765	current	RLUB_ECOLI	rluB	Ribosomal large subunit pseudouridine synthase B	Escherichia coli (strain K12)	291	reviewed	II	32.7	Cytoplasm [from Kerner 2005]	cytoplasmic	d.58; d.66	Ribosomal large subunit pseudouridine
+P27292	P0ACI0	demerged	ROB_ECOLI	rob	Right origin-binding protein	Escherichia coli (strain K12)	289	reviewed	II	33.1	Cytoplasm [from Kerner 2005]	cytoplasmic	d.60; a.4	Right origin-binding protein.
+P77333	P77333	current	PGRR_ECOLI	pgrR	HTH-type transcriptional regulator PgrR	Escherichia coli (strain K12)	299	reviewed	II	33.5	Cytoplasm [from Kerner 2005]	cytoplasmic	c.94; a.4	Putative HTH-type transcriptional regulator
+P27305	P27305	current	GLUQ_ECOLI	gluQ	Glutamyl-Q tRNA(Asp) synthetase	Escherichia coli (strain K12)	308	reviewed	II	33.6	Cytoplasm [from Kerner 2005]	cytoplasmic	c.26	Hypothetical protein yadB.
+P76187	P76187	current	YDHF_ECOLI	ydhF	Oxidoreductase YdhF	Escherichia coli (strain K12)	298	reviewed	II	33.6	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Hypothetical oxidoreductase ydhF (EC 1.-.-.-).
+P08330	P0A717	demerged	KPRS_ECOLI	prs	Ribose-phosphate pyrophosphokinase	Escherichia coli (strain K12)	315	reviewed	II	34.1	Cytoplasm	cytoplasmic	c.61	Ribose-phosphate pyrophosphokinase (EC
+P11721	P0ACQ4	demerged	OXYR_ECOLI	oxyR	DNA-binding transcriptional dual regulator OxyR	Escherichia coli (strain K12)	305	reviewed	II	34.3	Cytoplasm [from Kerner 2005]	cytoplasmic	c.94; a.4	Hydrogen peroxide-inducible genes activator
+P76250	P76250	current	DMLR_ECOLI	dmlR	HTH-type transcriptional regulator DmlR	Escherichia coli (strain K12)	307	reviewed	II	34.6		unknown	c.94; a.4	Putative HTH-type transcriptional regulator
+P30177	P30177	current	YBIB_ECOLI	ybiB	DNA-binding protein YbiB	Escherichia coli (strain K12)	320	reviewed	II	35.0	Cytoplasm [from Kerner 2005]	cytoplasmic	a.46	Hypothetical protein ybiB.
+P30867	P0ABD5	demerged	ACCA_ECOLI	accA	Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha	Escherichia coli (strain K12)	319	reviewed	II	35.1	Cytoplasm	cytoplasmic		Acetyl-coenzyme A carboxylase carboxyl
+P06613	P0A9F3	demerged	CYSB_ECOLI	cysB	HTH-type transcriptional regulator CysB	Escherichia coli (strain K12)	324	reviewed	II	36.2	Cytoplasm	cytoplasmic	c.94; a.4	HTH-type transcriptional regulator cysB (Cys
+P32695	P32695	current	DUSA_ECOLI	dusA	tRNA-dihydrouridine(20/20a) synthase	Escherichia coli (strain K12)	345	reviewed	II	36.8	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	tRNA-dihydrouridine synthase A (EC 1.-.-.-).
+P13519	P0A9X4	demerged	MREB_ECOLI	mreB	Cell shape-determining protein MreB	Escherichia coli (strain K12)	347	reviewed	II	37.0	Cytoplasm	cytoplasmic	c.55	Rod shape-determining protein mreB.
+P30745	P30745	current	MOAA_ECOLI	moaA	GTP 3',8-cyclase	Escherichia coli (strain K12)	329	reviewed	II	37.3	Cytoplasm [from Kerner 2005]	cytoplasmic		Molybdenum cofactor biosynthesis protein A.
+P37190	P0A9S3	demerged	GATD_ECOLI	gatD	Galactitol 1-phosphate 5-dehydrogenase	Escherichia coli (strain K12)	346	reviewed	II	37.4	Cytoplasm [from Kerner 2005]	cytoplasmic	c.2; c.66; b.35	Galactitol-1-phosphate 5-dehydrogenase (EC
+P39406	P39406	current	RSMC_ECOLI	rsmC	Ribosomal RNA small subunit methyltransferase C	Escherichia coli (strain K12)	343	reviewed	II	37.5	Cytoplasm	cytoplasmic	c.66	Ribosomal RNA small subunit
+P76071	P76071	current	INSH5_ECOLI	insH5	Transposase InsH for insertion sequence element IS5Y	Escherichia coli (strain K12)	326	reviewed	II	37.8	Cytoplasm [from Kerner 2005]	cytoplasmic		Transposase insH for insertion sequence
+P32127	P0C0K3	demerged	SRKA_ECOLI	srkA	Stress response kinase A	Escherichia coli (strain K12)	328	reviewed	II	38.1	Cytoplasm	cytoplasmic	d.144	Hypothetical protein yihE.
+Q46933	P0A9T4	demerged	TAS_ECOLI	tas	Protein tas	Escherichia coli (strain K12)	346	reviewed	II	38.5		unknown	c.1	Tas protein.
+P05020	P05020	current	PYRC_ECOLI	pyrC	Dihydroorotase	Escherichia coli (strain K12)	348	reviewed	II	38.7	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Dihydroorotase (EC 3.5.2.3) (DHOase).
+Q46851	Q46851	current	GPR_ECOLI	gpr	L-glyceraldehyde 3-phosphate reductase	Escherichia coli (strain K12)	346	reviewed	II	38.8		unknown	c.1	Hypothetical protein yghZ.
+P11604	P0AB71	demerged	ALF_ECOLI	fbaA	Fructose-bisphosphate aldolase class 2	Escherichia coli (strain K12)	359	reviewed	II	39.0		unknown	c.1	Fructose-bisphosphate aldolase class II (EC
+P29680	P29680	current	DCUP_ECOLI	hemE	Uroporphyrinogen decarboxylase	Escherichia coli (strain K12)	354	reviewed	II	39.2	Cytoplasm	cytoplasmic	c.1	Uroporphyrinogen decarboxylase (EC 4.1.1.37)
+P03837	P0CE49	demerged	INSH1_ECOLI	insH1	Transposase InsH for insertion sequence element IS5A	Escherichia coli (strain K12)	326	reviewed	II	39.3	Cytoplasm [from Kerner 2005]	cytoplasmic		Transposase insH for insertion sequence
+P02931	P02931	current	OMPF_ECOLI	ompF	Outer membrane porin F	Escherichia coli (strain K12)	362	reviewed	II	39.3	Cell outer membrane	outer_membrane	f.4	Outer membrane protein F precursor (Porin
+P23721	P23721	current	SERC_ECOLI	serC	Phosphoserine aminotransferase	Escherichia coli (strain K12)	362	reviewed	II	39.7	Cytoplasm	cytoplasmic	c.67	Phosphoserine aminotransferase (EC 2.6.1.52)
+P33667	P33667	current	SELU_ECOLI	selU	tRNA 2-selenouridine synthase	Escherichia coli (strain K12)	364	reviewed	II	41.1		unknown	c.46	Hypothetical protein ybbB.
+P10377	P0AEJ2	demerged	ENTC_ECOLI	entC	Isochorismate synthase EntC	Escherichia coli (strain K12)	391	reviewed	II	42.9		unknown	d.161	Isochorismate synthase entC (EC 5.4.99.6)
+P77581	P77581	current	ASTC_ECOLI	astC	Succinylornithine transaminase	Escherichia coli (strain K12)	406	reviewed	II	43.7		unknown	c.67	Succinylornithine transaminase (EC 2.6.1.-)
+P07016	P0AFG6	demerged	ODO2_ECOLI	sucB	Dihydrolipoyllysine-residue succinyltransferase component of 2-oxoglutarate dehydrogenase complex	Escherichia coli (strain K12)	405	reviewed	II	43.9	Cytoplasm [from Kerner 2005]	cytoplasmic	b.84; a.9; c.43	Dihydrolipoamide succinyltransferase
+P39171	P0A6B7	demerged	ISCS_ECOLI	iscS	Cysteine desulfurase IscS	Escherichia coli (strain K12)	404	reviewed	II	45.1	Cytoplasm	cytoplasmic	c.67	Cysteine desulfurase (EC 4.4.1.-) (ThiI
+P13033	P13033	current	GLPB_ECOLI	glpB	Anaerobic glycerol-3-phosphate dehydrogenase subunit B	Escherichia coli (strain K12)	419	reviewed	II	45.4	Cell inner membrane	inner_membrane	c.3	Anaerobic glycerol-3-phosphate dehydrogenase
+P23893	P23893	current	GSA_ECOLI	hemL	Glutamate-1-semialdehyde 2,1-aminomutase	Escherichia coli (strain K12)	426	reviewed	II	45.4	Cytoplasm	cytoplasmic	c.67	Glutamate-1-semialdehyde 2,1-aminomutase
+P31666	P31666	current	YADE_ECOLI	yadE	Putative polysaccharide deacetylase YadE	Escherichia coli (strain K12)	409	reviewed	II	46.3		unknown		Hypothetical protein yadE precursor.
+P09053	P09053	current	AVTA_ECOLI	avtA	Valine--pyruvate aminotransferase	Escherichia coli (strain K12)	417	reviewed	II	46.7	Cytoplasm	cytoplasmic	c.67	Valine--pyruvate aminotransferase (EC
+P24229	P0A8J8	demerged	RHLB_ECOLI	rhlB	ATP-dependent RNA helicase RhlB	Escherichia coli (strain K12)	421	reviewed	II	47.0	Cytoplasm	cytoplasmic	c.37	ATP-dependent RNA helicase rhlB (EC 3.6.1.-
+P03002	P0AG30	demerged	RHO_ECOLI	rho	Transcription termination factor Rho	Escherichia coli (strain K12)	419	reviewed	II	47.0	Cytoplasm [from Kerner 2005]	cytoplasmic	c.37; a.140; b.40	Transcription termination factor rho.
+P00393	P00393	current	NDH_ECOLI	ndh	Type II NADH:quinone oxidoreductase	Escherichia coli (strain K12)	434	reviewed	II	47.2	Cell inner membrane	inner_membrane	c.4; c.3	NADH dehydrogenase (EC 1.6.99.3).
+P00891	P0ABH7	demerged	CISY_ECOLI	gltA	Citrate synthase	Escherichia coli (strain K12)	427	reviewed	II	48.0	Cytoplasm [from Kerner 2005]	cytoplasmic	a.103	Citrate synthase (EC 2.3.3.1).
+P37339	P37339	current	LHGD_ECOLI	lhgD	L-2-hydroxyglutarate dehydrogenase	Escherichia coli (strain K12)	422	reviewed	II	48.6	Cell inner membrane	inner_membrane	c.3	Hypothetical protein ygaF.
+P76085	P76085	current	PAAK_ECOLI	paaK	Phenylacetate-coenzyme A ligase	Escherichia coli (strain K12)	437	reviewed	II	49.0	Cytoplasm [from Kerner 2005]	cytoplasmic	e.23	Phenylacetate-coenzyme A ligase (EC 6.2.1.30)
+P31979	P31979	current	NUOF_ECOLI	nuoF	NADH-quinone oxidoreductase subunit F	Escherichia coli (strain K12)	445	reviewed	II	49.3	Cytoplasm [from Kerner 2005]	cytoplasmic		NADH-quinone oxidoreductase chain F (EC
+P24182	P24182	current	ACCC_ECOLI	accC	Biotin carboxylase	Escherichia coli (strain K12)	449	reviewed	II	49.3	Cytoplasm [from Kerner 2005]	cytoplasmic	d.142; c.1; b.84; c.30	Biotin carboxylase (EC 6.3.4.14) (A subunit of
+P36928	P36928	current	YEGD_ECOLI	yegD	Uncharacterized chaperone protein YegD	Escherichia coli (strain K12)	450	reviewed	II	49.4		unknown	c.55	Hypothetical chaperone protein yegD.
+P45526	P0AAZ4	demerged	RARA_ECOLI	rarA	Replication-associated recombination protein A	Escherichia coli (strain K12)	447	reviewed	II	49.6	Cytoplasm [from Kerner 2005]	cytoplasmic	c.37	Hypothetical protein ycaJ.
+P27306	P27306	current	STHA_ECOLI	sthA	Soluble pyridine nucleotide transhydrogenase	Escherichia coli (strain K12)	466	reviewed	II	51.4	Cytoplasm	cytoplasmic	d.87; c.3; c.4; c.2	Soluble pyridine nucleotide transhydrogenase
+P80063	P69908	demerged	DCEA_ECOLI	gadA	Glutamate decarboxylase alpha	Escherichia coli (strain K12)	466	reviewed	II	52.7		unknown	c.67	Glutamate decarboxylase alpha (EC 4.1.1.15)
+P00913	P0A853	demerged	TNAA_ECOLI	tnaA	Tryptophanase	Escherichia coli (strain K12)	471	reviewed	II	52.8	Cytoplasm	cytoplasmic	c.67	Tryptophanase (EC 4.1.99.1) (L-tryptophan
+P77730	P77730	current	YDCR_ECOLI	ydcR	Uncharacterized HTH-type transcriptional regulator YdcR	Escherichia coli (strain K12)	468	reviewed	II	52.8	Cytoplasm [from Kerner 2005]	cytoplasmic	a.4; c.67	Hypothetical protein ydcR.
+P13685	P0ABF1	demerged	PCNB_ECOLI	pcnB	Poly(A) polymerase I	Escherichia coli (strain K12)	465	reviewed	II	54.7	Cytoplasm; Cell inner membrane	inner_membrane		Poly(A) polymerase (EC 2.7.7.19) (PAP)
+P23199	P0AAG8	demerged	MGLA_ECOLI	mglA	Galactose/methyl galactoside import ATP-binding protein MglA	Escherichia coli (strain K12)	506	reviewed	II	56.4	Cell inner membrane	inner_membrane	c.37	Galactoside transport ATP-binding protein
+P32132	P0DTT0	demerged	BIPA_ECOLI	bipA	Large ribosomal subunit assembly factor BipA	Escherichia coli (strain K12)	607	reviewed	II	65.4	Cytoplasm	cytoplasmic	c.37; d.58; b.43	GTP-binding protein typA/BipA (Tyrosine
+P33599	P33599	current	NUOCD_ECOLI	nuoC	NADH-quinone oxidoreductase subunit C/D	Escherichia coli (strain K12)	596	reviewed	II	68.7	Cytoplasm; Cell inner membrane	inner_membrane	e.18	NADH-quinone oxidoreductase chain C/D (EC
+P04475	P0A6Y8	demerged	DNAK_ECOLI	dnaK	Chaperone protein DnaK	Escherichia coli (strain K12)	638	reviewed	II	69.0	Cytoplasm; Cell inner membrane	inner_membrane	e.20; c.55	Chaperone protein dnaK (Heat shock protein
+P17112	P0A6U3	demerged	MNMG_ECOLI	mnmG	tRNA uridine 5-carboxymethylaminomethyl modification enzyme MnmG	Escherichia coli (strain K12)	629	reviewed	II	69.5	Cytoplasm	cytoplasmic	c.2; c.4; c.3	Glucose inhibited division protein A.
+P76104	P76104	current	RLHA_ECOLI	rlhA	23S rRNA 5-hydroxycytidine C2501 synthase	Escherichia coli (strain K12)	653	reviewed	II	72.7		unknown		Putative protease ydcP precursor (EC 3.4.-.-).
+P00955	P0A8M3	demerged	SYT_ECOLI	thrS	Threonine--tRNA ligase	Escherichia coli (strain K12)	642	reviewed	II	74.0	Cytoplasm	cytoplasmic	d.66; c.51; d.67; d.104	Threonyl-tRNA synthetase (EC 6.1.1.3)
+P17580	P0AG24	demerged	SPOT_ECOLI	spoT	Bifunctional (p)ppGpp synthase/hydrolase SpoT	Escherichia coli (strain K12)	702	reviewed	II	79.3	Cytoplasm	cytoplasmic	d.66	Guanosine-3',5'-bis(Diphosphate) 3'-
+P08177	P0A9M0	demerged	LON_ECOLI	lon	Lon protease	Escherichia coli (strain K12)	784	reviewed	II	87.4	Cytoplasm	cytoplasmic	c.37	ATP-dependent protease La (EC 3.4.21.53).
+P21499	P21499	current	RNR_ECOLI	rnr	Ribonuclease R	Escherichia coli (strain K12)	813	reviewed	II	92.1	Cytoplasm	cytoplasmic	b.40	Ribonuclease R (EC 3.1.-.-) (RNase R) (VacB
+P17547	P0A9Q7	demerged	ADHE_ECOLI	adhE	Bifunctional aldehyde-alcohol dehydrogenase AdhE	Escherichia coli (strain K12)	891	reviewed	II	96.0	Cytoplasm [from Kerner 2005]	cytoplasmic	c.82; e.22	Aldehyde-alcohol dehydrogenase [Includes:
+P09097	P0AES4	demerged	GYRA_ECOLI	gyrA	DNA gyrase subunit A	Escherichia coli (strain K12)	875	reviewed	II	97.0	Cytoplasm	cytoplasmic	e.11	DNA gyrase subunit A (EC 5.99.1.3).
+P02995	P0A705	demerged	IF2_ECOLI	infB	Translation initiation factor IF-2	Escherichia coli (strain K12)	890	reviewed	II	97.4	Cytoplasm	cytoplasmic	c.37; a.114; c.20; b.43	Translation initiation factor IF-2.
+P27249	P27249	current	GLND_ECOLI	glnD	Bifunctional uridylyltransferase/uridylyl-removing enzyme	Escherichia coli (strain K12)	890	reviewed	II	102.4	Cytoplasm [from Kerner 2005]	cytoplasmic		[Protein-PII] uridylyltransferase (EC 2.7.7.59)
+P07015	P0AFG3	demerged	ODO1_ECOLI	sucA	2-oxoglutarate dehydrogenase E1 component	Escherichia coli (strain K12)	933	reviewed	II	105.1	Cytoplasm [from Kerner 2005]	cytoplasmic	c.36	2-oxoglutarate dehydrogenase E1 component
+P15254	P15254	current	PUR4_ECOLI	purL	Phosphoribosylformylglycinamidine synthase	Escherichia coli (strain K12)	1295	reviewed	II	141.4	Cytoplasm	cytoplasmic	c.23	Phosphoribosylformylglycinamidine synthase
+P43329	P43329	current	HRPA_ECOLI	hrpA	ATP-dependent RNA helicase HrpA	Escherichia coli (strain K12)	1300	reviewed	II	149.0	Cytoplasm [from Kerner 2005]	cytoplasmic	c.37	ATP-dependent helicase hrpA.
+P00575	P0A8V2	demerged	RPOB_ECOLI	rpoB	DNA-directed RNA polymerase subunit beta	Escherichia coli (strain K12)	1342	reviewed	II	150.6	Cytoplasm [from Kerner 2005]	cytoplasmic	e.29	DNA-directed RNA polymerase beta chain (EC
+P00577	P0A8T7	demerged	RPOC_ECOLI	rpoC	DNA-directed RNA polymerase subunit beta'	Escherichia coli (strain K12)	1407	reviewed	II	155.2	Cytoplasm [from Kerner 2005]	cytoplasmic	e.29	DNA-directed RNA polymerase beta' chain (EC
+P37175	P0AAR3	demerged	YBAK_ECOLI	ybaK	Cys-tRNA(Pro)/Cys-tRNA(Cys) deacylase YbaK	Escherichia coli (strain K12)	159	reviewed	III	17.1	Cytoplasm	cytoplasmic	d.116	Protein ybaK.
+P11457	P0AEU7	demerged	SKP_ECOLI	skp	Chaperone protein Skp	Escherichia coli (strain K12)	161	reviewed	III	17.7	Periplasm	periplasmic		Histone-like protein HLP-1 precursor (DNA-
+P32052	P0A832	demerged	SSRP_ECOLI	smpB	SsrA-binding protein	Escherichia coli (strain K12)	160	reviewed	III	18.1	Cytoplasm	cytoplasmic	b.111	SsrA-binding protein (Small protein B).
+P31690	P0AFX4	demerged	RSD_ECOLI	rsd	Regulator of sigma D	Escherichia coli (strain K12)	158	reviewed	III	18.2	Cytoplasm	cytoplasmic		Regulator of sigma D.
+P26602	P26602	current	UBIC_ECOLI	ubiC	Chorismate pyruvate-lyase	Escherichia coli (strain K12)	165	reviewed	III	18.6	Cytoplasm	cytoplasmic	d.190	Chorismate--pyruvate lyase (EC 4.-.-.-).
+P77475	P77475	current	YQAB_ECOLI	yqaB	Fructose-1-phosphate phosphatase YqaB	Escherichia coli (strain K12)	188	reviewed	III	20.8	Cytoplasm [from Kerner 2005]	cytoplasmic	c.108	Hypothetical protein yqaB.
+P75950	P0A8E1	demerged	YCFP_ECOLI	ycfP	UPF0227 protein YcfP	Escherichia coli (strain K12)	180	reviewed	III	21.2	Cytoplasm [from Kerner 2005]	cytoplasmic		Hypothetical protein ycfP.
+P37745	P37745	current	RMLC_ECOLI	rfbC	dTDP-4-dehydrorhamnose 3,5-epimerase	Escherichia coli (strain K12)	185	reviewed	III	21.3	Cytoplasm [from Kerner 2005]	cytoplasmic	b.82	dTDP-4-dehydrorhamnose 3,5-epimerase (EC
+P09454	P0A948	demerged	RIMJ_ECOLI	rimJ	[Ribosomal protein uS5]-alanine N-acetyltransferase	Escherichia coli (strain K12)	194	reviewed	III	22.7	Cytoplasm	cytoplasmic	d.108	Ribosomal-protein-alanine acetyltransferase
+P21515	P21515	current	ACPH_ECOLI	acpH	Acyl carrier protein phosphodiesterase	Escherichia coli (strain K12)	193	reviewed	III	23.0	Cytoplasm [from Kerner 2005]	cytoplasmic		Hypothetical protein yajB.
+Q46872	P64588	demerged	YQJI_ECOLI	yqjI	Transcriptional regulator YqjI	Escherichia coli (strain K12)	207	reviewed	III	23.4	Cytoplasm [from Kerner 2005]	cytoplasmic		Hypothetical protein yqjI.
+P03020	P0ACJ8	demerged	CRP_ECOLI	crp	DNA-binding transcriptional dual regulator CRP	Escherichia coli (strain K12)	210	reviewed	III	23.6	Cytoplasm [from Kerner 2005]	cytoplasmic	b.82; a.4	Catabolite gene activator (cAMP receptor
+P10115	P0A9R7	demerged	FTSE_ECOLI	ftsE	Cell division ATP-binding protein FtsE	Escherichia coli (strain K12)	222	reviewed	III	24.4	Cell inner membrane	inner_membrane	c.37	Cell division ATP-binding protein ftsE.
+P27511	P0A6T5	demerged	GCH1_ECOLI	folE	GTP cyclohydrolase 1	Escherichia coli (strain K12)	222	reviewed	III	24.7		unknown	d.96	GTP cyclohydrolase I (EC 3.5.4.16) (GTP-CH-
+P32049	P0A8I5	demerged	TRMB_ECOLI	trmB	tRNA (guanine-N(7)-)-methyltransferase	Escherichia coli (strain K12)	239	reviewed	III	27.3	Cytoplasm [from Kerner 2005]	cytoplasmic	c.66	tRNA (guanine-N(7)-)-methyltransferase (EC
+P11554	P0ACK8	demerged	FUCR_ECOLI	fucR	L-fucose operon activator	Escherichia coli (strain K12)	243	reviewed	III	27.4	Cytoplasm [from Kerner 2005]	cytoplasmic	a.4; c.35	L-fucose operon activator.
+P09374	P0A9N4	demerged	PFLA_ECOLI	pflA	Pyruvate formate-lyase 1-activating enzyme	Escherichia coli (strain K12)	246	reviewed	III	28.1	Cytoplasm	cytoplasmic		Pyruvate formate-lyase 1 activating enzyme
+P07020	P0A873	demerged	TRMD_ECOLI	trmD	tRNA (guanine-N(1)-)-methyltransferase	Escherichia coli (strain K12)	255	reviewed	III	28.4	Cytoplasm	cytoplasmic		tRNA (Guanine-N(1)-)-methyltransferase (EC
+P52072	P0ACL5	demerged	GLCC_ECOLI	glcC	Glc operon transcriptional activator	Escherichia coli (strain K12)	254	reviewed	III	28.8	Cytoplasm [from Kerner 2005]	cytoplasmic	a.4	Glc operon transcriptional activator.
+P22783	P0ADG4	demerged	SUHB_ECOLI	suhB	Nus factor SuhB	Escherichia coli (strain K12)	267	reviewed	III	29.2	Cytoplasm	cytoplasmic	e.7	Inositol-1-monophosphatase (EC 3.1.3.25)
+P37346	P0AFQ7	demerged	YCFH_ECOLI	ycfH	Uncharacterized metal-dependent hydrolase YcfH	Escherichia coli (strain K12)	265	reviewed	III	29.8	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Putative deoxyribonuclease ycfH (EC 3.1.21.-).
+P30865	P0A8U2	demerged	YAFD_ECOLI	yafD	UPF0294 protein YafD	Escherichia coli (strain K12)	266	reviewed	III	30.0	Cytoplasm	cytoplasmic	d.151	Hypothetical protein yafD.
+P37192	P0C8J6	demerged	GATY_ECOLI	gatY	D-tagatose-1,6-bisphosphate aldolase subunit GatY	Escherichia coli (strain K12)	284	reviewed	III	30.8	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Tagatose-1,6-bisphosphate aldolase gatY (EC
+P05640	P0A6L2	demerged	DAPA_ECOLI	dapA	4-hydroxy-tetrahydrodipicolinate synthase	Escherichia coli (strain K12)	292	reviewed	III	31.3	Cytoplasm	cytoplasmic	c.1	Dihydrodipicolinate synthase (EC 4.2.1.52)
+P36548	P36548	current	AMIA_ECOLI	amiA	N-acetylmuramoyl-L-alanine amidase AmiA	Escherichia coli (strain K12)	289	reviewed	III	31.4	Periplasm	periplasmic		Probable N-acetylmuramoyl-L-alanine amidase
+P12638	P0A6C1	demerged	END4_ECOLI	nfo	Endonuclease 4	Escherichia coli (strain K12)	285	reviewed	III	31.5	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Endonuclease IV (EC 3.1.21.2)
+P29368	P29368	current	YPT1_ECOLX	ypt1	Uncharacterized 31.7 kDa protein in traX-finO intergenic region	Escherichia coli	286	reviewed	III	31.8		unknown	c.69	Hypothetical 31.7 kDa protein in TRAX-FINO
+P76143	P76143	current	LSRF_ECOLI	lsrF	3-hydroxy-5-phosphonooxypentane-2,4-dione thiolase	Escherichia coli (strain K12)	291	reviewed	III	31.9	Cytoplasm	cytoplasmic	c.1	Putative aldolase yneB (EC 4.2.1.-).
+P06995	P0A6L4	demerged	NANA_ECOLI	nanA	N-acetylneuraminate lyase	Escherichia coli (strain K12)	297	reviewed	III	32.5	Cytoplasm	cytoplasmic	c.1	N-acetylneuraminate lyase (EC 4.1.3.3) (N-
+P33995	P0A894	demerged	RAPZ_ECOLI	rapZ	RNase adapter protein RapZ	Escherichia coli (strain K12)	284	reviewed	III	32.5	Cytoplasm [from Kerner 2005]	cytoplasmic	c.37	Hypothetical UPF0042 protein yhbJ.
+P00394	P0AEZ1	demerged	METF_ECOLI	metF	5,10-methylenetetrahydrofolate reductase	Escherichia coli (strain K12)	296	reviewed	III	33.1	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	5,10-methylenetetrahydrofolate reductase (EC
+P03021	P0A9E0	demerged	ARAC_ECOLI	araC	Arabinose operon regulatory protein	Escherichia coli (strain K12)	292	reviewed	III	33.4	Cytoplasm	cytoplasmic	b.82; a.4	Arabinose operon regulatory protein.
+P24194	P0A8S1	demerged	ARGP_ECOLI	argP	HTH-type transcriptional regulator ArgP	Escherichia coli (strain K12)	297	reviewed	III	33.5	Cytoplasm [from Kerner 2005]	cytoplasmic	c.94; a.4	Chromosome initiation inhibitor (OriC
+P33371	P33371	current	DUSC_ECOLI	dusC	tRNA-dihydrouridine(16) synthase	Escherichia coli (strain K12)	315	reviewed	III	35.2	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	tRNA-dihydrouridine synthase C (EC 1.-.-.-).
+P15002	P0ACB2	demerged	HEM2_ECOLI	hemB	Delta-aminolevulinic acid dehydratase	Escherichia coli (strain K12)	324	reviewed	III	35.5	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Delta-aminolevulinic acid dehydratase (EC
+P25717	P0ABT5	demerged	DUSB_ECOLI	dusB	tRNA-dihydrouridine synthase B	Escherichia coli (strain K12)	321	reviewed	III	35.9	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	tRNA-dihydrouridine synthase B (EC 1.-.-.-).
+P23851	P0AA39	demerged	RLUC_ECOLI	rluC	Ribosomal large subunit pseudouridine synthase C	Escherichia coli (strain K12)	319	reviewed	III	36.0	Cytoplasm [from Kerner 2005]	cytoplasmic	d.66; d.58	Ribosomal large subunit pseudouridine
+P25845	P60716	demerged	LIPA_ECOLI	lipA	Lipoyl synthase	Escherichia coli (strain K12)	321	reviewed	III	36.1	Cytoplasm	cytoplasmic		Lipoic acid synthetase (Lip-syn) (Lipoate
+P22333	P22333	current	ADD_ECOLI	add	Adenosine deaminase	Escherichia coli (strain K12)	333	reviewed	III	36.4	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Adenosine deaminase (EC 3.5.4.4) (Adenosine
+P77735	P77735	current	YAJO_ECOLI	yajO	1-deoxyxylulose-5-phosphate synthase YajO	Escherichia coli (strain K12)	324	reviewed	III	36.4	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Hypothetical oxidoreductase yajO (EC 1.-.-.-).
+P75823	P75823	current	LTAE_ECOLI	ltaE	Low specificity L-threonine aldolase	Escherichia coli (strain K12)	333	reviewed	III	36.5		unknown	c.67	Low-specificity L-threonine aldolase (EC
+P75949	P75949	current	NAGZ_ECOLI	nagZ	Beta-hexosaminidase	Escherichia coli (strain K12)	341	reviewed	III	37.6	Cytoplasm	cytoplasmic	c.1	Beta-hexosaminidase (EC 3.2.1.52) (N-acetyl-
+P33635	P0AGJ5	demerged	YFIF_ECOLI	yfiF	Uncharacterized tRNA/rRNA methyltransferase YfiF	Escherichia coli (strain K12)	345	reviewed	III	37.8		unknown	c.116	Hypothetical tRNA/rRNA methyltransferase
+P71295	P0A991	demerged	ALF1_ECOLI	fbaB	Fructose-bisphosphate aldolase class 1	Escherichia coli (strain K12)	350	reviewed	III	38.0	Cytoplasm	cytoplasmic		Fructose-bisphosphate aldolase class I (EC
+P75821	P75821	current	YBJS_ECOLI	ybjS	Uncharacterized protein YbjS	Escherichia coli (strain K12)	337	reviewed	III	38.1		unknown	c.2	Hypothetical protein ybjS.
+P29012	P29012	current	ALR2_ECOLI	dadX	Alanine racemase, catabolic	Escherichia coli (strain K12)	356	reviewed	III	38.8	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1; b.49	Alanine racemase, catabolic (EC 5.1.1.1).
+P39407	P39407	current	YJJU_ECOLI	yjjU	Uncharacterized protein YjjU	Escherichia coli (strain K12)	357	reviewed	III	39.8		unknown		Hypothetical protein yjjU.
+P00353	P0A9Q9	demerged	DHAS_ECOLI	asd	Aspartate-semialdehyde dehydrogenase	Escherichia coli (strain K12)	367	reviewed	III	40.0		unknown	c.2; d.81	Aspartate-semialdehyde dehydrogenase (EC
+P06987	P06987	current	HIS7_ECOLI	hisB	Histidine biosynthesis bifunctional protein HisB	Escherichia coli (strain K12)	355	reviewed	III	40.3	Cytoplasm	cytoplasmic	c.108	Histidine biosynthesis bifunctional protein hisB
+P77349	P0A9K3	demerged	PHOL_ECOLI	ybeZ	PhoH-like protein	Escherichia coli (strain K12)	346	reviewed	III	40.7	Cytoplasm	cytoplasmic		PhoH-like protein.
+P21151	P21151	current	FADA_ECOLI	fadA	3-ketoacyl-CoA thiolase FadA	Escherichia coli (strain K12)	387	reviewed	III	40.9	Cytoplasm	cytoplasmic	c.95	3-ketoacyl-CoA thiolase (EC 2.3.1.16) (Fatty
+P08622	P08622	current	DNAJ_ECOLI	dnaJ	Chaperone protein DnaJ	Escherichia coli (strain K12)	376	reviewed	III	41.0	Cytoplasm	cytoplasmic	a.2; b.4; a.4; a.138; g.54	Chaperone protein dnaJ (Heat shock protein J)
+P12998	P12998	current	BIOF_ECOLI	bioF	8-amino-7-oxononanoate synthase	Escherichia coli (strain K12)	384	reviewed	III	41.6		unknown	c.67	8-amino-7-oxononanoate synthase (EC
+P04384	P0A817	demerged	METK_ECOLI	metK	S-adenosylmethionine synthase	Escherichia coli (strain K12)	384	reviewed	III	41.8	Cytoplasm	cytoplasmic	d.130	S-adenosylmethionine synthetase (EC 2.5.1.6)
+P23003	P23003	current	TRMA_ECOLI	trmA	tRNA/tmRNA (uracil-C(5))-methyltransferase	Escherichia coli (strain K12)	366	reviewed	III	42.0		unknown		tRNA (Uracil-5-)-methyltransferase (EC
+P42596	P42596	current	RLMG_ECOLI	rlmG	Ribosomal RNA large subunit methyltransferase G	Escherichia coli (strain K12)	378	reviewed	III	42.3	Cytoplasm	cytoplasmic	c.66	Putative ribosomal RNA small subunit
+P23908	P23908	current	ARGE_ECOLI	argE	Acetylornithine deacetylase	Escherichia coli (strain K12)	383	reviewed	III	42.3	Cytoplasm	cytoplasmic	d.58; c.56	Acetylornithine deacetylase (EC 3.5.1.16)
+P33232	P33232	current	LLDD_ECOLI	lldD	L-lactate dehydrogenase	Escherichia coli (strain K12)	396	reviewed	III	42.7	Cell inner membrane	inner_membrane	c.1	L-lactate dehydrogenase (Cytochrome) (EC
+P39435	P0AAI5	demerged	FABF_ECOLI	fabF	3-oxoacyl-[acyl-carrier-protein] synthase 2	Escherichia coli (strain K12)	413	reviewed	III	42.9	Cytoplasm [from Kerner 2005]	cytoplasmic	c.95	3-oxoacyl-[acyl-carrier-protein] synthase II (EC
+P07022	P0A9J8	demerged	CMPDT_ECOLI	pheA	Bifunctional chorismate mutase/prephenate dehydratase	Escherichia coli (strain K12)	386	reviewed	III	43.1	Cytoplasm	cytoplasmic	a.130; d.58	P-protein [Includes: Chorismate mutase (EC
+P30140	P30140	current	THIH_ECOLI	thiH	2-iminoacetate synthase	Escherichia coli (strain K12)	377	reviewed	III	43.2		unknown		Thiazole biosynthesis protein thiH.
+P37326	P37326	current	INTS_ECOLI	intS	Prophage integrase IntS	Escherichia coli (strain K12)	385	reviewed	III	44.1	Cytoplasm [from Kerner 2005]	cytoplasmic	d.163	Putative prophage CPS-53 integrase.
+P77444	P77444	current	SUFS_ECOLI	sufS	Cysteine desulfurase	Escherichia coli (strain K12)	406	reviewed	III	44.4	Cytoplasm	cytoplasmic	c.67	Selenocysteine lyase (EC 4.4.1.16)
+P77727	P0A959	demerged	ALAA_ECOLI	alaA	Glutamate-pyruvate aminotransferase AlaA	Escherichia coli (strain K12)	405	reviewed	III	45.5	Cytoplasm	cytoplasmic	c.67	Probable aminotransferase yfbQ (EC 2.6.1.-).
+P38104	P38104	current	RSPA_ECOLI	rspA	Starvation-sensing protein RspA	Escherichia coli (strain K12)	404	reviewed	III	46.0	Cytoplasm [from Kerner 2005]	cytoplasmic	d.54; c.1	Starvation sensing protein rspA.
+P37191	P0C8J8	demerged	GATZ_ECOLI	gatZ	D-tagatose-1,6-bisphosphate aldolase subunit GatZ	Escherichia coli (strain K12)	420	reviewed	III	47.1	Cytoplasm [from Kerner 2005]	cytoplasmic		Putative tagatose 6-phosphate kinase gatZ (EC
+P07650	P07650	current	TYPH_ECOLI	deoA	Thymidine phosphorylase	Escherichia coli (strain K12)	440	reviewed	III	47.2		unknown	d.41; a.46; c.27	Thymidine phosphorylase (EC 2.4.2.4)
+P29011	P0A6J5	demerged	DADA_ECOLI	dadA	D-amino acid dehydrogenase	Escherichia coli (strain K12)	432	reviewed	III	47.6	Cell inner membrane	inner_membrane	c.5; d.16; c.3; c.4; c.2	D-amino acid dehydrogenase small subunit (EC
+P24231	P0AFK0	demerged	PMBA_ECOLI	pmbA	Metalloprotease PmbA	Escherichia coli (strain K12)	450	reviewed	III	48.4	Cytoplasm	cytoplasmic		PmbA protein (TldE protein).
+P19635	P0AEJ6	demerged	EUTB_ECOLI	eutB	Ethanolamine ammonia-lyase large subunit	Escherichia coli (strain K12)	453	reviewed	III	49.4	Bacterial microcompartment	unknown		Ethanolamine ammonia-lyase heavy chain (EC
+P00944	P00944	current	XYLA_ECOLI	xylA	Xylose isomerase	Escherichia coli (strain K12)	440	reviewed	III	49.7	Cytoplasm	cytoplasmic	c.1	Xylose isomerase (EC 5.3.1.5) (D-xylulose
+P25888	P25888	current	RHLE_ECOLI	rhlE	ATP-dependent RNA helicase RhlE	Escherichia coli (strain K12)	454	reviewed	III	50.0	Cytoplasm	cytoplasmic	c.37	Putative ATP-dependent RNA helicase rhlE.
+P21165	P21165	current	PEPQ_ECOLI	pepQ	Xaa-Pro dipeptidase	Escherichia coli (strain K12)	443	reviewed	III	50.2	Cytoplasm [from Kerner 2005]	cytoplasmic	d.127	Xaa-Pro dipeptidase (EC 3.4.13.9) (X-Pro
+P46473	P0AGG8	demerged	TLDD_ECOLI	tldD	Metalloprotease TldD	Escherichia coli (strain K12)	481	reviewed	III	51.4	Cytoplasm [from Kerner 2005]	cytoplasmic		TldD protein.
+P42607	P0A8G3	demerged	UXAC_ECOLI	uxaC	Uronate isomerase	Escherichia coli (strain K12)	470	reviewed	III	54.0	Cytoplasm [from Kerner 2005]	cytoplasmic	c.1	Uronate isomerase (EC 5.3.1.12) (Glucuronate
+P11648	P68767	demerged	AMPA_ECOLI	pepA	Cytosol aminopeptidase	Escherichia coli (strain K12)	503	reviewed	III	54.9	Cytoplasm [from Kerner 2005]	cytoplasmic	c.50; c.56	Cytosol aminopeptidase (EC 3.4.11.1) (Leucine
+P08202	P08202	current	ARAA_ECOLI	araA	L-arabinose isomerase	Escherichia coli (strain K12)	500	reviewed	III	56.1		unknown		L-arabinose isomerase (EC 5.3.1.4).
+P37685	P37685	current	ALDB_ECOLI	aldB	Aldehyde dehydrogenase B	Escherichia coli (strain K12)	512	reviewed	III	56.3	Cytoplasm [from Kerner 2005]	cytoplasmic	c.82	Aldehyde dehydrogenase B (EC 1.2.1.22)
+P10444	P0AC41	demerged	SDHA_ECOLI	sdhA	Succinate dehydrogenase flavoprotein subunit	Escherichia coli (strain K12)	588	reviewed	III	64.4	Cell inner membrane	inner_membrane	a.7; c.3; d.168	Succinate dehydrogenase flavoprotein subunit
+P00363	P00363	current	FRDA_ECOLI	frdA	Fumarate reductase flavoprotein subunit	Escherichia coli (strain K12)	602	reviewed	III	65.8	Cell inner membrane	inner_membrane	a.7; c.3; d.168	Fumarate reductase flavoprotein subunit (EC
+P23304	P0A9P6	demerged	DEAD_ECOLI	deaD	ATP-dependent RNA helicase DeaD	Escherichia coli (strain K12)	629	reviewed	III	70.4	Cytoplasm	cytoplasmic	c.37	Cold-shock DEAD-box protein A (ATP-
+P75864	P75864	current	RLMKL_ECOLI	rlmL	Ribosomal RNA large subunit methyltransferase K/L	Escherichia coli (strain K12)	702	reviewed	III	78.9	Cytoplasm	cytoplasmic	c.66	Hypothetical protein ycbY.
+P20082	P0AFI2	demerged	PARC_ECOLI	parC	DNA topoisomerase 4 subunit A	Escherichia coli (strain K12)	752	reviewed	III	83.8	Cell membrane	inner_membrane	e.11	Topoisomerase IV subunit A (EC 5.99.1.-).
+P00490	P00490	current	PHSM_ECOLI	malP	Maltodextrin phosphorylase	Escherichia coli (strain K12)	797	reviewed	III	90.3		unknown	c.87	Maltodextrin phosphorylase (EC 2.4.1.1).

@@ -1,0 +1,214 @@
+======================================================================
+MitoCarta 3.0 Analysis Summary Report
+======================================================================
+
+SOURCE
+----------------------------------------
+Database: MitoCarta 3.0 (Rath et al., Nucleic Acids Research 2021)
+PMID: 33174596
+DOI: 10.1093/nar/gkaa1011
+Downloaded from: https://personal.broadinstitute.org/scalvo/MitoCarta3.0/Human.MitoCarta3.0.xls
+File: Human.MitoCarta3.0.xls
+Source page: https://www.broadinstitute.org/files/shared/metabolism/mitocarta/human.mitocarta3.0.html
+
+MITOCARTA 3.0 OVERVIEW
+----------------------------------------
+Total human mitochondrial proteins: 1136
+
+Sub-mitochondrial compartment breakdown (raw annotations):
+  Matrix              :   523 ( 46.0%)
+  MIM                 :   359 ( 31.6%)
+  MOM                 :   110 (  9.7%)
+  unknown             :    56 (  4.9%)
+  IMS                 :    51 (  4.5%)
+  Membrane            :    34 (  3.0%)
+  MOM|IMS             :     1 (  0.1%)
+  Matrix|IMS          :     1 (  0.1%)
+  MOM|Matrix          :     1 (  0.1%)
+
+Binary localization flags (proteins with multi-compartment annotations
+are counted in each relevant compartment):
+  Matrix:                  525
+  Inner membrane (MIM):    393
+  Intermembrane space:      53
+  Outer membrane:          112
+  Unknown:                  56
+
+OUTPUT FILES
+----------------------------------------
+1. Full mitochondrial proteome: human_mito_proteome.tsv
+   Location: data/processed/human_mito_proteome.tsv
+   Records: 1136 proteins
+   Columns: uniprot_id, gene_symbol, protein_name, mitocarta_score,
+            sub_mito_localization, pathways, is_matrix, is_im, is_ims, is_om
+
+2. Matrix-only proteome: human_matrix_proteome.tsv
+   Location: data/processed/human_matrix_proteome.tsv
+   Records: 525 proteins
+   (Subset of full proteome where is_matrix = 1)
+
+======================================================================
+CROSS-REFERENCE: HSP60 Interactome vs MitoCarta 3.0
+======================================================================
+
+Total HSP60 interactors (from Bruderer et al.): 325
+
+MitoCarta membership comparison:
+  In MitoCarta 2.0 (from HSP60 file):   278 / 325 (85.5%)
+  In MitoCarta 3.0:                     274 / 325 (84.3%)
+  NOT in MitoCarta 3.0:                  51 / 325 (15.7%)
+
+Matrix annotation comparison:
+  Matrix-annotated in MitoCarta 2.0 (HSP60 file): 227
+  Matrix-annotated in MitoCarta 3.0:               194
+
+======================================================================
+DISCREPANCIES: MitoCarta 2.0 vs 3.0 (for HSP60 interactors)
+======================================================================
+
+A. Membership changes
+   Gained in MC3 (in MC3, NOT marked as MC2 in HSP60 file): 2
+     Q96SZ6     CDK5RAP1      MC3 localization: Matrix
+     Q08J23     NSUN2         MC3 localization: Matrix
+
+   Lost from MC3 (marked as MC2 in HSP60 file, NOT in MC3): 6
+     P0DPI2     C21ORF33
+     P04406     GAPDH
+     P07237     P4HB
+     P62244     RPS15A
+     P62269     RPS18
+     G3V325     ATP5J2-PTCD1
+
+B. Matrix localization changes (proteins present in both MC2 & MC3): 70
+     P06576     ATP5B         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P25705     ATP5A1        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P00505     GOT2          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P00403     MT-CO2        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P48047     ATP5O         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q5T9A4     ATAD3B        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P30049     ATP5D         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P24539     ATP5F1        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O75947     ATP5H         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P22695     UQCRC2        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O75489     NDUFS3        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P31040     SDHA          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O75306     NDUFS2        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P31930     UQCRC1        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P49821     NDUFV1        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O43678     NDUFA2        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O43615     TIMM44        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O75964     ATP5L         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9UJZ1     STOML2        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P28331     NDUFS1        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q8NI60     ADCK3         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O94925     GLS           Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P21953     BCKDHB        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P49748     ACADVL        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q96D53     ADCK4         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P40939     HADHA         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q7L592     NDUFAF7       Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9NVI7     ATAD3A        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O96000     NDUFB10       Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P50336     PPOX          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P12694     BCKDHA        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q16795     NDUFA9        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9HA92     RSAD1         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q8WUK0     PTPMT1        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P21912     SDHB          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P47985     UQCRFS1       Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P19404     NDUFV2        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P23786     CPT2          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P13073     COX4I1        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O43181     NDUFS4        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P22830     FECH          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P08574     CYC1          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9Y4W6     AFG3L2        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O00746     NME4          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9Y276     BCS1L         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9H845     ACAD9         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     P36551     CPOX          Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9GZT6     CCDC90B       Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O95202     LETM1         Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     O14548     COX7A2L       Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+     Q9Y512     SAMM50        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MOM)
+     P11498     PC            NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     P05166     PCCB          NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q16822     PCK2          NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q96I99     SUCLG2        NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     P11177     PDHB          NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     P54886     ALDH18A1      NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     O15235     MRPS12        NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     P53597     SUCLG1        NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q7L2E3     DHX30         NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q9Y2R5     HCG_1984214   NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q9Y291     MRPS33        NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q9NX20     MRPL16        NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q9NPJ3     ACOT13        NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q9HCC0     MCCC2         NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q9H7H0     METTL17       NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     P82914     MRPS15        NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q96I59     NARS2         NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     Q9Y2Q3     GSTK1         NOT Matrix in MC2 -> Matrix in MC3 (MC3: Matrix)
+     P56556     NDUFA6        Matrix in MC2 -> NOT Matrix in MC3 (MC3: MIM)
+
+C. HSP60 interactors NOT in MitoCarta 3.0: 51
+   (These proteins were identified as HSP60 interactors but are not
+    annotated as mitochondrial in MitoCarta 3.0)
+
+   UniProt      Gene         Was in MC2? 
+   ------------ ------------ ------------
+   P0DPI2       C21ORF33     Yes         
+   P04406       GAPDH        Yes         
+   P07237       P4HB         Yes         
+   P62244       RPS15A       Yes         
+   P62269       RPS18        Yes         
+   G3V325       ATP5J2-PTCD1 Yes         
+   P40227       CCT6A        No          
+   P09543       CNP          No          
+   P68104       EEF1A1       No          
+   P24534       EEF1B2       No          
+   P06733       ENO1         No          
+   P12081       HARS         No          
+   P11021       HSPA5        No          
+   P07900       HSP90AA1     No          
+   P08238       HSP90AB1     No          
+   P01859       IGHG2        No          
+   Q14974       KPNB1        No          
+   P22061       PCMT1        No          
+   P62937       PPIA         No          
+   P32969       RPL9         No          
+   P62913       RPL11        No          
+   P62899       RPL31        No          
+   P23396       RPS3         No          
+   P62701       RPS4X        No          
+   P62753       RPS6         No          
+   P62241       RPS8         No          
+   P46781       RPS9         No          
+   P46783       RPS10        No          
+   P62280       RPS11        No          
+   P62249       RPS16        No          
+   P50502       ST13         No          
+   P49368       CCT3         No          
+   P62258       YWHAE        No          
+   Q13724       MOGS         No          
+   O15342       PIN4         No          
+   P62829       RPL23        No          
+   Q15084       PDIA6        No          
+   Q86V81       ALYREF       No          
+   Q9Y2C3       B3GALT5      No          
+   P68363       TUBA1B       No          
+   P68371       TUBB4B       No          
+   Q8NF91       SYNE1        No          
+   Q9UBI6       GNG12        No          
+   Q9ULD2       MTUS1        No          
+   Q8WWH5       TRUB1        No          
+   P07437       TUBB         No          
+   A0A0A6YYJ8   LUC7L2       No          
+   B4DLN1       NAN          No          
+   P50454       SERPINH1     No          
+   P62750       RPL23A       No          
+   S4R3N1       HSPE1-MOB4   No          
+
+======================================================================
+END OF REPORT
+======================================================================

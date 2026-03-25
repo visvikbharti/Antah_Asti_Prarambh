@@ -1,0 +1,253 @@
+entry_name,gene_symbol,accession,predicted_groel_class,mass_kDa,description_clean
+thi2_ecoli,thi2,P33636,I,15.6,Thioredoxin 2 (EC 1.8.1.8) (Protein-disulfide
+tpx_ecoli,tpx,P37901,I,17.7,Thiol peroxidase (EC 1.11.1.-) (Scavengase
+ptga_ecoli,ptga,P08837,I,18.1,"PTS system, glucose-specific IIA component"
+faba_ecoli,faba,P18391,I,18.8,3-hydroxydecanoyl-[acyl-carrier-protein]
+ipyr_ecoli,ipyr,P17288,I,19.6,Inorganic pyrophosphatase (EC 3.6.1.1)
+ahpc_ecoli,ahpc,P26427,I,20.6,Alkyl hydroperoxide reductase subunit C (EC
+rrf_ecoli,rrf,P16174,I,20.6,Ribosome recycling factor (Ribosome releasing
+grpe_ecoli,grpe,P09372,I,21.8,GrpE protein (HSP-70 cofactor) (Heat shock
+deod_ecoli,deod,P09743,I,25.8,Purine nucleoside phosphorylase (EC 2.4.2.1)
+thig_ecoli,thig,P30139,I,26.9,Thiazole biosynthesis protein thiG.
+deoc_ecoli,deoc,P00882,I,27.7,Deoxyribose-phosphate aldolase (EC 4.1.2.4)
+panb_ecoli,panb,P31057,I,28.2,3-methyl-2-oxobutanoate
+gpma_ecoli,gpma,P31217,I,28.4,"2,3-bisphosphoglycerate-dependent"
+efts_ecoli,efts,P02997,I,30.3,Elongation factor Ts (EF-Ts).
+rbsb_ecoli,rbsb,P02925,I,31.0,D-ribose-binding periplasmic protein precursor.
+blat_ecoli,blat,P00810,I,31.5,Beta-lactamase TEM precursor (EC 3.5.2.6)
+g3p1_ecoli,g3p1,P06977,I,35.4,Glyceraldehyde 3-phosphate dehydrogenase A
+rpoa_ecoli,rpoa,P00574,I,36.5,DNA-directed RNA polymerase alpha chain
+ompa_ecoli,ompa,P02934,I,37.2,Outer membrane protein A precursor (Outer
+ynce_ecoli,ynce,P76116,I,38.6,Hypothetical protein yncE precursor.
+ompc_ecoli,ompc,P06996,I,40.4,Outer membrane protein C precursor (Porin
+pgk_ecoli,pgk,P11665,I,41.0,Phosphoglycerate kinase (EC 2.7.2.3).
+fabb_ecoli,fabb,P14926,I,42.6,3-oxoacyl-[acyl-carrier-protein] synthase I (EC
+acka_ecoli,acka,P15046,I,43.3,Acetate kinase (EC 2.7.2.1) (Acetokinase).
+sera_ecoli,sera,P08328,I,44.0,D-3-phosphoglycerate dehydrogenase (EC
+glya_ecoli,glya,P00477,I,45.3,Serine hydroxymethyltransferase (EC 2.1.2.1)
+eno_ecoli,eno,P08324,I,45.5,Enolase (EC 4.2.1.11) (2-phosphoglycerate
+pura_ecoli,pura,P12283,I,47.2,Adenylosuccinate synthetase (EC 6.3.4.4)
+tig_ecoli,tig,P22257,I,48.2,Trigger factor (TF).
+kpy1_ecoli,kpy1,P14178,I,50.7,Pyruvate kinase I (EC 2.7.1.40) (PK-1).
+6pgd_ecoli,6pgd,P00350,I,51.5,"6-phosphogluconate dehydrogenase,"
+syn_ecoli,syn,P17242,I,52.4,Asparaginyl-tRNA synthetase (EC 6.1.1.22)
+oppa_ecoli,oppa,P23843,I,60.9,Periplasmic oligopeptide-binding protein
+odp2_ecoli,odp2,P06959,I,66.0,Dihydrolipoamide acetyltransferase component
+cira_ecoli,cira,P17315,I,73.9,Colicin I receptor precursor.
+pnp_ecoli,pnp,P05055,I,77.1,Polyribonucleotide nucleotidyltransferase (EC
+efg_ecoli,efg,P02996,I,77.5,Elongation factor G (EF-G).
+odp1_ecoli,odp1,P06958,I,99.5,Pyruvate dehydrogenase E1 component (EC
+muli_ecoli,muli,P02937,I or II,8.3,Major outer membrane lipoprotein precursor
+if3_ecoli,if3,P02999,I or II,20.6,Translation initiation factor IF-3.
+yhgi_ecoli,yhgi,P46847,I or II,21.0,Protein yhgI.
+dldh_ecoli,dldh,P00391,I or II,50.6,Dihydrolipoamide dehydrogenase (EC 1.8.1.4)
+ppic_ecoli,ppic,P39159,II,10.1,Peptidyl-prolyl cis-trans isomerase C (EC
+yohl_ecoli,yohl,P76424,II,10.1,Hypothetical protein yohL.
+ydhd_ecoli,ydhd,P37010,II,12.9,Protein ydhD.
+nikr_ecoli,nikr,P28910,II,15.1,Nickel responsive regulator.
+yjbq_ecoli,yjbq,P32698,II,15.7,Hypothetical protein yjbQ.
+uspg_ecoli,uspg,P39177,II,15.9,Universal stress protein G.
+moac_ecoli,moac,P30747,II,17.3,Molybdenum cofactor biosynthesis protein C.
+yfhp_ecoli,yfhp,P77484,II,17.3,Hypothetical protein yfhP.
+grea_ecoli,grea,P21346,II,17.6,Transcription elongation factor greA
+ppib_ecoli,ppib,P23869,II,18.2,Peptidyl-prolyl cis-trans isomerase B (EC
+moab_ecoli,moab,P30746,II,18.5,Molybdenum cofactor biosynthesis protein B.
+dps_ecoli,dps,P27430,II,18.6,DNA protection during starvation protein.
+nuoe_ecoli,nuoe,P33601,II,18.6,NADH-quinone oxidoreductase chain E (EC
+mug_ecoli,mug,P43342,II,18.7,G/U mismatch-specific DNA glycosylase (EC
+luxs_ecoli,luxs,P45578,II,19.3,S-ribosylhomocysteinase (EC 3.13.1.-)
+arok_ecoli,arok,P24167,II,19.4,Shikimate kinase I (EC 2.7.1.71) (SKI).
+yfbu_ecoli,yfbu,P76492,II,19.5,Protein yfbU.
+seqa_ecoli,seqa,P36658,II,20.3,SeqA protein.
+nusg_ecoli,nusg,P16921,II,20.4,Transcription antitermination protein nusG.
+rimm_ecoli,rimm,P21504,II,20.6,16S rRNA processing protein rimM (21K).
+riml_ecoli,riml,P13857,II,20.7,Ribosomal-protein-serine acetyltransferase (EC
+nudh_ecoli,nudh,Q46930,II,20.8,(Di)nucleoside polyphosphate hydrolase (EC
+pth_ecoli,pth,P23932,II,21.1,Peptidyl-tRNA hydrolase (EC 3.1.1.29) (PTH).
+hemg_ecoli,hemg,P27863,II,21.2,Protoporphyrinogen oxidase (EC 1.3.3.4)
+tehb_ecoli,tehb,P25397,II,22.5,Tellurite resistance protein tehB.
+yihx_ecoli,yihx,P32145,II,22.7,Hypothetical protein yihX.
+thie_ecoli,thie,P30137,II,23.0,Thiamine-phosphate pyrophosphorylase (EC
+ycio_ecoli,ycio,P45847,II,23.2,Protein yciO.
+engb_ecoli,engb,P24253,II,23.6,Probable GTP-binding protein engB.
+rcsb_ecoli,rcsb,P14374,II,23.7,Capsular synthesis regulator component B.
+ycbl_ecoli,ycbl,P75849,II,23.8,Hypothetical protein ycbL.
+uvry_ecoli,uvry,P07027,II,23.9,Response regulator uvrY.
+glr2_ecoli,glr2,P39811,II,24.4,Glutaredoxin 2 (Grx2).
+yoda_ecoli,yoda,P76344,II,24.8,Protein yodA.
+yadf_ecoli,yadf,P36857,II,25.1,Protein yadF.
+ygea_ecoli,ygea,P03813,II,25.2,Hypothetical protein ygeA.
+inaa_ecoli,inaa,P27294,II,25.3,Protein inaA.
+trmh_ecoli,trmh,P19396,II,25.3,tRNA (Guanosine-2'-O-)-methyltransferase (EC
+arad_ecoli,arad,P08203,II,25.5,L-ribulose-5-phosphate 4-epimerase (EC
+phop_ecoli,phop,P23836,II,25.5,Transcriptional regulatory protein phoP.
+fabg_ecoli,fabg,P25716,II,25.6,3-oxoacyl-[acyl-carrier protein] reductase (EC
+proq_ecoli,proq,P45577,II,25.9,ProP effector.
+cpxr_ecoli,cpxr,P16244,II,26.3,Transcriptional regulatory protein cpxR.
+pyrf_ecoli,pyrf,P08244,II,26.4,Orotidine 5'-phosphate decarboxylase (EC
+ompr_ecoli,ompr,P03025,II,27.4,Transcriptional regulatory protein ompR.
+lpxa_ecoli,lpxa,P10440,II,28.1,Acyl-[acyl-carrier-protein]--UDP-N-
+ybff_ecoli,ybff,P75736,II,28.4,Putative esterase/lipase ybfF (EC 3.1.-.-).
+pstb_ecoli,pstb,P07655,II,28.9,Phosphate import ATP-binding protein pstB
+yjjv_ecoli,yjjv,P39408,II,28.9,Putative deoxyribonuclease yjjV (EC 3.1.21.-).
+cyse_ecoli,cyse,P05796,II,29.3,Serine acetyltransferase (EC 2.3.1.30) (SAT).
+kdsa_ecoli,kdsa,P17579,II,30.8,2-dehydro-3-deoxyphosphooctonate aldolase
+yffs_ecoli,yffs,P76550,II,31.0,Hypothetical protein yffS.
+ypt2_ecoli,ypt2,Q99390,II,31.7,Hypothetical 31.7 kDa protein in TRAX-FINO
+ybbn_ecoli,ybbn,P77395,II,31.8,Protein ybbN.
+yijo_ecoli,yijo,P32677,II,32.1,Hypothetical transcriptional regulator yijO.
+ynia_ecoli,ynia,P77739,II,32.5,Hypothetical protein yniA.
+hslo_ecoli,hslo,P45803,II,32.5,33 kDa chaperonin (Heat shock protein 33)
+rlub_ecoli,rlub,P37765,II,32.7,Ribosomal large subunit pseudouridine
+rob_ecoli,rob,P27292,II,33.1,Right origin-binding protein.
+ycjz_ecoli,ycjz,P77333,II,33.5,Putative HTH-type transcriptional regulator
+yadb_ecoli,yadb,P27305,II,33.6,Hypothetical protein yadB.
+ydhf_ecoli,ydhf,P76187,II,33.6,Hypothetical oxidoreductase ydhF (EC 1.-.-.-).
+kprs_ecoli,kprs,P08330,II,34.1,Ribose-phosphate pyrophosphokinase (EC
+oxyr_ecoli,oxyr,P11721,II,34.3,Hydrogen peroxide-inducible genes activator
+yeat_ecoli,yeat,P76250,II,34.6,Putative HTH-type transcriptional regulator
+ybib_ecoli,ybib,P30177,II,35.0,Hypothetical protein ybiB.
+acca_ecoli,acca,P30867,II,35.1,Acetyl-coenzyme A carboxylase carboxyl
+cysb_ecoli,cysb,P06613,II,36.2,HTH-type transcriptional regulator cysB (Cys
+dusa_ecoli,dusa,P32695,II,36.8,tRNA-dihydrouridine synthase A (EC 1.-.-.-).
+mreb_ecoli,mreb,P13519,II,37.0,Rod shape-determining protein mreB.
+moaa_ecoli,moaa,P30745,II,37.3,Molybdenum cofactor biosynthesis protein A.
+gatd_ecoli,gatd,P37190,II,37.4,Galactitol-1-phosphate 5-dehydrogenase (EC
+rsmc_ecoli,rsmc,P39406,II,37.5,Ribosomal RNA small subunit
+inh5_ecoli,inh5,P76071,II,37.8,Transposase insH for insertion sequence
+yihe_ecoli,yihe,P32127,II,38.1,Hypothetical protein yihE.
+tas_ecoli,tas,Q46933,II,38.5,Tas protein.
+pyrc_ecoli,pyrc,P05020,II,38.7,Dihydroorotase (EC 3.5.2.3) (DHOase).
+yghz_ecoli,yghz,Q46851,II,38.8,Hypothetical protein yghZ.
+alf_ecoli,alf,P11604,II,39.0,Fructose-bisphosphate aldolase class II (EC
+dcup_ecoli,dcup,P29680,II,39.2,Uroporphyrinogen decarboxylase (EC 4.1.1.37)
+insh_ecoli,insh,P03837,II,39.3,Transposase insH for insertion sequence
+ompf_ecoli,ompf,P02931,II,39.3,Outer membrane protein F precursor (Porin
+serc_ecoli,serc,P23721,II,39.7,Phosphoserine aminotransferase (EC 2.6.1.52)
+ybbb_ecoli,ybbb,P33667,II,41.1,Hypothetical protein ybbB.
+entc_ecoli,entc,P10377,II,42.9,Isochorismate synthase entC (EC 5.4.99.6)
+argm_ecoli,argm,P77581,II,43.7,Succinylornithine transaminase (EC 2.6.1.-)
+odo2_ecoli,odo2,P07016,II,43.9,Dihydrolipoamide succinyltransferase
+iscs_ecoli,iscs,P39171,II,45.1,Cysteine desulfurase (EC 4.4.1.-) (ThiI
+glpb_ecoli,glpb,P13033,II,45.4,Anaerobic glycerol-3-phosphate dehydrogenase
+gsa_ecoli,gsa,P23893,II,45.4,"Glutamate-1-semialdehyde 2,1-aminomutase"
+yade_ecoli,yade,P31666,II,46.3,Hypothetical protein yadE precursor.
+avta_ecoli,avta,P09053,II,46.7,Valine--pyruvate aminotransferase (EC
+rhlb_ecoli,rhlb,P24229,II,47.0,ATP-dependent RNA helicase rhlB (EC 3.6.1.-
+rho_ecoli,rho,P03002,II,47.0,Transcription termination factor rho.
+dhna_ecoli,dhna,P00393,II,47.2,NADH dehydrogenase (EC 1.6.99.3).
+cisy_ecoli,cisy,P00891,II,48.0,Citrate synthase (EC 2.3.3.1).
+ygaf_ecoli,ygaf,P37339,II,48.6,Hypothetical protein ygaF.
+paak_ecoli,paak,P76085,II,49.0,Phenylacetate-coenzyme A ligase (EC 6.2.1.30)
+nuof_ecoli,nuof,P31979,II,49.3,NADH-quinone oxidoreductase chain F (EC
+accc_ecoli,accc,P24182,II,49.3,Biotin carboxylase (EC 6.3.4.14) (A subunit of
+yegd_ecoli,yegd,P36928,II,49.4,Hypothetical chaperone protein yegD.
+ycaj_ecoli,ycaj,P45526,II,49.6,Hypothetical protein ycaJ.
+stha_ecoli,stha,P27306,II,51.4,Soluble pyridine nucleotide transhydrogenase
+dcea_ecoli,dcea,P80063,II,52.7,Glutamate decarboxylase alpha (EC 4.1.1.15)
+tnaa_ecoli,tnaa,P00913,II,52.8,Tryptophanase (EC 4.1.99.1) (L-tryptophan
+ydcr_ecoli,ydcr,P77730,II,52.8,Hypothetical protein ydcR.
+pcnb_ecoli,pcnb,P13685,II,54.7,Poly(A) polymerase (EC 2.7.7.19) (PAP)
+mgla_ecoli,mgla,P23199,II,56.4,Galactoside transport ATP-binding protein
+typa_ecoli,typa,P32132,II,65.4,GTP-binding protein typA/BipA (Tyrosine
+nucd_ecoli,nucd,P33599,II,68.7,NADH-quinone oxidoreductase chain C/D (EC
+dnak_ecoli,dnak,P04475,II,69.0,Chaperone protein dnaK (Heat shock protein
+gida_ecoli,gida,P17112,II,69.5,Glucose inhibited division protein A.
+ydcp_ecoli,ydcp,P76104,II,72.7,Putative protease ydcP precursor (EC 3.4.-.-).
+syt_ecoli,syt,P00955,II,74.0,Threonyl-tRNA synthetase (EC 6.1.1.3)
+spot_ecoli,spot,P17580,II,79.3,"Guanosine-3',5'-bis(Diphosphate) 3'-"
+lon_ecoli,lon,P08177,II,87.4,ATP-dependent protease La (EC 3.4.21.53).
+rnr_ecoli,rnr,P21499,II,92.1,Ribonuclease R (EC 3.1.-.-) (RNase R) (VacB
+adhe_ecoli,adhe,P17547,II,96.0,Aldehyde-alcohol dehydrogenase [Includes:
+gyra_ecoli,gyra,P09097,II,97.0,DNA gyrase subunit A (EC 5.99.1.3).
+if2_ecoli,if2,P02995,II,97.4,Translation initiation factor IF-2.
+glnd_ecoli,glnd,P27249,II,102.4,[Protein-PII] uridylyltransferase (EC 2.7.7.59)
+odo1_ecoli,odo1,P07015,II,105.1,2-oxoglutarate dehydrogenase E1 component
+pur4_ecoli,pur4,P15254,II,141.4,Phosphoribosylformylglycinamidine synthase
+hrpa_ecoli,hrpa,P43329,II,149.0,ATP-dependent helicase hrpA.
+rpob_ecoli,rpob,P00575,II,150.6,DNA-directed RNA polymerase beta chain (EC
+rpoc_ecoli,rpoc,P00577,II,155.2,DNA-directed RNA polymerase beta' chain (EC
+ybak_ecoli,ybak,P37175,III,17.1,Protein ybaK.
+hlpa_ecoli,hlpa,P11457,III,17.7,Histone-like protein HLP-1 precursor (DNA-
+ssrp_ecoli,ssrp,P32052,III,18.1,SsrA-binding protein (Small protein B).
+rsd_ecoli,rsd,P31690,III,18.2,Regulator of sigma D.
+ubic_ecoli,ubic,P26602,III,18.6,Chorismate--pyruvate lyase (EC 4.-.-.-).
+yqab_ecoli,yqab,P77475,III,20.8,Hypothetical protein yqaB.
+ycfp_ecoli,ycfp,P75950,III,21.2,Hypothetical protein ycfP.
+rfbc_ecoli,rfbc,P37745,III,21.3,"dTDP-4-dehydrorhamnose 3,5-epimerase (EC"
+rimj_ecoli,rimj,P09454,III,22.7,Ribosomal-protein-alanine acetyltransferase
+yajb_ecoli,yajb,P21515,III,23.0,Hypothetical protein yajB.
+yqji_ecoli,yqji,Q46872,III,23.4,Hypothetical protein yqjI.
+crp_ecoli,crp,P03020,III,23.6,Catabolite gene activator (cAMP receptor
+ftse_ecoli,ftse,P10115,III,24.4,Cell division ATP-binding protein ftsE.
+gch1_ecoli,gch1,P27511,III,24.7,GTP cyclohydrolase I (EC 3.5.4.16) (GTP-CH-
+trmb_ecoli,trmb,P32049,III,27.3,tRNA (guanine-N(7)-)-methyltransferase (EC
+fucr_ecoli,fucr,P11554,III,27.4,L-fucose operon activator.
+pfla_ecoli,pfla,P09374,III,28.1,Pyruvate formate-lyase 1 activating enzyme
+trmd_ecoli,trmd,P07020,III,28.4,tRNA (Guanine-N(1)-)-methyltransferase (EC
+glcc_ecoli,glcc,P52072,III,28.8,Glc operon transcriptional activator.
+suhb_ecoli,suhb,P22783,III,29.2,Inositol-1-monophosphatase (EC 3.1.3.25)
+ycfh_ecoli,ycfh,P37346,III,29.8,Putative deoxyribonuclease ycfH (EC 3.1.21.-).
+yafd_ecoli,yafd,P30865,III,30.0,Hypothetical protein yafD.
+gaty_ecoli,gaty,P37192,III,30.8,"Tagatose-1,6-bisphosphate aldolase gatY (EC"
+dapa_ecoli,dapa,P05640,III,31.3,Dihydrodipicolinate synthase (EC 4.2.1.52)
+amia_ecoli,amia,P36548,III,31.4,Probable N-acetylmuramoyl-L-alanine amidase
+end4_ecoli,end4,P12638,III,31.5,Endonuclease IV (EC 3.1.21.2)
+ypt1_ecoli,ypt1,P29368,III,31.8,Hypothetical 31.7 kDa protein in TRAX-FINO
+yneb_ecoli,yneb,P76143,III,31.9,Putative aldolase yneB (EC 4.2.1.-).
+nana_ecoli,nana,P06995,III,32.5,N-acetylneuraminate lyase (EC 4.1.3.3) (N-
+yhbj_ecoli,yhbj,P33995,III,32.5,Hypothetical UPF0042 protein yhbJ.
+metf_ecoli,metf,P00394,III,33.1,"5,10-methylenetetrahydrofolate reductase (EC"
+arac_ecoli,arac,P03021,III,33.4,Arabinose operon regulatory protein.
+icia_ecoli,icia,P24194,III,33.5,Chromosome initiation inhibitor (OriC
+dusc_ecoli,dusc,P33371,III,35.2,tRNA-dihydrouridine synthase C (EC 1.-.-.-).
+hem2_ecoli,hem2,P15002,III,35.5,Delta-aminolevulinic acid dehydratase (EC
+dusb_ecoli,dusb,P25717,III,35.9,tRNA-dihydrouridine synthase B (EC 1.-.-.-).
+rluc_ecoli,rluc,P23851,III,36.0,Ribosomal large subunit pseudouridine
+lipa_ecoli,lipa,P25845,III,36.1,Lipoic acid synthetase (Lip-syn) (Lipoate
+add_ecoli,add,P22333,III,36.4,Adenosine deaminase (EC 3.5.4.4) (Adenosine
+yajo_ecoli,yajo,P77735,III,36.4,Hypothetical oxidoreductase yajO (EC 1.-.-.-).
+ltae_ecoli,ltae,P75823,III,36.5,Low-specificity L-threonine aldolase (EC
+nagz_ecoli,nagz,P75949,III,37.6,Beta-hexosaminidase (EC 3.2.1.52) (N-acetyl-
+yfif_ecoli,yfif,P33635,III,37.8,Hypothetical tRNA/rRNA methyltransferase
+alf1_ecoli,alf1,P71295,III,38.0,Fructose-bisphosphate aldolase class I (EC
+ybjs_ecoli,ybjs,P75821,III,38.1,Hypothetical protein ybjS.
+alr2_ecoli,alr2,P29012,III,38.8,"Alanine racemase, catabolic (EC 5.1.1.1)."
+yjju_ecoli,yjju,P39407,III,39.8,Hypothetical protein yjjU.
+dhas_ecoli,dhas,P00353,III,40.0,Aspartate-semialdehyde dehydrogenase (EC
+his7_ecoli,his7,P06987,III,40.3,Histidine biosynthesis bifunctional protein hisB
+phol_ecoli,phol,P77349,III,40.7,PhoH-like protein.
+thik_ecoli,thik,P21151,III,40.9,3-ketoacyl-CoA thiolase (EC 2.3.1.16) (Fatty
+dnaj_ecoli,dnaj,P08622,III,41.0,Chaperone protein dnaJ (Heat shock protein J)
+biof_ecoli,biof,P12998,III,41.6,8-amino-7-oxononanoate synthase (EC
+metk_ecoli,metk,P04384,III,41.8,S-adenosylmethionine synthetase (EC 2.5.1.6)
+trma_ecoli,trma,P23003,III,42.0,tRNA (Uracil-5-)-methyltransferase (EC
+rsmd_ecoli,rsmd,P42596,III,42.3,Putative ribosomal RNA small subunit
+arge_ecoli,arge,P23908,III,42.3,Acetylornithine deacetylase (EC 3.5.1.16)
+lldd_ecoli,lldd,P33232,III,42.7,L-lactate dehydrogenase (Cytochrome) (EC
+fabf_ecoli,fabf,P39435,III,42.9,3-oxoacyl-[acyl-carrier-protein] synthase II (EC
+phea_ecoli,phea,P07022,III,43.1,P-protein [Includes: Chorismate mutase (EC
+thih_ecoli,thih,P30140,III,43.2,Thiazole biosynthesis protein thiH.
+ints_ecoli,ints,P37326,III,44.1,Putative prophage CPS-53 integrase.
+csdb_ecoli,csdb,P77444,III,44.4,Selenocysteine lyase (EC 4.4.1.16)
+yfbq_ecoli,yfbq,P77727,III,45.5,Probable aminotransferase yfbQ (EC 2.6.1.-).
+rspa_ecoli,rspa,P38104,III,46.0,Starvation sensing protein rspA.
+gatz_ecoli,gatz,P37191,III,47.1,Putative tagatose 6-phosphate kinase gatZ (EC
+typh_ecoli,typh,P07650,III,47.2,Thymidine phosphorylase (EC 2.4.2.4)
+dada_ecoli,dada,P29011,III,47.6,D-amino acid dehydrogenase small subunit (EC
+pmba_ecoli,pmba,P24231,III,48.4,PmbA protein (TldE protein).
+eutb_ecoli,eutb,P19635,III,49.4,Ethanolamine ammonia-lyase heavy chain (EC
+xyla_ecoli,xyla,P00944,III,49.7,Xylose isomerase (EC 5.3.1.5) (D-xylulose
+rhle_ecoli,rhle,P25888,III,50.0,Putative ATP-dependent RNA helicase rhlE.
+pepq_ecoli,pepq,P21165,III,50.2,Xaa-Pro dipeptidase (EC 3.4.13.9) (X-Pro
+tldd_ecoli,tldd,P46473,III,51.4,TldD protein.
+uxac_ecoli,uxac,P42607,III,54.0,Uronate isomerase (EC 5.3.1.12) (Glucuronate
+ampa_ecoli,ampa,P11648,III,54.9,Cytosol aminopeptidase (EC 3.4.11.1) (Leucine
+araa_ecoli,araa,P08202,III,56.1,L-arabinose isomerase (EC 5.3.1.4).
+aldb_ecoli,aldb,P37685,III,56.3,Aldehyde dehydrogenase B (EC 1.2.1.22)
+dhsa_ecoli,dhsa,P10444,III,64.4,Succinate dehydrogenase flavoprotein subunit
+frda_ecoli,frda,P00363,III,65.8,Fumarate reductase flavoprotein subunit (EC
+dead_ecoli,dead,P23304,III,70.4,Cold-shock DEAD-box protein A (ATP-
+ycby_ecoli,ycby,P75864,III,78.9,Hypothetical protein ycbY.
+parc_ecoli,parc,P20082,III,83.8,Topoisomerase IV subunit A (EC 5.99.1.-).
+phsm_ecoli,phsm,P00490,III,90.3,Maltodextrin phosphorylase (EC 2.4.1.1).

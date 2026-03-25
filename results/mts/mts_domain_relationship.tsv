@@ -1,0 +1,437 @@
+uniprot_accession	transit_peptide_end	first_domain_start	first_domain_cath_sf	first_domain_name	gap_length	mts_overlaps_domain	mts_is_pre_domain
+A3KMH1	28	89	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	61	False	True
+A6NK58	31	5	3.30.930.10	Bira Bifunctional Protein; Domain 2	-26	True	False
+A8MUP2	28	32	3.40.50.150	Vaccinia Virus protein VP39	4	False	True
+O00142	33	36	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	3	False	True
+O00217	34	84	3.30.70.3270		50	False	True
+O00330	53	55	2.40.50.100	E3-binding domain	2	False	True
+O00411	41	228	1.25.40.10	Tetratricopeptide repeat domain	187	False	True
+O00746	28	36	3.30.70.141	Nucleoside diphosphate kinase-like domain	8	False	True
+O14521	56	46	1.20.1300.10	Fumarate reductase/succinate dehydrogenase, transmembrane subunit	-10	True	False
+O14548	55	57	4.10.91.10	Cytochrome c oxidase, subunit VIIa	2	False	True
+O14561	68	66	1.10.1200.10	ACP-like	-2	True	False
+O14832	30	31	2.60.120.620	q2cbj1_9rhob like domain	1	False	True
+O14874	30	70	1.20.140.20	Alpha-ketoacid/pyruvate dehydrogenase kinase, N-terminal domain	40	False	True
+O15091	45	144	1.25.40.10	Tetratricopeptide repeat domain	99	False	True
+O15235	29	31	2.40.50.140	Nucleic acid-binding proteins	2	False	True
+O15382	27	28	3.30.470.10	D-amino Acid Aminotransferase, subunit A, domain 2	1	False	True
+O43181	42	73	3.30.160.190	atu1810 like domain	31	False	True
+O43464	31	140	2.40.10.120		109	False	True
+O43488	38	37	3.20.20.100	NADP-dependent oxidoreductase domain	-1	True	False
+O43572	28	93	1.10.167.10	Regulator of G-protein Signalling 4, domain 2	65	False	True
+O43766	27	121	3.20.20.70	Aldolase class I	94	False	True
+O43819	41	97	3.40.30.10	Glutaredoxin	56	False	True
+O43837	34	36	3.40.718.10	Isopropylmalate Dehydrogenase	2	False	True
+O60313	87	258	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	171	False	True
+O75027	22	109	1.20.1560.10	ABC transporter type 1, transmembrane domain	87	False	True
+O75208	44	94	1.10.357.10	Tetracycline Repressor, domain 2	50	False	True
+O75251	38	58	3.40.50.12280		20	False	True
+O75306	33	79	1.10.645.10	Cytochrome-c3 Hydrogenase, chain B	46	False	True
+O75323	23	65	3.30.70.100		42	False	True
+O75380	28	71	2.60.260.40	q5lls5 like domains	43	False	True
+O75390	27	37	1.10.580.10	Citrate Synthase, domain 1	10	False	True
+O75394	8	1	2.20.28.120	Ribosomal protein L33	-7	True	False
+O75439	43	39	3.30.830.10	Metalloenzyme, LuxS/M16 peptidase-like	-4	True	False
+O75489	36	36	3.30.460.80	NADH:ubiquinone oxidoreductase, 30kDa subunit	0	False	True
+O75521	38	34	1.20.80.10	2-enoyl-CoA Hydratase; Chain A, domain 1	-4	True	False
+O75570	61	63	6.10.140.1950		2	False	True
+O75600	21	67	3.90.1150.10	Aspartate Aminotransferase, domain 1	46	False	True
+O75616	43	108	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	65	False	True
+O75879	41	495	1.10.10.410		454	False	True
+O75880	67	135	3.40.30.10	Glutaredoxin	68	False	True
+O76031	56	159	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	103	False	True
+O94925	54	136	1.10.238.210	DD-peptidase/beta-lactamase superfamily	82	False	True
+O95202	115	535	1.10.238.10	EF-hand	420	False	True
+O95299	35	57	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	22	False	True
+O95571	7	19	3.60.15.10	Ribonuclease Z/Hydroxyacylglutathione hydrolase-like	12	False	True
+O95822	39	33	1.20.140.90	Malonyl-CoA decarboxylase, oligemerization domain	-6	True	False
+O95831	54	135	3.50.50.60	FAD/NAD(P)-binding domain	81	False	True
+O95900	10	4	3.30.2350.10	Pseudouridine synthase	-6	True	False
+P00367	53	54	1.10.287.140	Leucine Dehydrogenase, chain A, domain 1	1	False	True
+P00390	43	65	3.50.50.60	FAD/NAD(P)-binding domain	22	False	True
+P00480	32	40	3.40.50.1370	Aspartate/ornithine carbamoyltransferase	8	False	True
+P00505	29	42	3.90.1150.10	Aspartate Aminotransferase, domain 1	13	False	True
+P04179	24	43	1.10.287.990	Fe,Mn superoxide dismutase (SOD) domain	19	False	True
+P04181	35	47	3.90.1150.10	Aspartate Aminotransferase, domain 1	12	False	True
+P05091	17	51	3.40.605.10	Aldehyde Dehydrogenase; Chain A, domain 1	34	False	True
+P05108	39	42	1.10.630.10	Cytochrome P450	3	False	True
+P05165	52	60	3.40.50.20	ATP-grasp fold, A domain	8	False	True
+P05166	28	25	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	-3	True	False
+P05496	61	63	1.20.20.10	F1F0 ATP synthase subunit C	2	False	True
+P06576	47	47	2.40.10.170	P-loop containing nucleotide triphosphate hydrolases	0	False	True
+P07919	13	16	1.10.287.20	Ubiquinol-cytochrome C reductase hinge domain	3	False	True
+P07954	44	51	1.10.275.10	Fumarase/aspartase (N-terminal domain)	7	False	True
+P08559	29	20	3.40.50.970		-9	True	False
+P08574	84	85	1.10.760.10	Cytochrome c-like domain	1	False	True
+P09001	40	61	2.40.30.10	Translation factors	21	False	True
+P09110	26	33	3.40.47.10		7	False	True
+P09622	35	43	3.50.50.60	FAD/NAD(P)-binding domain	8	False	True
+P0C7M7	22	44	3.40.50.12780	N-terminal domain of ligase-like	22	False	True
+P0C7P0	14	40	3.40.5.90	CDGSH iron-sulfur domain, mitoNEET-type	26	False	True
+P0DPI2	41	41	3.40.50.880		0	False	True
+P10109	60	60	3.10.20.30		0	False	True
+P10176	25	26	4.10.81.10	Cytochrome c oxidase, subunit 8	1	False	True
+P10515	86	87	2.40.50.100	E3-binding domain	1	False	True
+P10606	31	32	2.60.11.10	Cytochrome c oxidase, subunit Vb	1	False	True
+P10809	26	30	1.10.560.10	GroEL-like equatorial domain	4	False	True
+P11177	30	32	3.40.50.970		2	False	True
+P11182	61	61	2.40.50.100	E3-binding domain	0	False	True
+P11310	25	26	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	1	False	True
+P11498	20	27	3.30.470.20	ATP-grasp fold, B domain	7	False	True
+P12074	24	25	4.10.95.10	Cytochrome c oxidase, subunit VIa	1	False	True
+P12694	45	46	3.40.50.970		1	False	True
+P13073	22	23	1.10.442.10	Cytochrome c oxidase subunit IV	1	False	True
+P13196	56	260	3.40.640.10	Type I PLP-dependent aspartate aminotransferase-like (Major domain)	204	False	True
+P13804	19	19	3.40.50.620	HUPs	0	False	True
+P13995	35	40	3.40.50.720	NAD(P)-binding Rossmann-like Domain	5	False	True
+P14406	23	24	4.10.91.10	Cytochrome c oxidase, subunit VIIa	1	False	True
+P15538	24	26	1.10.630.10	Cytochrome P450	2	False	True
+P15954	16	17	4.10.49.10	Cytochrome c oxidase subunit VIIc	1	False	True
+P16219	24	29	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	5	False	True
+P17540	39	23	1.10.135.10	ATP:guanido phosphotransferase, N-terminal domain	-16	True	False
+P18859	32	39	1.10.246.110	Mitochondrial ATP synthase-coupling factor 6	7	False	True
+P19099	24	29	1.10.630.10	Cytochrome P450	5	False	True
+P19404	32	53	1.10.10.1590	NADH-quinone oxidoreductase subunit E	21	False	True
+P20674	41	42	1.25.40.40	Cytochrome c oxidase, subunit Va/VI	1	False	True
+P21912	28	29	3.10.20.30	Alpha-helical ferredoxin	1	False	True
+P21953	50	67	3.40.50.970		17	False	True
+P22033	32	61	3.20.20.240	Methylmalonyl-CoA mutase	29	False	True
+P22557	49	1	4.10.92.10	Aminolevulinic Acid Synthase 2	-48	True	False
+P22570	32	41	3.40.50.720	NAD(P)-binding Rossmann-like Domain	9	False	True
+P22695	14	15	3.30.830.10	Metalloenzyme, LuxS/M16 peptidase-like	1	False	True
+P22830	54	68	3.40.50.1400		14	False	True
+P23368	18	23	3.40.50.10380	Malic enzyme, N-terminal domain	5	False	True
+P23378	35	133	3.90.1150.10	Aspartate Aminotransferase, domain 1	98	False	True
+P23434	48	31	2.40.50.100		-17	True	False
+P23786	25	33	1.10.275.20	Choline/Carnitine o-acyltransferase	8	False	True
+P24310	21	22	4.10.91.10	Cytochrome c oxidase, subunit VIIa	1	False	True
+P24311	24	25	4.10.51.10	Cytochrome C Oxidase, chain K	1	False	True
+P24539	42	164	1.20.5.2210		122	False	True
+P24752	33	32	3.40.47.10		-1	True	False
+P25705	43	44	2.40.30.20	P-loop containing nucleotide triphosphate hydrolases	1	False	True
+P26440	32	41	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	9	False	True
+P28330	30	32	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	2	False	True
+P28331	23	31	3.10.20.740		8	False	True
+P29803	27	15	3.40.50.970		-12	True	False
+P30038	24	35	3.40.605.10	Aldehyde Dehydrogenase; Chain A, domain 1	11	False	True
+P30044	52	44	3.40.30.10	Glutaredoxin	-8	True	False
+P30048	61	57	3.40.30.10	Glutaredoxin	-4	True	False
+P30049	22	23	2.60.15.10	F0F1 ATP synthase delta/epsilon subunit, N-terminal	1	False	True
+P30084	27	31	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	4	False	True
+P30405	29	36	2.40.100.10	Cyclophilin-like	7	False	True
+P30837	17	51	3.40.605.10	Aldehyde Dehydrogenase; Chain A, domain 1	34	False	True
+P31040	42	63	3.50.50.60	FAD/NAD(P)-binding domain	21	False	True
+P31327	38	43	3.50.30.20	Carbamoyl-phosphate synthase small subunit, N-terminal domain	5	False	True
+P31930	34	28	3.30.830.10	Metalloenzyme, LuxS/M16 peptidase-like	-6	True	False
+P31937	36	35	3.40.50.720	NAD(P)-binding Rossmann-like Domain	-1	True	False
+P33316	69	105	2.70.40.10		36	False	True
+P34897	29	53	3.90.1150.10	Aspartate Aminotransferase, domain 1	24	False	True
+P35218	38	34	3.10.200.10	Alpha carbonic anhydrase	-4	True	False
+P35914	27	26	3.20.20.70	Aldolase class I	-1	True	False
+P36542	25	29	1.10.287.80	ATP synthase, gamma subunit, helix hairpin domain	4	False	True
+P36551	110	110	3.40.1500.10	Coproporphyrinogen III oxidase, aerobic	0	False	True
+P36776	67	119	2.30.130.40	LON domain-like	52	False	True
+P36957	67	67	2.40.50.100	Chloramphenicol acetyltransferase-like domain	0	False	True
+P38646	46	56	3.30.420.40	Actin; Chain A, domain 4	10	False	True
+P40305	33	31	6.10.110.10		-2	True	False
+P40926	24	23	3.40.50.720	NAD(P)-binding Rossmann-like Domain	-1	True	False
+P40939	36	39	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	3	False	True
+P41250	36	66	1.10.287.10	S15/NS1, RNA-binding	30	False	True
+P42126	41	42	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	1	False	True
+P42704	59	136	1.25.40.10	Tetratricopeptide repeat domain	77	False	True
+P42765	16	7	3.40.47.10		-9	True	False
+P43304	42	68	3.50.50.60	FAD/NAD(P)-binding domain	26	False	True
+P43897	45	43	1.10.8.10	DNA helicase RuvA subunit, C-terminal domain	-2	True	False
+P45954	33	51	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	18	False	True
+P46199	29	176	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	147	False	True
+P48047	23	36	1.10.520.20	N-terminal domain of the delta subunit of the F1F0-ATP synthase	13	False	True
+P48201	67	69	1.20.20.10	F1F0 ATP synthase subunit C	2	False	True
+P48728	28	34	3.30.1360.120	Probable tRNA modification gtpase trme; domain 1	6	False	True
+P48735	39	41	3.40.718.10	Isopropylmalate Dehydrogenase	2	False	True
+P49411	46	58	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	12	False	True
+P49419	26	63	3.40.605.10	Aldehyde Dehydrogenase; Chain A, domain 1	37	False	True
+P49448	53	54	1.10.287.140	Leucine Dehydrogenase, chain A, domain 1	1	False	True
+P49590	33	45	3.30.930.10	Bira Bifunctional Protein; Domain 2	12	False	True
+P49675	63	65	3.30.530.20		2	False	True
+P49748	40	91	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	51	False	True
+P49821	20	85	3.40.50.11540	NADH-ubiquinone oxidoreductase 51kDa subunit	65	False	True
+P49916	42	91	3.30.1740.10	Zinc finger, PARP-type	49	False	True
+P50213	27	28	3.40.718.10	Isopropylmalate Dehydrogenase	1	False	True
+P50440	43	64	3.75.10.10	L-arginine/glycine Amidinotransferase; Chain A	21	False	True
+P51553	39	40	3.40.718.10	Isopropylmalate Dehydrogenase	1	False	True
+P51649	47	74	3.40.605.10	Aldehyde Dehydrogenase; Chain A, domain 1	27	False	True
+P51687	79	80	3.10.120.10	Cytochrome b5-like heme/steroid binding domain	1	False	True
+P52815	36	63	1.20.5.710	Single helix bin	27	False	True
+P53597	40	44	3.40.50.720	NAD(P)-binding Rossmann-like Domain	4	False	True
+P54868	37	49	3.40.47.10		12	False	True
+P55084	33	44	3.40.47.10		11	False	True
+P55809	39	40	3.40.1080.10	Glutaconate Coenzyme A-transferase	1	False	True
+P78540	22	21	3.40.800.10	Ureohydrolase domain	-1	True	False
+P78549	22	112	1.10.340.30	Hypothetical protein; domain 2	90	False	True
+P80404	28	48	3.90.1150.10	Aspartate Aminotransferase, domain 1	20	False	True
+P82914	57	98	1.10.287.10	S15/NS1, RNA-binding	41	False	True
+P83111	115	112	3.40.710.10	DD-peptidase/beta-lactamase superfamily	-3	True	False
+Q00059	42	43	1.10.30.10	High mobility group box domain	1	False	True
+Q00325	49	66	1.50.40.10	Mitochondrial carrier domain	17	False	True
+Q02127	10	32	3.20.20.70	Aldolase class I	22	False	True
+Q02218	40	120	1.10.287.1150	TPP helical domain	80	False	True
+Q02221	12	13	4.10.95.10	Cytochrome c oxidase, subunit VIa	1	False	True
+Q02252	33	44	3.40.605.10	Aldehyde Dehydrogenase; Chain A, domain 1	11	False	True
+Q02318	33	50	1.10.630.10	Cytochrome P450	17	False	True
+Q02338	46	55	3.40.50.720	NAD(P)-binding Rossmann-like Domain	9	False	True
+Q04837	16	17	2.40.50.140	Nucleic acid-binding proteins	1	False	True
+Q05932	42	39	3.40.1190.10	Mur-like, catalytic domain	-3	True	False
+Q06055	66	68	1.20.20.10	F1F0 ATP synthase subunit C	2	False	True
+Q07021	73	74	3.10.280.10	Mitochondrial glycoprotein	1	False	True
+Q07973	35	52	1.10.630.10	Cytochrome P450	17	False	True
+Q08AH1	31	39	3.40.50.12780	N-terminal domain of ligase-like	8	False	True
+Q08AH3	46	34	3.40.50.12780	N-terminal domain of ligase-like	-12	True	False
+Q10713	33	57	3.30.830.10	Metalloenzyme, LuxS/M16 peptidase-like	24	False	True
+Q12849	117	139	3.30.70.330		22	False	True
+Q12931	59	82	3.30.565.10	Histidine kinase-like ATPase, C-terminal domain	23	False	True
+Q13011	33	50	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	17	False	True
+Q13084	55	87	2.30.170.40	Ribosomal protein L28/L24	32	False	True
+Q13268	23	24	3.40.50.720	NAD(P)-binding Rossmann-like Domain	1	False	True
+Q13423	43	60	3.40.50.720	NAD(P)-binding Rossmann-like Domain	17	False	True
+Q13825	67	68	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	1	False	True
+Q14154	23	247	1.25.40.10	Tetratricopeptide repeat domain	224	False	True
+Q14197	29	66	3.30.160.20		37	False	True
+Q14249	48	59	3.40.570.10	Extracellular Endonuclease, subunit A	11	False	True
+Q15118	28	30	1.20.140.20	Alpha-ketoacid/pyruvate dehydrogenase kinase, N-terminal domain	2	False	True
+Q16134	33	67	3.50.50.60	FAD/NAD(P)-binding domain	34	False	True
+Q16595	41	82	3.30.920.10	Frataxin/CyaY	41	False	True
+Q16698	34	34	3.40.50.720	NAD(P)-binding Rossmann-like Domain	0	False	True
+Q16740	56	57	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	1	False	True
+Q16775	13	49	3.60.15.10	Ribonuclease Z/Hydroxyacylglutathione hydrolase-like	36	False	True
+Q16795	35	48	3.40.50.720	NAD(P)-binding Rossmann-like Domain	13	False	True
+Q16822	32	47	3.40.449.10	Phosphoenolpyruvate Carboxykinase, domain 1	15	False	True
+Q16836	12	13	3.40.50.720	NAD(P)-binding Rossmann-like Domain	1	False	True
+Q16854	39	37	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	-2	True	False
+Q32NB8	28	94	3.30.870.10	Endonuclease Chain A	66	False	True
+Q330K2	44	57	1.10.600.10	Farnesyl Diphosphate Synthase	13	False	True
+Q3SY69	19	23	3.40.50.170	Formyl transferase, N-terminal domain	4	False	True
+Q3ZCQ8	44	133	3.40.50.1000	HAD superfamily/HAD-like	89	False	True
+Q49AM1	35	140	1.25.70.10	Transcription termination factor 3, mitochondrial	105	False	True
+Q4G0N4	62	68	3.40.50.10330	Probable inorganic polyphosphate/atp-NAD kinase; domain 1	6	False	True
+Q4G176	83	48	3.40.50.12780	N-terminal domain of ligase-like	-35	True	False
+Q53FZ2	27	50	3.40.50.12780	N-terminal domain of ligase-like	23	False	True
+Q5EBM0	98	248	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	150	False	True
+Q5HYK3	42	74	3.40.50.150	Vaccinia Virus protein VP39	32	False	True
+Q5JPH6	41	30	3.40.50.620	HUPs	-11	True	False
+Q5JRX3	28	24	3.30.830.10	Metalloenzyme, LuxS/M16 peptidase-like	-4	True	False
+Q5JTZ9	23	37	3.30.930.10	Bira Bifunctional Protein; Domain 2	14	False	True
+Q5ST30	26	102	3.40.50.620	HUPs	76	False	True
+Q5T160	16	4	3.30.1360.70	Arginyl tRNA synthetase N-terminal domain	-12	True	False
+Q5T1C6	36	31	3.10.129.10	Hotdog Thioesterase	-5	True	False
+Q5T440	39	43	3.30.1360.120	Probable tRNA modification gtpase trme; domain 1	4	False	True
+Q5T653	60	61	2.40.50.140	Nucleic acid-binding proteins	1	False	True
+Q5TEU4	36	50	3.40.50.150	Vaccinia Virus protein VP39	14	False	True
+Q68CK6	46	34	3.40.50.12780	N-terminal domain of ligase-like	-12	True	False
+Q6DKK2	70	163	1.25.40.10	Tetratricopeptide repeat domain	93	False	True
+Q6IN84	20	44	3.30.1330.30		24	False	True
+Q6L8Q7	42	279	3.60.10.10	Endonuclease/exonuclease/phosphatase	237	False	True
+Q6NUN0	26	44	3.40.50.12780	N-terminal domain of ligase-like	18	False	True
+Q6NVY1	32	31	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	-1	True	False
+Q6P087	25	77	3.30.2350.10	Pseudouridine synthase	52	False	True
+Q6P1L8	30	31	2.40.150.20	Ribosomal protein L14	1	False	True
+Q6P4F2	52	64	3.10.20.30		12	False	True
+Q6P587	24	1	3.90.850.10	Fumarylacetoacetase-like, C-terminal domain	-23	True	False
+Q6PI48	47	40	2.40.50.140	Nucleic acid-binding proteins	-7	True	False
+Q6PML9	67	105	3.90.530.10	XPA C-terminal domain	38	False	True
+Q6UB28	19	52	3.90.230.10	Creatinase/methionine aminopeptidase superfamily	33	False	True
+Q6UB35	31	77	3.40.50.10860	Leucine Dehydrogenase, chain A, domain 1	46	False	True
+Q7L0Y3	39	191	3.40.1280.30		152	False	True
+Q7L3T8	29	59	3.30.930.10	Bira Bifunctional Protein; Domain 2	30	False	True
+Q7L592	46	31	3.40.50.12710		-15	True	False
+Q7Z3D6	28	26	3.40.1640.10	PSTPO5379-like	-2	True	False
+Q7Z4L0	29	29	4.10.81.10	Cytochrome c oxidase, subunit 8	0	False	True
+Q7Z6M4	42	75	1.25.70.10	Transcription termination factor 3, mitochondrial	33	False	True
+Q7Z7F7	33	34	6.20.130.20	Mitochondrial ribosomal protein L55	1	False	True
+Q7Z7H8	28	30	3.30.70.1730		2	False	True
+Q86SX6	31	44	3.40.30.10	Glutaredoxin	13	False	True
+Q86U28	8	49	2.60.300.12	HesB-like domain	41	False	True
+Q86U90	55	58	3.90.870.10	DHBP synthase	3	False	True
+Q86UT6	86	76	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	-10	True	False
+Q86WU2	52	7	3.30.43.10	Uridine Diphospho-n-acetylenolpyruvylglucosamine Reductase, domain 2	-45	True	False
+Q86X67	20	28	3.90.79.20	Nucleoside Triphosphate Pyrophosphohydrolase	8	False	True
+Q86X76	13	49	3.60.110.10	Carbon-nitrogen hydrolase	36	False	True
+Q86XE3	43	131	1.10.238.10	EF-hand	88	False	True
+Q86XE5	25	24	3.20.20.70	Aldolase class I	-1	True	False
+Q86YB7	35	24	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	-11	True	False
+Q8IVH4	65	70	1.20.5.170	P-loop containing nucleotide triphosphate hydrolases	5	False	True
+Q8IVS2	21	65	3.40.366.10	Malonyl-Coenzyme A Acyl Carrier Protein, domain 2	44	False	True
+Q8IXQ9	38	82	3.40.50.150	Vaccinia Virus protein VP39	44	False	True
+Q8IYB8	22	46	1.10.1740.140	P-loop containing nucleotide triphosphate hydrolases	24	False	True
+Q8IYU8	22	85	1.10.238.10	EF-hand	63	False	True
+Q8N0V3	41	79	3.30.300.20		38	False	True
+Q8N0X4	22	33	3.20.20.60	Phosphoenolpyruvate-binding domains	11	False	True
+Q8N159	18	96	3.40.1160.10	Acetylglutamate kinase-like	78	False	True
+Q8N3J5	29	88	3.60.40.10	PPM-type phosphatase domain	59	False	True
+Q8N442	49	65	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	16	False	True
+Q8N465	13	54	3.30.43.10	Uridine Diphospho-n-acetylenolpyruvylglucosamine Reductase, domain 2	41	False	True
+Q8N4E7	49	61	1.20.1260.10		12	False	True
+Q8N5M1	40	42	3.30.2180.10	ATP12-like	2	False	True
+Q8N5Z0	29	1	3.40.640.10	Type I PLP-dependent aspartate aminotransferase-like (Major domain)	-28	True	False
+Q8NCN5	27	45	3.50.50.60	FAD/NAD(P)-binding domain	18	False	True
+Q8NCW5	47	56	3.40.50.10260	YjeF N-terminal domain	9	False	True
+Q8NE62	29	43	3.50.50.60	FAD/NAD(P)-binding domain	14	False	True
+Q8NFF5	17	109	3.40.980.10	MoaB/Mog-like domain	92	False	True
+Q8NI37	68	55	3.60.40.10	PPM-type phosphatase domain	-13	True	False
+Q8TAA5	32	45	3.90.20.20	Head domain of nucleotide exchange factor GrpE	13	False	True
+Q8TB37	38	62	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	24	False	True
+Q8TCC3	34	68	3.30.1390.20	Ribosomal protein L30, ferredoxin-like fold domain	34	False	True
+Q8TCS8	45	41	3.30.230.70	GHMP Kinase, N-terminal domain	-4	True	False
+Q8TF08	25	26	4.10.51.10	Cytochrome C Oxidase, chain K	1	False	True
+Q8WUK0	27	37	3.90.190.10	Protein tyrosine phosphatase superfamily	10	False	True
+Q8WVM0	27	2	3.40.50.150	Vaccinia Virus protein VP39	-25	True	False
+Q8WWV3	40	50	3.90.180.10	Medium-chain alcohol dehydrogenases, catalytic domain	10	False	True
+Q8WXI4	13	39	3.10.129.10	Hotdog Thioesterase	26	False	True
+Q92552	36	36	1.25.40.10	Tetratricopeptide repeat domain	0	False	True
+Q92667	29	608	3.30.1370.10	K Homology domain, type 1	579	False	True
+Q92947	44	37	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	-7	True	False
+Q969P6	50	42	2.170.11.10	DNA Topoisomerase I, domain 2	-8	True	False
+Q969Y2	20	31	3.30.1360.120	Probable tRNA modification gtpase trme; domain 1	11	False	True
+Q96A35	9	47	2.30.30.30		38	False	True
+Q96CB9	25	26	6.20.240.40	Vaccinia Virus protein VP39	1	False	True
+Q96CM3	15	92	3.30.2350.10	Pseudouridine synthase	77	False	True
+Q96CM8	41	98	3.40.50.980	Luciferase; Domain 3	57	False	True
+Q96DC8	17	45	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	28	False	True
+Q96DV4	26	149	3.90.280.10	PEBP-like	123	False	True
+Q96E11	55	90	1.10.132.20	Ribosome-recycling factor	35	False	True
+Q96E29	68	148	1.25.70.10	Transcription termination factor 3, mitochondrial	80	False	True
+Q96E52	13	254	3.30.2010.10	"Metalloproteases (""zincins""), catalytic domain"	241	False	True
+Q96EY7	37	154	1.25.40.10	Tetratricopeptide repeat domain	117	False	True
+Q96EY8	32	79	1.20.1200.10	Cobalamin adenosyltransferase-like	47	False	True
+Q96GC5	28	90	3.30.70.600	Ribosomal protein S10 domain	62	False	True
+Q96GJ1	16	93	3.40.50.150	Vaccinia Virus protein VP39	77	False	True
+Q96GK7	84	51	3.90.850.10	Fumarylacetoacetase-like, C-terminal domain	-33	True	False
+Q96GW9	29	46	3.40.50.620	HUPs	17	False	True
+Q96H96	34	84	1.10.357.140	UbiA prenyltransferase	50	False	True
+Q96I23	35	57	2.20.25.10		22	False	True
+Q96I51	37	55	2.130.10.30	Regulator of chromosome condensation 1/beta-lactamase-inhibitor protein II	18	False	True
+Q96I59	14	18	2.40.50.140	Nucleic acid-binding proteins	4	False	True
+Q96I99	37	38	3.30.470.20	ATP-grasp fold, B domain	1	False	True
+Q96KJ9	28	32	1.10.442.10	Cytochrome c oxidase subunit IV	4	False	True
+Q96LL9	38	48	1.10.287.110	DnaJ domain	10	False	True
+Q96MF6	15	84	3.30.530.20		69	False	True
+Q96PE7	36	45	3.10.180.10	2,3-Dihydroxybiphenyl 1,2-Dioxygenase, domain 1	9	False	True
+Q96Q11	41	28	3.30.460.10	Beta Polymerase, domain 2	-13	True	False
+Q96QE5	35	124	3.30.420.10	Ribonuclease H-like superfamily/Ribonuclease H	89	False	True
+Q96RP9	36	40	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	4	False	True
+Q96RQ3	41	37	3.30.470.20	ATP-grasp fold, B domain	-4	True	False
+Q96RR1	31	244	3.40.1360.10	P-loop containing nucleotide triphosphate hydrolases	213	False	True
+Q96SZ6	33	100	3.40.50.12160	Methylthiotransferase, N-terminal domain	67	False	True
+Q99551	57	70	1.25.70.10	Transcription termination factor 3, mitochondrial	13	False	True
+Q99643	29	30	1.20.5.540	Single helix bin	1	False	True
+Q99757	59	53	3.40.30.10	Glutaredoxin	-6	True	False
+Q99766	25	25	3.80.10.10	Ribonuclease Inhibitor	0	False	True
+Q99797	35	73	1.10.1370.40	Neurolysin, domain 3	38	False	True
+Q99798	27	29	3.30.499.10	Aconitase, domain 3	2	False	True
+Q9BPW8	35	63	3.30.70.100		28	False	True
+Q9BPX6	33	119	1.10.238.10	EF-hand	86	False	True
+Q9BQ48	46	47	1.10.287.3980		1	False	True
+Q9BQ52	16	60	3.60.15.10	Ribonuclease Z/Hydroxyacylglutathione hydrolase-like	44	False	True
+Q9BSE5	35	41	3.40.800.10	Ureohydrolase domain	6	False	True
+Q9BT30	20	16	2.60.120.590	Alpha-ketoglutarate-dependent dioxygenase AlkB-like	-4	True	False
+Q9BUE6	12	24	2.60.300.12	HesB-like domain	12	False	True
+Q9BV79	53	45	3.90.180.10	Medium-chain alcohol dehydrogenases, catalytic domain	-8	True	False
+Q9BVV7	18	134	3.10.450.320	Mitochondrial import inner membrane translocase subunit Tim21	116	False	True
+Q9BW91	46	169	3.90.79.10	Nucleoside Triphosphate Pyrophosphohydrolase	123	False	True
+Q9BX68	17	35	3.30.428.10	HIT-like	18	False	True
+Q9BXM7	77	265	1.10.510.10	Transferase(Phosphotransferase) domain 1	188	False	True
+Q9BYC2	39	37	3.40.1080.10	Glutaconate Coenzyme A-transferase	-2	True	False
+Q9BYC9	9	62	1.10.1900.20	Ribosomal protein L20	53	False	True
+Q9BYD2	52	94	3.40.5.10	Ribosomal protein L9, N-terminal domain	42	False	True
+Q9BYD6	50	97	3.30.190.20		47	False	True
+Q9BYT8	37	24	1.20.1050.40	Endopeptidase. Chain P; domain 1	-13	True	False
+Q9BYV1	41	85	3.90.1150.10	Aspartate Aminotransferase, domain 1	44	False	True
+Q9BZ23	31	204	3.30.420.510		173	False	True
+Q9GZT6	42	62	1.20.5.340		20	False	True
+Q9H078	36	120	1.25.40.20	Ankyrin repeat-containing domain	84	False	True
+Q9H1K1	34	34	3.90.1010.10		0	False	True
+Q9H2K0	31	76	3.10.20.80	Translation initiation factor 3 (IF-3), N-terminal domain	45	False	True
+Q9H2U2	32	36	3.90.80.10	Inorganic pyrophosphatase	4	False	True
+Q9H300	52	161	1.20.1540.10	Rhomboid-like	109	False	True
+Q9H3H1	47	25	3.40.50.300	P-loop containing nucleotide triphosphate hydrolases	-22	True	False
+Q9H3J6	35	14	3.30.160.20		-21	True	False
+Q9H4B0	29	39	3.30.420.40		10	False	True
+Q9H5Q4	19	61	3.40.50.150	Vaccinia Virus protein VP39	42	False	True
+Q9H6R3	29	60	3.40.50.12780	N-terminal domain of ligase-like	31	False	True
+Q9H7H0	27	160	3.40.50.150	Vaccinia Virus protein VP39	133	False	True
+Q9H825	21	176	3.40.50.150	Vaccinia Virus protein VP39	155	False	True
+Q9H845	37	61	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	24	False	True
+Q9H8M1	37	75	3.30.530.20		38	False	True
+Q9H9J2	30	55	1.10.1520.10	Ribonuclease III domain	25	False	True
+Q9H9P8	51	50	3.50.50.60	FAD/NAD(P)-binding domain	-1	True	False
+Q9HA92	17	13	3.20.20.70	Aldolase class I	-4	True	False
+Q9HAC7	31	37	3.40.50.10540	Crotonobetainyl-coa:carnitine coa-transferase; domain 1	6	False	True
+Q9HAV7	27	48	3.90.20.20	Head domain of nucleotide exchange factor GrpE	21	False	True
+Q9HBH1	39	64	3.90.45.10	Peptide deformylase	25	False	True
+Q9HC36	40	101	3.30.1330.30		61	False	True
+Q9HCC0	22	29	3.90.226.10	2-enoyl-CoA Hydratase; Chain A, domain 1	7	False	True
+Q9HD23	49	75	2.40.128.330	Magnesium transport protein CorA, transmembrane region	26	False	True
+Q9NNW7	36	40	3.50.50.60	FAD/NAD(P)-binding domain	4	False	True
+Q9NP81	34	58	1.10.287.40	Serine-tRNA synthetase, tRNA binding domain	24	False	True
+Q9NPB1	31	39	3.40.50.1000	HAD superfamily/HAD-like	8	False	True
+Q9NPH0	32	33	3.40.50.1240	Phosphoglycerate mutase-like	1	False	True
+Q9NQ50	46	83	6.10.250.3440		37	False	True
+Q9NQH7	31	67	3.40.350.10	Creatinase/prolidase N-terminal domain	36	False	True
+Q9NQZ5	58	124	3.30.530.20		66	False	True
+Q9NR28	21	56	1.20.58.70		35	False	True
+Q9NRK6	105	151	1.20.1560.10	ABC transporter type 1, transmembrane domain	46	False	True
+Q9NRX2	8	3	3.90.1030.10	Ribosomal protein L17	-5	True	False
+Q9NS18	19	54	3.40.30.10	Glutaredoxin	35	False	True
+Q9NSE4	48	98	3.40.50.620	HUPs	50	False	True
+Q9NUB1	37	56	3.40.50.12780	N-terminal domain of ligase-like	19	False	True
+Q9NUJ1	52	62	3.40.50.1820	alpha/beta hydrolase	10	False	True
+Q9NUT2	25	203	1.20.1560.10	ABC transporter type 1, transmembrane domain	178	False	True
+Q9NVH6	15	37	3.30.2020.30	Clavaminate synthase-like	22	False	True
+Q9NVS2	34	68	4.10.640.10	Ribosomal protein S18	34	False	True
+Q9NVV4	37	200	3.30.460.10	Beta Polymerase, domain 2	163	False	True
+Q9NWU1	27	35	3.40.47.10		8	False	True
+Q9NWU5	40	41	3.90.470.10	Ribosomal protein L22/L17	1	False	True
+Q9NX18	29	62	1.10.150.250	Flavinator of succinate dehydrogenase	33	False	True
+Q9NX20	29	55	3.90.1170.10	Ribosomal protein L10e/L16	26	False	True
+Q9NXA8	36	49	3.40.50.1220	TPP-binding domain	13	False	True
+Q9NXH9	23	54	3.40.50.150	Vaccinia Virus protein VP39	31	False	True
+Q9NZB8	21	58	3.20.20.70	Aldolase class I	37	False	True
+Q9NZJ6	85	96	3.40.50.150	Vaccinia Virus protein VP39	11	False	True
+Q9P015	21	86	3.100.10.10		65	False	True
+Q9P0J1	71	72	3.60.40.10	PPM-type phosphatase domain	1	False	True
+Q9P0M9	30	35	2.40.50.100		5	False	True
+Q9P2J9	66	71	3.60.40.10	PPM-type phosphatase domain	5	False	True
+Q9P2R7	52	54	3.30.470.20	ATP-grasp fold, B domain	2	False	True
+Q9UDR5	27	25	3.40.50.720	NAD(P)-binding Rossmann-like Domain	-2	True	False
+Q9UGC7	26	61	6.10.140.1950		35	False	True
+Q9UGM6	18	36	3.40.50.620	HUPs	18	False	True
+Q9UI17	50	52	3.50.50.60	FAD/NAD(P)-binding domain	2	False	True
+Q9UI32	14	69	1.10.238.210	DD-peptidase/beta-lactamase superfamily	55	False	True
+Q9UI43	18	51	3.40.50.150	Vaccinia Virus protein VP39	33	False	True
+Q9UII2	25	26	1.20.5.500	Single helix bin	1	False	True
+Q9UJ68	23	24	3.30.1060.10	Peptide methionine sulphoxide reductase MsrA	1	False	True
+Q9UJZ1	28	64	3.30.479.30	Band 7 domain	36	False	True
+Q9UK39	75	116	3.60.10.10	Endonuclease/exonuclease/phosphatase	41	False	True
+Q9UKU7	22	23	1.10.540.10	Acyl-CoA dehydrogenase/oxidase, N-terminal domain	1	False	True
+Q9UL12	22	69	3.50.50.60	FAD/NAD(P)-binding domain	47	False	True
+Q9ULD0	73	108	1.10.287.1150	TPP helical domain	35	False	True
+Q9UMS0	9	51	3.30.1370.70	Scaffold protein Nfu/NifU, N-terminal domain	42	False	True
+Q9UQ90	43	153	3.40.1690.20	P-loop containing nucleotide triphosphate hydrolases	110	False	True
+Q9Y234	25	27	3.30.930.10	Bira Bifunctional Protein; Domain 2	2	False	True
+Q9Y2C4	41	59	3.40.570.10	Extracellular Endonuclease, subunit A	18	False	True
+Q9Y2D0	33	39	3.10.200.10	Alpha carbonic anhydrase	6	False	True
+Q9Y2R5	20	1	2.40.50.140	Nucleic acid-binding proteins	-19	True	False
+Q9Y2R9	37	72	1.10.455.10	Ribosomal protein S7 domain	35	False	True
+Q9Y2S7	51	235	2.60.40.1470	ApaG domain	184	False	True
+Q9Y2Z2	25	30	3.50.50.60	FAD/NAD(P)-binding domain	5	False	True
+Q9Y2Z4	16	28	3.40.50.620	HUPs	12	False	True
+Q9Y2Z9	28	35	3.50.50.60	FAD/NAD(P)-binding domain	7	False	True
+Q9Y305	21	97	3.10.129.10	Hotdog Thioesterase	76	False	True
+Q9Y375	24	132	2.60.120.430	Galactose-binding lectin	108	False	True
+Q9Y3B8	25	32	3.30.420.10	Ribonuclease H-like superfamily/Ribonuclease H	7	False	True
+Q9Y3D2	20	46	2.170.150.20	Peptide methionine sulfoxide reductase.	26	False	True
+Q9Y3D3	34	1	3.30.1320.10		-33	True	False
+Q9Y3D5	40	66	4.10.640.10	Ribosomal protein S18	26	False	True
+Q9Y4W6	38	156	3.40.1690.20	P-loop containing nucleotide triphosphate hydrolases	118	False	True
+Q9Y676	35	103	4.10.640.10	Ribosomal protein S18	68	False	True
+Q9Y6E7	28	54	3.40.50.1220	TPP-binding domain	26	False	True
+Q9Y6N1	75	140	2.60.370.10	Ctag/Cox11	65	False	True

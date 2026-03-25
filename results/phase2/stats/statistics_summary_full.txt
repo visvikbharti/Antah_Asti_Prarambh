@@ -1,0 +1,534 @@
+======================================================================
+ANTAH ASTI PRARAMBH — PHASE 2 FULL-SCALE STATISTICS
+Generated: 2026-03-19 14:38:24.677624
+======================================================================
+
+Total tests: 56
+Significant within family: 25
+Significant overall: 25
+
+
+==================================================
+DOMAIN_ARCHITECTURE
+==================================================
+
+H1.1_GroEL_multi_domain:
+  Test: Fisher exact
+  Statistic: 1.1287
+  p-value: 3.46e-01
+  p-BH (within family): 4.60e-01
+  Effect size: 1.1287
+  Direction: enriched
+  n1=257, n2=25001
+
+H1.1_HSP60_multi_domain:
+  Test: Fisher exact
+  Statistic: 0.8459
+  p-value: 1.56e-01
+  p-BH (within family): 2.20e-01
+  Effect size: 0.8459
+  Direction: depleted
+  n1=291, n2=24967
+
+H1.2_GroEL_SF_3.20.20.70:
+  Test: Fisher exact
+  Statistic: 8.3685
+  p-value: 1.93e-08
+  p-BH (within family): 2.31e-07
+  Effect size: 8.3685
+  Direction: enriched
+  n1=499, n2=1642 ***
+
+H1.2_GroEL_SF_3.40.50.300:
+  Test: Fisher exact
+  Statistic: 0.8663
+  p-value: 6.36e-01
+  p-BH (within family): 6.64e-01
+  Effect size: 0.8663
+  Direction: depleted
+  n1=499, n2=1642
+
+H1.2_GroEL_SF_1.10.10.10:
+  Test: Fisher exact
+  Statistic: 50.8574
+  p-value: 3.48e-09
+  p-BH (within family): 8.34e-08
+  Effect size: 50.8574
+  Direction: enriched
+  n1=499, n2=1642 ***
+
+H1.2_GroEL_SF_3.40.640.10:
+  Test: Fisher exact
+  Statistic: 2.5569
+  p-value: 1.49e-02
+  p-BH (within family): 3.98e-02
+  Effect size: 2.5569
+  Direction: enriched
+  n1=499, n2=1642 ***
+
+H1.2_GroEL_SF_3.50.50.60:
+  Test: Fisher exact
+  Statistic: 1.2397
+  p-value: 5.88e-01
+  p-BH (within family): 6.42e-01
+  Effect size: 1.2397
+  Direction: enriched
+  n1=499, n2=1642
+
+H1.2_GroEL_SF_3.90.1150.10:
+  Test: Fisher exact
+  Statistic: 2.2907
+  p-value: 3.90e-02
+  p-BH (within family): 9.36e-02
+  Effect size: 2.2907
+  Direction: enriched
+  n1=499, n2=1642
+
+H1.2_GroEL_SF_3.30.420.40:
+  Test: Fisher exact
+  Statistic: 6.0135
+  p-value: 1.21e-03
+  p-BH (within family): 5.82e-03
+  Effect size: 6.0135
+  Direction: enriched
+  n1=499, n2=1642 ***
+
+H1.2_GroEL_SF_3.40.50.150:
+  Test: Fisher exact
+  Statistic: 1.1880
+  p-value: 6.83e-01
+  p-BH (within family): 6.83e-01
+  Effect size: 1.1880
+  Direction: enriched
+  n1=499, n2=1642
+
+H1.2_GroEL_SF_3.40.50.720:
+  Test: Fisher exact
+  Statistic: 0.4885
+  p-value: 6.43e-02
+  p-BH (within family): 1.19e-01
+  Effect size: 0.4885
+  Direction: depleted
+  n1=499, n2=1642
+
+H1.2_GroEL_SF_2.40.50.100:
+  Test: Fisher exact
+  Statistic: 2.2132
+  p-value: 1.06e-01
+  p-BH (within family): 1.69e-01
+  Effect size: 2.2132
+  Direction: enriched
+  n1=499, n2=1642
+
+H1.2_HSP60_SF_3.40.50.300:
+  Test: Fisher exact
+  Statistic: 1.1767
+  p-value: 4.70e-01
+  p-BH (within family): 5.37e-01
+  Effect size: 1.1767
+  Direction: enriched
+  n1=471, n2=1670
+
+H1.2_HSP60_SF_3.40.50.720:
+  Test: Fisher exact
+  Statistic: 1.2698
+  p-value: 4.33e-01
+  p-BH (within family): 5.20e-01
+  Effect size: 1.2698
+  Direction: enriched
+  n1=471, n2=1670
+
+H1.2_HSP60_SF_1.25.40.10:
+  Test: Fisher exact
+  Statistic: 2.1569
+  p-value: 4.96e-02
+  p-BH (within family): 1.08e-01
+  Effect size: 2.1569
+  Direction: enriched
+  n1=471, n2=1670
+
+H1.2_HSP60_SF_3.40.30.10:
+  Test: Fisher exact
+  Statistic: 1.8721
+  p-value: 9.71e-02
+  p-BH (within family): 1.67e-01
+  Effect size: 1.8721
+  Direction: enriched
+  n1=471, n2=1670
+
+H1.2_HSP60_SF_3.30.830.10:
+  Test: Fisher exact
+  Statistic: 5.4314
+  p-value: 2.48e-04
+  p-BH (within family): 1.98e-03
+  Effect size: 5.4314
+  Direction: enriched
+  n1=471, n2=1670 ***
+
+H1.2_HSP60_SF_3.90.226.10:
+  Test: Fisher exact
+  Statistic: 4.8250
+  p-value: 4.64e-04
+  p-BH (within family): 2.78e-03
+  Effect size: 4.8250
+  Direction: enriched
+  n1=471, n2=1670 ***
+
+H1.2_HSP60_SF_3.50.50.60:
+  Test: Fisher exact
+  Statistic: 1.3382
+  p-value: 3.64e-01
+  p-BH (within family): 4.60e-01
+  Effect size: 1.3382
+  Direction: enriched
+  n1=471, n2=1670
+
+H1.2_HSP60_SF_3.40.50.620:
+  Test: Fisher exact
+  Statistic: 3.2715
+  p-value: 1.33e-02
+  p-BH (within family): 3.98e-02
+  Effect size: 3.2715
+  Direction: enriched
+  n1=471, n2=1670 ***
+
+H1.2_HSP60_SF_2.40.30.10:
+  Test: Fisher exact
+  Statistic: 3.5896
+  p-value: 1.24e-02
+  p-BH (within family): 3.98e-02
+  Effect size: 3.5896
+  Direction: enriched
+  n1=471, n2=1670 ***
+
+H1.2_HSP60_SF_2.40.50.140:
+  Test: Fisher exact
+  Statistic: 2.3814
+  p-value: 1.13e-01
+  p-BH (within family): 1.70e-01
+  Effect size: 2.3814
+  Direction: enriched
+  n1=471, n2=1670
+
+H1.3_GroEL_CATH_class:
+  Test: Chi-squared
+  Statistic: 16.7852
+  p-value: 2.13e-03
+  p-BH (within family): 8.51e-03
+  Effect size: 0.0885
+  Direction: different
+  n1=499, n2=1642 ***
+
+H1.3_HSP60_CATH_class:
+  Test: Chi-squared
+  Statistic: 9.2334
+  p-value: 5.55e-02
+  p-BH (within family): 1.11e-01
+  Effect size: 0.0657
+  Direction: different
+  n1=471, n2=1670
+
+==================================================
+STABILITY_ASYMMETRY
+==================================================
+
+H2.1_groel_relative_contact_order:
+  Test: Wilcoxon signed-rank
+  Statistic: 2304.0000
+  p-value: 8.94e-05
+  p-BH (within family): 3.83e-04
+  Effect size: 0.4054
+  Direction: N>C
+  n1=124, n2=124 ***
+
+H2.1_groel_mean_plddt:
+  Test: Wilcoxon signed-rank
+  Statistic: 3539.0000
+  p-value: 5.31e-03
+  p-BH (within family): 1.33e-02
+  Effect size: 0.2726
+  Direction: N>C
+  n1=139, n2=139 ***
+
+H2.1_groel_frac_helix:
+  Test: Wilcoxon signed-rank
+  Statistic: 4476.0000
+  p-value: 4.13e-01
+  p-BH (within family): 4.96e-01
+  Effect size: -0.0800
+  Direction: C>N
+  n1=139, n2=139
+
+H2.1_groel_frac_strand:
+  Test: Wilcoxon signed-rank
+  Statistic: 4253.0000
+  p-value: 2.49e-01
+  p-BH (within family): 3.56e-01
+  Effect size: 0.1131
+  Direction: N>C
+  n1=139, n2=139
+
+H2.1_groel_frac_plddt_gt70:
+  Test: Wilcoxon signed-rank
+  Statistic: 1670.0000
+  p-value: 1.51e-04
+  p-BH (within family): 5.05e-04
+  Effect size: 0.4219
+  Direction: N>C
+  n1=139, n2=139 ***
+
+H2.1_groel_frac_hydrophobic:
+  Test: Wilcoxon signed-rank
+  Statistic: 3827.0000
+  p-value: 2.91e-02
+  p-BH (within family): 5.82e-02
+  Effect size: 0.2134
+  Direction: N>C
+  n1=139, n2=139
+
+H2.1_hsp60_relative_contact_order:
+  Test: Wilcoxon signed-rank
+  Statistic: 2341.0000
+  p-value: 5.29e-06
+  p-BH (within family): 3.17e-05
+  Effect size: 0.4585
+  Direction: N>C
+  n1=131, n2=131 ***
+
+H2.1_hsp60_mean_plddt:
+  Test: Wilcoxon signed-rank
+  Statistic: 4310.0000
+  p-value: 1.19e-01
+  p-BH (within family): 1.87e-01
+  Effect size: 0.1510
+  Direction: N>C
+  n1=142, n2=142
+
+H2.1_hsp60_frac_helix:
+  Test: Wilcoxon signed-rank
+  Statistic: 4817.0000
+  p-value: 5.97e-01
+  p-BH (within family): 6.40e-01
+  Effect size: 0.0511
+  Direction: N>C
+  n1=142, n2=142
+
+H2.1_hsp60_frac_strand:
+  Test: Wilcoxon signed-rank
+  Statistic: 4333.5000
+  p-value: 3.26e-01
+  p-BH (within family): 4.08e-01
+  Effect size: 0.0963
+  Direction: N>C
+  n1=142, n2=142
+
+H2.1_hsp60_frac_plddt_gt70:
+  Test: Wilcoxon signed-rank
+  Statistic: 2519.5000
+  p-value: 6.13e-02
+  p-BH (within family): 1.08e-01
+  Effect size: 0.2037
+  Direction: C>N
+  n1=142, n2=142
+
+H2.1_hsp60_frac_hydrophobic:
+  Test: Wilcoxon signed-rank
+  Statistic: 3543.0000
+  p-value: 1.79e-03
+  p-BH (within family): 4.88e-03
+  Effect size: 0.3021
+  Direction: N>C
+  n1=142, n2=142 ***
+
+H2.1_matrix_bg_relative_contact_order:
+  Test: Wilcoxon signed-rank
+  Statistic: 8944.0000
+  p-value: 2.43e-09
+  p-BH (within family): 3.65e-08
+  Effect size: 0.4344
+  Direction: N>C
+  n1=251, n2=251 ***
+
+H2.1_matrix_bg_mean_plddt:
+  Test: Wilcoxon signed-rank
+  Statistic: 14732.0000
+  p-value: 1.40e-04
+  p-BH (within family): 5.05e-04
+  Effect size: 0.2616
+  Direction: N>C
+  n1=282, n2=282 ***
+
+H2.1_matrix_bg_frac_helix:
+  Test: Wilcoxon signed-rank
+  Statistic: 18603.0000
+  p-value: 3.25e-01
+  p-BH (within family): 4.08e-01
+  Effect size: 0.0676
+  Direction: N>C
+  n1=282, n2=282
+
+H2.1_matrix_bg_frac_strand:
+  Test: Wilcoxon signed-rank
+  Statistic: 17524.0000
+  p-value: 3.17e-01
+  p-BH (within family): 4.08e-01
+  Effect size: 0.0697
+  Direction: N>C
+  n1=282, n2=282
+
+H2.1_matrix_bg_frac_plddt_gt70:
+  Test: Wilcoxon signed-rank
+  Statistic: 9917.5000
+  p-value: 7.74e-06
+  p-BH (within family): 3.87e-05
+  Effect size: 0.3309
+  Direction: N>C
+  n1=282, n2=282 ***
+
+H2.1_matrix_bg_frac_hydrophobic:
+  Test: Wilcoxon signed-rank
+  Statistic: 16253.0000
+  p-value: 6.97e-03
+  p-BH (within family): 1.49e-02
+  Effect size: 0.1854
+  Direction: N>C
+  n1=282, n2=282 ***
+
+H2.1_mito_bg_relative_contact_order:
+  Test: Wilcoxon signed-rank
+  Statistic: 23440.0000
+  p-value: 7.13e-18
+  p-BH (within family): 2.14e-16
+  Effect size: 0.4821
+  Direction: N>C
+  n1=425, n2=425 ***
+
+H2.1_mito_bg_mean_plddt:
+  Test: Wilcoxon signed-rank
+  Statistic: 41154.0000
+  p-value: 7.63e-07
+  p-BH (within family): 5.73e-06
+  Effect size: 0.2627
+  Direction: N>C
+  n1=472, n2=472 ***
+
+H2.1_mito_bg_frac_helix:
+  Test: Wilcoxon signed-rank
+  Statistic: 51360.0000
+  p-value: 1.33e-01
+  p-BH (within family): 2.00e-01
+  Effect size: 0.0798
+  Direction: N>C
+  n1=472, n2=472
+
+H2.1_mito_bg_frac_strand:
+  Test: Wilcoxon signed-rank
+  Statistic: 40494.5000
+  p-value: 6.70e-03
+  p-BH (within family): 1.49e-02
+  Effect size: 0.1499
+  Direction: N>C
+  n1=472, n2=472 ***
+
+H2.1_mito_bg_frac_plddt_gt70:
+  Test: Wilcoxon signed-rank
+  Statistic: 28849.0000
+  p-value: 4.82e-09
+  p-BH (within family): 4.82e-08
+  Effect size: 0.3316
+  Direction: N>C
+  n1=472, n2=472 ***
+
+H2.1_mito_bg_frac_hydrophobic:
+  Test: Wilcoxon signed-rank
+  Statistic: 45001.0000
+  p-value: 2.65e-04
+  p-BH (within family): 7.96e-04
+  Effect size: 0.1937
+  Direction: N>C
+  n1=472, n2=472 ***
+
+H2.2_GroEL_vs_ecoli_bg_relative_contact_order:
+  Test: Mann-Whitney U
+  Statistic: 102727.0000
+  p-value: 5.82e-02
+  p-BH (within family): 1.08e-01
+  Effect size: 0.1015
+  Direction: bg_higher
+  n1=124, n2=1844
+
+H2.2_HSP60_vs_mito_bg_relative_contact_order:
+  Test: Mann-Whitney U
+  Statistic: 26843.0000
+  p-value: 5.36e-01
+  p-BH (within family): 5.96e-01
+  Effect size: 0.0357
+  Direction: bg_higher
+  n1=131, n2=425
+
+H2.2_GroEL_vs_ecoli_bg_mean_plddt:
+  Test: Mann-Whitney U
+  Statistic: 135920.0000
+  p-value: 4.47e-01
+  p-BH (within family): 5.16e-01
+  Effect size: 0.0385
+  Direction: bg_higher
+  n1=139, n2=2034
+
+H2.2_HSP60_vs_mito_bg_mean_plddt:
+  Test: Mann-Whitney U
+  Statistic: 30496.5000
+  p-value: 1.04e-01
+  p-BH (within family): 1.73e-01
+  Effect size: 0.0900
+  Direction: bg_higher
+  n1=142, n2=472
+
+H2.3_GroEL_class_relative_contact_order:
+  Test: Kruskal-Wallis
+  Statistic: 0.5234
+  p-value: 7.70e-01
+  p-BH (within family): 7.96e-01
+  Effect size: -0.0125
+  Direction: class_effect
+  n1=121, n2=3
+
+H2.3_GroEL_class_mean_plddt:
+  Test: Kruskal-Wallis
+  Statistic: 0.1664
+  p-value: 9.20e-01
+  p-BH (within family): 9.20e-01
+  Effect size: -0.0138
+  Direction: class_effect
+  n1=136, n2=3
+
+==================================================
+MTS_TARGETING
+==================================================
+
+H3.1_HSP60_matrix_enrichment:
+  Test: Fisher exact
+  Statistic: 3.2903
+  p-value: 1.60e-16
+  p-BH (within family): 1.60e-16
+  Effect size: 3.2903
+  Direction: enriched
+  n1=266, n2=873 ***
+
+H3.2_MTS_pre_domain:
+  Test: Binomial
+  Statistic: 0.8440
+  p-value: 3.42e-51
+  p-BH (within family): 6.83e-51
+  Effect size: 0.8440
+  Direction: pre_domain_dominant
+  n1=436, n2=436 ***
+
+
+======================================================================
+NOTES:
+  - pLDDT is model confidence, NOT thermodynamic stability
+  - Contact order is the primary folding kinetics proxy
+  - Hierarchical BH: within-family + between-family correction
+  - *** = significant at both levels, * = within-family only
+======================================================================

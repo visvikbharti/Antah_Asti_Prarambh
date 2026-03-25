@@ -1,0 +1,132 @@
+======================================================================
+MODULE C - STEP C4: ORTHOLOGY GROUP ANALYSIS REPORT
+Generated: 2026-03-12 00:46:58
+======================================================================
+
+1. METHOD
+----------------------------------------
+Approach: MMseqs2 all-vs-all reciprocal search + connected-component clustering
+  - Bidirectional MMseqs2 search (E. coli <-> Human)
+  - E-value cutoff: 1e-05
+  - Min percent identity: 25.0%
+  - Min coverage (query or target): 50.0%
+  - Reciprocal hit filtering: pair must be found in both search directions
+  - Orthogroup clustering: union-find connected components on reciprocal pairs
+  - This captures many-to-many orthology relationships (paralogs + orthologs)
+
+2. ORTHOGROUP STATISTICS
+----------------------------------------
+Total orthogroups (both species): 422
+  1-to-1 orthogroups:    199
+  1-to-many (EC:HS):     114
+  many-to-1 (EC:HS):     40
+  many-to-many:          69
+Total reciprocal pairs:  2,895
+Strict RBH pairs:        453
+
+Orthogroup size distribution:
+  Min:    2
+  Median: 3
+  Mean:   4.2
+  Max:    101
+
+Mean percent identity across orthogroups:
+  Min:    25.2%
+  Median: 34.0%
+  Mean:   36.1%
+  Max:    76.5%
+
+3. SUBSTRATE ORTHOGROUP ANALYSIS
+----------------------------------------
+Orthogroups containing chaperonin substrates: 143
+  SHARED (GroEL + HSP60 substrate):  34
+  GroEL-only (no HSP60 substrate):   51
+  HSP60-only (no GroEL substrate):   58
+
+GroEL class breakdown in SHARED orthogroups:
+  Class I: 8
+  Class I or II: 2
+  Class II: 24
+  Class III: 8
+
+Substrate pairs in shared orthogroups: 62
+
+4. COMPARISON WITH SIMPLE RBH (40 PAIRS)
+----------------------------------------
+Original RBH substrate pairs: 40
+RBH pairs in same orthogroup: 33
+Additional substrate pairs from orthogroups: 29
+Total substrate pairs (orthogroup method): 62
+
+New substrate pairs found (not in RBH):
+  P00363 -- P31040
+  P06959 -- O00330
+  P06959 -- P10515
+  P06959 -- P36957
+  P0A6M8 -- Q969S9
+  P0A9P0 -- P00390
+  P0A9T4 -- O43488
+  P0AC69 -- P07237
+  P0AE08 -- Q13162
+  P0AEK2 -- Q7Z4W1
+  P0AEK2 -- Q92506
+  P0AEK2 -- Q99714
+  P0AFG6 -- O00330
+  P0AFG6 -- P10515
+  P0AGG4 -- Q86SX6
+  P0DTT0 -- P49411
+  P21151 -- P24752
+  P21151 -- P55084
+  P23893 -- P04181
+  P27306 -- P00390
+  P27306 -- P09622
+  P37685 -- P30837
+  P37685 -- P49189
+  P37685 -- P49419
+  P37685 -- P51649
+  P63020 -- Q9UMS0
+  P77395 -- P07237
+  P77395 -- Q86SX6
+  Q46851 -- O43488
+
+5. TOP SHARED ORTHOGROUPS
+----------------------------------------
+  OG00012: GroEL=[sucA] (class II) <-> HSP60=[OGDH] | e=4.7e-196, pident=39.2%
+  OG00015: GroEL=[frdA,sdhA] (class III,III) <-> HSP60=[SDHA] | e=4.6e-180, pident=39.9%
+  OG00017: GroEL=[fusA] (class I) <-> HSP60=[GFM2,GFM1] | e=1.2e-173, pident=41.3%
+  OG00019: GroEL=[aldB] (class III) <-> HSP60=[ALDH2,ALDH1B1,ALDH9A1,ALDH7A1,ALDH5A1] | e=1.2e-170, pident=33.6%
+  OG00021: GroEL=[iscS] (class II) <-> HSP60=[NFS1] | e=7.3e-165, pident=47.7%
+  OG00028: GroEL=[mnmG] (class II) <-> HSP60=[MTO1] | e=9.9e-156, pident=43.6%
+  OG00030: GroEL=[lpdA,sthA] (class I or II,II) <-> HSP60=[GSR,DLD] | e=1.9e-154, pident=35.0%
+  OG00032: GroEL=[lon] (class II) <-> HSP60=[LONP1] | e=1.1e-152, pident=40.4%
+  OG00033: GroEL=[bipA] (class II) <-> HSP60=[TUFM] | e=7.6e-151, pident=30.7%
+  OG00038: GroEL=[thrS] (class II) <-> HSP60=[TARS2] | e=2.7e-141, pident=40.3%
+  OG00046: GroEL=[pnp] (class I) <-> HSP60=[PNPT1] | e=3.0e-133, pident=37.6%
+  OG00048: GroEL=[accC] (class II) <-> HSP60=[PC] | e=4.0e-132, pident=41.2%
+  OG00049: GroEL=[bioF] (class III) <-> HSP60=[GCAT] | e=4.0e-131, pident=33.9%
+  OG00059: GroEL=[fadA] (class III) <-> HSP60=[ACAT1,ACAA2,HADHB] | e=1.1e-117, pident=36.6%
+  OG00061: GroEL=[hrpA] (class II) <-> HSP60=[DHX30] | e=3.6e-117, pident=32.2%
+  OG00065: GroEL=[asnS] (class I) <-> HSP60=[NARS2] | e=7.5e-112, pident=33.2%
+  OG00066: GroEL=[glyA] (class I) <-> HSP60=[SHMT2] | e=3.2e-110, pident=48.9%
+  OG00075: GroEL=[nuoF] (class II) <-> HSP60=[NDUFV1] | e=9.7e-102, pident=47.8%
+  OG00086: GroEL=[aceF,sucB] (class I,II) <-> HSP60=[PDHX,DLAT,DLST] | e=1.1e-93, pident=30.3%
+  OG00093: GroEL=[nuoC] (class II) <-> HSP60=[NDUFS2] | e=5.7e-90, pident=44.9%
+
+6. INTERPRETATION
+----------------------------------------
+The orthogroup approach identified 34 shared chaperonin-client orthogroups,
+containing 62 GroEL-HSP60 substrate pairs.
+This is 22 more than the 40 pairs from simple RBH,
+due to many-to-many orthology relationships (paralogs with shared function).
+
+51 GroEL substrates have human orthologs but the ortholog is NOT
+a known HSP60 substrate - these represent potential cases of:
+  - Lost chaperonin dependence in the human lineage
+  - Undetected HSP60 substrates (experimental coverage gap)
+
+58 HSP60 substrates have E. coli orthologs but the ortholog is NOT
+a known GroEL substrate - potential cases of:
+  - Gained chaperonin dependence in the eukaryotic/mitochondrial lineage
+  - Undetected GroEL substrates
+
+======================================================================

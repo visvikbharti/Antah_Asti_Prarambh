@@ -1,0 +1,65 @@
+========================================================================
+Module G — Mitochondrial Targeting Analysis: Summary Report
+========================================================================
+
+Total proteins analysed          : 1139
+  HSP60 Tier-1 substrates        : 266
+  MitoCarta mito proteome        : 1133
+  Overlap (HSP60 ∩ MitoCarta)    : 260
+
+--- Targeting classification breakdown (all proteins) ---
+  Inner membrane (MIM)                                  391  (34.3%)
+  High-confidence matrix                                325  (28.5%)
+  Non-canonical matrix import                           192  (16.9%)
+  Outer membrane (MOM)                                  110  (9.7%)
+  Intermembrane space (IMS)                              52  (4.6%)
+  Mitochondrial (other/unspecified)                      50  (4.4%)
+  Probable matrix                                         7  (0.6%)
+  Mitochondrial (with MTS)                                6  (0.5%)
+  Non-mitochondrial / no targeting signal                 4  (0.4%)
+  Secretory pathway (signal peptide)                      1  (0.1%)
+  Predicted mitochondrial (transit peptide)               1  (0.1%)
+
+Proteins with transit peptide     : 494 (43.4%)
+Proteins with signal peptide      : 15 (1.3%)
+
+--- HSP60 Tier-1 substrates: targeting breakdown ---
+  High-confidence matrix                                124  (46.6%)
+  Inner membrane (MIM)                                   71  (26.7%)
+  Non-canonical matrix import                            56  (21.1%)
+  Non-mitochondrial / no targeting signal                 4  (1.5%)
+  Intermembrane space (IMS)                               3  (1.1%)
+  Mitochondrial (other/unspecified)                       2  (0.8%)
+  Outer membrane (MOM)                                    2  (0.8%)
+  Mitochondrial (with MTS)                                1  (0.4%)
+  Secretory pathway (signal peptide)                      1  (0.4%)
+  Predicted mitochondrial (transit peptide)               1  (0.4%)
+  Probable matrix                                         1  (0.4%)
+
+HSP60 substrates with transit peptide : 168 (63.2%)
+HSP60 substrates with signal peptide  : 3 (1.1%)
+
+HSP60 matrix substrates : 181 total, 124 with TP (68.5%)
+All matrix proteins     : 524 total, 325 with TP (62.0%)
+
+--- MTS vs. first structural domain relationship ---
+Proteins with both TP and CATH domain : 436
+  MTS overlaps first domain           : 68 (15.6%)
+  MTS is pre-domain (non-overlapping) : 368 (84.4%)
+
+  Gap (domain_start - tp_end) statistics for non-overlapping:
+    Mean   : 37.4 residues
+    Median : 18.0 residues
+    Min    : 0 residues
+    Max    : 579 residues
+
+  Overlap extent (negative gap) statistics:
+    Mean overlap : 10.3 residues
+    Max overlap  : 48 residues
+
+========================================================================
+Key biological conclusion:
+  The MTS (mitochondrial targeting sequence) is a SEPARATE N-terminal
+  extension that is cleaved upon import. In most cases it does NOT
+  overlap with the first structural domain.
+========================================================================

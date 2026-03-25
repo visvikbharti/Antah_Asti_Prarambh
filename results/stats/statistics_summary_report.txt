@@ -1,0 +1,181 @@
+==============================================================================
+ANTAH ASTI PRARAMBH: MODULE H - COMPARATIVE STATISTICS SUMMARY REPORT
+Generated: 2026-03-12 02:02:16
+==============================================================================
+
+STATISTICAL FRAMEWORK
+------------------------------------------------------------------------------
+- Alpha level: 0.05 (two-sided)
+- Multiple testing: Hierarchical BH correction
+  Level 1: Three goal families (domain, stability, targeting)
+  Level 2: BH within each family
+- Effect sizes: Odds ratios (Fisher), rank-biserial r (Wilcoxon/MWU),
+  eta-squared (Kruskal-Wallis), Cramer's V (chi-squared)
+- Controls: Compartment-matched AND size-matched (10 kDa bins)
+
+==============================================================================
+GOAL 1: DOMAIN ARCHITECTURE ENRICHMENT
+==============================================================================
+
+H1.1: GroEL substrate CATH superfamily enrichment
+--------------------------------------------------
+  Superfamilies tested: 123
+  Significant (BH < 0.05): 5
+  Top enriched superfamilies:
+    1.10.10.10 (Winged helix-like DNA-binding domain superfamily/Winged helix DNA-binding domain): OR=42.80 [5.62, 325.83], p_BH=2.3456e-06
+    3.20.20.70 (Aldolase class I): OR=9.16 [3.86, 21.74], p_BH=2.3456e-06
+    1.50.40.10: OR=0.00 [0.00, 0.42], p_BH=1.1998e-05
+    3.40.50.2300: OR=inf [2.00, 636.43], p_BH=1.1759e-02
+    3.20.20.140 (Metal-dependent hydrolases): OR=inf [1.66, 546.35], p_BH=3.5181e-02
+
+  CATH class distribution (chi-squared):
+    chi2=24.24, dof=4, p=7.1588e-05, Cramer's V=0.120
+
+H1.2: HSP60 substrate CATH superfamily enrichment
+--------------------------------------------------
+  Superfamilies tested: 119
+  Significant (BH < 0.05): 1
+  Top enriched superfamilies:
+    1.50.40.10 (Mitochondrial carrier domain): OR=0.16 [0.05, 0.52], p_BH=2.7896e-02
+
+  CATH class distribution (chi-squared):
+    chi2=16.79, dof=4, p=2.1270e-03, Cramer's V=0.101
+
+H1.3: Conservation of fold enrichment between GroEL and HSP60
+--------------------------------------------------
+  Shared CATH superfamilies: 85
+  GroEL-only: 179, HSP60-only: 156
+  Jaccard index: 0.202
+  Hypergeometric test: p=1.0000e+00
+  Homolog pairs with shared top SF: 55/69
+
+==============================================================================
+GOAL 2: N-VS-C STABILITY ASYMMETRY
+==============================================================================
+
+H2.1: Within-protein paired tests (Wilcoxon signed-rank)
+--------------------------------------------------
+
+  groel:
+    relative_contact_order: W=2262.0, p_BH=8.1987e-04, r=0.387, direction=N > C *
+    mean_plddt: W=3750.0, p_BH=6.1307e-03, r=0.282, direction=N > C *
+    frac_helix: W=5001.0, p_BH=6.6229e-01, r=0.042, direction=C > N 
+    frac_strand: W=4471.0, p_BH=2.3855e-01, r=0.132, direction=N > C 
+    frac_plddt_gt70: W=1623.0, p_BH=4.1643e-04, r=0.438, direction=N > C *
+
+  hsp60:
+    relative_contact_order: W=1776.0, p_BH=7.3435e-06, r=0.519, direction=N > C *
+    mean_plddt: W=3752.0, p_BH=1.0108e-01, r=0.183, direction=N > C 
+    frac_helix: W=4125.0, p_BH=4.4395e-01, r=0.088, direction=N > C 
+    frac_strand: W=3857.0, p_BH=2.3855e-01, r=0.134, direction=N > C 
+    frac_plddt_gt70: W=2081.5, p_BH=5.9115e-02, r=0.238, direction=C > N 
+
+  matrix_bg:
+    relative_contact_order: W=3195.0, p_BH=3.5868e-04, r=0.388, direction=N > C *
+    mean_plddt: W=4815.0, p_BH=8.5565e-04, r=0.322, direction=N > C *
+    frac_helix: W=6632.0, p_BH=5.1166e-01, r=0.066, direction=N > C 
+    frac_strand: W=6193.0, p_BH=3.5866e-01, r=0.096, direction=N > C 
+    frac_plddt_gt70: W=3543.0, p_BH=8.1987e-04, r=0.349, direction=N > C *
+
+  mito_bg:
+    relative_contact_order: W=1086.0, p_BH=8.9991e-08, r=0.644, direction=N > C *
+    mean_plddt: W=2268.0, p_BH=1.6958e-03, r=0.354, direction=N > C *
+    frac_helix: W=3261.0, p_BH=5.2931e-01, r=0.071, direction=C > N 
+    frac_strand: W=1667.0, p_BH=1.2592e-03, r=0.389, direction=N > C *
+    frac_plddt_gt70: W=1900.5, p_BH=9.5291e-04, r=0.389, direction=N > C *
+
+H2.2: Cross-dataset asymmetry comparison (Mann-Whitney U)
+--------------------------------------------------
+  GroEL vs mito_bg (contact_order_asymmetry): U=5921.0, p_BH=5.7047e-01, r=0.110 
+  HSP60 vs matrix_bg (contact_order_asymmetry): U=8544.0, p_BH=9.4898e-01, r=0.019 
+  HSP60 vs mito_bg (contact_order_asymmetry): U=6357.0, p_BH=9.4898e-01, r=0.045 
+  GroEL vs mito_bg (mean_plddt_asymmetry): U=7696.0, p_BH=5.7047e-01, r=0.094 
+  HSP60 vs matrix_bg (mean_plddt_asymmetry): U=10114.0, p_BH=5.7047e-01, r=0.108 
+  GroEL vs mito_bg (frac_helix_asymmetry): U=8443.0, p_BH=9.4898e-01, r=0.006 
+  HSP60 vs matrix_bg (frac_helix_asymmetry): U=11389.0, p_BH=9.4898e-01, r=-0.004 
+  GroEL vs mito_bg (frac_strand_asymmetry): U=7960.0, p_BH=8.5538e-01, r=0.063 
+  HSP60 vs matrix_bg (frac_strand_asymmetry): U=11589.5, p_BH=9.4898e-01, r=-0.022 
+
+H2.3: GroEL class comparison (Kruskal-Wallis)
+--------------------------------------------------
+  relative_contact_order_asymmetry: H=0.32, p_BH=9.6448e-01, eta2=-0.014 
+  mean_plddt_asymmetry: H=0.95, p_BH=9.6448e-01, eta2=-0.008 
+  frac_helix_asymmetry: H=0.07, p_BH=9.6448e-01, eta2=-0.014 
+  frac_strand_asymmetry: H=0.18, p_BH=9.6448e-01, eta2=-0.013 
+
+  Omnibus Hotelling's T-squared (multivariate):
+    groel: T2=18.08, F(4,117)=4.41, p=2.3556e-03
+    hsp60: T2=27.92, F(4,117)=6.80, p=5.8438e-05
+    matrix_bg: T2=31.10, F(4,140)=7.61, p=1.4057e-05
+    mito_bg: T2=60.19, F(4,106)=14.63, p=1.5073e-09
+
+==============================================================================
+GOAL 3: MATRIX TARGETING AND MTS
+==============================================================================
+
+H3.1: HSP60 matrix localization enrichment
+--------------------------------------------------
+  HSP60 matrix: 181, HSP60 non-matrix: 85
+  Non-HSP60 matrix: 343, Non-HSP60 non-matrix: 530
+  OR=3.29 [2.46, 4.40], p=1.5970e-16
+  Conclusion: Significant enrichment
+
+H3.2: MTS prevalence and first-domain properties
+--------------------------------------------------
+  MTS prevalence (HSP60 matrix vs non-HSP60 matrix):
+    OR=1.54 [1.05, 2.25], p=2.9489e-02
+  First-domain property comparisons (MTS+ vs MTS-):
+
+H3.3: MTS is predominantly a pre-domain extension
+--------------------------------------------------
+  MTS pre-domain: 368/436 (84.4%)
+  MTS overlaps domain: 68/436 (15.6%)
+  Binomial test (H0: p=0.5): p=3.4153e-51
+  Gap length (MTS end to 1st domain): median=12, mean=30.0
+  Conclusion: MTS is predominantly pre-domain
+
+==============================================================================
+HIERARCHICAL MULTIPLE TESTING SUMMARY
+==============================================================================
+
+  Family: domain_architecture
+    Min raw p-value: 2.8189e-08
+    Family-level BH p-value: 2.8189e-08
+    Family significant: True
+  Family: matrix_targeting
+    Min raw p-value: 3.4153e-51
+    Family-level BH p-value: 1.0246e-50
+    Family significant: True
+  Family: stability_asymmetry
+    Min raw p-value: 4.4995e-09
+    Family-level BH p-value: 6.7493e-09
+    Family significant: True
+
+  Total tests: 281
+  Significant within family: 22
+  Significant overall (hierarchical): 22
+
+==============================================================================
+KEY CONCLUSIONS
+==============================================================================
+
+1. Domain Architecture: 8 tests significant after hierarchical correction
+   -> Evidence for specific fold enrichment in chaperonin substrates
+
+2. N-vs-C Stability: 11 tests significant after hierarchical correction
+   -> Evidence for systematic N-vs-C asymmetry in chaperonin substrates
+
+3. Matrix Targeting: 3 tests significant after hierarchical correction
+   -> MTS is predominantly a pre-domain extension (strong evidence)
+   -> HSP60 substrates enriched for matrix localization
+
+==============================================================================
+OUTPUT FILES
+==============================================================================
+  /Users/vishalbharti/Downloads/Antah_Asti_Prarambh/results/stats/domain_enrichment.tsv
+  /Users/vishalbharti/Downloads/Antah_Asti_Prarambh/results/stats/stability_comparisons.tsv
+  /Users/vishalbharti/Downloads/Antah_Asti_Prarambh/results/stats/targeting_stats.tsv
+  /Users/vishalbharti/Downloads/Antah_Asti_Prarambh/results/stats/corrected_pvalues.tsv
+  /Users/vishalbharti/Downloads/Antah_Asti_Prarambh/results/stats/statistics_summary_report.txt
+
+END OF REPORT

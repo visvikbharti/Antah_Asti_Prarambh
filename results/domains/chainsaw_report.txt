@@ -1,0 +1,31 @@
+======================================================================
+E2: Chainsaw Domain Segmentation Report
+======================================================================
+
+Tool: Chainsaw v3 (Wells et al., 2024)
+Input: 236 proteins without CATH/Gene3D assignments
+  (3 additional proteins had no AlphaFold structure)
+Runtime: 509.4 seconds (8.5 min)
+
+Results:
+  Proteins processed: 236
+  Multi-domain: 218 (92.4%)
+  Single-domain/no domain: 18 (7.6%)
+  Mean confidence: 0.821
+
+Domain count distribution:
+  0 domains: 18 proteins
+  1 domains: 143 proteins
+  2 domains: 54 proteins
+  3 domains: 17 proteins
+  4 domains: 4 proteins
+
+Unified coverage (CATH + Chainsaw):
+  CATH/Gene3D: 1151 proteins
+  Chainsaw: 236 proteins
+  Total: 1387/1390 (99.8%)
+
+Output files:
+  results/domains/chainsaw_domain_predictions.tsv
+  results/domains/ml_domain_assignments.tsv
+======================================================================

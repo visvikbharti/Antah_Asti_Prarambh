@@ -1,0 +1,4 @@
+hypothesis	test	comparison	a_hsp60_matrix	b_hsp60_nonmatrix	c_bg_matrix	d_bg_nonmatrix	odds_ratio	ci_lower	ci_upper	pvalue	n_pre_domain	n_overlaps	n_total	proportion_pre_domain	pvalue_bh	significant
+H3.1	fisher_exact	HSP60 matrix enrichment vs mito proteome	181.0	85.0	343.0	530.0	3.290344709312296	2.4587949393544726	4.403119647278009	1.5969788333969086e-16					2.395468250095363e-16	True
+H3.2	fisher_exact	MTS prevalence: HSP60 matrix vs non-HSP60 matrix	124.0	57.0	201.0	142.0	1.5368770184166884	1.0508130633964432	2.2477746537551897	0.029489024706799517					0.029489024706799517	True
+H3.3	binomial_test	MTS pre-domain vs overlapping								3.4153436180572293e-51	368.0	68.0	436.0	0.8440366972477065	1.0246030854171689e-50	True

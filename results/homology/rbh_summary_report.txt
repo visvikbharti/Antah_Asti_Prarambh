@@ -1,0 +1,151 @@
+==============================================================================
+MODULE C - MMseqs2 RECIPROCAL BEST HIT (RBH) ANALYSIS REPORT
+==============================================================================
+Generated: 2026-03-11 21:07:27
+
+Query:  GroEL substrates (E. coli)   — 252 proteins
+Target: HSP60 Tier 1 substrates (H. sapiens) — 266 proteins
+Method: MMseqs2 easy-rbh (v18.8, default parameters, e-value < 0.001)
+
+------------------------------------------------------------------------------
+1. OVERALL RBH RESULTS
+------------------------------------------------------------------------------
+   Total RBH pairs found:           40
+   Unique GroEL proteins matched:   40 / 252 (15.9%)
+   Unique HSP60 proteins matched:   40 / 266 (15.0%)
+
+------------------------------------------------------------------------------
+2. E-VALUE DISTRIBUTION
+------------------------------------------------------------------------------
+   Min e-value:                      6.17e-204
+   Max e-value:                      1.21e-04
+   Median e-value:                   3.39e-58
+   Mean e-value:                     3.45e-06
+
+   E-value bin breakdown:
+     < 1e-100 (extremely strong)               :  15 (37.5%)
+     1e-100 to 1e-50 (very strong)             :   7 (17.5%)
+     1e-50 to 1e-20 (strong)                   :  10 (25.0%)
+     1e-20 to 1e-10 (moderate)                 :   4 (10.0%)
+     1e-10 to 1e-5 (weak)                      :   2 (5.0%)
+     1e-5 to 1e-3 (marginal)                   :   2 (5.0%)
+
+------------------------------------------------------------------------------
+3. PERCENT IDENTITY DISTRIBUTION
+------------------------------------------------------------------------------
+   Min:     21.6%
+   Max:     60.1%
+   Median:  35.8%
+   Mean:    37.1%
+   Std:     8.2%
+
+   Percent identity bin breakdown:
+     20-30%              :   9 (22.5%)
+     30-40%              :  17 (42.5%)
+     40-50%              :  12 (30.0%)
+     50-60%              :   1 (2.5%)
+     >= 60%              :   1 (2.5%)
+
+------------------------------------------------------------------------------
+4. ALIGNMENT COVERAGE DISTRIBUTION
+------------------------------------------------------------------------------
+   Query coverage (qcov) - GroEL proteins:
+     Min:    0.139
+     Max:    0.993
+     Median: 0.924
+     Mean:   0.833
+
+   Target coverage (tcov) - HSP60 proteins:
+     Min:    0.082
+     Max:    0.987
+     Median: 0.827
+     Mean:   0.724
+
+------------------------------------------------------------------------------
+5. BREAKDOWN BY GroEL CLASS
+------------------------------------------------------------------------------
+   GroEL class distribution (full dataset):
+     Class I: 38 substrates
+     Class I or II: 4 substrates
+     Class II: 126 substrates
+     Class III: 84 substrates
+
+   RBH matches per GroEL class:
+     Class I:   7 RBH pairs (18.4% of class)
+     Class I or II:   1 RBH pairs (25.0% of class)
+     Class II:  24 RBH pairs (19.0% of class)
+     Class III:   8 RBH pairs (9.5% of class)
+
+   Class III substrates with human HSP60 orthologs (key finding):
+     8 out of 84 Class III substrates have RBH matches
+     (9.5% of Class III)
+
+   Class III RBH pairs:
+     sdhA       (P0AC41) <-> SDHA (P31040)  bits=591  pident=55.4%  evalue=1.3e-188
+     aldB       (P37685) <-> ALDH2 (P05091)  bits=382  pident=42.6%  evalue=6.3e-118
+     pepA       (P68767) <-> LAP3 (P28838)  bits=266  pident=35.1%  evalue=2.1e-78
+     fadA       (P21151) <-> ACAA2 (P42765)  bits=243  pident=38.2%  evalue=3.4e-72
+     bioF       (P12998) <-> GCAT (O75600)  bits=201  pident=30.9%  evalue=6.8e-58
+     alaA       (P0A959) <-> GPT2 (Q8TD30)  bits=133  pident=26.4%  evalue=8.5e-35
+     yajO       (P77735) <-> AKR7A2 (O43488)  bits=90  pident=28.0%  evalue=2.7e-21
+     pepQ       (P21165) <-> XPNPEP3 (Q9NQH7)  bits=85  pident=27.7%  evalue=3.9e-19
+
+   Average alignment statistics per class:
+   Class       N   Avg bits   Avg pident   Avg qcov   Avg tcov   Avg evalue
+   I           7      298.9        39.6%      0.876      0.744     1.30e-13
+   I or II     1      361.0        43.6%      0.943      0.892    2.53e-111
+   II         24      240.5        36.6%      0.794      0.670     5.75e-06
+   III         8      248.9        35.5%      0.901      0.845     4.95e-20
+
+------------------------------------------------------------------------------
+6. TOP 20 RBH PAIRS BY BIT SCORE
+------------------------------------------------------------------------------
+
+Rank  GroEL Gene   GroEL Acc  Cls  HSP60 Gene   HSP60 Acc       Bits  pident      E-value   qcov   tcov
+----  ----------   ---------  ---  ----------   ---------      -----  ------      -------   ----   ----
+   1  sucA         P0AFG3      II  OGDH         Q02218           652   38.5%    6.17e-204  0.986  0.947
+   2  sdhA         P0AC41     III  SDHA         P31040           591   55.4%    1.31e-188  0.927  0.818
+   3  fusA         P0A6M8       I  GFM1         Q96RP9           572   44.6%    4.24e-180  0.993  0.932
+   4  mnmG         P0A6U3      II  MTO1         Q9Y2Z2           533   45.4%    6.34e-168  0.976  0.908
+   5  iscS         P0A6B7      II  NFS1         Q9Y697           526   60.1%    1.66e-169  0.993  0.875
+   6  lon          P0A9M0      II  LONP1        P36776           525   35.8%    9.72e-163  0.974  0.862
+   7  pnp          P05055       I  PNPT1        Q8TCS8           469   39.6%    1.11e-144  0.955  0.893
+   8  thrS         P0A8M3      II  TARS2        Q9BW92           406   35.0%    3.62e-124  0.972  0.889
+   9  accC         P24182      II  PC           P11498           396   44.0%    8.76e-124  0.982  0.379
+  10  aldB         P37685     III  ALDH2        P05091           382   42.6%    6.28e-118  0.938  0.921
+  11  asnS         P0A8M0       I  NARS2        Q96I59           371   41.9%    6.83e-115  0.983  0.933
+  12  glyA         P0A825       I  SHMT2        P34897           370   48.7%    2.27e-115  0.911  0.796
+  13  lpdA         P0A9P0     I or II  DLD          P09622           361   43.6%    2.53e-111  0.943  0.892
+  14  nuoF         P31979      II  NDUFV1       P49821           338   43.6%    6.91e-104  0.865  0.830
+  15  sucB         P0AFG6      II  DLST         P36957           332   45.3%    1.76e-102  0.993  0.845
+  16  nuoC         P33599      II  NDUFS2       O75306           318   40.7%     7.76e-95  0.643  0.825
+  17  hrpA         P43329      II  DHX30        Q7L2E3           269   34.6%     2.91e-74  0.372  0.425
+  18  pepA         P68767     III  LAP3         P28838           266   35.1%     2.09e-78  0.948  0.919
+  19  fadA         P21151     III  ACAA2        P42765           243   38.2%     3.42e-72  0.987  0.977
+  20  astC         P77581      II  OAT          P04181           214   34.8%     5.06e-62  0.921  0.856
+
+------------------------------------------------------------------------------
+7. BIOLOGICAL INTERPRETATION
+------------------------------------------------------------------------------
+
+   Of the 252 GroEL substrates, 40 (15.9%) have
+   reciprocal best hits among the 266 HSP60 Tier 1 substrates.
+
+   This represents pairs where both:
+     (a) The GroEL substrate's best match in the HSP60 set is that human protein, AND
+     (b) That human protein's best match in the GroEL set is that E. coli protein.
+
+   These are high-confidence ortholog pairs that are substrates of both the
+   bacterial GroEL and human mitochondrial HSP60 chaperonins.
+
+   Class I: 7/38 (18.4%) have human HSP60 orthologs
+   Class II: 24/126 (19.0%) have human HSP60 orthologs
+   Class III: 8/84 (9.5%) have human HSP60 orthologs
+
+   Class III proteins are the most GroEL-dependent (obligate substrates).
+   Finding: 8 Class III proteins (9.5%) have conserved
+   chaperonin dependence from E. coli GroEL to human HSP60.
+
+==============================================================================
+END OF REPORT
+==============================================================================

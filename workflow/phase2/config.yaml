@@ -1,0 +1,179 @@
+# =============================================================================
+# Antah Asti Prarambh — Phase 2 Full-Scale Configuration
+# =============================================================================
+# HPC: CentOS 7, SLURM, Lustre filesystem
+# Partition: compute (40 CPUs, 380G RAM per node)
+# QOS: common (max 300G mem, 5-day walltime, max 5 concurrent jobs)
+
+# -- Project paths (on Lustre) ------------------------------------------------
+project_dir: "/lustre/vishal.bharti/Antah_Asti_Prarambh_hpc"
+# Phase 1 data lives in the same project directory (rsync'd from local Mac)
+phase1_dir: "/lustre/vishal.bharti/Antah_Asti_Prarambh_hpc"
+
+# -- Data directories --------------------------------------------------------
+data:
+  raw_dir: "{project_dir}/data/raw"
+  processed_dir: "{project_dir}/data/processed"
+  alphafold_dir: "{project_dir}/data/raw/alphafold/full"
+  alphafold_ecoli_dir: "{project_dir}/data/raw/alphafold/full/ecoli"
+  alphafold_human_dir: "{project_dir}/data/raw/alphafold/full/human"
+  uniprot_dir: "{project_dir}/data/raw/uniprot"
+
+# -- Results directories -----------------------------------------------------
+results:
+  base_dir: "{project_dir}/results/phase2"
+  structures_dir: "{project_dir}/results/phase2/structures"
+  domains_dir: "{project_dir}/results/phase2/domains"
+  foldseek_dir: "{project_dir}/results/phase2/foldseek"
+  foldx_dir: "{project_dir}/results/phase2/foldx"
+  stability_dir: "{project_dir}/results/phase2/stability"
+  stats_dir: "{project_dir}/results/phase2/stats"
+  figures_dir: "{project_dir}/results/phase2/figures"
+
+# -- Proteome definitions ----------------------------------------------------
+proteomes:
+  ecoli:
+    organism: "Escherichia coli K-12"
+    taxon_id: 83333
+    expected_proteins: 4403
+    alphafold_bulk_url: "https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000625_83333_ECOLI_v6.tar"
+    estimated_size_gb: 0.5
+  human:
+    organism: "Homo sapiens"
+    taxon_id: 9606
+    expected_proteins: 20416
+    alphafold_bulk_url: "https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000005640_9606_HUMAN_v6.tar"
+    estimated_size_gb: 5
+
+# -- Phase 1 input files (substrate lists, etc.) ------------------------------
+phase1_inputs:
+  groel_substrates: "{phase1_dir}/data/processed/groel_substrates_standardized.tsv"
+  hsp60_substrates: "{phase1_dir}/data/processed/hsp60_tier1_substrates.tsv"
+  mito_proteome: "{phase1_dir}/data/processed/human_mito_proteome.tsv"
+  matrix_proteome: "{phase1_dir}/data/processed/human_matrix_proteome.tsv"
+  homologs: "{phase1_dir}/data/processed/groel_hsp60_homologs.tsv"
+  ecoli_proteome_tsv: "{phase1_dir}/data/raw/uniprot/ecoli_k12_proteome.tsv"
+  human_proteome_tsv: "{phase1_dir}/data/raw/uniprot/human_proteome.tsv"
+  ecoli_proteome_fasta: "{phase1_dir}/data/raw/uniprot/ecoli_k12_proteome.fasta"
+  human_proteome_fasta: "{phase1_dir}/data/raw/uniprot/human_proteome.fasta"
+
+# -- AlphaFold download settings ----------------------------------------------
+alphafold:
+  version: "v4"
+  # Individual download fallback URLs (if bulk tar is unavailable)
+  individual_url_v6: "https://alphafold.ebi.ac.uk/files/AF-{acc}-F1-model_v6.cif"
+  individual_url_v4: "https://alphafold.ebi.ac.uk/files/AF-{acc}-F1-model_v4.cif"
+  # Download settings
+  max_retries: 3
+  retry_delay_sec: 5
+  batch_size: 200
+  # Checkpointing: progress file written every N proteins
+  checkpoint_interval: 500
+  # Parallel download workers (for individual downloads)
+  download_workers: 8
+
+# -- Foldseek settings --------------------------------------------------------
+foldseek:
+  binary: "foldseek"  # will be in conda env PATH
+  # Clustering parameters (same as pilot but at full scale)
+  min_seq_id: 0.3
+  coverage: 0.5
+  coverage_mode: 0  # bidirectional
+  cluster_mode: 0   # set-cover
+  evalue: 0.01
+  search_evalue: 0.001
+  # All-vs-all search sensitivity
+  sensitivity: 7.5
+  # Resource requirements
+  threads: 16
+  split_memory_limit: "64G"
+  # Temporary database directory (on Lustre, NOT /tmp)
+  tmp_dir: "/lustre/vishal.bharti/Antah_Asti_Prarambh_hpc/tmp/foldseek_tmp"
+
+# -- Chainsaw settings --------------------------------------------------------
+chainsaw:
+  # Path to Chainsaw installation on HPC
+  install_dir: "/lustre/vishal.bharti/software/chainsaw"
+  python: "python3"
+  # Batch size for processing
+  batch_size: 500
+  # Max proteins per Chainsaw run (memory management)
+  max_per_run: 1000
+
+# -- FoldX settings -----------------------------------------------------------
+foldx:
+  binary: "/lustre/vishal.bharti/software/foldx5/foldx"
+  # FoldX 5.1 does NOT require rotabase.txt
+  rotabase: ""
+  # Commands to run
+  repair_pdb: true     # Run RepairPDB first to fix side chains
+  stability: true      # Compute free energy (DeltaG)
+  build_model: false   # Mutation scanning (optional, very expensive)
+  # Parameters
+  temperature: 298.15  # Kelvin (25 C)
+  ph: 7.0
+  ionic_strength: 0.05
+  # Parallelization
+  proteins_per_job: 50  # SLURM array: each job handles this many proteins
+  timeout_per_protein: 300  # seconds
+
+# -- SLURM resource defaults --------------------------------------------------
+slurm:
+  partition: "compute"
+  # No account needed (QOS: common)
+  # Per-task defaults (overridden per rule in Snakefile)
+  default_mem: "8G"
+  default_time: "04:00:00"
+  default_cpus: 4
+  # Specific resource allocations:
+  download:
+    mem: "4G"
+    time: "12:00:00"
+    cpus: 1
+  foldseek_createdb:
+    mem: "16G"
+    time: "02:00:00"
+    cpus: 4
+  foldseek_search:
+    mem: "64G"
+    time: "24:00:00"
+    cpus: 16
+  foldseek_cluster:
+    mem: "64G"
+    time: "08:00:00"
+    cpus: 16
+  chainsaw:
+    mem: "16G"
+    time: "2-00:00:00"
+    cpus: 4
+  foldx_repair:
+    mem: "4G"
+    time: "04:00:00"
+    cpus: 1
+  foldx_stability:
+    mem: "4G"
+    time: "04:00:00"
+    cpus: 1
+  analysis:
+    mem: "16G"
+    time: "04:00:00"
+    cpus: 4
+  figures:
+    mem: "8G"
+    time: "02:00:00"
+    cpus: 2
+
+# -- Conda environment --------------------------------------------------------
+conda_env: "proteomics"
+
+# -- Module toggles (set false to skip) ---------------------------------------
+run_modules:
+  download_alphafold: true
+  foldseek_clustering: true
+  chainsaw_domains: true
+  foldx_stability: true
+  module_e_domains: true
+  module_f_stability: true
+  module_g_mts: true
+  module_h_stats: true
+  module_i_figures: true

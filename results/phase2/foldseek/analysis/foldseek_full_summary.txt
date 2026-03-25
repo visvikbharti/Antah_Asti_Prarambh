@@ -1,0 +1,59 @@
+======================================================================
+  FOLDSEEK FULL-SCALE CLUSTERING — PHASE 2 SUMMARY
+======================================================================
+
+CLUSTERING PARAMETERS:
+  Method: Foldseek cluster
+  Scope: Full E. coli + Human proteomes
+
+OVERALL STATISTICS:
+  Total proteins:    27063
+  Total clusters:    16242
+  Singletons (1):    12282 (75.6%)
+  Small (2-5):       3426
+  Medium (6-20):     485
+  Large (21-100):    45
+  Very large (>100): 4
+
+SUBSTRATE CLUSTER OVERLAP:
+  GroEL substrate clusters:  239
+  HSP60 substrate clusters:  240
+  Shared clusters:           25
+  GroEL-only clusters:       214
+  HSP60-only clusters:       215
+
+TOP 30 LARGEST CLUSTERS:
+      ID    Size           Rep  Labels
+  ------  ------  ------------  ----------------------------------------
+       1     371        Q8NGQ4  background
+       2     207        A6NM28  background
+       3     176        Q96IR2  background
+       4     108  AF-Q8TD57-F5-model_v6  background
+       5      92        P01715  background
+       6      80        P0DTE2  background
+       7      78        Q8WZ42  background
+       8      63        Q9UKR3  background
+       9      62        Q9H340  background
+      10      59        Q9P2E7  background
+      11      58  AF-Q02505-F8-model_v6  background
+      12      57        Q96DA2  background
+      13      52    A0A0K0K1B3  background
+      14      52        Q8IVF4  background
+      15      44    A0A0A6YYK6  background
+      16      41        Q00526  background
+      17      39        P33594  groel
+      18      37        Q15413  background
+      19      36        Q07954  background
+      20      31        P23443  mito
+      21      30  AF-Q8WZ42-F69-model_v6  background
+      22      28  AF-P98088-F2-model_v6  background
+      23      27    A0A1W2PRP0  background
+      24      27    A0A376A8Z9  background
+      25      27  AF-P35556-F4-model_v6  background
+      26      27        P58107  background
+      27      26  AF-Q8NDA2-F4-model_v6  background
+      28      26  AF-Q9Y493-F4-model_v6  background
+      29      26        Q9BZ81  background
+      30      26        Q9P225  background
+
+======================================================================
