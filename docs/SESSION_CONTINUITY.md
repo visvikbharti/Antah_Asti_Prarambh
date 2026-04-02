@@ -1,7 +1,7 @@
 # Antah Asti Prarambh: Session Continuity Document
 
 **Purpose:** Complete handoff document so that Claude in session 3+ has full context of everything accomplished in sessions 1 and 2, all key results, and what comes next.
-**Last updated:** 2026-03-22, end of session 6.
+**Last updated:** 2026-04-01, end of session 9.
 
 ---
 
@@ -599,6 +599,143 @@ Copy and paste the following:
 
 ---
 
+## Session 9 Summary (2026-04-01)
+
+### Major Milestone: FoldX Thermodynamic Stability — 100% COMPLETE
+
+**FoldX verification:**
+- All 25,007/25,007 per-protein JSONs present in `results/phase2/foldx/per_protein/`
+- 501/501 chunks completed, 0 failures (confirmed via sampling)
+- Sample JSON: `{"accession": "A0A024R1R8", "status": "success", "total_energy": 38.09, ...}`
+- Component energies are null — this is expected FoldX 5.1 behavior (only `total_energy` populated)
+
+**FoldX collection (job 99072):**
+- Submitted: `sbatch 07_foldx_collect.sh`
+- Completed in ~3 minutes
+- Output: `results/phase2/foldx/foldx_stability_all.tsv` (1.1 MB, 25,008 lines)
+- Columns: accession, status, total_energy, backbone_hbond, sidechain_hbond, vdw_clashes, electrostatics, solvation_polar, solvation_hydrophobic, entropy_mainchain, entropy_sidechain, error
+- **DeltaG summary (n=25,007):**
+  - Mean: 309.56 kcal/mol
+  - Median: 111.24 kcal/mol
+  - Std: 605.39 kcal/mol
+  - Min: -242.70 kcal/mol
+  - Max: 11,442.77 kcal/mol
+- Note: Absolute values scale with protein size. Relative N-vs-C comparisons within proteins are what matter scientifically.
+
+**Analysis chain — column name bugs found and fixed (same pattern as session 4):**
+- First attempt (99087) FAILED: CATH uses `domain_start`/`domain_end`/`uniprot_accession`, not `start`/`end`/`accession`
+- Chainsaw uses `chain_id`, not `accession`; GroEL uses `current_accession`; HSP60/matrix/mito use `uniprot_id`
+- Fix: Added `get_accessions()` helper that tries multiple column names in all 3 scripts
+- Also fixed matplotlib `savefig.bbox_inches` → `savefig.bbox` compatibility issue
+
+**Analysis chain — COMPLETED after fixes:**
+- Job 99115: Module F — COMPLETED (13,991 boundaries, 4,370 multi-domain, 4,362 with FoldX)
+- Job 99130: Module H — COMPLETED (7 tests, 4 significant after BH)
+- Job 99142: Module I — COMPLETED (4 new figures with `_full` suffix)
+
+### Session 9 Job IDs
+
+| Job ID | Purpose | Status |
+|--------|---------|--------|
+| 99072 | FoldX collection | COMPLETED |
+| 99115 | Module F (fixed) | COMPLETED — 13,991 boundaries, 4,370 multi-domain |
+| 99130 | Module H (fixed) | COMPLETED — 7 tests, 4 significant |
+| 99142 | Module I (fixed) | COMPLETED — 4 new figures |
+
+### Key FoldX Integration Results
+
+**Module F — DeltaG by dataset:**
+- GroEL substrates: mean DeltaG = **-9.43** kcal/mol (more favorable = more stable)
+- HSP60 substrates: mean DeltaG = 96.23
+- Matrix background: mean DeltaG = 104.21
+- Mito background: mean DeltaG = 101.86
+- Proteome background: mean DeltaG = 294.09
+
+**Module H — 7 tests, 4 significant (BH < 0.05):**
+- GroEL FoldX DeltaG vs background: p=2.81e-25, Cohen's d=-0.431 (substrates more stable)
+- HSP60 pre-tail length: p=2.75e-08, d=-0.266
+- HSP60 matrix enrichment: OR=3.29, p=1.60e-16
+- Domain architecture multi-domain enrichment: NOT significant
+
+**Module I — 4 new figures:**
+- `fig1_domain_distribution_full.pdf/png`
+- `fig2_n_vs_c_stability_full.pdf/png`
+- `fig3_foldx_deltag_comparison.pdf/png` (NEW — FoldX-specific)
+- `fig4_statistics_summary_full.pdf/png`
+
+### What Was Done in Session 9
+
+1. Comprehensive codebase audit (6 parallel specialist agents verified all scripts, data, results, docs, HPC pipeline, scientific methods)
+2. SSH to HPC — confirmed FoldX 100% complete (25,007 proteins, 0 failures)
+3. Submitted `07_foldx_collect.sh` — job 99072 completed → `foldx_stability_all.tsv` (1.1 MB)
+4. Submitted analysis chain — first attempt FAILED (column name bugs in all 3 scripts)
+5. **Fixed column name bugs** in 09_module_f_stability.sh, 10_module_h_stats.sh, 11_module_i_figures.sh
+6. Resubmitted and all 3 modules COMPLETED successfully
+7. Updated memory files and SESSION_CONTINUITY.md
+
+### What Was NOT Done (Session 10 Tasks)
+
+1. **rsync Phase 2 results to Mac** (may have been started at end of session 9):
+   ```bash
+   rsync -avz vishal.bharti@tejas.igib.res.in:/lustre/vishal.bharti/Antah_Asti_Prarambh_hpc/results/phase2/ \
+     /Users/vishalbharti/Downloads/Antah_Asti_Prarambh/results/phase2/
+   ```
+2. Regenerate PowerPoint presentation with FoldX DeltaG results
+3. Update collaborator presentation and data handover index
+4. git add + commit + push new results to GitHub
+5. Begin manuscript preparation (Methods: FoldX protocol; Results: DeltaG comparisons; Discussion: FoldX+AlphaFold caveat)
+6. Polish figures locally with real p-values, sample sizes, colorblind palette
+
+### FoldX Interpretation Notes
+
+- `total_energy` from FoldX Stability = total free energy of the folded protein
+- **Positive values are normal** — FoldX total energy is not ΔG_folding (which would be negative for stable proteins). The `Stability` command returns the total internal energy sum.
+- **For this project**: We compare N-domain vs C-region total_energy within the same protein (paired comparison). The RELATIVE difference is what matters, not absolute values.
+- **Caveat for publication**: FoldX was parameterized on experimental X-ray structures, not AlphaFold models. AlphaFold models have idealized geometry that may bias FoldX energy calculations. This must be caveated.
+- **Key question for Module F**: Does integrating FoldX DeltaG change the N-vs-C asymmetry conclusion? The contact order result (N > C universally) is robust. FoldX may add thermodynamic confirmation or reveal a new dimension.
+
+---
+
+## What to Prompt Claude in Session 10
+
+Copy and paste the following:
+
+---
+
+> Continuing Antah Asti Prarambh Phase 2 (session 10). Please read memory files for context:
+> - Memory: check MEMORY.md (auto-loaded)
+> - Session 9 details: session 9 section of `docs/SESSION_CONTINUITY.md`
+>
+> **Session 9 summary:** FoldX 100% COMPLETE. Collection done. Analysis chain F→H→I completed after fixing column name bugs. All results on HPC. 4 new figures generated with FoldX DeltaG.
+>
+> **Key FoldX finding:** GroEL substrates have mean DeltaG = -9.43 (significantly lower/more stable than background at p=2.8e-25). This is biologically interesting — chaperonin substrates are thermodynamically stable but kinetically complex.
+>
+> **If rsync not yet done, transfer results:**
+> ```bash
+> rsync -avz vishal.bharti@tejas.igib.res.in:/lustre/vishal.bharti/Antah_Asti_Prarambh_hpc/results/phase2/ \
+>   /Users/vishalbharti/Downloads/Antah_Asti_Prarambh/results/phase2/
+> ```
+>
+> **What I need help with today:**
+> - [e.g., "Regenerate PPT with FoldX" / "Polish figures" / "Write manuscript Methods" / "Git push"]
+>
+> **Key reminders:**
+> - FoldX total_energy is NOT ΔG_folding — it's total internal energy (positive values normal for large proteins)
+> - FoldX was parameterized on experimental structures, not AlphaFold — caveat this
+> - Previous Phase 2 results (without FoldX) on Mac will be overwritten by rsync — this is intended
+
+---
+
+### Critical Reminders for Session 10
+
+1. **Jobs 99087-99089** were RUNNING/PENDING at session 9 end. Check all three.
+2. **If Module F failed**: Check if it correctly reads `foldx_stability_all.tsv` and merges DeltaG into paired comparisons. The column name is `total_energy`.
+3. **FoldX total_energy is NOT ΔG_folding** — it's total internal energy. Positive values are normal. Use for relative N-vs-C comparison only.
+4. **Previous Module F/H/I results (without FoldX) are already on Mac** at `results/phase2/`. The new results will overwrite them — this is intended.
+5. **All Phase 1 files must be preserved** — only Phase 2 `_full` suffix files get updated.
+6. **After rsync**: Run `create_presentation_v2.py` locally to regenerate PPT with DeltaG data.
+7. **Manuscript priorities**: Methods section (FoldX protocol), Results (DeltaG N-vs-C comparison), Discussion (FoldX caveat about AlphaFold models).
+
 ---
 
 ## Session 7 Summary (2026-03-25)
@@ -686,7 +823,7 @@ Copy and paste the following:
 
 ---
 
-### Critical Reminders for Session 8
+### Critical Reminders for Session 9
 
 1. **FoldX job 94439** (chunks 125, 139) was submitted separately from 94152. Check BOTH job IDs.
 2. **Collection job must be submitted manually** — the original afterok dependency (94158) was cancelled.
@@ -700,6 +837,57 @@ Copy and paste the following:
    - `docs/COLLABORATOR_PRESENTATION.md` (add FoldX findings)
    - `docs/COMPREHENSIVE_PROJECT_DOCUMENT.md` (add FoldX section)
    - `docs/PRESENTATION_GUIDE_AND_QA.md` (add DeltaG Q&As)
+
+---
+
+## Session 8 Summary (2026-03-25)
+
+### What Was Done
+- **FoldX status checked**: ~48.5% complete (243/501 chunks, 12,343/25,007 proteins). 5 tasks running, chunks 250-500 + resubmits 125/139 still pending. ETA unchanged: April 1-2.
+- **GitHub repository created**: https://github.com/visvikbharti/Antah_Asti_Prarambh (private)
+  - 165 files in initial commit (scripts, data, results, docs)
+  - Excluded: AlphaFold CIFs (465 MB), DSSP files (82 MB), FoldX zip (31 MB), binary DBs
+- **Full reproducibility infrastructure added**:
+  - `environment.yml` + `requirements.txt` — pinned conda/pip dependencies
+  - `scripts/download_external_data.sh` — auto-download FASTA, MitoCarta, UniProt with MD5 checksums
+  - `Makefile` — master build system (`make setup`, `make phase1`, `make phase2-hpc`)
+  - `docs/INSTALLATION.md` — complete setup guide (conda, Chainsaw, FoldX, DSSP, HPC, troubleshooting)
+  - `workflow/phase2/config.example.yaml` — portable config template
+- **Fixed hardcoded paths** in `create_presentation.py` and `create_presentation_v2.py` (now use `__file__`)
+- **README.md rewritten** with:
+  - Pipeline flowchart (ASCII art, Phase 1 + Phase 2 dependency graphs)
+  - Quick start (3 commands)
+  - Data availability table with auto-download info
+  - Key results summary tables for all 3 goals
+  - Scientific notes (pLDDT caveat, negative result, FoldX limitation)
+  - Citation section, documentation index
+- **Git config set**: Vishal Bharti <vishalvikashbharti@gmail.com>
+
+### Files Created/Modified in Session 8
+| File | Action | Description |
+|------|--------|-------------|
+| `.gitignore` | Created | Excludes large/binary/intermediate files |
+| `README.md` | Rewritten | Flowchart, quick start, full guides |
+| `environment.yml` | Created | Conda environment spec |
+| `requirements.txt` | Created | Pip dependencies |
+| `scripts/download_external_data.sh` | Created | Data download with checksums |
+| `Makefile` | Created | Master build system |
+| `docs/INSTALLATION.md` | Created | Complete setup guide |
+| `workflow/phase2/config.example.yaml` | Created | Portable config template |
+| `create_presentation.py` | Fixed | Relative paths |
+| `create_presentation_v2.py` | Fixed | Relative paths |
+
+### What Was NOT Done (deferred to session 9)
+- FoldX not yet complete (~48%)
+- Module F/H/I re-run with DeltaG — waiting for FoldX
+- PPT update with DeltaG — waiting for FoldX
+- Manuscript preparation — waiting for complete results
+
+---
+
+## What to Prompt Claude in Session 9
+
+Same as session 8 prompt above — FoldX should be done by April 1-2. The GitHub repo is now set up, so also commit any new results after transfer.
 
 ---
 

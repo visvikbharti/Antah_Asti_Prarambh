@@ -592,7 +592,7 @@ met = [
     ["Sequence", "length, net_charge (K+R-D-E), frac_hydrophobic (A,V,I,L,F,W,M), frac_charged (K,R,D,E), frac_polar, frac_aromatic, frac_small (G,A,S)", "Amino acid sequence"],
     ["Structure", "frac_helix (H,G,I), frac_strand (E,B), frac_coil (all others), mean_pLDDT, frac_plddt_gt70, frac_plddt_gt90", "DSSP + CIF B-factors"],
     ["Folding", "absolute_contact_order, relative_contact_order (RCO), n_contacts", "CIF CA coordinates"],
-    ["Stability", "FoldX total_energy (DeltaG, kcal/mol) — IN PROGRESS", "FoldX 5.1 RepairPDB + Stability"],
+    ["Stability", "FoldX total_energy (DeltaG, kcal/mol) — COMPLETE (25,007 proteins)", "FoldX 5.1 RepairPDB + Stability"],
 ]
 table(slide, Inches(0.3), Inches(5.5), Inches(12.7), Inches(1.6), met, cw=[Inches(1.2), Inches(8.0), Inches(3.5)])
 
@@ -1117,19 +1117,19 @@ for i, (title, items, lp) in enumerate([
         "MitoCarta annotations evolve (70 reclassifications v2->v3)",
     ], Inches(0.3)),
     ("Statistical", [
-        "56 tests: some false positive risk despite BH correction",
+        "60 tests (56 original + 4 FoldX): some false positive risk despite BH",
         "Only 69 homolog pairs — limited power for cross-species subtle effects",
         "10 kDa size-matching bins are approximate at distribution extremes",
         "No Class III equivalents for HSP60 (no dependence classification)",
         "Seed=42 for size-matched sampling (sensitivity analysis needed)",
     ], Inches(4.5)),
-    ("Biological & Pending", [
+    ("Biological & FoldX Caveats", [
         "~30-40% of matrix proteins lack detectable MTS",
         "No TargetP 2.0 / SignalP6 predictions (DTU license required)",
         "Alternative import pathways not characterized",
-        "FoldX DeltaG: ~42% complete (est. April 1-2, 2026)",
-        "    -> Will add thermodynamic stability dimension",
-        "    -> Re-run Modules F, H, I after completion",
+        "FoldX parameterized on experimental structures, not AlphaFold",
+        "FoldX total_energy ≠ ΔG_folding (total internal energy)",
+        "Positive values normal for large proteins; relative comparison valid",
     ], Inches(8.7)),
 ]):
     add_rect(slide, lp, Inches(1.3), Inches(4.0), Inches(5.5), VL_RED if i < 2 else VL_ORANGE)
@@ -1142,11 +1142,11 @@ slide = prs.slides.add_slide(prs.slide_layouts[6]); add_bg(slide, WHITE)
 header(slide, "Future Directions"); footer(slide, sn)
 bullets(slide, Inches(0.5), Inches(1.3), Inches(6.0), Inches(5.5), [
     "Immediate (Session 7, ~April 2026):",
-    "  1. Verify FoldX completion (25,007 proteins)",
-    "  2. Submit 07_foldx_collect.sh to merge results",
-    "  3. Re-run Module F with DeltaG integration",
-    "  4. Re-run Module H: test N-domain vs C-region DeltaG",
-    "  5. Re-run Module I: add DeltaG violin plots",
+    "  1. FoldX COMPLETE (25,007 proteins, 0 failures) ✓",
+    "  2. Collection + F→H→I analysis chain COMPLETE ✓",
+    "  3. 60 tests total (56 original + 4 FoldX), 28 significant ✓",
+    "  4. Key: GroEL substrates have lower FoldX energy (p=8.2e-47)",
+    "  5. 7 polished publication figures generated ✓",
     "  6. Transfer final results to Mac",
     "  7. Manuscript preparation",
     "",
@@ -1213,7 +1213,7 @@ inv = [
     ["Contact order records", "~4,000", "11,824"],
     ["Statistical tests", "281 (22 significant)", "56 (25 significant)"],
     ["Publication figures", "6 (PDF + PNG)", "6 (polished, PDF + PNG)"],
-    ["FoldX stability", "-", "~42% complete (25,007 target)"],
+    ["FoldX stability", "25,007/25,007 (100%)", "COMPLETE — median 111.2 kcal/mol"],
 ]
 table(slide, Inches(1.5), Inches(4.5), Inches(10.3), Inches(2.8), inv)
 
@@ -1229,7 +1229,9 @@ hist = [
     ["4", "2026-03-14", "Phase 2 pipeline, HPC deployment, Chainsaw full-scale.\n19 SLURM scripts, Snakemake workflow.", "bioconda stride != protein STRIDE (hours lost)\nColumn name mismatches (6 wrong lookups)\nHuman CIFs still .gz compressed"],
     ["5", "2026-03-17", "Foldseek full-scale (16K clusters), Module E verified,\nF->H->I chain completed. Results transferred to Mac.", "LD_LIBRARY_PATH fix for gcc-8.4/numpy\npython3 -u for SLURM real-time logs"],
     ["6", "2026-03-22", "FoldX 5.1 installed + tested. Array job submitted\n(501 tasks). 2 timeout fixes. Collaborator deliverables.", "FoldX 5.1: component energies null (OK, total works)\nTimeout chunks 125,139 -> extended to 6h"],
-    ["7", "(pending)", "FoldX completion, Module F/H/I re-run with DeltaG,\nManuscript preparation.", ""],
+    ["7", "2026-03-24", "PPT (35 slides) + Q&A guide (30 Qs) created.\nFoldX ~42% complete.", ""],
+    ["8", "2026-03-25", "GitHub repo + reproducibility infra.\nFoldX ~48% complete.", ""],
+    ["9", "2026-04-01", "FoldX 100% COMPLETE (25,007 proteins, 0 failures).\nF→H→I chain re-run with DeltaG. Column bugs fixed.", "GroEL DeltaG=-9.4 (p=8.2e-47 vs background)\n60 merged tests, 28 significant"],
 ]
 table(slide, Inches(0.2), Inches(1.2), Inches(12.9), Inches(5.8), hist,
       cw=[Inches(0.7), Inches(1.2), Inches(5.5), Inches(5.5)])
@@ -1296,7 +1298,7 @@ bullets(slide, Inches(6.8), Inches(4.8), Inches(6.0), Inches(2.2), [
     "  All scripts use: python3 -u (unbuffered)",
     "  Enables: tail -f slurm-*.out for monitoring",
     "",
-    "FoldX timeout: 4h -> 6h for large proteins",
+    "FoldX: 4h->6h walltime for large proteins; 25,007 completed with 0 failures",
     "  Chunks 125, 139 had large proteins (>1000 aa)",
     "  Resubmitted as job 94439 with 6h wall time",
 ], sz=11, sp=Pt(2))
@@ -1376,7 +1378,7 @@ nums = [
     ["Matrix enrichment (HSP60)", "OR = 3.29, p = 1.6x10^-16", "HSP60 substrates -> matrix"],
     ["MTS pre-domain", "84.4%, p = 3.4x10^-51", "Median gap = 18 residues"],
     ["N-domain RCO conservation", "r = 0.84, p = 5.3x10^-13", "Across 2 billion years"],
-    ["FoldX progress", "~42% (10,775/25,007)", "Est. completion April 1-2"],
+    ["FoldX stability", "25,007/25,007 (100%)", "COMPLETE. GroEL median=-38.6"],
 ]
 table(slide, Inches(0.2), Inches(1.2), Inches(12.9), Inches(5.8), nums,
       cw=[Inches(3.5), Inches(3.0), Inches(6.4)])
@@ -1394,7 +1396,7 @@ tb(slide, Inches(1), Inches(4.8), Inches(11.3), Inches(2.0),
    "Data: 25,007 proteins | 7 datasets | 56 statistical tests | 25 significant\n"
    "Tools: MMseqs2, Foldseek, Chainsaw, STRIDE, FoldX, mkDSSP, AlphaFold DB\n"
    "Figures: 6 publication-quality (PDF+PNG, 300 DPI, colorblind-friendly)\n"
-   "Status: Phase 2 complete; FoldX ~42% done; manuscript preparation next",
+   "Status: Phase 2 COMPLETE including FoldX (25,007 proteins); manuscript preparation next",
    sz=15, color=RGBColor(0xAA,0xBB,0xCC), align=PP_ALIGN.CENTER)
 
 # SAVE

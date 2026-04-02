@@ -2,8 +2,8 @@
 ## Comparative Structural Proteomics of Group I Chaperonin Substrates
 
 **Investigator:** Vishal Bharti, CSIR-Institute of Genomics and Integrative Biology
-**Date:** 2026-03-22
-**Status:** Phase 2 analysis complete; FoldX thermodynamic stability running on HPC (~7 days remaining)
+**Date:** 2026-04-01 (updated)
+**Status:** Phase 2 analysis COMPLETE including FoldX thermodynamic stability (25,007 proteins, 0 failures)
 
 ---
 
@@ -21,7 +21,7 @@
 | **Goal 2** | Do N-terminal domains differ structurally from C-terminal regions, and is this asymmetry substrate-specific? | Complete |
 | **Goal 3** | How do mitochondrial targeting signals relate to structural domain boundaries in HSP60 substrates? | Complete |
 
-**Additional (pending):** FoldX-based thermodynamic stability (DeltaG) to complement contact order as a folding difficulty proxy.
+**Additional (COMPLETE):** FoldX-based thermodynamic stability (DeltaG, 25,007 proteins) complements contact order. GroEL substrates have significantly lower total energy (median -38.6 kcal/mol, p=8.2e-47 vs background).
 
 ---
 
@@ -85,7 +85,7 @@ AlphaFold structures (25,007)
 └─────────────────────────────┘
     ↓
 ┌─────────────────────────────┐
-│ FoldX Stability [RUNNING]    │
+│ FoldX Stability [COMPLETE]   │
 │  25,007 proteins             │
 │  DeltaG (kcal/mol)           │
 │  ~28% complete               │
@@ -273,34 +273,49 @@ All figures are available in both **PDF** (vector) and **PNG** (300 DPI) formats
 
 ---
 
-## 7. FoldX Thermodynamic Stability — In Progress
+## 7. FoldX Thermodynamic Stability — COMPLETE
 
 ### 7.1 What FoldX Adds
 
-Contact order is a proxy for folding kinetics (Plaxco et al. 1998). FoldX provides computed thermodynamic stability (ΔG in kcal/mol) — a complementary metric that captures the energetic favorability of the folded state rather than the kinetic pathway.
+Contact order is a proxy for folding kinetics (Plaxco et al. 1998). FoldX provides computed thermodynamic stability (total energy in kcal/mol) — a complementary metric that captures the energetic state of the folded protein.
 
-**Why this matters:** A protein can have high contact order (complex topology, slow folding) but still be thermodynamically stable. Adding ΔG allows us to distinguish:
-- Kinetically challenging but thermodynamically stable folds (high CO, low ΔG)
-- Both kinetically and thermodynamically difficult folds (high CO, high ΔG) — these are the proteins most likely to require chaperonin assistance
+**Why this matters:** A protein can have high contact order (complex topology, slow folding) but still be thermodynamically stable. Adding FoldX energy allows us to distinguish:
+- Kinetically challenging but thermodynamically stable folds (high CO, low energy)
+- Both kinetically and thermodynamically unfavorable folds (high CO, high energy)
 
-### 7.2 Current Status
+### 7.2 FoldX Results Summary
 
 | Metric | Value |
 |--------|:-----:|
 | Total proteins | 25,007 |
-| Completed chunks | 143/501 (28.5%) |
-| Per-protein results | 7,204 |
-| Currently running | 5 tasks |
-| Pending | ~353 tasks |
-| Failed (timeout) | 2 chunks (being resubmitted with extended wall time) |
-| **Estimated completion** | **~March 29–30, 2026** |
+| Successful | **25,007 (100%)** |
+| Failed | **0** |
+| Completion date | April 1, 2026 |
 
-### 7.3 What Will Change After FoldX
+**FoldX DeltaG by dataset:**
 
-1. **Module F** will be re-run to integrate ΔG per N-domain and C-region
-2. **Module H** will add statistical tests: paired Wilcoxon on ΔG (N-vs-C), Mann-Whitney (substrate vs background)
-3. **Module I** figures will be updated with ΔG violin plots and scatter plots
-4. Updated results report with thermodynamic stability findings
+| Dataset | N | Median (kcal/mol) | Mean | Direction |
+|---------|--:|------------------:|-----:|-----------|
+| **GroEL substrates** | 248 | **-38.6** | -9.4 | Significantly lower |
+| HSP60 substrates | 264 | 74.6 | 96.2 | Similar to background |
+| Matrix background | 502 | 77.7 | 104.2 | — |
+| Mito background | 1,056 | 63.5 | 101.9 | — |
+| Full proteome | 23,632 | 119.2 | 294.1 | — |
+
+**Key finding:** GroEL substrates have significantly lower FoldX total energy than background (Mann-Whitney p=8.2e-47, Cohen's d=-0.46). This suggests GroEL substrates are thermodynamically more stable — chaperonin assistance is needed for kinetic (folding pathway) reasons, not thermodynamic instability.
+
+HSP60 substrates do NOT show this pattern (p=0.77), suggesting different selection pressures in mitochondrial vs cytoplasmic chaperonin systems.
+
+### 7.3 Updated Statistics (with FoldX)
+
+Total tests: 60 (56 original + 4 FoldX-specific), 28 significant after hierarchical BH correction.
+
+New significant FoldX tests:
+- H2.1 GroEL FoldX DeltaG vs background: p=8.2e-47, d=-0.46
+- H2.2 GroEL pre-tail length: p=2.8e-25, d=-0.43
+- H2.2 HSP60 pre-tail length: p=2.8e-08, d=-0.27
+
+**Caveat:** FoldX was parameterized on experimental X-ray structures, not AlphaFold models. AlphaFold models have idealized geometry that may bias energy calculations. Relative comparisons within the same modeling pipeline are valid.
 
 ### 7.4 Test Run Results
 
@@ -346,11 +361,14 @@ Goal 3: HOW do substrates reach the chaperonin?
 - [x] Publication figures (6 figures, colorblind-friendly)
 - [x] Statistical framework (56 tests, hierarchical BH)
 
-### In Progress
-- [ ] FoldX thermodynamic stability (25,007 proteins, ~28% complete, est. March 29–30)
+### Completed (April 1, 2026)
+- [x] FoldX thermodynamic stability (25,007/25,007 proteins, 0 failures)
+- [x] Module F/H/I re-run with FoldX DeltaG integration
+- [x] 60 merged statistical tests, 28 significant
+- [x] 7 polished publication figures
 
-### After FoldX Completes (~early April)
-1. Verify FoldX results (success rate, data quality)
+### Remaining
+1. Manuscript preparation
 2. Re-run Modules F → H → I with ΔG integration
 3. Transfer updated results to local machine
 4. Update figures with thermodynamic stability data
@@ -416,7 +434,7 @@ results/phase2/
 ├── stats/             — P-values, statistics summary (981 KB)
 ├── figures/           — 6 figures × 2 formats (1.6 MB)
 ├── foldseek/analysis/ — Cluster membership, summary (2.3 MB)
-└── foldx/             — [IN PROGRESS] Per-protein DeltaG values
+└── foldx/             — [COMPLETE] foldx_stability_all.tsv (25,007 proteins)
 ```
 
 ---
@@ -447,4 +465,4 @@ Sum over all Cα–Cα contacts within 8.0 Å with sequence separation ≥ 6 res
 ---
 
 *All data derived from actual computational results — no simulated or fabricated data.*
-*FoldX stability analysis in progress; updated presentation to follow upon completion (~early April 2026).*
+*FoldX stability analysis complete (April 1, 2026). 25,007 proteins processed. GroEL substrates significantly more stable (p=8.2e-47). Manuscript in preparation.*

@@ -97,10 +97,18 @@ hsp60 = pd.read_csv(f"{PROJECT_DIR}/data/processed/hsp60_tier1_substrates.tsv", 
 matrix = pd.read_csv(f"{PROJECT_DIR}/data/processed/human_matrix_proteome.tsv", sep="\t")
 mito = pd.read_csv(f"{PROJECT_DIR}/data/processed/human_mito_proteome.tsv", sep="\t")
 
-groel_acc = set(groel["accession"].values) if "accession" in groel.columns else set()
-hsp60_acc = set(hsp60["accession"].values) if "accession" in hsp60.columns else set()
-matrix_acc = set(matrix["accession"].values) if "accession" in matrix.columns else set()
-mito_acc = set(mito["accession"].values) if "accession" in mito.columns else set()
+def get_accessions(df, preferred_cols=["accession", "current_accession", "uniprot_accession", "uniprot_id"]):
+    """Extract accession set from a DataFrame, trying multiple column names."""
+    for col in preferred_cols:
+        if col in df.columns:
+            return set(df[col].dropna().values)
+    return set()
+
+groel_acc = get_accessions(groel)
+hsp60_acc = get_accessions(hsp60)
+matrix_acc = get_accessions(matrix)
+mito_acc = get_accessions(mito)
+print(f"Substrate sets: GroEL={len(groel_acc)}, HSP60={len(hsp60_acc)}, Matrix={len(matrix_acc)}, Mito={len(mito_acc)}")
 
 # ---- Load Phase 1 structure index for protein lengths ----
 struct_idx_path = f"{PROJECT_DIR}/results/structures/structure_index.tsv"
@@ -123,27 +131,37 @@ print("\n--- Three-Region Decomposition ---")
 boundary_records = []
 
 # From CATH: get first domain boundaries per protein
-if not cath.empty and "start" in cath.columns and "end" in cath.columns:
-    for acc, group in cath.groupby("accession"):
-        group_sorted = group.sort_values("start")
+# Column names: uniprot_accession, domain_start, domain_end
+cath_acc_col = "uniprot_accession" if "uniprot_accession" in cath.columns else "accession"
+cath_start_col = "domain_start" if "domain_start" in cath.columns else "start"
+cath_end_col = "domain_end" if "domain_end" in cath.columns else "end"
+if not cath.empty and cath_start_col in cath.columns and cath_end_col in cath.columns:
+    for acc, group in cath.groupby(cath_acc_col):
+        group_sorted = group.sort_values(cath_start_col)
         first = group_sorted.iloc[0]
         boundary_records.append({
             "accession": acc,
             "source": "CATH",
             "n_domains": len(group_sorted),
-            "first_domain_start": int(first["start"]),
-            "first_domain_end": int(first["end"]),
+            "first_domain_start": int(first[cath_start_col]),
+            "first_domain_end": int(first[cath_end_col]),
         })
 
 # From Chainsaw: parse domain boundaries for proteins not in CATH
 cath_accs = {r["accession"] for r in boundary_records}
 
-# Chainsaw output format varies; try to parse domain boundaries
+# Chainsaw output format: chain_id=AF-ACC-F1-model_v6, ndom, chopping
+# Use annotated version if available (has accession column)
 dom_boundary_col = None
 for col in ["chopping", "domain_boundaries", "boundaries", "domains"]:
     if col in chainsaw.columns:
         dom_boundary_col = col
         break
+
+# Extract accession from chain_id if accession column not present
+if "accession" not in chainsaw.columns and "chain_id" in chainsaw.columns:
+    import re
+    chainsaw["accession"] = chainsaw["chain_id"].str.extract(r"AF-([A-Z0-9]+)-F", expand=False)
 
 if dom_boundary_col and "accession" in chainsaw.columns:
     for _, row in chainsaw.iterrows():
@@ -174,16 +192,25 @@ if dom_boundary_col and "accession" in chainsaw.columns:
 
         if domains:
             domains.sort(key=lambda x: x[0])
+            # Use ndom from Chainsaw if available, else count parsed domains
+            n_dom = int(row["ndom"]) if "ndom" in chainsaw.columns and pd.notna(row.get("ndom")) else len(domains)
             boundary_records.append({
                 "accession": acc,
                 "source": "Chainsaw",
-                "n_domains": len(domains),
+                "n_domains": n_dom,
                 "first_domain_start": domains[0][0],
                 "first_domain_end": domains[0][1],
             })
 
 boundaries = pd.DataFrame(boundary_records)
 print(f"Proteins with domain boundaries: {len(boundaries)}")
+
+if boundaries.empty:
+    print("ERROR: No domain boundaries found. Check column names in CATH/Chainsaw files.")
+    print(f"  CATH columns: {list(cath.columns) if not cath.empty else 'N/A'}")
+    print(f"  Chainsaw columns: {list(chainsaw.columns)}")
+    import sys
+    sys.exit(1)
 
 # Filter to multi-domain (need at least 1 domain to define regions)
 multi_domain = boundaries[boundaries["n_domains"] >= 2]

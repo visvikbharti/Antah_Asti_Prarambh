@@ -88,8 +88,15 @@ groel = pd.read_csv(f"{PROJECT_DIR}/data/processed/groel_substrates_standardized
 hsp60 = pd.read_csv(f"{PROJECT_DIR}/data/processed/hsp60_tier1_substrates.tsv", sep="\t")
 homologs = pd.read_csv(f"{PROJECT_DIR}/data/processed/groel_hsp60_homologs.tsv", sep="\t")
 
-groel_acc = set(groel["accession"].values) if "accession" in groel.columns else set()
-hsp60_acc = set(hsp60["accession"].values) if "accession" in hsp60.columns else set()
+def get_accessions(df, preferred_cols=["accession", "current_accession", "uniprot_accession", "uniprot_id"]):
+    """Extract accession set from a DataFrame, trying multiple column names."""
+    for col in preferred_cols:
+        if col in df.columns:
+            return set(df[col].dropna().values)
+    return set()
+
+groel_acc = get_accessions(groel)
+hsp60_acc = get_accessions(hsp60)
 
 print(f"\nGroEL substrates: {len(groel_acc)}")
 print(f"HSP60 substrates: {len(hsp60_acc)}")
@@ -247,19 +254,26 @@ if os.path.exists(targ_path):
     print(f"Targeting data: {len(targeting)} proteins")
 
     # Matrix enrichment in HSP60 substrates
-    if "accession" in targeting.columns:
-        hsp60_targ = targeting[targeting["accession"].isin(hsp60_acc)]
-        bg_targ = targeting[~targeting["accession"].isin(hsp60_acc)]
+    # Targeting file uses uniprot_accession
+    targ_acc_col = None
+    for col in ["accession", "uniprot_accession", "uniprot_id"]:
+        if col in targeting.columns:
+            targ_acc_col = col
+            break
+
+    if targ_acc_col:
+        hsp60_targ = targeting[targeting[targ_acc_col].isin(hsp60_acc)]
+        bg_targ = targeting[~targeting[targ_acc_col].isin(hsp60_acc)]
 
         matrix_col = None
-        for col in ["matrix_localization", "is_matrix", "localization", "sub_localization"]:
+        for col in ["mitocarta_is_matrix", "matrix_localization", "is_matrix", "localization", "sub_localization"]:
             if col in targeting.columns:
                 matrix_col = col
                 break
 
         if matrix_col:
-            hsp60_matrix = hsp60_targ[hsp60_targ[matrix_col].astype(str).str.contains("matrix|Matrix", case=False, na=False)]
-            bg_matrix = bg_targ[bg_targ[matrix_col].astype(str).str.contains("matrix|Matrix", case=False, na=False)]
+            hsp60_matrix = hsp60_targ[hsp60_targ[matrix_col].astype(str).str.contains("True|matrix|Matrix|1", case=False, na=False)]
+            bg_matrix = bg_targ[bg_targ[matrix_col].astype(str).str.contains("True|matrix|Matrix|1", case=False, na=False)]
 
             table = [[len(hsp60_matrix), len(hsp60_targ) - len(hsp60_matrix)],
                      [len(bg_matrix), len(bg_targ) - len(bg_matrix)]]

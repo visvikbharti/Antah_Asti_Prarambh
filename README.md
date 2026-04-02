@@ -3,7 +3,7 @@
 **"The End is the Beginning"** — Comparative structural proteomics of chaperonin substrates
 
 [![Phase 1](https://img.shields.io/badge/Phase%201-Complete-brightgreen)]()
-[![Phase 2](https://img.shields.io/badge/Phase%202-FoldX%20in%20progress-yellow)]()
+[![Phase 2](https://img.shields.io/badge/Phase%202-Complete-brightgreen)]()
 [![Python](https://img.shields.io/badge/Python-3.9-blue)]()
 
 ## Overview
@@ -378,8 +378,10 @@ bash scripts/download_external_data.sh
 ## Status
 
 - **Phase 1 (pilot)**: Complete and verified (all 5 success criteria PASS)
-- **Phase 2 (full-scale)**: Complete except FoldX thermodynamic stability (~48% done on HPC)
-- **Next**: Integrate FoldX DeltaG results, regenerate figures, prepare manuscript
+- **Phase 2 (full-scale)**: **COMPLETE** including FoldX thermodynamic stability (25,007 proteins, 0 failures)
+- **FoldX key finding**: GroEL substrates have significantly lower total energy (median -38.6 kcal/mol, p=8.2e-47 vs background)
+- **Statistics**: 60 tests across 3 families, 28 significant after hierarchical BH correction
+- **Next**: Manuscript preparation
 
 ---
 

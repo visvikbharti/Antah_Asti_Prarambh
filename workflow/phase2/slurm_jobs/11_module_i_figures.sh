@@ -57,7 +57,7 @@ plt.style.use("seaborn-v0_8-whitegrid")
 plt.rcParams.update({
     "font.size": 12, "axes.labelsize": 12, "axes.titlesize": 13,
     "xtick.labelsize": 10, "ytick.labelsize": 10, "legend.fontsize": 10,
-    "figure.dpi": 300, "savefig.dpi": 300, "savefig.bbox_inches": "tight",
+    "figure.dpi": 300, "savefig.dpi": 300, "savefig.bbox": "tight",
 })
 
 print("=" * 70)
@@ -83,8 +83,17 @@ pvalues = safe_load(f"{RESULTS}/stats/corrected_pvalues_full.tsv", "p-values")
 groel = safe_load(f"{PROJECT_DIR}/data/processed/groel_substrates_standardized.tsv", "GroEL")
 hsp60 = safe_load(f"{PROJECT_DIR}/data/processed/hsp60_tier1_substrates.tsv", "HSP60")
 
-groel_acc = set(groel["accession"].values) if groel is not None and "accession" in groel.columns else set()
-hsp60_acc = set(hsp60["accession"].values) if hsp60 is not None and "accession" in hsp60.columns else set()
+def get_accessions(df, preferred_cols=["accession", "current_accession", "uniprot_accession", "uniprot_id"]):
+    """Extract accession set from a DataFrame, trying multiple column names."""
+    if df is None:
+        return set()
+    for col in preferred_cols:
+        if col in df.columns:
+            return set(df[col].dropna().values)
+    return set()
+
+groel_acc = get_accessions(groel)
+hsp60_acc = get_accessions(hsp60)
 
 figures_generated = 0
 
