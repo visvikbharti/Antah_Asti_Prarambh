@@ -300,10 +300,11 @@ missing_accessions_ecoli.txt             — 8 missing E. coli structures
 missing_accessions_human.txt             — 10 missing human structures
 ```
 
-#### F7. FoldX — PENDING (expected ~March 30)
+#### F7. FoldX — COMPLETE (April 1, 2026)
 ```
-results/phase2/foldx/per_protein/*.json  — Per-protein DeltaG (25,007 expected)
-results/phase2/foldx/foldx_stability_all.tsv — Aggregated stability values
+results/phase2/foldx/foldx_stability_all.tsv — Aggregated stability (25,007 proteins, 1.1 MB)
+  Columns: accession, status, total_energy (kcal/mol)
+  Key: GroEL median=-38.6, HSP60 median=74.6, proteome median=119.2
 ```
 
 ---

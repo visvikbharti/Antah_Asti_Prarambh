@@ -3,8 +3,8 @@
 ## "The End is the Beginning": A Comparative Structural Proteomics Study of Chaperonin Substrates
 
 **Principal Investigator:** Vishal Bharti, CSIR-Institute of Genomics and Integrative Biology (IGIB), New Delhi
-**Date:** March 24, 2026
-**Status:** Phase 2 full-scale analysis complete; FoldX thermodynamic stability calculations running on HPC (~42% complete, estimated completion April 1-2, 2026)
+**Date:** April 1, 2026 (updated)
+**Status:** Phase 2 COMPLETE including FoldX thermodynamic stability (25,007/25,007 proteins, 0 failures). 60 statistical tests, 28 significant. Manuscript in preparation.
 
 ---
 
@@ -377,7 +377,7 @@ Nine hypotheses were pre-registered before Module H analysis, organized into thr
 │       ├── stats/                         # Full-scale statistics (56 tests)
 │       ├── figures/                       # Publication figures (6 × PDF+PNG)
 │       ├── foldseek/                      # Structural clustering (16,193 clusters)
-│       └── foldx/                         # FoldX results (IN PROGRESS on HPC)
+│       └── foldx/                         # FoldX results (COMPLETE — 25,007 proteins)
 │
 ├── scripts/                               # Standalone analysis scripts (4 files)
 │   ├── validate_uniprot_accessions.py     # GroEL accession demerging
@@ -458,7 +458,7 @@ A common point of confusion is that the project contains **two separate `phase2`
    - Contents: `Snakefile`, `config.yaml`, `download_alphafold_full.py`, `run_foldseek_full.py`, `run_foldx.py`, `scripts/` (4 analysis modules), `slurm_jobs/` (19 SLURM scripts)
 
 2. **`results/phase2/`** — This is the **output data**. It contains all the results that were produced by running the Phase 2 pipeline on the HPC cluster and then transferred back to the local Mac. Think of this as the "finished dish."
-   - Contents: `structures/` (index), `domains/` (assignments), `stability/` (N-vs-C), `stats/` (p-values), `figures/` (6 publication figures), `foldseek/` (clusters), `foldx/` (in progress)
+   - Contents: `structures/` (index), `domains/` (assignments), `stability/` (N-vs-C), `stats/` (p-values), `figures/` (7 publication figures), `foldseek/` (clusters), `foldx/` (COMPLETE — 25,007 proteins)
 
 ---
 
@@ -1203,7 +1203,7 @@ Locally polished using `module_i_polished.py` after transfer from HPC.
 
 ### FoldX Thermodynamic Stability
 
-FoldX deserves special attention because it is the final piece of the analysis, currently running on HPC.
+FoldX deserves special attention because it provides the thermodynamic stability dimension. **Completed April 1, 2026** (25,007 proteins, 0 failures). Key finding: GroEL substrates have significantly lower total energy (median -38.6 kcal/mol, p=8.2e-47 vs background), while HSP60 substrates show no significant difference (p=0.77).
 
 **What FoldX calculates:** The empirical free energy of folding (ΔG, kcal/mol) using a force field that includes:
 - Van der Waals energy (attractive + repulsive)
@@ -1404,7 +1404,7 @@ The three goals converge into a coherent biological narrative:
 
 ### Methodological Limitations
 
-1. **pLDDT is confidence, not stability.** We use contact order and FoldX (pending) for stability. However, contact order captures folding kinetics, not thermodynamics. The full picture requires FoldX ΔG values, which are still being computed.
+1. **pLDDT is confidence, not stability.** We use contact order for folding kinetics and FoldX for thermodynamics. FoldX (now complete) shows GroEL substrates are thermodynamically MORE stable (median -38.6 kcal/mol) — chaperonin assistance is needed for kinetic reasons. Caveat: FoldX was parameterized on experimental structures, not AlphaFold models.
 
 2. **Co-IP captures interactions, not function.** HSP60 substrates are proteins that physically associate with HSP60 in a co-IP experiment. Some may be transient interactors, not true folding substrates. SILAC filtering mitigates this but cannot fully eliminate it.
 
@@ -1486,7 +1486,9 @@ The project was developed across 6 interactive sessions:
 | 4 | 2026-03-14 | Phase 2 pipeline development, HPC deployment, bug fixes (column names, STRIDE binary), Chainsaw full-scale |
 | 5 | 2026-03-17 | Foldseek full-scale, Module E verified, F→H→I chain submitted, results transferred to Mac |
 | 6 | 2026-03-22 | FoldX 5.1 installation, test run, full array job submitted (501 tasks), timeout fixes, collaborator deliverables |
-| 7 | (pending) | FoldX completion verification, Module F/H/I re-run with ΔG, manuscript preparation |
+| 7 | 2026-03-24 | PPT (35 slides) + Q&A guide created. FoldX ~42%. |
+| 8 | 2026-03-25 | GitHub repo + reproducibility infra. FoldX ~48%. |
+| 9 | 2026-04-01 | FoldX 100% COMPLETE (25,007, 0 failures). F→H→I chain re-run. 60 tests, 28 sig. Column bugs fixed. Manuscript next. |
 
 ---
 
@@ -1558,7 +1560,7 @@ The project was developed across 6 interactive sessions:
 | Statistics summary | `results/phase2/stats/statistics_summary_full.txt` | — | Human-readable |
 | Foldseek clusters (full) | `results/phase2/foldseek/analysis/foldseek_clusters_full.tsv` | 16,193 | Structure clusters |
 | Figures (full) | `results/phase2/figures/fig[1-6]_*.{pdf,png}` | 12 | Publication figures |
-| FoldX results | `results/phase2/foldx/per_protein/*.json` | 10,775+ | IN PROGRESS |
+| FoldX results | `results/phase2/foldx/foldx_stability_all.tsv` | 25,007 | COMPLETE |
 
 ### Scripts Inventory
 
