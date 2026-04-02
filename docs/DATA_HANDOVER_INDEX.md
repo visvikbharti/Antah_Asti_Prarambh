@@ -72,7 +72,7 @@ PNG versions (300 DPI) are provided alongside PDFs for presentations.
 
 | File | Rows | Description |
 |------|-----:|-------------|
-| `foldx_stability_all.tsv` | 25,007 | Aggregated FoldX total energy for all proteins. Columns: accession, status, total_energy (kcal/mol). All 25,007 proteins succeeded. Mean=309.6, Median=111.2, Range=[-242.7, 11442.8]. GroEL substrates significantly lower (median -38.6, p=8.2e-47). |
+| `foldx_stability_all.tsv` | 25,007 | Aggregated FoldX total energy for all proteins. Columns: accession, status, total_energy (kcal/mol). All 25,007 proteins succeeded. Mean=309.6, Median=111.2, Range=[-242.7, 11442.8]. GroEL substrates significantly lower (median -38.6 vs -15.2 bg, p=2.9e-3 compartment-matched). |
 | `foldx_array.slurm` | — | SLURM array job script (501 tasks, 50 proteins each). |
 | `collect_results.slurm` | — | Collection job script. |
 
@@ -123,7 +123,7 @@ All scripts are in `workflow/phase2/`:
 
 ## Known Limitations
 
-1. **pLDDT ≠ stability.** AlphaFold pLDDT is model confidence, not thermodynamic stability. FoldX total energy (now complete) addresses this: GroEL substrates have median -38.6 kcal/mol vs 119 for proteome background (p=8.2e-47). Note: FoldX was parameterized on experimental structures, not AlphaFold models — caveat for publication.
+1. **pLDDT ≠ stability.** AlphaFold pLDDT is model confidence, not thermodynamic stability. FoldX total energy (now complete) addresses this: GroEL substrates have median -38.6 vs -15.2 for E. coli background (p=2.9e-3, d=-0.07, compartment-matched). Note: initial comparison vs all 25K proteins yielded inflated p=8.2e-47 due to species confound. Note: FoldX was parameterized on experimental structures, not AlphaFold models — caveat for publication.
 2. **Chainsaw domain predictions** are ML-based; where CATH assignments exist, they are preferred.
 3. **MTS analysis** uses Phase 1 CATH domain boundaries (identical in unified assignments since CATH is preferred).
 4. **8 proteins** lack AlphaFold structures: P07203, P30042, P36969, Q16881, Q5THJ4, Q86UA3, Q9BVL4, Q9NNW7.

@@ -310,7 +310,7 @@ Where the sum is over all CA-CA contacts within 8.0 A with sequence separation >
 
 ## 8. Limitations and Caveats
 
-1. **pLDDT is model confidence, NOT thermodynamic stability.** We use contact order as the primary folding kinetics proxy. FoldX total energy (25,007 proteins, completed 2026-04-01) confirms: GroEL substrates have significantly lower energy (median -38.6, p=8.2e-47). FoldX was parameterized on experimental structures, not AlphaFold — relative comparisons valid but absolute values should be caveated.
+1. **pLDDT is model confidence, NOT thermodynamic stability.** We use contact order as the primary folding kinetics proxy. FoldX total energy (25,007 proteins, completed 2026-04-01) confirms: GroEL substrates have significantly lower energy (median -38.6 vs -15.2 bg, p=2.9e-3 compartment-matched). FoldX was parameterized on experimental structures, not AlphaFold — relative comparisons valid but absolute values should be caveated.
 
 2. **MTS analysis uses Phase 1 domain boundaries.** The 436 proteins with MTS data were all in the Phase 1 CATH set; since CATH assignments are preferred over Chainsaw in the unified assignments, domain boundaries are identical. This is a known limitation but does not affect results.
 
@@ -318,7 +318,7 @@ Where the sum is over all CA-CA contacts within 8.0 A with sequence separation >
 
 4. **Chainsaw domain predictions have variable confidence.** For proteins without CATH assignments, domain boundaries rely on ML prediction. Phase 2 uses both sources with CATH preferred.
 
-5. **FoldX stability: COMPLETE.** 25,007 proteins processed (0 failures). Key results: GroEL substrates have mean total energy -9.4 kcal/mol (median -38.6), significantly lower than proteome background (mean 294.1, median 119.2; Mann-Whitney p=8.2e-47, d=-0.46). HSP60 substrates are NOT significantly different from mitochondrial background (p=0.77). This asymmetry between the two chaperonin systems is biologically interesting — GroEL may select for thermodynamically stable but kinetically complex substrates, while HSP60 selection is driven more by compartment targeting. Combined statistics: 60 tests, 28 significant after hierarchical BH correction.
+5. **FoldX stability: COMPLETE.** 25,007 proteins processed (0 failures). With proper compartment-matched comparison: GroEL substrates have slightly lower total energy (median -38.6 vs -15.2 for *E. coli* bg; p=2.9e-3, d=-0.07) — statistically significant but small effect. HSP60 substrates NOT different from matrix bg (p=0.80). An initial analysis using all 25K proteins as background yielded an inflated p=8.2e-47 due to species confound (*E. coli* median=-16.7 vs Human median=165.7). Combined statistics: 60 tests, 28 significant after hierarchical BH correction.
 
 ---
 
@@ -337,4 +337,4 @@ Where the sum is over all CA-CA contacts within 8.0 A with sequence separation >
 ---
 
 *Report generated: 2026-03-19. All data derived from actual computational results — no simulated or fabricated data.*
-*FoldX stability analysis complete (April 1, 2026). 25,007 proteins, 0 failures. GroEL substrates significantly more stable (p=8.2e-47). Manuscript in preparation.*
+*FoldX stability analysis complete (April 1, 2026). 25,007 proteins, 0 failures. GroEL substrates slightly more stable (p=2.9e-3, d=-0.07, compartment-matched). Manuscript in preparation.*

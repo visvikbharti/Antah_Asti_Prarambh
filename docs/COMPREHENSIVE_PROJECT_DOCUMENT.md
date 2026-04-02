@@ -1203,7 +1203,7 @@ Locally polished using `module_i_polished.py` after transfer from HPC.
 
 ### FoldX Thermodynamic Stability
 
-FoldX deserves special attention because it provides the thermodynamic stability dimension. **Completed April 1, 2026** (25,007 proteins, 0 failures). Key finding: GroEL substrates have significantly lower total energy (median -38.6 kcal/mol, p=8.2e-47 vs background), while HSP60 substrates show no significant difference (p=0.77).
+FoldX deserves special attention because it provides the thermodynamic stability dimension. **Completed April 1, 2026** (25,007 proteins, 0 failures). Key finding: GroEL substrates have significantly lower total energy (median -38.6 vs -15.2 for E. coli bg, p=2.9e-3, d=-0.07, compartment-matched vs background), while HSP60 substrates show no significant difference (p=0.77).
 
 **What FoldX calculates:** The empirical free energy of folding (ΔG, kcal/mol) using a force field that includes:
 - Van der Waals energy (attractive + repulsive)

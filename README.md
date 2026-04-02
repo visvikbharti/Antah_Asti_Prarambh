@@ -379,7 +379,7 @@ bash scripts/download_external_data.sh
 
 - **Phase 1 (pilot)**: Complete and verified (all 5 success criteria PASS)
 - **Phase 2 (full-scale)**: **COMPLETE** including FoldX thermodynamic stability (25,007 proteins, 0 failures)
-- **FoldX key finding**: GroEL substrates have significantly lower total energy (median -38.6 kcal/mol, p=8.2e-47 vs background)
+- **FoldX key finding**: GroEL substrates have slightly lower total energy (median -38.6 vs -15.2 for *E. coli* bg, p=2.9e-3, d=-0.07; compartment-matched)
 - **Statistics**: 60 tests across 3 families, 28 significant after hierarchical BH correction
 - **Next**: Manuscript preparation
 

@@ -21,7 +21,7 @@
 | **Goal 2** | Do N-terminal domains differ structurally from C-terminal regions, and is this asymmetry substrate-specific? | Complete |
 | **Goal 3** | How do mitochondrial targeting signals relate to structural domain boundaries in HSP60 substrates? | Complete |
 
-**Additional (COMPLETE):** FoldX-based thermodynamic stability (DeltaG, 25,007 proteins) complements contact order. GroEL substrates have significantly lower total energy (median -38.6 kcal/mol, p=8.2e-47 vs background).
+**Additional (COMPLETE):** FoldX-based thermodynamic stability (DeltaG, 25,007 proteins) complements contact order. GroEL substrates have significantly lower total energy (median -38.6 vs -15.2 for E. coli bg, p=2.9e-3, d=-0.07; compartment-matched vs background).
 
 ---
 
@@ -302,7 +302,7 @@ Contact order is a proxy for folding kinetics (Plaxco et al. 1998). FoldX provid
 | Mito background | 1,056 | 63.5 | 101.9 | — |
 | Full proteome | 23,632 | 119.2 | 294.1 | — |
 
-**Key finding:** GroEL substrates have significantly lower FoldX total energy than background (Mann-Whitney p=8.2e-47, Cohen's d=-0.46). This suggests GroEL substrates are thermodynamically more stable — chaperonin assistance is needed for kinetic (folding pathway) reasons, not thermodynamic instability.
+**Key finding:** GroEL substrates have significantly lower FoldX total energy than background (Mann-Whitney p=2.9e-3, Cohen's d=-0.07 (compartment-matched)). This suggests GroEL substrates are thermodynamically more stable — chaperonin assistance is needed for kinetic (folding pathway) reasons, not thermodynamic instability.
 
 HSP60 substrates do NOT show this pattern (p=0.77), suggesting different selection pressures in mitochondrial vs cytoplasmic chaperonin systems.
 
@@ -311,7 +311,7 @@ HSP60 substrates do NOT show this pattern (p=0.77), suggesting different selecti
 Total tests: 60 (56 original + 4 FoldX-specific), 28 significant after hierarchical BH correction.
 
 New significant FoldX tests:
-- H2.1 GroEL FoldX DeltaG vs background: p=8.2e-47, d=-0.46
+- H2.1 GroEL FoldX DeltaG vs background: p=2.9e-3, d=-0.07 (compartment-matched)
 - H2.2 GroEL pre-tail length: p=2.8e-25, d=-0.43
 - H2.2 HSP60 pre-tail length: p=2.8e-08, d=-0.27
 
@@ -465,4 +465,4 @@ Sum over all Cα–Cα contacts within 8.0 Å with sequence separation ≥ 6 res
 ---
 
 *All data derived from actual computational results — no simulated or fabricated data.*
-*FoldX stability analysis complete (April 1, 2026). 25,007 proteins processed. GroEL substrates significantly more stable (p=8.2e-47). Manuscript in preparation.*
+*FoldX stability analysis complete (April 1, 2026). 25,007 proteins processed. GroEL substrates slightly more stable (p=2.9e-3, d=-0.07, compartment-matched). Manuscript in preparation.*

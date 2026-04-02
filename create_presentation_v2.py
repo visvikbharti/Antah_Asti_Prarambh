@@ -1012,7 +1012,7 @@ if os.path.exists(fig7):
 # FoldX results table
 foldx_tbl = [
     ["Dataset", "N", "Median (kcal/mol)", "Mean", "vs Background", "p-value", "Cohen's d"],
-    ["GroEL substrates", "248", "-38.6", "-9.9", "LOWER (more stable)", "8.2x10^-47", "-0.46"],
+    ["GroEL substrates", "248", "-38.6", "-9.9", "Slightly lower", "2.9x10^-3", "-0.07"],
     ["HSP60 substrates", "264", "74.6", "98.7", "No difference", "0.77 (NS)", "-0.29"],
     ["Matrix background", "502", "77.7", "104.2", "—", "—", "—"],
     ["Mito background", "1,056", "63.5", "101.9", "—", "—", "—"],
@@ -1188,7 +1188,7 @@ bullets(slide, Inches(0.5), Inches(1.3), Inches(6.0), Inches(5.5), [
     "  1. FoldX COMPLETE (25,007 proteins, 0 failures) ✓",
     "  2. Collection + F→H→I analysis chain COMPLETE ✓",
     "  3. 60 tests total (56 original + 4 FoldX), 28 significant ✓",
-    "  4. Key: GroEL substrates have lower FoldX energy (p=8.2e-47)",
+    "  4. Key: GroEL substrates have lower FoldX energy (p=2.9e-3 (compartment-matched))",
     "  5. 7 polished publication figures generated ✓",
     "  6. Transfer final results to Mac",
     "  7. Manuscript preparation",
@@ -1274,7 +1274,7 @@ hist = [
     ["6", "2026-03-22", "FoldX 5.1 installed + tested. Array job submitted\n(501 tasks). 2 timeout fixes. Collaborator deliverables.", "FoldX 5.1: component energies null (OK, total works)\nTimeout chunks 125,139 -> extended to 6h"],
     ["7", "2026-03-24", "PPT (35 slides) + Q&A guide (30 Qs) created.\nFoldX ~42% complete.", ""],
     ["8", "2026-03-25", "GitHub repo + reproducibility infra.\nFoldX ~48% complete.", ""],
-    ["9", "2026-04-01", "FoldX 100% COMPLETE (25,007 proteins, 0 failures).\nF→H→I chain re-run with DeltaG. Column bugs fixed.", "GroEL DeltaG=-9.4 (p=8.2e-47 vs background)\n60 merged tests, 28 significant"],
+    ["9", "2026-04-01", "FoldX 100% COMPLETE (25,007 proteins, 0 failures).\nF→H→I chain re-run with DeltaG. Column bugs fixed.", "GroEL DeltaG=-9.4 (p=2.9e-3 (compartment-matched) vs background)\n60 merged tests, 28 significant"],
 ]
 table(slide, Inches(0.2), Inches(1.2), Inches(12.9), Inches(5.8), hist,
       cw=[Inches(0.7), Inches(1.2), Inches(5.5), Inches(5.5)])

@@ -16,7 +16,7 @@ Group I chaperonins (GroEL in *Escherichia coli*, HSP60/HSPD1 in human mitochond
 
 Our analysis of 60 statistical tests (28 significant after hierarchical Benjamini-Hochberg correction) reveals three principal findings: (1) chaperonin substrates are enriched in specific fold topologies (GroEL: TIM barrels OR=8.4, p=2.3e-7; winged helix OR=50.9), and these enrichments are partially conserved across species; (2) N-terminal structural domains universally have higher relative contact order than C-terminal regions (p=7.1e-18), but this asymmetry is **not** substrate-specific — it is a general property of all multi-domain proteins; and (3) 84.4% of mitochondrial transit peptides are separate pre-domain extensions (median gap 18 residues, p=3.4e-51), with HSP60 substrates 3.3-fold enriched for matrix localization.
 
-A novel finding from FoldX thermodynamic stability analysis shows that GroEL substrates have significantly lower total energy (median -38.6 kcal/mol) compared to the *E. coli* proteome background (median 114.3; p=8.2e-47, Cohen's d=-0.46), while HSP60 substrates show no such difference (p=0.77). This suggests GroEL selects for proteins that are thermodynamically stable but kinetically complex — chaperonin assistance addresses folding pathway difficulties, not thermodynamic instability.
+FoldX thermodynamic stability analysis (25,007 proteins) shows that GroEL substrates have slightly lower total energy (median -38.6 kcal/mol) compared to compartment-matched *E. coli* cytoplasmic background (median -15.2; p=2.9e-3, Cohen's d=-0.07), a statistically significant but small effect. HSP60 substrates show no difference from matrix background (p=0.80). The small GroEL effect, combined with the strong contact order signal, suggests chaperonin assistance primarily addresses folding pathway (kinetic) difficulties rather than thermodynamic instability. Note: an initial analysis comparing GroEL against all 25,000 proteins (including human) yielded an inflated p=8.2e-47 due to a species confound (*E. coli* proteins have systematically lower FoldX energy than human proteins); the corrected compartment-matched comparison is reported here.
 
 ---
 
@@ -268,17 +268,20 @@ Does asymmetry increase with GroEL dependency? (Kruskal-Wallis across Class I, I
 
 FoldX total energy by dataset (25,007 proteins):
 
-| Dataset | N | Median (kcal/mol) | Mean | vs Background |
-|---------|--:|------------------:|-----:|:-------------:|
-| **GroEL substrates** | 248 | **-38.6** | **-9.9** | **p=8.2e-47, d=-0.46** |
-| HSP60 substrates | 264 | 74.6 | 98.7 | p=0.77, NS |
-| Matrix background | 502 | 77.7 | 104.2 | — |
-| Mito background | 1,056 | 63.5 | 101.9 | — |
-| Proteome background | 23,632 | 119.2 | 294.1 | — |
+| Dataset | N | Median (kcal/mol) | Mean | Compartment-Matched Comparison |
+|---------|--:|------------------:|-----:|:------------------------------:|
+| **GroEL substrates** | 248 | **-38.6** | **-9.9** | **vs E. coli bg: p=2.9e-3, d=-0.07** |
+| HSP60 substrates | 264 | 74.6 | 98.7 | vs Matrix bg: p=0.80, NS |
+| *E. coli* background | 4,123 | -15.2 | -3.5 | (GroEL comparison group) |
+| Matrix background | 337 | 79.1 | 108.1 | (HSP60 comparison group) |
+| Mito background | 863 | 61.6 | 106.1 | — |
+| Full proteome | 25,007 | 60.9 | 309.6 | — |
 
-**GroEL substrates are thermodynamically MORE stable** (lower total energy) than the *E. coli* proteome. This is the strongest single statistical signal in the entire study (p=8.2e-47).
+**GroEL substrates have slightly lower total energy** than the *E. coli* cytoplasmic background (p=2.9e-3, d=-0.07). The effect is statistically significant but small — median -38.6 vs -15.2 for background. This suggests a modest thermodynamic stability advantage in GroEL substrates.
 
-**HSP60 substrates are NOT different** from the mitochondrial background (p=0.77). This striking asymmetry between the two chaperonin systems suggests fundamentally different substrate selection mechanisms.
+**IMPORTANT NOTE:** An initial (incorrect) analysis comparing GroEL substrates against ALL 25,007 proteins yielded p=8.2e-47, which was driven by a species confound: *E. coli* proteins as a whole have systematically lower FoldX energy (median -16.7) than human proteins (median 165.7). The correct compartment-matched comparison reported above eliminates this confound.
+
+**HSP60 substrates are NOT different** from the mitochondrial matrix background (p=0.80). This asymmetry between the two chaperonin systems suggests different substrate selection mechanisms — GroEL may have a weak thermodynamic component, while HSP60 selection is primarily compartment-driven.
 
 #### 4.2.5 Pre-Domain Tail Length
 
@@ -366,8 +369,8 @@ This "cleavage-before-folding" model is consistent with the 18-residue median ga
 | Rank | Hypothesis | Test | p_raw | p_BH | Effect | Interpretation |
 |-----:|-----------|------|------:|-----:|-------:|----------------|
 | 1 | H3.2 MTS pre-domain | Binomial | 3.4e-51 | 6.8e-51 | 84.4% | MTS is separate extension |
-| 2 | H2.1 GroEL FoldX | Mann-Whitney | 8.2e-47 | 2.8e-45 | d=-0.46 | Substrates more stable |
-| 3 | H2.2 GroEL pre-tail | Mann-Whitney | 2.8e-25 | 4.8e-24 | d=-0.43 | Shorter pre-domain tails |
+| 2 | H2.2 GroEL pre-tail | Mann-Whitney | 2.8e-25 | 4.8e-24 | d=-0.43 | Shorter pre-domain tails |
+| 3 | H2.1 GroEL FoldX | Mann-Whitney | 2.9e-3 | 6.9e-3 | d=-0.07 | Slightly lower energy (compartment-matched) |
 | 4 | H2.1 Mito bg RCO | Wilcoxon | 7.1e-18 | 8.1e-17 | r=0.48 | N>C universal |
 | 5 | H3.1 HSP60 matrix | Fisher | 1.6e-16 | 1.6e-16 | OR=3.29 | Matrix enrichment |
 | 6 | H2.1 Matrix bg RCO | Wilcoxon | 2.4e-9 | 2.1e-8 | r=0.43 | N>C universal |
@@ -460,7 +463,7 @@ All data, code, and results are available at:
 
 2. **N-terminal structural complexity is universal, not substrate-specific** — Higher N-domain contact order is a fundamental property of all multi-domain proteins (p=7.1e-18 in mito background). Chaperonins exploit this pre-existing asymmetry rather than driving it.
 
-3. **GroEL substrates are thermodynamically stable but kinetically complex** — FoldX shows significantly lower total energy (median -38.6 kcal/mol, p=8.2e-47). The chaperonin need is kinetic, not thermodynamic. HSP60 substrates lack this signature, suggesting compartment-based rather than stability-based selection.
+3. **GroEL substrates show a small thermodynamic stability advantage** — FoldX shows slightly lower total energy (median -38.6 vs -15.2 for *E. coli* background, p=2.9e-3, d=-0.07). The effect is small, suggesting the chaperonin need is primarily kinetic (high contact order), not thermodynamic. HSP60 substrates lack even this small signature (p=0.80 vs matrix), suggesting compartment-based selection.
 
 4. **Mitochondrial transit peptides are separate pre-domain extensions** — 84.4% have a clear gap between MTS cleavage site and first domain (median 18 residues, p=3.4e-51). HSP60 substrates are 3.3-fold enriched for matrix localization.
 
