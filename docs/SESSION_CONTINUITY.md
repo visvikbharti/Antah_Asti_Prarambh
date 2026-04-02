@@ -738,6 +738,124 @@ Copy and paste the following:
 
 ---
 
+## Session 10 Summary (2026-04-01 to 2026-04-02)
+
+### Critical Correction: Species Confound in FoldX
+
+The initial FoldX comparison (GroEL vs ALL 25K proteins) yielded an inflated p=8.2e-47 because *E. coli* proteins as a whole have systematically lower FoldX energy (median -16.7) than human proteins (median 165.7). **This was a species confound, not a substrate effect.**
+
+**Corrected compartment-matched comparisons:**
+- GroEL vs *E. coli* cytoplasmic bg: **p=2.9e-3, d=-0.07** (small but significant)
+- HSP60 vs matrix bg: p=0.80 (not significant)
+
+All 19 stale references across 8 documents + PPT script were corrected and pushed to GitHub.
+
+### Full-Proteome Coverage Gaps Identified
+
+The user's collaborator (from a different lab) and her PI will ask about full-proteome analysis. Three gaps found:
+
+| Analysis | Was | Should Be | Gap |
+|----------|-----|-----------|-----|
+| DSSP | 1,382 (pilot) | 25,007 | 23,625 proteins |
+| Contact order | 5,322 (partial) | 25,007 | ~19,685 proteins |
+| CATH superfamily | 1,151 (pilot) | 25,007 | ~23,856 proteins |
+
+### HPC Jobs Submitted to Close Gaps
+
+| Job ID | Script | Task | Status at Session End |
+|--------|--------|------|----------------------|
+| 99810 | 13_contact_order_full.sh | Contact order for all proteins | **COMPLETED** — 13,979 proteins, 3,175 pairs |
+| 100012 | 12_dssp_full.sh | DSSP for all structures | RUNNING — ~4.2% done, est. 5h |
+| 99811 | 14_cath_interpro_full.sh | CATH via InterPro API | RUNNING — ~12.6% done, est. 8h |
+
+**Note:** DSSP required two fixes:
+1. Install mkdssp on HPC: `conda install -c conda-forge dssp` (wasn't installed, only on Mac)
+2. Syntax fix: mkdssp v4.6.0 uses `mkdssp input output` (positional), NOT `mkdssp -i input -o output`
+
+**CATH is checkpointed** — saves progress every 100 proteins to `_cath_full_checkpoint.json`. If it times out (24h walltime), resubmitting will resume from where it stopped.
+
+### Contact Order Results (COMPLETED)
+
+Full-scale N>C contact order asymmetry confirmed:
+- GroEL: 121 pairs, median diff = +0.041
+- HSP60: 121 pairs, median diff = +0.068
+- Matrix bg: 237 pairs, median diff = +0.074
+- Mito bg: 380 pairs, median diff = +0.070
+- **Proteome bg: 2,671 pairs, median diff = +0.093** (strongest — confirms universality)
+
+### Documents Updated in Session 10
+
+1. `README.md` — Phase 2 badge green, corrected FoldX p-value
+2. `create_presentation_v2.py` — New FoldX slide (23), corrected all p-values, 36 slides total
+3. `docs/RESEARCH_FINDINGS_COMPLETE.md` — 484-line research-paper document, all corrected
+4. `docs/COLLABORATOR_PRESENTATION.md` — All FoldX references corrected
+5. `docs/DATA_HANDOVER_INDEX.md` — FoldX file listing corrected
+6. `docs/PHASE2_RESULTS_REPORT.md` — FoldX results corrected
+7. `docs/COMPREHENSIVE_PROJECT_DOCUMENT.md` — Status + FoldX corrected
+8. `results/phase2/stats/` — Corrected pvalues + summary
+
+### Git Commits in Session 10
+
+| Commit | Description |
+|--------|-------------|
+| b1d49c9 | Add FoldX results + all doc updates |
+| 044fa67 | Update remaining docs |
+| 9ae7688 | Add RESEARCH_FINDINGS_COMPLETE.md |
+| 8a91095 | Add backup files from merge |
+| 2af8045 | Add FoldX results slide to PPT |
+| 18e5f44 | CRITICAL FIX: compartment-matched backgrounds |
+| 800ab0e | Propagate corrected stats to ALL documents |
+| 072d608 | Add gap-closing SLURM scripts 12-15 |
+
+---
+
+## What to Prompt Claude in Session 11
+
+Copy and paste:
+
+---
+
+> Continuing Antah Asti Prarambh (session 11). Memory files auto-loaded.
+>
+> **Session 10 summary:** FoldX species confound corrected (p=2.9e-3 not 8.2e-47). Three full-proteome gap-closing jobs submitted on HPC:
+> - Job 99810 (Contact Order): COMPLETED
+> - Job 100012 (DSSP full-scale): was RUNNING
+> - Job 99811 (CATH InterPro): was RUNNING (~12% done, checkpointed)
+>
+> **Check HPC job status:**
+> ```bash
+> ssh vishal.bharti@tejas.igib.res.in
+> sacct --format=JobID,JobName,State,ExitCode,Elapsed -j 100012,99811
+> cat /lustre/vishal.bharti/Antah_Asti_Prarambh_hpc/workflow/phase2/slurm_jobs/logs/12_dssp_full*100012*.out | tail -20
+> cat /lustre/vishal.bharti/Antah_Asti_Prarambh_hpc/workflow/phase2/slurm_jobs/logs/14_cath_interpro*99811*.out | tail -20
+> wc -l /lustre/vishal.bharti/Antah_Asti_Prarambh_hpc/results/phase2/domains/cath_domain_assignments_full.tsv
+> wc -l /lustre/vishal.bharti/Antah_Asti_Prarambh_hpc/results/phase2/structures/dssp_summary_full.tsv
+> ```
+>
+> **If CATH timed out:** Just resubmit `sbatch 14_cath_interpro_full.sh` — it's checkpointed.
+>
+> **After all jobs complete:**
+> 1. Re-run Module H (stats) + Module I (figures) with full-proteome data
+> 2. Transfer all results to Mac
+> 3. Regenerate polished figures + PPT
+> 4. Git push
+>
+> [PASTE HPC output here]
+
+---
+
+### Critical Reminders for Session 11
+
+1. **Species confound is corrected.** GroEL FoldX p=2.9e-3 (d=-0.07), NOT the old inflated 8.2e-47.
+2. **All comparisons must use compartment-matched backgrounds.** GroEL vs E.coli; HSP60 vs matrix/mito.
+3. **CATH is checkpointed.** If job 99811 timed out, resubmit — it resumes automatically.
+4. **mkdssp v4.6.0 syntax:** `mkdssp input output` (positional), NOT `-i`/`-o` flags.
+5. **Module H needs rewriting** to use the new full-scale files: dssp_summary_full.tsv, contact_order_full.tsv, cath_domain_assignments_full.tsv, n_vs_c_rco_paired_full.tsv.
+6. **The collaboration context:** This is Vishal's contribution to a colleague's larger project (different lab). The colleague's PI will ask about full-proteome coverage — completeness matters.
+7. **Contact order already done:** Job 99810 completed — 13,979 proteins, 3,175 multi-domain pairs. N>C asymmetry confirmed universal (proteome_bg median diff +0.093, strongest signal).
+
+---
+
 ## Session 7 Summary (2026-03-25)
 
 ### What Was Done

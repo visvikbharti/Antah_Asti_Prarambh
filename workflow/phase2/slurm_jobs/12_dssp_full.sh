@@ -130,7 +130,7 @@ for i, (acc, cif_path) in enumerate(work):
     dssp_out = f"{dssp_dir}/{acc}.dssp"
     try:
         result = subprocess.run(
-            [mkdssp, "-i", cif_path, "-o", dssp_out],
+            [mkdssp, cif_path, dssp_out],
             capture_output=True, text=True, timeout=60
         )
         if result.returncode == 0 and os.path.exists(dssp_out):
