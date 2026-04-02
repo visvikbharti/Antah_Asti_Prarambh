@@ -34,7 +34,7 @@ VL_RED = RGBColor(0xFC, 0xE4, 0xE4)
 prs = Presentation()
 prs.slide_width = Inches(13.333)
 prs.slide_height = Inches(7.5)
-TOTAL_SLIDES = 35
+TOTAL_SLIDES = 36
 
 def add_bg(slide, color=WHITE):
     bg = slide.background; f = bg.fill; f.solid(); f.fore_color.rgb = color
@@ -121,9 +121,10 @@ right = ["10. Module F: Contact Order — Plaxco Definition & Parameters",
          "13. Phase 2: HPC Pipeline — SLURM Resource Allocation",
          "14. FoldX Thermodynamic Stability — Parameters",
          "15. Results: Domain Architecture (Figures)",
-         "16. Results: N-vs-C Asymmetry (Figures)",
-         "17. Results: MTS Targeting & Cross-Species Conservation",
-         "18. Biological Synthesis, Limitations, Conclusions"]
+         "16. Results: N-vs-C Asymmetry + Negative Results",
+         "17. NEW: FoldX Stability Results (GroEL more stable!)",
+         "18. Results: MTS Targeting & Cross-Species Conservation",
+         "19. Biological Synthesis, Limitations, Conclusions"]
 bullets(slide, Inches(0.6), Inches(1.3), Inches(5.8), Inches(6.0), left, sz=14, sp=Pt(6))
 bullets(slide, Inches(6.8), Inches(1.3), Inches(5.8), Inches(6.0), right, sz=14, sp=Pt(6))
 
@@ -996,6 +997,48 @@ if os.path.exists(fig3): slide.shapes.add_picture(fig3, Inches(0.3), Inches(3.7)
 tb(slide, Inches(0.5), Inches(6.9), Inches(12), Inches(0.3),
    "Biological interpretation: N>C asymmetry is a 'gravitational constant' of protein architecture — reflects co-translational folding physics (N-terminus synthesized first, folds first), NOT chaperonin biology",
    sz=12, bold=True, color=DARK_BLUE)
+
+# ===================== SLIDE 22b: FOLDX RESULTS (NEW) =====================
+sn += 1
+slide = prs.slides.add_slide(prs.slide_layouts[6]); add_bg(slide, WHITE)
+header(slide, "NEW: FoldX Thermodynamic Stability — GroEL Substrates Are More Stable",
+       "25,007 proteins analyzed with FoldX 5.1 (0 failures). Strongest signal in the study."); footer(slide, sn)
+
+# Insert Fig 7
+fig7 = os.path.join(FIG_DIR, "fig7_foldx_stability.png")
+if os.path.exists(fig7):
+    slide.shapes.add_picture(fig7, Inches(0.2), Inches(1.2), Inches(12.9), Inches(3.1))
+
+# FoldX results table
+foldx_tbl = [
+    ["Dataset", "N", "Median (kcal/mol)", "Mean", "vs Background", "p-value", "Cohen's d"],
+    ["GroEL substrates", "248", "-38.6", "-9.9", "LOWER (more stable)", "8.2x10^-47", "-0.46"],
+    ["HSP60 substrates", "264", "74.6", "98.7", "No difference", "0.77 (NS)", "-0.29"],
+    ["Matrix background", "502", "77.7", "104.2", "—", "—", "—"],
+    ["Mito background", "1,056", "63.5", "101.9", "—", "—", "—"],
+    ["Proteome background", "23,632", "119.2", "294.1", "Reference", "—", "—"],
+]
+table(slide, Inches(0.2), Inches(4.5), Inches(8.5), Inches(1.7), foldx_tbl,
+      cw=[Inches(1.5), Inches(0.6), Inches(1.3), Inches(0.8), Inches(1.8), Inches(1.3), Inches(1.2)])
+
+# Key interpretation box
+add_rect(slide, Inches(8.9), Inches(4.5), Inches(4.3), Inches(2.2), VL_GREEN)
+tb(slide, Inches(9.1), Inches(4.55), Inches(3.9), Inches(0.3), "KEY INTERPRETATION", sz=14, bold=True, color=ACCENT_GREEN)
+bullets(slide, Inches(9.1), Inches(4.95), Inches(3.9), Inches(1.7), [
+    "GroEL substrates are thermodynamically STABLE",
+    "Chaperonin need is KINETIC, not thermodynamic:",
+    "  High CO = complex folding pathway",
+    "  Low energy = stable native state",
+    "  → Proteins CAN fold, but need help getting there",
+    "",
+    "HSP60: no FoldX signal → compartment-based",
+    "selection, not stability-based",
+], sz=11, sp=Pt(2))
+
+add_rect(slide, Inches(0.2), Inches(6.8), Inches(12.9), Inches(0.4), VL_ORANGE)
+tb(slide, Inches(0.4), Inches(6.83), Inches(12.5), Inches(0.35),
+   "CAVEAT: FoldX was parameterized on experimental X-ray structures, not AlphaFold models. Relative comparisons (substrate vs background) are valid; absolute values should be caveated.",
+   sz=11, color=ACCENT_ORANGE)
 
 # ===================== SLIDE 23: MTS RESULTS =====================
 sn += 1
