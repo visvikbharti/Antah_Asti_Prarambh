@@ -16,15 +16,15 @@ conda activate proteomics
 # 3. Download external datasets
 bash scripts/download_external_data.sh
 
-# 4. Run Phase 1 pipeline
-make phase1
+# 4. Run the analysis pipeline
+make analysis
 ```
 
 ## Prerequisites
 
 - **Operating system**: Linux or macOS (Apple Silicon works via Rosetta 2)
 - **Conda**: Miniconda or Anaconda ([install guide](https://docs.conda.io/en/latest/miniconda.html))
-- **Disk space**: ~1 GB for Phase 1, ~50 GB for Phase 2 (AlphaFold structures)
+- **Disk space**: ~1 GB for core analysis, ~50 GB for full-scale HPC pipeline (AlphaFold structures)
 - **RAM**: 8 GB minimum, 16 GB recommended
 
 ## Core Environment (conda)
@@ -76,7 +76,7 @@ These tools are **not installable via conda** and require separate setup.
 
 ### Chainsaw (ML domain segmentation)
 
-Required for: Phase 1 Module E2, Phase 2 domain assignment
+Required for: Module E2 domain segmentation, full-scale domain assignment
 
 ```bash
 # Install from GitHub
@@ -88,7 +88,7 @@ pip install -e .
 python -c "from chainsaw import get_predictions; print('Chainsaw OK')"
 ```
 
-**Phase 2 (HPC)**: Install in your software directory and update `config.yaml`:
+**HPC deployment**: Install in your software directory and update `config.yaml`:
 ```yaml
 chainsaw:
   install_dir: "/path/to/chainsaw"
@@ -96,7 +96,7 @@ chainsaw:
 
 ### FoldX (thermodynamic stability)
 
-Required for: Phase 2 only (DeltaG calculations)
+Required for: Full-scale DeltaG stability calculations (HPC)
 
 FoldX requires an **academic license** (free for non-commercial use):
 
@@ -150,9 +150,9 @@ For intrinsic disorder prediction. Not required for the core pipeline.
 1. Register at [https://iupred2a.elte.hu/](https://iupred2a.elte.hu/)
 2. Download and follow installation instructions
 
-## Phase 2 HPC Setup
+## HPC Pipeline Setup
 
-For running the full-scale pipeline on an HPC cluster with SLURM:
+For running the full-scale pipeline (25,007 proteins) on an HPC cluster with SLURM:
 
 ### 1. Transfer project to HPC
 

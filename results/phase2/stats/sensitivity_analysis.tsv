@@ -1,0 +1,17 @@
+analysis	parameter	value	test	n_substrates	n_background	statistic	p_value	effect_size
+SILAC_threshold	median_silac_ratio	3	HSP60_multi_domain_enrichment	246	300	1.0661513980450101	0.3888042370700331	1.0661513980450101
+SILAC_threshold	median_silac_ratio	3	HSP60_NvsC_contact_order_asymmetry	135	0	6791.0	6.691565410854595e-07	0.0633975072090835
+SILAC_threshold	median_silac_ratio	5	HSP60_multi_domain_enrichment	241	304	1.0038845726970034	0.5258897474783922	1.0038845726970034
+SILAC_threshold	median_silac_ratio	5	HSP60_NvsC_contact_order_asymmetry	131	0	6305.0	2.642846401749002e-06	0.059404811563189
+SILAC_threshold	median_silac_ratio	7	HSP60_multi_domain_enrichment	221	320	1.0580721466587817	0.4085920975303423	1.0580721466587817
+SILAC_threshold	median_silac_ratio	7	HSP60_NvsC_contact_order_asymmetry	122	0	5541.0	2.413563154339416e-06	0.0632585375279835
+SILAC_threshold	median_silac_ratio	10	HSP60_multi_domain_enrichment	184	348	0.8809523809523809	0.7832775585930328	0.8809523809523809
+SILAC_threshold	median_silac_ratio	10	HSP60_NvsC_contact_order_asymmetry	100	0	3761.0	1.0699529989928296e-05	0.061262189705036246
+bin_width	bin_width_kDa	5	GroEL_TIM_barrel_enrichment	247	551	4.8	1.717650143969074e-05	4.8
+bin_width	bin_width_kDa	10	GroEL_TIM_barrel_enrichment	247	545	5.231111111111111	9.110145600777905e-06	5.231111111111111
+bin_width	bin_width_kDa	15	GroEL_TIM_barrel_enrichment	247	540	3.422222222222222	0.00028249333292284075	3.422222222222222
+bin_width	bin_width_kDa	20	GroEL_TIM_barrel_enrichment	247	525	3.850940170940171	0.00011993194784873395	3.850940170940171
+bg_multiplier	background_multiplier	1	GroEL_TIM_barrel_enrichment	247	190	3.617777777777778	0.004824836298236755	3.617777777777778
+bg_multiplier	background_multiplier	2	GroEL_TIM_barrel_enrichment	247	390	5.34984126984127	3.7239981155449774e-05	5.34984126984127
+bg_multiplier	background_multiplier	3	GroEL_TIM_barrel_enrichment	247	556	3.7853968253968255	0.00011398409103340306	3.7853968253968255
+bg_multiplier	background_multiplier	5	GroEL_TIM_barrel_enrichment	247	837	4.209590643274854	1.1396406592823868e-05	4.209590643274854

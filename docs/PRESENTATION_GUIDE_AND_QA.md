@@ -4,7 +4,7 @@
 
 **Presenter:** Vishal Bharti, CSIR-IGIB, New Delhi
 **Estimated Presentation Time:** 55-65 minutes (+ 15-20 min Q&A)
-**Total Slides:** 35 (comprehensive version with all technical parameters)
+**Total Slides:** 36 (comprehensive version with all technical parameters)
 
 ---
 
@@ -19,7 +19,7 @@
 - Slides 19-25: Results with publication figures
 - Slides 26-28: Synthesis, Limitations, Future Work
 - Slides 29-32: Reproducibility, Session History, Bug Fixes, File Inventory
-- Slides 33-35: Conclusions, Key Numbers, Thank You
+- Slides 33-36: Conclusions, Key Numbers, Thank You
 
 ---
 
@@ -109,11 +109,11 @@
 
 ---
 
-### Slide 9: Phase 1 Workflow (~2 min)
+### Slide 9: Analysis Workflow (~2 min)
 
 **What to say:**
-- "Phase 1 has 9 modules, A through I. This table shows every script, input, output, and key parameter."
-- "The pilot served three purposes: validate methods, produce preliminary results, and debug data integration issues like column name mismatches."
+- "The analysis has 9 modules, A through I, developed at pilot scale and then scaled to full proteomes on HPC. This table shows every script, input, output, and key parameter."
+- "The full-scale analysis covers 25,007 proteins: 24,530 with DSSP, 18,855 with CATH domains, and all 25,007 processed by FoldX."
 - Highlight the key scripts and their roles.
 
 ---
@@ -132,7 +132,7 @@
 
 **What to say:**
 - "AlphaFold download: we tried v6 first with v4 fallback. Batch size 50, 0.5 second delay between batches. 8 proteins had no AlphaFold model."
-- "DSSP: mkdssp v2.2.1 with 30-second timeout. We group the 8 DSSP codes into 3 categories: helix (H,G,I), strand (E,B), and coil (everything else)."
+- "DSSP: mkdssp v2.2.1 with 30-second timeout. 24,530 proteins processed at full scale. We group the 8 DSSP codes into 3 categories: helix (H,G,I), strand (E,B), and coil (everything else)."
 - "Quality validation uses 5 tiers based on mean pLDDT, with 3 automatic flags for potentially unreliable structures."
 - "For Phase 2, we used bulk FTP downloads — about 2 GB for E. coli and 20 GB for human."
 
@@ -141,10 +141,10 @@
 ### Slide 12: Module E — Domain Assignment Parameters (~2 min)
 
 **What to say:**
-- "CATH domains queried through InterPro Gene3D API at 1 request per second with checkpointing every 50 proteins."
-- "Chainsaw uses STRIDE secondary structure as input — and this is where we learned the hard way that bioconda's 'stride' is a different tool entirely."
+- "CATH domains queried through InterPro Gene3D API at 1 request per second with checkpointing every 50 proteins. At full scale, 18,855 proteins (75.3%) received CATH annotations."
+- "Chainsaw uses STRIDE secondary structure as input — and this is where we learned the hard way that bioconda's 'stride' is a different tool entirely. Chainsaw covers the remaining 24.7% of proteins."
 - "Foldseek parameters: sensitivity 7.5, E-value 0.001, 50% bidirectional coverage, 3Di+AA hybrid alignment. Phase 2 required 64 GB RAM for the all-vs-all search."
-- "The coverage is excellent: 99.8% at pilot scale, 93.6% at full scale."
+- "The combined coverage is excellent: 75.3% CATH + 24.7% Chainsaw for near-complete structural domain assignment."
 
 ---
 
@@ -155,7 +155,7 @@
 - "We compute CA-CA distances with an 8 Angstrom cutoff, minimum 6 residues sequence separation. Relative contact order normalizes by protein length."
 - "The three-region decomposition is critical: pre-domain tail, N-domain (first structural domain), C-region (everything after). Minimum 5 residues per region."
 - "We compute 13 metrics per region: 7 sequence-based (charge, hydrophobicity, etc.), 3 structure-based (SS fractions, pLDDT), and 3 folding metrics (ACO, RCO, n_contacts)."
-- "FoldX DeltaG will be added as the 14th metric after completion."
+- "FoldX DeltaG is included as the 14th metric, providing the thermodynamic stability dimension across all 25,007 proteins."
 
 ---
 
@@ -172,7 +172,7 @@
 ### Slide 15: Module H — Statistical Framework (~2 min)
 
 **What to say:**
-- "This is where rigorous statistics matter. We use hierarchical Benjamini-Hochberg: BH within each of the 3 families, then Simes method to get a family-level summary, then BH across families."
+- "This is where rigorous statistics matter. We run 62 pre-registered tests with hierarchical Benjamini-Hochberg: BH within each of the 3 families, then Simes method to get a family-level summary, then BH across families."
 - "Effect sizes are always reported: rank-biserial r for Wilcoxon and Mann-Whitney, eta-squared for Kruskal-Wallis, odds ratios with 95% CIs for Fisher's exact, Cramer's V for chi-squared."
 - "This table shows all test types mapped to specific hypotheses."
 
@@ -208,7 +208,7 @@
 **What to say:**
 - "This is the Phase 2 dependency graph. Starting from AlphaFold download, the pipeline branches into three parallel tracks: Foldseek clustering, Chainsaw domain prediction, and FoldX stability calculations."
 - "The analysis chain — Modules F through I — runs sequentially after domains are unified."
-- "FoldX is the most resource-intensive: 501 array tasks, each processing 50 proteins at about 40 seconds per protein. It's currently about 42% complete."
+- "FoldX is the most resource-intensive: 501 array tasks, each processing 50 proteins at about 40 seconds per protein. All 25,007 proteins completed with 0 failures."
 - "The Foldseek search required 64 GB of RAM and 16 CPUs for the all-vs-all structural comparison of 25,000+ proteins."
 
 ---
@@ -216,11 +216,9 @@
 ### Slide 10: Structural Domain Assignment Method (~2 min)
 
 **What to say:**
-- "Domain assignment combines two approaches. CATH domains from Gene3D are our gold standard — curated, experimentally validated structural classifications. They cover 82.8% of our pilot proteins."
-- "For the remaining proteins, Chainsaw — a deep learning model trained on CATH — predicts boundaries from 3D coordinates. This gives us 99.8% coverage."
-- "At full scale, CATH covers the pilot set and Chainsaw adds 23,868 proteins from the full proteomes."
+- "Domain assignment combines two approaches. CATH domains from Gene3D are our gold standard — curated, experimentally validated structural classifications. They cover 18,855 proteins (75.3%) at full scale."
+- "For the remaining 24.7%, Chainsaw — a deep learning model trained on CATH — predicts boundaries from 3D coordinates. This gives us near-complete coverage."
 - "Foldseek provides structural clustering using a 3D structural alphabet, giving us 16,193 clusters across all proteins."
-
 ---
 
 ### Slide 11: Stability Metrics (~2 min)
@@ -236,8 +234,8 @@
 ### Slide 12: Results — Domain Architecture (~3 min)
 
 **What to say:**
-- **Point to Figure 1:** "Panel A shows CATH class distributions — alpha-beta proteins dominate all groups at 60-71%. Panel B shows the top superfamilies with clear enrichments. Panel C shows domain count distributions."
-- "The key finding: GroEL substrates are 8.4 times more likely to contain TIM barrels than expected by chance, and 50.9 times more likely for winged helix domains. These are not random — they are topologically complex folds."
+- **Point to Figure 1:** "Panel A shows CATH class distributions — alpha-beta proteins dominate all groups at 60-71%. The distributions are highly significantly different from background: GroEL chi-squared p=5.2e-21, HSP60 p=2.4e-24. Panel B shows the top superfamilies with clear enrichments. Panel C shows domain count distributions."
+- "The key finding: GroEL substrates are 22.6 times more likely to contain TIM barrels than expected by chance (p=2.4e-21). These are not random — they are topologically complex folds."
 - "HSP60 shows different enrichments: Rossmann-like folds and other matrix enzyme topologies."
 - "Importantly, neither substrate set is enriched for having MORE domains. It's not about domain count — it's about fold type."
 
@@ -311,8 +309,8 @@
 
 **What to say:**
 - "Figure 6 provides the visual summary."
-- "Across 56 pre-registered tests with hierarchical BH correction, 25 were significant — a 44.6% discovery rate."
-- "The three families all contributed: 9 domain architecture, 14 stability asymmetry, and 2 MTS targeting."
+- "Across 62 pre-registered tests with hierarchical BH correction, 45 were significant — a 72.6% discovery rate."
+- "All three families contributed with strong results across domain architecture, stability asymmetry, and MTS targeting."
 
 ---
 
@@ -332,8 +330,8 @@
 **What to say:**
 - "I want to be transparent about limitations."
 - "Methodologically: pLDDT as confidence (mitigated by CO + FoldX), co-IP as interaction not function (mitigated by SILAC), AlphaFold structures being predictions."
-- "Statistically: 56 tests carry some false positive risk despite correction. Our cross-species analysis has only 69 pairs."
-- "FoldX is 42% complete — the thermodynamic stability dimension will be added in the final analysis."
+- "Statistically: 62 tests carry some false positive risk despite correction. Our cross-species analysis has only 69 pairs."
+- "FoldX is complete across all 25,007 proteins but absolute delta-G values have limited accuracy — relative comparisons are more reliable."
 
 **Tip:** Acknowledging limitations upfront builds credibility and preempts tough questions.
 
@@ -342,7 +340,7 @@
 ### Slide 22: Future Directions (~1 min)
 
 **What to say:**
-- "Immediately after FoldX completes, we'll integrate thermodynamic stability and prepare the manuscript."
+- "With all analyses complete, the next step is manuscript preparation with all 62 statistical tests and 6 publication figures."
 - "Longer-term, we'd like to extend to Group II chaperonins (TRiC/CCT in the eukaryotic cytoplasm) and develop a predictive model for chaperonin substrate identification."
 
 ---
@@ -357,7 +355,7 @@
 ### Slide 24: Conclusions (~2 min)
 
 **What to say (slowly, one point at a time):**
-1. "Chaperonin substrates are enriched for specific complex fold topologies — TIM barrels for GroEL at odds ratio 8.4."
+1. "Chaperonin substrates are enriched for specific complex fold topologies — TIM barrels for GroEL at odds ratio 22.6."
 2. "N-terminal domains universally have higher contact order — this is NOT substrate-specific."
 3. "Mitochondrial targeting signals create a 'landing pad' for post-import chaperonin engagement."
 4. "These properties are conserved across 2 billion years with remarkable correlation."
@@ -376,7 +374,7 @@
 ### Slide 30: Session History (~1 min)
 
 **What to say:**
-- "The project developed across 6 sessions over 12 days. Session 4 was the most challenging — three major bugs discovered and fixed."
+- "The project developed across 11 sessions. Session 4 was the most challenging — three major bugs discovered and fixed. Sessions 9-11 completed FoldX, full-proteome gap-closing (DSSP, CATH, contact order), and final figure regeneration."
 
 ---
 
@@ -402,7 +400,7 @@
 ### Slide 33: Conclusions (~2 min)
 
 **What to say (slowly, one point at a time):**
-1. "Chaperonin substrates are enriched for specific complex fold topologies — TIM barrels at odds ratio 8.4."
+1. "Chaperonin substrates are enriched for specific complex fold topologies — TIM barrels at odds ratio 22.6."
 2. "N-terminal domains universally have higher contact order — but this is NOT substrate-specific."
 3. "MTS creates a landing pad for post-import chaperonin engagement."
 4. "These properties are conserved across 2 billion years with r = 0.84."
@@ -436,7 +434,7 @@
 
 ### Q2: How did you handle the multiple testing problem with so many tests?
 
-**Answer:** "We use hierarchical Benjamini-Hochberg correction. First, we group tests into three families based on the scientific question: domain architecture (24 tests), stability asymmetry (30 tests), and MTS targeting (2 tests). We apply BH correction within each family, then compute a family-level summary p-value using the Simes method, and finally apply BH across the three families. A test is 'significant' only if both its within-family corrected p-value is below 0.05 AND its family passes the across-family correction. This controls the overall false discovery rate at 5% while preserving power for related tests. We also reduced the test count from 281 (Phase 1 pilot) to 56 (Phase 2) by focusing on pre-registered hypotheses."
+**Answer:** "We use hierarchical Benjamini-Hochberg correction. First, we group tests into three families based on the scientific question: domain architecture, stability asymmetry, and MTS targeting. We apply BH correction within each family, then compute a family-level summary p-value using the Simes method, and finally apply BH across the three families. A test is 'significant' only if both its within-family corrected p-value is below 0.05 AND its family passes the across-family correction. This controls the overall false discovery rate at 5% while preserving power for related tests. The final test count is 62, yielding 45 significant results (72.6% discovery rate) after hierarchical correction."
 
 ---
 
@@ -470,9 +468,9 @@
 
 ---
 
-### Q8: What will FoldX add that contact order doesn't capture?
+### Q8: What does FoldX add that contact order doesn't capture?
 
-**Answer:** "Contact order measures folding KINETICS — how fast or slow a protein folds. FoldX measures folding THERMODYNAMICS — how stable the folded state is. These are complementary. A protein could have high contact order (folds slowly) but weak thermodynamic stability (fragile fold) — or vice versa. The ideal chaperonin substrate might be one that folds slowly (high CO) but ends up very stable (strongly negative delta-G) — it needs help getting there, but once folded, stays folded. FoldX also allows us to compare N-domain delta-G versus C-region delta-G, testing whether there's a thermodynamic asymmetry beyond the kinetic one we've already measured."
+**Answer:** "Contact order measures folding KINETICS — how fast or slow a protein folds. FoldX measures folding THERMODYNAMICS — how stable the folded state is. These are complementary. A protein could have high contact order (folds slowly) but weak thermodynamic stability (fragile fold) — or vice versa. With FoldX complete across all 25,007 proteins, we can now compare N-domain delta-G versus C-region delta-G, testing whether there's a thermodynamic asymmetry beyond the kinetic one. The compartment-matched analysis shows GroEL substrates have marginally lower stability than E. coli background (p=2.9e-3, d=-0.07, small effect), while HSP60 substrates show no significant difference versus matrix background (p=0.80)."
 
 ---
 
@@ -520,13 +518,13 @@
 
 ### Q16: How robust are the Chainsaw ML domain predictions?
 
-**Answer:** "Chainsaw was published by Wells et al. in 2024 and trained directly on CATH domain structures. In our analysis, it serves as a SECONDARY method — we only use it for proteins that lack curated CATH annotations. For the pilot set, the overlap between CATH and Chainsaw predictions for proteins that have both shows good agreement. At full scale, the 93.6% assignment rate is comparable to CATH's coverage of the pilot set (82.8%). However, ML predictions inherently have some error rate, which is why we report the domain source (CATH vs Chainsaw) for every protein and prioritize CATH when available."
+**Answer:** "Chainsaw was published by Wells et al. in 2024 and trained directly on CATH domain structures. In our analysis, it serves as a SECONDARY method — we only use it for proteins that lack curated CATH annotations. The overlap between CATH and Chainsaw predictions for proteins that have both shows good agreement. At full scale, Chainsaw covers the 24.7% of proteins lacking CATH annotations, complementing CATH's 75.3% coverage (18,855 proteins). However, ML predictions inherently have some error rate, which is why we report the domain source (CATH vs Chainsaw) for every protein and prioritize CATH when available."
 
 ---
 
 ### Q17: Could the TIM barrel enrichment simply reflect E. coli's metabolic repertoire?
 
-**Answer:** "Partly, yes — E. coli has many TIM barrel enzymes in its metabolic pathways. But our enrichment test explicitly controls for this. We compare GroEL substrates to the FULL E. coli cytoplasmic proteome, not to a random selection. An odds ratio of 8.4 means TIM barrels are 8.4 times MORE common among GroEL substrates than in the general E. coli proteome. So even though E. coli has many TIM barrels, GroEL substrates have proportionally far MORE of them. The enrichment is real and robust — confirmed at both pilot and full scale."
+**Answer:** "Partly, yes — E. coli has many TIM barrel enzymes in its metabolic pathways. But our enrichment test explicitly controls for this. We compare GroEL substrates to the FULL E. coli cytoplasmic proteome, not to a random selection. An odds ratio of 22.6 means TIM barrels are 22.6 times MORE common among GroEL substrates than in the general E. coli proteome (p=2.4e-21). So even though E. coli has many TIM barrels, GroEL substrates have proportionally far MORE of them. The enrichment is real and robust — confirmed at both pilot and full scale, with the OR increasing from 8.4 (pilot) to 22.6 (full-scale) as the background became more representative."
 
 ---
 
@@ -542,9 +540,9 @@
 
 ---
 
-### Q20: What would change if FoldX shows N-domains are LESS stable than C-regions?
+### Q20: What did FoldX reveal about N-domain vs C-region thermodynamic stability?
 
-**Answer:** "That would be a fascinating finding because it would create a 'kinetic paradox': N-domains fold MORE SLOWLY (higher contact order) but are LESS STABLE (higher delta-G). This could mean N-domains are kinetically trapped — they reach a local energy minimum during co-translational folding that isn't the global minimum. Chaperonins could help escape these traps. Conversely, if N-domains are MORE stable, it confirms the intuitive model that complex folds (high CO) produce stable structures (negative delta-G). Either way, it adds a new dimension to our understanding."
+**Answer:** "FoldX is now complete for all 25,007 proteins. The key finding is that thermodynamic stability differences are modest. GroEL substrates show marginally lower total energy than E. coli background (p=2.9e-3, Cohen's d=-0.07 -- a small effect), while HSP60 substrates show no significant difference versus matrix background (p=0.80, NS). Critically, we discovered a species confound in the initial analysis: comparing GroEL substrates directly to HSP60 substrates yielded a spurious p=8.2e-47, which disappeared when we used compartment-matched backgrounds. This underscores why proper controls are essential. The overall picture is that chaperonin substrates are not dramatically less stable thermodynamically — their chaperonin dependence is driven more by fold topology (TIM barrels) and kinetic complexity (contact order) than by thermodynamic fragility."
 
 ---
 
@@ -574,7 +572,7 @@
 
 ### Q25: How exactly does the hierarchical BH correction work?
 
-**Answer:** "It's a two-level procedure. At Level 1, within each of the three hypothesis families, we apply standard Benjamini-Hochberg FDR correction at alpha=0.05. For example, the 30 N-vs-C stability tests are corrected together — if test i has the k-th smallest p-value among its 30 siblings, its BH-adjusted p-value is p_k * (30/k). At Level 2, we compute a family-level summary using the Simes method: for each family's vector of BH-corrected p-values p(1) <= p(2) <= ... <= p(k), the Simes p-value is min over i of (k * p(i) / i). This gives one p-value per family. We then apply BH across the 3 family-level Simes p-values. A test is 'significant overall' only if it passes BOTH levels: within-family BH < 0.05 AND its family's Simes p-value passes the across-family BH."
+**Answer:** "It's a two-level procedure. At Level 1, within each of the three hypothesis families, we apply standard Benjamini-Hochberg FDR correction at alpha=0.05. For example, the N-vs-C stability tests are corrected together — if test i has the k-th smallest p-value among its siblings, its BH-adjusted p-value is p_k * (k_total/k). At Level 2, we compute a family-level summary using the Simes method: for each family's vector of BH-corrected p-values p(1) <= p(2) <= ... <= p(k), the Simes p-value is min over i of (k * p(i) / i). This gives one p-value per family. We then apply BH across the 3 family-level Simes p-values. A test is 'significant overall' only if it passes BOTH levels: within-family BH < 0.05 AND its family's Simes p-value passes the across-family BH."
 
 ---
 
@@ -592,7 +590,7 @@
 
 ### Q28: How do you handle proteins at the boundary between CATH and Chainsaw?
 
-**Answer:** "CATH always takes priority because it's based on curated experimental structures. For the pilot set, if a protein has a Gene3D annotation, we use those domain boundaries exclusively. Chainsaw is only invoked for proteins that LACK CATH annotations. In the unified assignment table, a 'source' column records whether each protein's domains came from CATH or Chainsaw, allowing sensitivity analyses. For the 1,151 pilot proteins with CATH, the boundaries are from Gene3D's InterPro entries. For the 236 Chainsaw proteins, boundaries are parsed from chopping strings. In Phase 2, CATH proteins keep their annotations from Phase 1; the remaining 23,868 proteins use Chainsaw."
+**Answer:** "CATH always takes priority because it's based on curated experimental structures. If a protein has a Gene3D annotation, we use those domain boundaries exclusively. Chainsaw is only invoked for proteins that LACK CATH annotations. In the unified assignment table, a 'source' column records whether each protein's domains came from CATH or Chainsaw, allowing sensitivity analyses. At full scale, 18,855 proteins (75.3%) have CATH annotations from Gene3D's InterPro entries, and the remaining 24.7% use Chainsaw predictions parsed from chopping strings."
 
 ---
 
@@ -604,7 +602,37 @@
 
 ### Q30: What happens to the 8 proteins without AlphaFold structures?
 
-**Answer:** "P07203, P30042, P36969, Q16881, Q5THJ4, Q86UA3, Q9BVL4, and Q9NNW7 have no AlphaFold predicted structures. They are excluded from all structural analyses (DSSP, domain assignment, contact order, FoldX). However, they are retained in the dataset membership lists and included in sequence-level analyses where applicable. For the 3 pilot proteins with no domain assignment (no CATH AND no Chainsaw because no AlphaFold structure), they are excluded from the N-vs-C stability comparisons. This affects 3 out of 1,390 pilot proteins (0.2%) and has negligible impact on statistical power."
+**Answer:** "P07203, P30042, P36969, Q16881, Q5THJ4, Q86UA3, Q9BVL4, and Q9NNW7 have no AlphaFold predicted structures. They are excluded from all structural analyses (DSSP, domain assignment, contact order, FoldX). However, they are retained in the dataset membership lists and included in sequence-level analyses where applicable. These 8 proteins without structures are excluded from the N-vs-C stability comparisons. This affects 8 out of 25,007 total proteins (0.03%) and has negligible impact on statistical power."
+
+---
+
+### Q31: What are the DSSP secondary structure findings?
+
+**Answer:** "With 24,530 proteins processed by DSSP at full scale, we can now compare secondary structure compositions with high statistical power. GroEL substrates have significantly lower helix fraction (p=1.5e-5), higher strand fraction (p=5.0e-7), and higher coil fraction (p=1.9e-6) compared to E. coli cytoplasmic background. This is consistent with TIM barrel enrichment — TIM barrels are alpha/beta proteins with prominent beta-strands. HSP60 substrates show higher helix fraction (p=1.7e-4) and lower coil (p=2.2e-3) versus matrix background."
+
+---
+
+### Q32: Why did the TIM barrel OR change from 8.4 to 22.6?
+
+**Answer:** "The full-scale CATH analysis (18,855 proteins via InterPro Gene3D) provides a comprehensive background covering the entire E. coli and human proteomes. With this complete background, TIM barrels are strongly disproportionately enriched in GroEL substrates, yielding an odds ratio of 22.6 (p=2.4e-21). Full-proteome backgrounds are essential for robust enrichment testing."
+
+---
+
+### Q33: How robust are the findings to parameter choices?
+
+**Answer:** "We performed sensitivity analyses varying three parameters: (1) HSP60 SILAC enrichment threshold (3, 5, 7, 10) — N>C asymmetry significant at all thresholds; (2) size-matching bin width (5-20 kDa) — TIM barrel enrichment OR=3.4-5.2, significant at all widths; (3) background multiplier (1-5x) — enrichment significant at all levels. All key findings are robust to reasonable parameter variation."
+
+---
+
+### Q34: Why is the N-vs-C asymmetry NOT substrate-specific?
+
+**Answer:** "We tested whether chaperonin substrates show greater N-vs-C contact order asymmetry than non-substrate backgrounds (Mann-Whitney U). GroEL vs E. coli background: p=0.058 (NS); HSP60 vs matrix: p=0.536 (NS). Background proteins show the same or even stronger N>C asymmetry. This means the asymmetry is a fundamental property of multi-domain protein architecture — likely reflecting co-translational folding constraints where N-terminal domains fold first under ribosomal pressure. Chaperonins exploit this pre-existing property rather than creating it. This is our most important negative result and redirects the field toward fold topology (TIM barrels, complex folds) as the primary determinant of chaperonin dependence."
+
+---
+
+### Q35: What about pLDDT as a stability metric?
+
+**Answer:** "pLDDT is AlphaFold's per-residue prediction confidence, NOT thermodynamic stability. It measures how sure AlphaFold is about its prediction — a region with low pLDDT could be genuinely disordered OR a stable domain that AlphaFold lacks training data for. We use contact order (correlation r=-0.75 with experimental folding rates; Plaxco et al. 1998) as the primary folding kinetics proxy, and FoldX total energy for thermodynamic stability. pLDDT results are reported as model confidence comparisons only. This distinction is critical — conflating pLDDT with stability is a widespread error in the structural proteomics field."
 
 ---
 
@@ -635,25 +663,25 @@
 - End with the conservation scatter plot (r = 0.84) — it's visually striking
 
 ### If Presenting to PI/Collaborators (full detail, ~60 min)
-- Present ALL 35 slides — they want to see exact parameters
+- Present ALL 36 slides — they want to see exact parameters
 - Spend extra time on Slides 10-14 (tool parameters, rationale)
 - Emphasize Slides 16-17 (HPC resources, FoldX parameters)
 - Slide 31 (bug fixes) shows thoroughness and debugging rigor
 - Slide 34 (key numbers) is your Q&A reference card
 
 ### Key Numbers to Remember
-- 25,007 proteins analyzed
+- 25,007 proteins analyzed, 24,530 with DSSP, 18,855 with CATH domains
 - 252 GroEL substrates, 266 HSP60 substrates
 - 69 cross-species homolog pairs
-- TIM barrel OR = 8.4 (GroEL), Winged helix OR = 50.9
+- TIM barrel OR = 22.6 (GroEL, p=2.4e-21); CATH class: GroEL chi-sq p=5.2e-21, HSP60 p=2.4e-24
 - N-vs-C contact order: r = 0.48 (strongest in mito background)
 - NOT substrate-specific: p = 0.536 (HSP60 vs bg)
 - NO class gradient: p = 0.77
 - MTS pre-domain: 84.4%, median gap = 18 residues
 - Cross-species conservation: r = 0.84
-- 25/56 tests significant after hierarchical BH correction
+- 45/62 tests significant after hierarchical BH correction (72.6% discovery rate)
 
 ---
 
-*Guide prepared: March 25, 2026*
+*Guide prepared: March 25, 2026; updated April 7, 2026 with full-scale Phase 2 numbers and 5 new Q&As*
 *Project: Antah Asti Prarambh — Comparative Structural Proteomics of Chaperonin Substrates*

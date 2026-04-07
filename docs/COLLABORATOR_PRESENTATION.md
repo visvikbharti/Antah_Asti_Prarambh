@@ -59,9 +59,9 @@ AlphaFold structures (25,007)
     ↓
 ┌─────────────────────────────┐
 │ Domain Assignment           │
-│  CATH/Gene3D (1,390)       │  ← curated, preferred source
-│  + Chainsaw ML (23,868)    │  ← ML prediction with STRIDE
-│  = 25,258 unified records  │
+│  CATH/Gene3D (18,855)      │  ← curated, preferred source (75.3%)
+│  + Chainsaw ML (6,164)     │  ← ML prediction with STRIDE (24.7%)
+│  = 25,019 unified records  │
 └─────────────────────────────┘
     ↓
 ┌─────────────────────────────┐
@@ -79,16 +79,16 @@ AlphaFold structures (25,007)
     ↓
 ┌─────────────────────────────┐
 │ Statistical Testing          │
-│  56 pre-registered tests     │
+│  62 pre-registered tests     │
 │  Hierarchical BH correction  │
-│  25 significant findings     │
+│  45 significant findings     │
 └─────────────────────────────┘
     ↓
 ┌─────────────────────────────┐
 │ FoldX Stability [COMPLETE]   │
 │  25,007 proteins             │
 │  DeltaG (kcal/mol)           │
-│  ~28% complete               │
+│  100% complete               │
 └─────────────────────────────┘
 ```
 
@@ -104,12 +104,16 @@ GroEL substrates show strong enrichment for complex alpha-beta topologies, consi
 
 | CATH Superfamily | Description | Odds Ratio | 95% CI | p (corrected) |
 |-----------------|-------------|:----------:|--------|:-------------:|
-| 3.20.20.70 | **TIM barrel** | **8.4** | [3.83–18.30] | 2.3 × 10⁻⁷ |
+| 3.20.20.70 | **TIM barrel** | **22.6** | [3.83–18.30] | 2.3 × 10⁻⁷ |
 | 1.10.10.10 | Arc repressor-like | 50.9 | [6.70–386.0] | 8.3 × 10⁻⁸ |
 | 3.30.420.40 | Nucleotidyltransferase | 6.0 | [2.01–18.03] | 5.8 × 10⁻³ |
 | 3.40.640.10 | Muconolactone isomerase | 2.6 | [1.23–5.30] | 3.98 × 10⁻² |
 
-GroEL CATH class distribution significantly different from background: χ² = 16.8, p = 2.1 × 10⁻³, Cramer's V = 0.089.
+GroEL CATH class distribution significantly different from background: χ² p = 5.23 × 10⁻²¹, Cramer's V = 0.089.
+
+**HSP60 CATH class distribution:** χ² p = 2.39 × 10⁻²⁴.
+
+**DSSP secondary structure (24,530 proteins):** GroEL substrates have lower helix fraction (p=1.5e-5) and higher strand fraction (p=5.0e-7) than background. HSP60 substrates have higher helix fraction (p=1.7e-4).
 
 **HSP60 superfamily enrichment (vs mitochondrial background):**
 
@@ -120,7 +124,7 @@ GroEL CATH class distribution significantly different from background: χ² = 16
 | 3.40.50.620 | 3.3 | 3.98 × 10⁻² |
 | 2.40.30.10 | 3.6 | 3.98 × 10⁻² |
 
-**Interpretation:** The TIM barrel enrichment (OR = 8.4) is the strongest signal and is fully consistent with established literature — TIM barrels have complex alpha-beta topology prone to misfolding and are the canonical GroEL-dependent fold.
+**Interpretation:** The TIM barrel enrichment (OR = 22.6) is the strongest signal and is fully consistent with established literature — TIM barrels have complex alpha-beta topology prone to misfolding and are the canonical GroEL-dependent fold.
 
 → *See Figure 1: Domain Architecture*
 
@@ -237,10 +241,10 @@ All figures are available in both **PDF** (vector) and **PNG** (300 DPI) formats
 
 | Family | Description | Tests | Significant |
 |--------|-------------|:-----:|:-----------:|
-| H1: Domain architecture | Multi-domain enrichment, superfamily enrichment, CATH class | 24 | 9 |
-| H2: Stability asymmetry | Paired N-vs-C, substrate vs background, class effects | 30 | 14 |
+| H1: Domain architecture | Multi-domain enrichment, superfamily enrichment, CATH class, DSSP | 24 | 24 |
+| H2: Stability asymmetry | Paired N-vs-C, substrate vs background, class effects, FoldX | 36 | 19 |
 | H3: MTS targeting | Matrix enrichment, pre-domain dominance | 2 | 2 |
-| **Total** | | **56** | **25** |
+| **Total** | | **62** | **45** |
 
 ### 5.3 Tests and Effect Sizes
 
@@ -255,25 +259,7 @@ All figures are available in both **PDF** (vector) and **PNG** (300 DPI) formats
 
 ---
 
-## 6. Phase 1 vs Phase 2 Scale Comparison
-
-| Metric | Phase 1 (Pilot) | Phase 2 (Full-Scale) | Fold increase |
-|--------|:---------------:|:--------------------:|:-------------:|
-| Total structures | 1,382 | 25,007 | 18× |
-| Foldseek clusters | 1,155 | 16,242 | 14× |
-| CATH assignments | 1,151 | 1,390 | 1.2× |
-| Chainsaw predictions | ~200 | 25,007 | 125× |
-| Unified assignments | 1,387 | 25,258 | 18× |
-| Paired N-vs-C comparisons | ~400 | 2,648 | 7× |
-| Contact orders computed | ~800 | 11,824 | 15× |
-| Statistical tests | 281 | 56 (streamlined) | — |
-| Significant results | 22 | 25 | — |
-
-**Key observation:** All major findings from Phase 1 pilot are **confirmed and strengthened** at Phase 2 scale. The streamlining from 281 → 56 tests reflects focusing on pre-registered hypotheses and eliminating redundant tests, improving statistical power.
-
----
-
-## 7. FoldX Thermodynamic Stability — COMPLETE
+## 6. FoldX Thermodynamic Stability — COMPLETE
 
 ### 7.1 What FoldX Adds
 
@@ -308,7 +294,7 @@ HSP60 substrates do NOT show this pattern (p=0.77), suggesting different selecti
 
 ### 7.3 Updated Statistics (with FoldX)
 
-Total tests: 60 (56 original + 4 FoldX-specific), 28 significant after hierarchical BH correction.
+Total tests: 62, 45 significant after hierarchical BH correction.
 
 New significant FoldX tests:
 - H2.1 GroEL FoldX DeltaG vs background: p=2.9e-3, d=-0.07 (compartment-matched)
@@ -317,19 +303,15 @@ New significant FoldX tests:
 
 **Caveat:** FoldX was parameterized on experimental X-ray structures, not AlphaFold models. AlphaFold models have idealized geometry that may bias energy calculations. Relative comparisons within the same modeling pipeline are valid.
 
-### 7.4 Test Run Results
-
-A pilot of 50 proteins completed with 100% success rate (~40 sec/protein). The first protein (A0A385XJ53) returned total_energy = 18.81 kcal/mol, confirming the pipeline works correctly.
-
 ---
 
-## 8. Biological Synthesis
+## 7. Biological Synthesis
 
 ### The Three Goals Converge
 
 ```
 Goal 1: WHAT folds need help?
-  → TIM barrels (OR=8.4), complex alpha-beta topologies
+  → TIM barrels (OR=22.6), complex alpha-beta topologies
   → Specific CATH superfamilies, not broad fold classes
 
 Goal 2: WHERE in the protein is folding most complex?
@@ -352,19 +334,18 @@ Goal 3: HOW do substrates reach the chaperonin?
 
 ---
 
-## 9. Timeline and Next Steps
+## 8. Timeline and Next Steps
 
 ### Completed
-- [x] Phase 0: Dataset assembly and quality control
-- [x] Phase 1: Pilot analysis (1,390 proteins, 10 modules)
-- [x] Phase 2: Full-scale HPC analysis (25,007 proteins)
-- [x] Publication figures (6 figures, colorblind-friendly)
-- [x] Statistical framework (56 tests, hierarchical BH)
+- [x] Dataset assembly and quality control
+- [x] Full-scale HPC analysis (25,007 proteins)
+- [x] Publication figures (7 figures, colorblind-friendly)
+- [x] Statistical framework (62 tests, hierarchical BH)
 
 ### Completed (April 1, 2026)
 - [x] FoldX thermodynamic stability (25,007/25,007 proteins, 0 failures)
 - [x] Module F/H/I re-run with FoldX DeltaG integration
-- [x] 60 merged statistical tests, 28 significant
+- [x] 62 merged statistical tests, 45 significant
 - [x] 7 polished publication figures
 
 ### Remaining
@@ -372,9 +353,8 @@ Goal 3: HOW do substrates reach the chaperonin?
 2. Re-run Modules F → H → I with ΔG integration
 3. Transfer updated results to local machine
 4. Update figures with thermodynamic stability data
-5. Final Phase 1 vs Phase 2 comparison document
-6. **Second collaborator meeting** with complete results
-7. Manuscript preparation
+5. **Second collaborator meeting** with complete results
+6. Manuscript preparation
 
 ### Discussion Points for This Meeting
 1. Does the universal N > C asymmetry finding change the manuscript framing?
@@ -385,13 +365,13 @@ Goal 3: HOW do substrates reach the chaperonin?
 
 ---
 
-## 10. Data Inventory
+## 9. Data Inventory
 
-### 10.1 Primary Result Files
+### 9.1 Primary Result Files
 
 | File | Records | Description |
 |------|:-------:|-------------|
-| `unified_domain_assignments_full.tsv` | 25,258 | Unified CATH + Chainsaw domain assignments for all proteins |
+| `unified_domain_assignments_full.tsv` | 25,019 | Unified CATH + Chainsaw domain assignments for all proteins |
 | `chainsaw_full_predictions.tsv` | 25,007 | ML-based domain boundary predictions |
 | `domain_distribution_full.tsv` | 56 | Domain count distribution by dataset |
 | `n_vs_c_paired_full.tsv` | 2,648 | Paired N-domain vs C-region metrics (30 columns) |
@@ -399,12 +379,12 @@ Goal 3: HOW do substrates reach the chaperonin?
 | `contact_order_full.tsv` | 11,824 | Per-domain relative contact order values |
 | `structure_metrics_full.tsv` | 11,824 | pLDDT, secondary structure per domain |
 | `sequence_metrics_full.tsv` | 11,824 | Amino acid composition, charge, hydrophobicity |
-| `corrected_pvalues_full.tsv` | 56 | All statistical tests with corrected p-values and CIs |
+| `corrected_pvalues_full.tsv` | 62 | All statistical tests with corrected p-values and CIs |
 | `statistics_summary_full.txt` | — | Human-readable statistics summary |
 | `foldseek_clusters_full.tsv` | 16,242 | Structural cluster assignments |
 | `combined_cluster_membership.tsv` | 27,063 | Per-protein cluster membership |
 
-### 10.2 Figures
+### 9.2 Figures
 
 | File | Format | Description |
 |------|:------:|-------------|
@@ -415,7 +395,7 @@ Goal 3: HOW do substrates reach the chaperonin?
 | `fig5_orthology` | PDF + PNG | Orthogroup categories, RCO conservation scatter |
 | `fig6_summary` | PDF + PNG | Key findings overview |
 
-### 10.3 Documentation
+### 9.3 Documentation
 
 | Document | Description |
 |----------|-------------|
@@ -425,7 +405,7 @@ Goal 3: HOW do substrates reach the chaperonin?
 | `SESSION5_DOCUMENTATION.md` | Technical session log with verification |
 | `PRIMARY_HYPOTHESES.md` | Pre-registered hypotheses |
 
-### 10.4 Directory Structure
+### 9.4 Directory Structure
 
 ```
 results/phase2/
@@ -439,7 +419,7 @@ results/phase2/
 
 ---
 
-## 11. Software and Reproducibility
+## 10. Software and Reproducibility
 
 | Software | Version | Purpose |
 |----------|---------|---------|

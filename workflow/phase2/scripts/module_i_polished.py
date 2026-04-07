@@ -118,7 +118,10 @@ paired = safe_load(f"{RESULTS}/stability/n_vs_c_paired_full.tsv", "N-vs-C paired
 contact_order = safe_load(f"{RESULTS}/stability/contact_order_full.tsv", "Contact order")
 regions = safe_load(f"{RESULTS}/stability/region_boundaries_full.tsv", "Region boundaries")
 pvalues = safe_load(f"{RESULTS}/stats/corrected_pvalues_full.tsv", "Corrected p-values")
-cath = safe_load(f"{PROJECT_DIR}/results/domains/cath_domain_assignments.tsv", "CATH domains")
+# Use full-scale CATH if available, pilot as fallback
+cath_full_path = f"{RESULTS}/domains/cath_domain_assignments_full.tsv"
+cath_pilot_path = f"{PROJECT_DIR}/results/domains/cath_domain_assignments.tsv"
+cath = safe_load(cath_full_path if os.path.exists(cath_full_path) else cath_pilot_path, "CATH domains")
 targeting = safe_load(f"{PROJECT_DIR}/results/mts/combined_targeting.tsv", "MTS targeting")
 mts_domain = safe_load(f"{PROJECT_DIR}/results/mts/mts_domain_relationship.tsv", "MTS-domain")
 homologs = safe_load(f"{PROJECT_DIR}/data/processed/groel_hsp60_homologs.tsv", "Homolog pairs")

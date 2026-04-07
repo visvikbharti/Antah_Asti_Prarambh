@@ -3,7 +3,7 @@
 **Prepared by:** Vishal Bharti, CSIR-IGIB
 **Date:** 2026-03-22
 
-This document lists everything to share with your collaborator for **full reproducibility** — raw data, processed datasets, all scripts (Phase 1 + Phase 2 HPC), results, figures, and documentation.
+This document lists everything to share with your collaborator for **full reproducibility** — raw data, processed datasets, all analysis scripts + HPC pipeline, results, figures, and documentation.
 
 ---
 
@@ -13,14 +13,14 @@ This document lists everything to share with your collaborator for **full reprod
 |----------|------|------|
 | Raw data | Literature source files, UniProt proteomes, MitoCarta, AlphaFold structures | ~510 MB |
 | Processed data | 7 cleaned datasets + FASTA files | ~1.7 MB |
-| Scripts (Phase 1) | 20 Python analysis scripts | ~780 KB |
-| Scripts (Phase 2 HPC) | Snakefile, config, 7 Python scripts, 19 SLURM jobs | ~930 KB |
-| Results (Phase 1) | Domain, homology, stability, MTS, statistics, figures | ~90 MB |
-| Results (Phase 2) | Full-scale domains, stability, stats, figures | ~19 MB |
+| Analysis scripts | 20 Python analysis scripts | ~780 KB |
+| HPC pipeline scripts | Snakefile, config, 7 Python scripts, 19 SLURM jobs | ~930 KB |
+| Core analysis results | Domain, homology, stability, MTS, statistics, figures | ~90 MB |
+| Full-scale results | Full-scale domains, stability, stats, figures | ~19 MB |
 | Documentation | 14 markdown files | ~440 KB |
 | **Total** | | **~620 MB** |
 
-**Note:** The AlphaFold structures (465 MB) are the bulk of the size. If bandwidth is a concern, share everything except `data/raw/alphafold/pilot/` and tell the collaborator to re-download using the provided script.
+**Note:** The AlphaFold structures (465 MB) are the bulk of the size. If bandwidth is a concern, share everything except `data/raw/alphafold/pilot/` (the locally-cached structure set) and tell the collaborator to re-download using the provided script.
 
 ---
 
@@ -56,7 +56,7 @@ Human.MitoCarta3.0.xls         — MitoCarta 3.0 (9.7 MB) — mitochondrial prot
 1,382 CIF files                — AF-{ACC}-F1-model_v4.cif format (465 MB total)
                                — AlphaFold DB v6 predictions for all 7 datasets
 ```
-*Note: Phase 2 full structures (25,007) are on HPC only (~15 GB), not transferred locally.*
+*Note: This directory holds the locally-cached subset. The full structure set (25,007) is on HPC only (~15 GB) and not transferred locally.*
 
 #### A5. Duplicate copies in `data/raw/custom/`
 ```
@@ -84,7 +84,7 @@ mitocarta_summary_report.txt         — MitoCarta v2→v3 reclassification repo
 
 ---
 
-### C. PHASE 1 SCRIPTS
+### C. ANALYSIS SCRIPTS
 
 #### C1. Data preparation scripts (`scripts/`)
 ```
@@ -110,19 +110,19 @@ parse_mitocarta.py                   — Module G: MitoCarta parsing
 module_f_n_vs_c_analysis.py          — Module F: N-vs-C terminus stability
 module_f_extension_chainsaw.py       — Module F: Chainsaw-based extension
 module_g_mts_analysis.py             — Module G: MTS targeting analysis
-module_h_comparative_stats.py        — Module H: 281 statistical tests
-generate_figures.py                  — Module I: Publication figures (Phase 1)
+module_h_comparative_stats.py        — Module H: Statistical tests
+generate_figures.py                  — Module I: Publication figures
 ```
 
 ---
 
-### D. PHASE 2 HPC SCRIPTS
+### D. HPC PIPELINE SCRIPTS
 
 #### D1. Pipeline orchestration (`workflow/phase2/`)
 ```
 Snakefile                            — Snakemake workflow (717 lines, all rules)
 config.yaml                          — Pipeline configuration (paths, params, resources)
-README.md                            — Phase 2 pipeline documentation
+README.md                            — HPC pipeline documentation
 download_alphafold_full.py           — Bulk AlphaFold download (E. coli + Human)
 run_foldseek_full.py                 — Foldseek search + clustering orchestrator
 run_foldx.py                         — FoldX orchestrator (generate/chunk/collect modes)
@@ -131,7 +131,7 @@ run_foldx.py                         — FoldX orchestrator (generate/chunk/coll
 #### D2. Full-scale analysis scripts (`workflow/phase2/scripts/`)
 ```
 module_f_full.py                     — Module F: N-vs-C on 25,007 proteins
-module_h_full.py                     — Module H: 56 statistical tests, hierarchical BH
+module_h_full.py                     — Module H: 62 statistical tests, hierarchical BH
 module_i_full.py                     — Module I: 6 publication figures (HPC version)
 module_i_polished.py                 — Module I: Polished figures (local version)
 ```
@@ -171,7 +171,7 @@ test_stride_fix.sh                   — STRIDE binary compatibility test
 
 ---
 
-### E. RESULTS — PHASE 1 PILOT
+### E. CORE ANALYSIS RESULTS
 
 #### E1. Structures (`results/structures/`)
 ```
@@ -189,7 +189,7 @@ quality_validation_report.txt        — QC narrative
 ```
 cath_domain_assignments.tsv          — CATH domain assignments (Gene3D)
 cath_protein_summary.tsv             — Per-protein CATH summary
-chainsaw_domain_predictions.tsv      — Chainsaw ML predictions (pilot)
+chainsaw_domain_predictions.tsv      — Chainsaw ML predictions
 chainsaw_raw_output.tsv              — Chainsaw raw output
 ml_domain_assignments.tsv            — Unified CATH + Chainsaw (1,387 proteins)
 domain_structural_metrics.tsv        — Per-domain contact order, pLDDT
@@ -231,7 +231,7 @@ targeting_summary_report.txt         — MTS summary
 
 #### E6. Statistics (`results/stats/`)
 ```
-corrected_pvalues.tsv                — 281 tests with hierarchical BH correction
+corrected_pvalues.tsv                — Statistical tests with hierarchical BH correction
 statistics_summary_report.txt        — Human-readable summary
 stability_comparisons.tsv            — Stability comparison results
 domain_enrichment.tsv                — Superfamily enrichment (OR, CI)
@@ -250,7 +250,7 @@ fig6_summary.{pdf,png}               — Key findings summary
 
 ---
 
-### F. RESULTS — PHASE 2 FULL-SCALE
+### F. FULL-SCALE RESULTS
 
 #### F1. Domains (`results/phase2/domains/`)
 ```
@@ -278,7 +278,7 @@ sequence_metrics_full.tsv                — 11,824 composition per domain
 
 #### F4. Statistics (`results/phase2/stats/`)
 ```
-corrected_pvalues_full.tsv               — 56 tests, hierarchical BH correction
+corrected_pvalues_full.tsv               — 62 tests, hierarchical BH correction
 statistics_summary_full.txt              — Human-readable summary (534 lines)
 stability_comparisons_full.tsv           — Detailed paired comparison results
 ```
@@ -317,8 +317,8 @@ PRIMARY_HYPOTHESES.md                — Pre-registered hypotheses (H1, H2, H3)
 METHODS_AND_PROTOCOLS.md             — Detailed computational protocols
 DOCUMENTATION.md                     — General project documentation (114 KB)
 RESULTS_NARRATIVE.md                 — Scientific interpretation of findings (32 KB)
-PHASE1_VERIFICATION.md              — Phase 1 completion checklist
-PHASE2_RESULTS_REPORT.md            — Phase 2 results for collaborator (16 KB)
+PHASE1_VERIFICATION.md              — Analysis completion checklist
+PHASE2_RESULTS_REPORT.md            — Full-scale results for collaborator (16 KB)
 HPC_DEPLOYMENT_GUIDE.md             — HPC cluster setup + job submission
 SESSION_CONTINUITY.md               — Cross-session state management
 SESSION4_DOCUMENTATION.md           — Session 4: bug fixes
@@ -366,8 +366,8 @@ mkdir -p Antah_Asti_Prarambh_essential/
 # Copy essential directories
 cp -r data/processed/ Antah_Asti_Prarambh_essential/data_processed/
 cp -r results/phase2/ Antah_Asti_Prarambh_essential/results_phase2/
-cp -r results/stats/ Antah_Asti_Prarambh_essential/results_stats_phase1/
-cp -r results/figures/ Antah_Asti_Prarambh_essential/figures_phase1/
+cp -r results/stats/ Antah_Asti_Prarambh_essential/results_stats/
+cp -r results/figures/ Antah_Asti_Prarambh_essential/figures/
 cp -r docs/ Antah_Asti_Prarambh_essential/docs/
 cp -r workflow/ Antah_Asti_Prarambh_essential/workflow/
 cp -r scripts/ Antah_Asti_Prarambh_essential/scripts/
@@ -398,7 +398,7 @@ Tell your collaborator to read these files in this order:
 2. **`docs/DATA_HANDOVER_INDEX.md`** — What each result file contains
 3. **`docs/PRIMARY_HYPOTHESES.md`** — The pre-registered hypotheses being tested
 4. **`docs/METHODS_AND_PROTOCOLS.md`** — Detailed computational methods
-5. **`results/phase2/stats/statistics_summary_full.txt`** — All 56 tests at a glance
+5. **`results/phase2/stats/statistics_summary_full.txt`** — All 62 tests at a glance
 6. **`results/phase2/figures/fig1-6.pdf`** — The publication figures
 
 For pipeline reproduction:

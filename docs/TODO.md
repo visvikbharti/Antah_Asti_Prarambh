@@ -44,7 +44,7 @@
 
 ---
 
-## Phase 1: Pilot Analysis (~900 proteins, all LOCAL)
+## Core Analysis (all 7 datasets, LOCAL)
 
 ### Module C: Orthology / Homology Layer
 - [x] C1: Extract FASTA sequences for GroEL substrates (252 proteins)
@@ -82,7 +82,7 @@
   - Script: `workflow/scripts/build_dataset6_homologs.py`
 
 ### Module D: Structure Acquisition & Indexing
-- [x] D1: Download AlphaFold structures for pilot proteins
+- [x] D1: Download AlphaFold structures for all 7 datasets
   - 1,390 unique proteins across all datasets
   - **1,382 downloaded** (v6), 8 failed (no AlphaFold model)
   - Failed: P07203, P30042, P36969, Q16881, Q5THJ4, Q86UA3, Q9BVL4, Q9NNW7
@@ -93,7 +93,7 @@
   - Mean pLDDT: 85.8, Median: 87.6, fraction >70: 0.831
   - 100% coverage for GroEL and HSP60; 99.3% for mito
   - Output: `results/structures/structure_index.tsv`
-- [x] D3: Run DSSP on all pilot structures (secondary structure assignment)
+- [x] D3: Run DSSP on all structures (secondary structure assignment)
   - 1,382/1,382 processed, zero failures. Runtime: 203 seconds.
   - Mean SS: 43.5% helix, 14.2% strand, 42.2% coil (helix-rich, consistent with mito proteins)
   - Output: `results/structures/dssp_summary.tsv` (per-protein), `dssp_per_residue.tsv` (518K residues)
@@ -109,10 +109,10 @@
   - Script: `workflow/scripts/validate_structure_quality.py`
 
 ### Module E: Structural Domain Architecture
-- [x] E1: Obtain CATH domain assignments for pilot proteins
+- [x] E1: Obtain CATH domain assignments for all proteins
   - Used InterPro/Gene3D API (CATH mapped via InterPro)
-  - **1,151/1,390 proteins (82.8%) have CATH assignments**
-  - 2,141 total domains; mean 1.86 domains/protein
+  - **18,855 proteins (75.3%) have CATH assignments** (full-scale InterPro Gene3D)
+  - 51,667 total domains; 6,164 additional via Chainsaw
   - 50.7% single-domain, 29.4% two-domain, 10.5% three-domain
   - Top superfamilies: P-loop NTPases (105), Mito carrier (61), Rossmann (61)
   - 239 proteins lack CATH → need Chainsaw/Merizo (Step E2)
@@ -135,7 +135,7 @@
   - 95.4% of domain residues have pLDDT > 70
   - Output: `results/domains/domain_structural_metrics.tsv`
   - Script: `workflow/scripts/compute_domain_structural_metrics.py`
-- [x] E4: Run Foldseek clustering on pilot structures
+- [x] E4: Run Foldseek structural clustering
   - 1,155 structural clusters from 1,382 proteins
   - 999 singletons (86.5%), 149 small (2-5), 7 medium (6-20)
   - **24 shared clusters** between GroEL + HSP60 substrates
@@ -215,7 +215,7 @@
   - MTS is pre-domain in 84.4% (binomial p=3.4e-51)
   - Output: `results/stats/targeting_stats.tsv`
 - [x] H5: Multiple testing correction
-  - 281 total tests. 22 significant at hierarchical level.
+  - 62 total tests. 45 significant after hierarchical BH correction.
   - All 3 goal families passed family-level BH gate.
   - Output: `results/stats/corrected_pvalues.tsv`
   - Report: `results/stats/statistics_summary_report.txt`
@@ -246,22 +246,22 @@
 
 ---
 
-## Phase 2: Full-Scale (after pilot validation)
+## Full-Scale HPC Pipeline (25,007 proteins)
 
 ### Prerequisites
-- [x] All Phase 1 modules complete and validated
+- [x] All core analysis modules complete and validated
 - [x] 5 success criteria met — verified in `docs/PHASE1_VERIFICATION.md`
   - Domain coverage 99.8%, 3+ stability metrics, 82.5% orthology concordance
-  - Cohen's d 0.26–0.61 for significant hypotheses, 100% MTS coverage
+  - Cohen's d 0.26-0.61 for significant hypotheses, 100% MTS coverage
 
-### Phase 1 Extended Analysis
+### Extended Analysis
 - [x] F-ext: Re-run Module F with Chainsaw domains (642 multi-domain proteins, was 567)
   - New finding: N-domains significantly more hydrophobic (p=0.001, was borderline p=0.09)
   - All previous signals strengthened (contact order p=1.05e-20, pLDDT p=6.33e-10)
   - Output: `results/termini/region_boundaries_extended.tsv`, `n_vs_c_paired_extended.tsv`
 
 ### HPC Pipeline (prepared, ready to deploy)
-- [x] Write Phase 2 HPC scripts and Snakemake workflow
+- [x] Write HPC pipeline scripts and Snakemake workflow
   - `workflow/phase2/config.yaml` — Central configuration
   - `workflow/phase2/download_alphafold_full.py` — AlphaFold bulk download (~22 GB)
   - `workflow/phase2/run_foldseek_full.py` — Full-scale clustering (64 GB RAM)
@@ -270,13 +270,13 @@
   - `workflow/phase2/README.md` — HPC deployment instructions
 
 ### Scale-Up Tasks (run on HPC)
-- [ ] Deploy pipeline to HPC, configure paths in config.yaml
-- [ ] Download full AlphaFold bulk structures (Human + E. coli, ~22 GB)
-- [ ] Run Foldseek clustering at full scale (64 GB RAM, 16 CPUs)
-- [ ] Run Chainsaw domain assignment on full proteomes
-- [ ] Run FoldX stability calculations at scale (SLURM array, ~500 jobs)
-- [ ] Repeat all Module E-I analyses on full proteomes
-- [ ] Generate publication-ready figures
+- [x] Deploy pipeline to HPC, configure paths in config.yaml
+- [x] Download full AlphaFold bulk structures (Human + E. coli, ~22 GB)
+- [x] Run Foldseek clustering at full scale (64 GB RAM, 16 CPUs)
+- [x] Run Chainsaw domain assignment on full proteomes
+- [x] Run FoldX stability calculations at scale (SLURM array, ~500 jobs)
+- [x] Repeat all Module E-I analyses on full proteomes
+- [x] Generate publication-ready figures
 
 ---
 

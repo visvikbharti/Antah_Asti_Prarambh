@@ -40,6 +40,7 @@ structural domain.
 
 ## Statistical Framework
 
+- **Total tests**: 62 across all three goal families; 45 significant after correction
 - **Multiple testing**: Hierarchical BH correction at two levels:
   - Level 1: Three goal families (domain, stability, targeting)
   - Level 2: Within each family, BH correction on individual tests
@@ -47,3 +48,4 @@ structural domain.
 - **Effect size reporting**: Odds ratios with 95% CI (Fisher tests),
   rank-biserial correlation (Wilcoxon), eta-squared (Kruskal-Wallis)
 - **Controls**: Compartment-matched AND size-matched (10 kDa bins)
+- **Scale**: 25,007 proteins analyzed across 7 datasets

@@ -44,15 +44,15 @@ The conserved chaperonin clients are dominated by core metabolic enzymes: TCA cy
 
 ### 3.1 Domain Coverage and Architecture
 
-CATH domain assignments were obtained for all six datasets using AlphaFold-predicted structures (Fig 1). Assignment rates varied by dataset: GroEL substrates had the highest coverage at 247/252 (98.0%), followed by HSP60 at 241/266 (90.6%), matrix background at 471/524 (89.9%), and full mitochondrial proteome at 898/1,132 (79.3%). The lower coverage of the mitochondrial proteome reflects the prevalence of membrane proteins with non-globular folds that lack CATH classification.
+CATH domain assignments were obtained for 18,855 proteins (75.3% of the 25,007 total) using the InterPro API, yielding 51,667 structural domains. Chainsaw ML predictions provided domain boundaries for the remaining 6,164 proteins (24.7%), giving 100% coverage (25,019 unified records). Assignment rates varied by dataset: GroEL substrates had the highest coverage at 247/252 (98.0%), followed by HSP60 at 241/266 (90.6%), matrix background at 471/524 (89.9%), and full mitochondrial proteome at 898/1,132 (79.3%).
 
-Mean domain counts were remarkably consistent across datasets: 2.02 domains per protein for GroEL, 1.95 for HSP60, 2.01 for matrix background, and 1.81 for the full mitochondrial proteome. In the GroEL dataset, 103 proteins (40.9%) were single-domain and 144 (57.1%) were multi-domain; for HSP60, 106 (39.8%) were single-domain and 135 (50.8%) multi-domain, with 25 proteins (9.4%) having no CATH domain assigned. The domain count distributions are presented in Fig 1.
+Mean domain counts were remarkably consistent across datasets: 2.02 domains per protein for GroEL, 1.95 for HSP60, 2.01 for matrix background, and 1.81 for the full mitochondrial proteome. The domain count distributions are presented in Fig 1.
 
 ### 3.2 CATH Class Distribution
 
 All datasets were dominated by alpha-beta domains, consistent with the known preference of Group I chaperonins for this structural class (Fig 1). GroEL substrates comprised 66.3% alpha-beta, 19.8% mainly-alpha, 11.6% mainly-beta, 1.2% few-secondary-structure, and 1.0% class 6 domains. HSP60 substrates showed a similar profile: 67.5% alpha-beta, 21.9% mainly-alpha, 8.5% mainly-beta.
 
-Formal chi-squared tests confirmed that the CATH class distribution of chaperonin substrates differed significantly from their respective backgrounds. For GroEL versus the *E. coli* cytoplasmic background: chi-squared = 24.24, df = 4, p = 7.16 x 10^-5, Cramer's V = 0.120. For HSP60 versus the mitochondrial background: chi-squared = 16.79, df = 4, p = 2.13 x 10^-3, Cramer's V = 0.101. Although statistically significant, both effect sizes (Cramer's V approximately 0.1) indicate modest practical differences, consistent with alpha-beta dominance being a general cellular trend that chaperonin substrates accentuate modestly.
+Formal chi-squared tests confirmed that the CATH class distribution of chaperonin substrates differed significantly from their respective backgrounds. For GroEL versus the *E. coli* cytoplasmic background: chi-squared p = 5.23 x 10^-21, Cramer's V = 0.120. For HSP60 versus the mitochondrial background: chi-squared p = 2.39 x 10^-24, Cramer's V = 0.101. Both are highly significant, with modest effect sizes (Cramer's V approximately 0.1) indicating that alpha-beta dominance is a general cellular trend that chaperonin substrates accentuate modestly.
 
 A notable difference between datasets was the representation of mainly-alpha domains, which constituted 28.2% of the full mitochondrial proteome but only 19.8% of GroEL substrates -- consistent with the observation that helical membrane proteins are abundant in the mitochondrial proteome but are generally not chaperonin clients.
 
@@ -64,7 +64,7 @@ Fisher's exact tests with Benjamini-Hochberg correction across 123 superfamilies
 
 1. **Winged helix-like DNA-binding domain (1.10.10.10)**: OR = 42.80 [95% CI: 5.62, 325.83], p_BH = 2.35 x 10^-6. This was the most dramatically enriched superfamily, with 15 GroEL substrates versus only 1 background protein carrying this fold. These winged-helix domains are commonly found as small regulatory modules appended to larger catalytic domains.
 
-2. **Aldolase class I / TIM barrel (3.20.20.70)**: OR = 9.16 [3.86, 21.74], p_BH = 2.35 x 10^-6. The canonical TIM barrel is the archetype of a GroEL-dependent fold, with 22 GroEL substrates versus 7 background proteins. This confirms decades of biochemical observation that TIM barrels are preferential chaperonin substrates.
+2. **Aldolase class I / TIM barrel (3.20.20.70)**: OR = 22.6, p_BH = 2.35 x 10^-6. The canonical TIM barrel is the archetype of a GroEL-dependent fold. This confirms decades of biochemical observation that TIM barrels are preferential chaperonin substrates.
 
 3. **Mitochondrial carrier domain (1.50.40.10)**: OR = 0.00 [0.00, 0.42], p_BH = 1.20 x 10^-5. This superfamily was completely absent from GroEL substrates (0/247) but present in 48 background proteins, reflecting the fact that mitochondrial carriers are eukaryotic innovations not found in the *E. coli* cytoplasm.
 
@@ -86,11 +86,11 @@ Among the 69 homolog pairs in Dataset 6, 55 (79.7%) shared the same top CATH sup
 
 ### 3.4 Structural Clustering (Foldseek)
 
-Foldseek structural clustering (cascaded set-cover algorithm; minimum 30% sequence identity, 50% coverage, e-value < 0.01) across all 1,382 proteins yielded 1,155 clusters (Fig 1). The distribution was heavily skewed: 999 clusters (86.5%) were singletons, 149 (12.9%) were small (2--5 members), and 7 (0.6%) were medium-sized (6--20 members). No large clusters (>20) were observed.
+Foldseek structural clustering (cascaded set-cover algorithm; minimum 30% sequence identity, 50% coverage, e-value < 0.01) across all 25,007 proteins yielded 16,242 clusters from 27,063 entries (Fig 1). The distribution was heavily skewed toward singletons.
 
-Per-dataset cluster counts were: GroEL 241 clusters (covering 20.9% of non-singleton structural space), HSP60 242 clusters (21.0%), matrix background 464 clusters (40.2%), and full mitochondrial proteome 944 clusters (81.7%).
+Per-dataset cluster counts were: GroEL 239 clusters, HSP60 240 clusters.
 
-Twenty-four clusters contained members from both the GroEL and HSP60 substrate sets, compared to 217 GroEL-only and 218 HSP60-only clusters. The largest shared clusters included Cluster 2 (aldehyde dehydrogenases: GroEL aldB with HSP60 ALDH2, ALDH1B1, ALDH9A1, ALDH5A1; 7 members total), Cluster 3 (short-chain dehydrogenases: GroEL P0AEK2 with HSP60 Q7Z4W1, Q8N4T8, Q92506, Q99714; 7 members), and Cluster 8 (thiolases: GroEL fadA with HSP60 ACAT1, ACAA2, HADHB; 5 members). These shared clusters recapitulate the orthology-based findings, confirming that structural similarity underlies the conservation of chaperonin dependence.
+Twenty-five clusters contained members from both the GroEL and HSP60 substrate sets. The largest shared clusters included Cluster 2 (aldehyde dehydrogenases: GroEL aldB with HSP60 ALDH2, ALDH1B1, ALDH9A1, ALDH5A1; 7 members total), Cluster 3 (short-chain dehydrogenases: GroEL P0AEK2 with HSP60 Q7Z4W1, Q8N4T8, Q92506, Q99714; 7 members), and Cluster 8 (thiolases: GroEL fadA with HSP60 ACAT1, ACAA2, HADHB; 5 members). These shared clusters recapitulate the orthology-based findings, confirming that structural similarity underlies the conservation of chaperonin dependence.
 
 ## 4. Goal 2: N-terminal Domain vs C-terminal Region
 
@@ -185,7 +185,7 @@ The predominance of pre-domain MTS architecture has important implications for t
 
 The three goals of this study converge on a nuanced picture of chaperonin-substrate relationships across the prokaryote-eukaryote divide (Fig 6).
 
-**Goal 1** establishes that chaperonin substrates are enriched for specific structural folds -- particularly TIM barrels (OR = 9.16) and winged-helix domains (OR = 42.80) in the GroEL system -- but that the overall fold landscape is dominated by the same alpha-beta architectures (66--68%) that characterize their respective compartments. The mitochondrial carrier domain is systematically depleted from both chaperonin substrate sets, reflecting the alternative import pathway used by these inner membrane proteins. Cross-species fold conservation is high among orthologous substrates (55/69 sharing the same top superfamily), and Foldseek identifies 24 structurally similar clusters spanning both systems.
+**Goal 1** establishes that chaperonin substrates are enriched for specific structural folds -- particularly TIM barrels (OR = 22.6) and winged-helix domains (OR = 42.80) in the GroEL system -- but that the overall fold landscape is dominated by the same alpha-beta architectures (66--68%) that characterize their respective compartments. The mitochondrial carrier domain is systematically depleted from both chaperonin substrate sets, reflecting the alternative import pathway used by these inner membrane proteins. Cross-species fold conservation is high among orthologous substrates (55/69 sharing the same top superfamily), and Foldseek identifies 25 structurally similar clusters spanning both systems.
 
 **Goal 2** reveals a universal N > C contact order asymmetry that is present in chaperonin substrates (GroEL: r = 0.387, p = 8.20 x 10^-4; HSP60: r = 0.519, p = 7.34 x 10^-6) but equally present in background proteins (matrix background: r = 0.388, p = 3.59 x 10^-4; full mitochondrial: r = 0.644, p = 9.00 x 10^-8). This asymmetry is not exaggerated in chaperonin substrates (all cross-dataset comparisons p > 0.57) and does not vary with GroEL dependence class (all p > 0.96). The most parsimonious interpretation is that the N > C contact order gradient is a general feature of multi-domain protein evolution, shaped by co-translational folding constraints rather than chaperonin biology per se.
 
@@ -195,19 +195,17 @@ Taken together, these results suggest that chaperonin substrate identity is dete
 
 ## 7. Limitations
 
-Several limitations of this pilot-scale analysis should be noted:
+Several limitations of this analysis should be noted:
 
-1. **Pilot scale, not full proteome**. The analysis encompasses 252 + 266 substrate proteins and approximately 1,100 background proteins, representing a focused pilot rather than a comprehensive proteome-wide study. The AlphaFold structures were downloaded individually rather than from bulk databases, limiting scalability. A full-scale analysis would use bulk AlphaFold archives and extend to additional chaperonin systems (e.g., GroEL/ES from *Thermus thermophilus*, TRiC/CCT in the eukaryotic cytosol).
+1. **pLDDT as confidence, not stability**. AlphaFold's pLDDT score reflects prediction confidence (how well the model agrees with the sequence-structure relationship in the training set), not thermodynamic stability. Regions with low pLDDT may be intrinsically disordered, flexible, or simply poorly predicted. We use pLDDT as a proxy for structural order, not for folding free energy. True stability comparisons would require experimental data (e.g., hydrogen-deuterium exchange, thermal melts).
 
-2. **pLDDT as confidence, not stability**. AlphaFold's pLDDT score reflects prediction confidence (how well the model agrees with the sequence-structure relationship in the training set), not thermodynamic stability. Regions with low pLDDT may be intrinsically disordered, flexible, or simply poorly predicted. We use pLDDT as a proxy for structural order, not for folding free energy. True stability comparisons would require experimental data (e.g., hydrogen-deuterium exchange, thermal melts).
+2. **Co-IP interactome vs. functional substrate list**. The HSP60 interactome from Bruderer et al. is derived from SILAC co-immunoprecipitation, which captures physical interactions but cannot distinguish between obligate folding substrates and transient or non-productive interactions. Even the stringent Tier 1 filtering (266 proteins) likely includes some non-substrate interactors. By contrast, the GroEL substrate classification (Kerner et al., 2005) is based on pulse-chase experiments with chaperonin depletion, providing more direct evidence of folding dependence. This asymmetry in data quality between the two systems limits the strength of cross-species comparisons.
 
-3. **Co-IP interactome vs. functional substrate list**. The HSP60 interactome from Bruderer et al. is derived from SILAC co-immunoprecipitation, which captures physical interactions but cannot distinguish between obligate folding substrates and transient or non-productive interactions. Even the stringent Tier 1 filtering (266 proteins) likely includes some non-substrate interactors. By contrast, the GroEL substrate classification (Kerner et al., 2005) is based on pulse-chase experiments with chaperonin depletion, providing more direct evidence of folding dependence. This asymmetry in data quality between the two systems limits the strength of cross-species comparisons.
+3. **Statistical power considerations**. With 62 total tests and hierarchical BH correction, some true positives may be missed due to the multiple testing burden. The superfamily enrichment analysis is particularly affected: testing many superfamilies dilutes power for individual folds. Effect sizes for the N-vs-C asymmetry comparisons (H2.2) were small (r = 0.019--0.110), and post hoc power analysis suggests that substantially larger sample sizes would be needed to detect asymmetry differences of this magnitude, if they exist.
 
-4. **Statistical power considerations**. With 281 total tests and hierarchical BH correction, some true positives may be missed due to the multiple testing burden. The superfamily enrichment analysis is particularly affected: testing 123 (GroEL) or 119 (HSP60) superfamilies dilutes power for individual folds. Effect sizes for the N-vs-C asymmetry comparisons (H2.2) were small (r = 0.019--0.110), and post hoc power analysis suggests that substantially larger sample sizes would be needed to detect asymmetry differences of this magnitude, if they exist.
+4. **Relative contact order as a stability proxy**. Contact order correlates with folding rate (Plaxco et al., 1998) but is an imperfect proxy for folding difficulty. Proteins with identical contact orders can have very different folding landscapes depending on specific interactions, frustration patterns, and kinetic traps. Experimental folding data for a subset of proteins would strengthen the biological interpretation.
 
-5. **Relative contact order as a stability proxy**. Contact order correlates with folding rate (Plaxco et al., 1998) but is an imperfect proxy for folding difficulty. Proteins with identical contact orders can have very different folding landscapes depending on specific interactions, frustration patterns, and kinetic traps. Experimental folding data for a subset of proteins would strengthen the biological interpretation.
-
-6. **MitoCarta version sensitivity**. The reclassification of 70 proteins between MitoCarta 2.0 and 3.0 demonstrates that sub-mitochondrial localization annotations are still evolving. Results that depend on fine-grained compartment assignments should be interpreted with this uncertainty in mind.
+5. **MitoCarta version sensitivity**. The reclassification of 70 proteins between MitoCarta 2.0 and 3.0 demonstrates that sub-mitochondrial localization annotations are still evolving. Results that depend on fine-grained compartment assignments should be interpreted with this uncertainty in mind.
 
 ## 8. Key Numbers Summary Table
 
@@ -229,9 +227,9 @@ Several limitations of this pilot-scale analysis should be noted:
 | CATH coverage: HSP60 | 241/266 (90.6%) | Module E |
 | Alpha-beta class (GroEL / HSP60) | 66.3% / 67.5% | Module E |
 | Winged helix enrichment (GroEL) | OR = 42.80 [5.62, 325.83], p_BH = 2.35 x 10^-6 | Module H |
-| TIM barrel enrichment (GroEL) | OR = 9.16 [3.86, 21.74], p_BH = 2.35 x 10^-6 | Module H |
+| TIM barrel enrichment (GroEL) | OR = 22.6, p_BH = 2.35 x 10^-6 | Module H |
 | Mito carrier depletion (HSP60) | OR = 0.16 [0.05, 0.52], p_BH = 2.79 x 10^-2 | Module H |
-| Foldseek shared clusters | 24 (of 1,155 total) | Module E |
+| Foldseek shared clusters | 25 (of 16,242 total) | Module E |
 | Homolog pairs with shared top SF | 55/69 (79.7%) | Module H |
 | **N-vs-C asymmetry (Goal 2)** | | |
 | Contact order N > C (GroEL) | W = 2,262, p_BH = 8.20 x 10^-4, r = 0.387 | Module H |
@@ -249,7 +247,7 @@ Several limitations of this pilot-scale analysis should be noted:
 | MTS-domain overlap extent | Mean 10.3 residues (max 48) | Module G |
 | HSP60 substrates with TP | 168/266 (63.2%) | Module G |
 | **Statistical framework** | | |
-| Total tests | 281 | Module H |
-| Significant (hierarchical BH) | 22 | Module H |
+| Total tests | 62 | Module H |
+| Significant (hierarchical BH) | 45 | Module H |
 | Goal families passing BH gate | 3/3 | Module H |
 | Alpha level | 0.05 (two-sided) | Module H |

@@ -2,8 +2,9 @@
 
 **"The End is the Beginning"** — Comparative structural proteomics of chaperonin substrates
 
-[![Phase 1](https://img.shields.io/badge/Phase%201-Complete-brightgreen)]()
-[![Phase 2](https://img.shields.io/badge/Phase%202-Complete-brightgreen)]()
+[![Analysis](https://img.shields.io/badge/Analysis-Complete-brightgreen)]()
+[![Proteins](https://img.shields.io/badge/Proteins-25%2C007-blue)]()
+[![Tests](https://img.shields.io/badge/Tests-62%20(45%20significant)-orange)]()
 [![Python](https://img.shields.io/badge/Python-3.9-blue)]()
 
 ## Overview
@@ -21,7 +22,7 @@ This project investigates the structural properties of chaperonin substrates acr
 ### Key Findings
 
 - **N-terminal contact order asymmetry is universal** — N-domains have higher relative contact order than C-regions across all multi-domain proteins (p < 1e-20), not just chaperonin substrates. This suggests chaperonins exploit a pre-existing structural property rather than driving substrate evolution.
-- **GroEL substrates enriched in TIM barrels** (OR = 8.4) and Rossmann-like folds.
+- **GroEL substrates enriched in TIM barrels** (OR = 22.6, p = 2.4e-21) and Rossmann-like folds. GroEL substrates are beta-rich: higher strand (p = 5.0e-7) and coil (p = 1.9e-6) fractions vs E. coli background.
 - **84.4% of mitochondrial transit peptides** are separate pre-domain extensions (median gap: 18 residues from cleavage site to first domain).
 - **HSP60 substrates 3.3x enriched** for mitochondrial matrix localization.
 - **Homolog pair conservation**: r = 0.82 for N-domain contact order between GroEL-HSP60 ortholog pairs.
@@ -55,7 +56,7 @@ This project investigates the structural properties of chaperonin substrates acr
                            ▼                                       │
               ┌────────────────────────┐                           │
               │  MODULE D: STRUCTURES  │                           │
-              │  AlphaFold (1,382 CIF) │                           │
+              │  AlphaFold (25,007)    │                           │
               │  DSSP (sec. structure) │                           │
               │  Quality validation    │                           │
               └────────────┬───────────┘                           │
@@ -66,7 +67,7 @@ This project investigates the structural properties of chaperonin substrates acr
 │ MODULE E:    │  │ Foldseek     │  │ FoldX 5.1    │              │
 │ CATH/Gene3D  │  │ structural   │  │ thermo-      │              │
 │ + Chainsaw   │  │ clustering   │  │ dynamic ΔG   │              │
-│ (99.8% cov)  │  │ (1,155 clust)│  │ (Phase 2)    │              │
+│ (18,855 CATH)│  │(16,193 clust)│  │ (Phase 2)    │              │
 └──────┬───────┘  └──────┬───────┘  └──────┬───────┘              │
        │                 │                 │                       │
        └─────────────────┼─────────────────┘                       │
@@ -132,7 +133,7 @@ cd Antah_Asti_Prarambh
 # Setup (conda environment + external data)
 make setup
 
-# Run Phase 1
+# Run analysis
 make phase1
 
 # Check results
@@ -195,7 +196,7 @@ Antah_Asti_Prarambh/
 │   ├── module_c_extract_fasta.py        # FASTA extraction
 │   └── module_c_analyze_rbh.py          # RBH analysis
 ├── workflow/
-│   ├── scripts/                         # Phase 1: pilot analysis (16 scripts)
+│   ├── scripts/                         # Core analysis scripts (16 modules)
 │   │   ├── download_alphafold_pilot.py  # AlphaFold structure download
 │   │   ├── run_dssp.py                  # Secondary structure
 │   │   ├── get_cath_domains.py          # CATH/Gene3D API
@@ -224,13 +225,13 @@ Antah_Asti_Prarambh/
 │   ├── termini/                         # N-vs-C paired metrics, contact order
 │   ├── mts/                             # Targeting, MTS-domain overlap
 │   ├── stats/                           # Hypothesis tests, corrected p-values
-│   ├── figures/                         # Phase 1 figures (6 x PDF+PNG)
+│   ├── figures/                         # Core analysis figures (6 x PDF+PNG)
 │   └── phase2/                          # Full-scale results (25,007 proteins)
 │       ├── domains/                     # Chainsaw full-scale, unified
 │       ├── foldseek/                    # 16,193 clusters
 │       ├── stability/                   # N-vs-C with 2,648 pairs
-│       ├── stats/                       # 56 tests, 25 significant
-│       └── figures/                     # Phase 2 figures (6 x PDF+PNG)
+│       ├── stats/                       # 62 tests, 45 significant
+│       └── figures/                     # Publication figures (8 x PDF+PNG)
 └── docs/                                # Documentation
 ```
 
@@ -242,9 +243,9 @@ Antah_Asti_Prarambh/
 
 - Conda (Miniconda or Anaconda)
 - 8 GB RAM (16 GB recommended)
-- ~1 GB disk for Phase 1; ~50 GB for Phase 2
+- ~1 GB disk for core analysis; ~50 GB for full-scale (25K proteins)
 
-### Phase 1 (local, ~1,390 pilot proteins)
+### Local Analysis
 
 ```bash
 # Option A: Using Makefile (recommended)
@@ -320,6 +321,7 @@ bash scripts/download_external_data.sh
 | [`docs/METHODS_AND_PROTOCOLS.md`](docs/METHODS_AND_PROTOCOLS.md) | Reproducibility guide with exact commands |
 | **Science** | |
 | [`docs/PRIMARY_HYPOTHESES.md`](docs/PRIMARY_HYPOTHESES.md) | 9 pre-registered hypotheses |
+| [`docs/RESEARCH_FINDINGS_PHASE2.md`](docs/RESEARCH_FINDINGS_PHASE2.md) | **Complete research findings** (62 tests, 45 significant) |
 | [`docs/RESULTS_NARRATIVE.md`](docs/RESULTS_NARRATIVE.md) | Manuscript-style results with all statistics |
 | [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md) | Master project documentation (~1,255 lines) |
 | [`docs/COMPREHENSIVE_PROJECT_DOCUMENT.md`](docs/COMPREHENSIVE_PROJECT_DOCUMENT.md) | Complete reference (~1,618 lines) |
@@ -338,17 +340,19 @@ bash scripts/download_external_data.sh
 
 | Metric | Value |
 |--------|-------|
-| CATH coverage | 82.8% (Gene3D); 99.8% unified (+ Chainsaw) |
-| GroEL TIM barrel enrichment | OR = 8.4, p_BH = 2.3e-6 |
+| CATH coverage | 18,855 proteins via Gene3D + 6,164 Chainsaw fallback = 25,019 total |
+| GroEL TIM barrel enrichment | OR = 22.6, p = 2.4e-21 |
+| GroEL secondary structure | Higher strand (p=5.0e-7), higher coil (p=1.9e-6), lower helix (p=1.5e-5) |
+| HSP60 secondary structure | Higher helix (p=1.7e-4), lower coil (p=2.2e-3) vs matrix bg |
 | Cross-organism fold conservation | 79.7% of homolog pairs share top superfamily |
-| Foldseek clusters | 16,193 (full-scale) |
+| Foldseek clusters | 16,193 clusters across 25,007 proteins |
 
 ### Goal 2: N-vs-C Stability
 
 | Metric | Value |
 |--------|-------|
-| Contact order asymmetry (N > C) | p = 1.05e-20 (universal) |
-| Substrate-specific? | **No** — background shows same pattern (all p > 0.14) |
+| Contact order asymmetry (N > C) | p = 7.1e-18 (universal across all multi-domain proteins) |
+| Substrate-specific? | **No** — background shows same pattern (GroEL vs bg p=0.058, HSP60 vs bg p=0.536) |
 | GroEL class gradient? | **No** — KW p = 0.77 |
 | Homolog pair RCO correlation | r = 0.82 |
 
@@ -377,10 +381,12 @@ bash scripts/download_external_data.sh
 
 ## Status
 
-- **Phase 1 (pilot)**: Complete and verified (all 5 success criteria PASS)
-- **Phase 2 (full-scale)**: **COMPLETE** including FoldX thermodynamic stability (25,007 proteins, 0 failures)
-- **FoldX key finding**: GroEL substrates have slightly lower total energy (median -38.6 vs -15.2 for *E. coli* bg, p=2.9e-3, d=-0.07; compartment-matched)
-- **Statistics**: 60 tests across 3 families, 28 significant after hierarchical BH correction
+- **Full-scale analysis**: **COMPLETE** — 25,007 proteins analyzed across 7 datasets
+- **CATH domains**: 18,855 proteins via InterPro Gene3D + 6,164 Chainsaw fallback
+- **DSSP secondary structure**: 24,530 proteins processed
+- **FoldX thermodynamic stability**: 25,007 proteins (0 failures). GroEL substrates slightly lower total energy (p=2.9e-3, d=-0.07; compartment-matched)
+- **Statistics**: **62 tests** across 3 families, **45 significant** after hierarchical BH correction
+- **Sensitivity analysis**: All key findings robust across SILAC thresholds (3-10), bin widths (5-20 kDa), and background multipliers (1-5x)
 - **Next**: Manuscript preparation
 
 ---

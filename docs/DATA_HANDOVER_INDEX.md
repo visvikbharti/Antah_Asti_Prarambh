@@ -11,7 +11,7 @@
 
 All results are in `results/phase2/`. The most important files to look at first:
 
-1. **`stats/corrected_pvalues_full.tsv`** — All 56 statistical tests with p-values, effect sizes, and significance flags
+1. **`stats/corrected_pvalues_full.tsv`** — All 62 statistical tests with p-values, effect sizes, and significance flags
 2. **`figures/fig1–fig6.pdf`** — 6 publication-quality figures (use PDFs for vector quality)
 3. **`stability/n_vs_c_paired_full.tsv`** — The core paired comparison dataset (2,648 multi-domain proteins)
 4. **`stats/statistics_summary_full.txt`** — Human-readable summary of all results
@@ -24,7 +24,7 @@ All results are in `results/phase2/`. The most important files to look at first:
 
 | File | What it shows | Key takeaway |
 |------|--------------|--------------|
-| `fig1_domain_architecture.pdf` | CATH class distribution, top enriched superfamilies per dataset, domain count histogram | GroEL enriched for TIM barrels (OR=8.4) |
+| `fig1_domain_architecture.pdf` | CATH class distribution, top enriched superfamilies per dataset, domain count histogram | GroEL enriched for TIM barrels (OR=22.6) |
 | `fig2_n_vs_c_stability.pdf` | Split violin plots of contact order and pLDDT for N-domain vs C-region across all datasets | N > C contact order is universal (p = 7.1×10⁻¹⁸ in mito background) |
 | `fig3_groel_class_comparison.pdf` | N–C contact order difference boxplots for GroEL Class I, II, III | No class effect (KW p = 0.77) |
 | `fig4_mts_targeting.pdf` | Sub-mitochondrial localization bars, MTS-domain gap histogram, cleavage vs domain start scatter | 84.4% MTS are pre-domain, median 12-residue gap |
@@ -37,7 +37,7 @@ PNG versions (300 DPI) are provided alongside PDFs for presentations.
 
 | File | Format | Rows | How to use |
 |------|--------|:----:|-----------|
-| `corrected_pvalues_full.tsv` | TSV | 56 | **Master results table.** Each row is one statistical test. Key columns: `family` (H1/H2/H3), `hypothesis`, `test`, `statistic`, `p_value`, `effect_size`, `ci_low`/`ci_high`, `n1`/`n2`, `direction`, `p_bh_within`, `significant_overall`. Filter on `significant_overall == True` for the 25 significant results. |
+| `corrected_pvalues_full.tsv` | TSV | 62 | **Master results table.** Each row is one statistical test. Key columns: `family` (H1/H2/H3), `hypothesis`, `test`, `statistic`, `p_value`, `effect_size`, `ci_low`/`ci_high`, `n1`/`n2`, `direction`, `p_bh_within`, `significant_overall`. Filter on `significant_overall == True` for the 45 significant results. |
 | `statistics_summary_full.txt` | Text | 534 lines | Human-readable version of all tests grouped by family. `***` marks significant results. Good for reading through results without opening a spreadsheet. |
 | `stability_comparisons_full.tsv` | TSV | 2,648 | Per-protein paired comparison data. Same as `n_vs_c_paired_full.tsv` but formatted for statistical analysis. |
 
@@ -45,7 +45,7 @@ PNG versions (300 DPI) are provided alongside PDFs for presentations.
 
 | File | Rows | Key columns | How to use |
 |------|:----:|-------------|-----------|
-| `unified_domain_assignments_full.tsv` | 25,258 | `accession`, `source` (CATH/Chainsaw), `n_domains`, `top_superfamily`, `cath_class`, `datasets` | **Master domain table.** Every protein with its domain assignment source, domain count, and which datasets it belongs to. The `datasets` column contains comma-separated labels (groel, hsp60, matrix_bg, mito_bg, proteome_bg). |
+| `unified_domain_assignments_full.tsv` | 25,019 | `accession`, `source` (CATH/Chainsaw), `n_domains`, `top_superfamily`, `cath_class`, `datasets` | **Master domain table.** Every protein with its domain assignment source (75.3% CATH, 24.7% Chainsaw), domain count, and which datasets it belongs to. The `datasets` column contains comma-separated labels (groel, hsp60, matrix_bg, mito_bg, proteome_bg). |
 | `chainsaw_full_predictions.tsv` | 25,007 | `accession`, `ndom`, `chopping`, `confidence` | Raw Chainsaw ML predictions. The `chopping` column gives domain boundaries in PDB-style notation. |
 | `domain_distribution_full.tsv` | 56 | `dataset`, `n_domains`, `count`, `percent` | Domain count distribution per dataset. Each row = one (dataset, domain_count) combination. Ready for bar chart plotting. |
 | `chainsaw_full_predictions_annotated.tsv` | 25,007 | Same + superfamily annotations | Chainsaw predictions with CATH superfamily labels added. |
@@ -123,9 +123,9 @@ All scripts are in `workflow/phase2/`:
 
 ## Known Limitations
 
-1. **pLDDT ≠ stability.** AlphaFold pLDDT is model confidence, not thermodynamic stability. FoldX total energy (now complete) addresses this: GroEL substrates have median -38.6 vs -15.2 for E. coli background (p=2.9e-3, d=-0.07, compartment-matched). Note: initial comparison vs all 25K proteins yielded inflated p=8.2e-47 due to species confound. Note: FoldX was parameterized on experimental structures, not AlphaFold models — caveat for publication.
+1. **pLDDT ≠ stability.** AlphaFold pLDDT is model confidence, not thermodynamic stability. FoldX total energy (25,007 proteins) addresses this: GroEL substrates have median -38.6 vs -15.2 for E. coli background (p=2.9e-3, d=-0.07, compartment-matched). Note: FoldX was parameterized on experimental structures, not AlphaFold models — caveat for publication.
 2. **Chainsaw domain predictions** are ML-based; where CATH assignments exist, they are preferred.
-3. **MTS analysis** uses Phase 1 CATH domain boundaries (identical in unified assignments since CATH is preferred).
+3. **MTS analysis** uses CATH domain boundaries (preferred over Chainsaw in the unified assignments).
 4. **8 proteins** lack AlphaFold structures: P07203, P30042, P36969, Q16881, Q5THJ4, Q86UA3, Q9BVL4, Q9NNW7.
 
 ---

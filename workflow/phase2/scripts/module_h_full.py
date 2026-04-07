@@ -29,7 +29,7 @@ except ImportError:
     print("WARNING: statsmodels not available, using manual BH correction")
 
 PROJECT_DIR = os.environ.get("PROJECT_DIR",
-    "/lustre/vishal.bharti/Antah_Asti_Prarambh_hpc")
+    os.path.expanduser("~/Downloads/Antah_Asti_Prarambh"))
 RESULTS = f"{PROJECT_DIR}/results/phase2"
 
 print("=" * 70)
@@ -150,8 +150,21 @@ regions = safe_load(f"{RESULTS}/stability/region_boundaries_full.tsv", "Region b
 targeting = safe_load(f"{PROJECT_DIR}/results/mts/combined_targeting.tsv", "Targeting")
 mts_domain = safe_load(f"{PROJECT_DIR}/results/mts/mts_domain_relationship.tsv", "MTS-domain")
 
-# Phase 1 CATH data
-cath = safe_load(f"{PROJECT_DIR}/results/domains/cath_domain_assignments.tsv", "CATH domains")
+# Full-scale CATH data (18,855 proteins from InterPro Gene3D + pilot)
+cath_full_path = f"{RESULTS}/domains/cath_domain_assignments_full.tsv"
+cath_pilot_path = f"{PROJECT_DIR}/results/domains/cath_domain_assignments.tsv"
+if os.path.exists(cath_full_path):
+    cath = safe_load(cath_full_path, "CATH domains (FULL-SCALE)")
+else:
+    cath = safe_load(cath_pilot_path, "CATH domains (pilot fallback)")
+
+# Full-scale DSSP data (if available)
+dssp_full_path = f"{RESULTS}/structures/dssp_summary_full.tsv"
+dssp_pilot_path = f"{PROJECT_DIR}/results/structures/dssp_summary.tsv"
+if os.path.exists(dssp_full_path):
+    dssp = safe_load(dssp_full_path, "DSSP secondary structure (FULL-SCALE)")
+else:
+    dssp = safe_load(dssp_pilot_path, "DSSP secondary structure (pilot fallback)")
 
 # Substrate lists
 groel = pd.read_csv(f"{PROJECT_DIR}/data/processed/groel_substrates_standardized.tsv", sep="\t")
@@ -391,6 +404,78 @@ if paired is not None and len(paired) > 0:
 
 
 # ===========================================================================
+# FAMILY 2 (continued): DSSP Secondary Structure Tests
+# ===========================================================================
+if dssp is not None and len(dssp) > 0:
+    print("\n" + "-" * 50)
+    print("DSSP Secondary Structure Comparisons (Mann-Whitney U)")
+    print("-" * 50)
+
+    dssp_acc_col = "accession" if "accession" in dssp.columns else (
+        "uniprot_accession" if "uniprot_accession" in dssp.columns else dssp.columns[0])
+
+    # E. coli proteome accessions (for GroEL background)
+    ecoli_path = f"{PROJECT_DIR}/data/raw/uniprot/ecoli_k12_proteome.tsv"
+    if os.path.exists(ecoli_path):
+        ecoli_df = pd.read_csv(ecoli_path, sep="\t")
+        ecoli_acc_col = "Entry" if "Entry" in ecoli_df.columns else ecoli_df.columns[0]
+        ecoli_acc = set(ecoli_df[ecoli_acc_col].dropna().values)
+    else:
+        ecoli_acc = set()
+
+    # Matrix accessions (for HSP60 background)
+    matrix_path = f"{PROJECT_DIR}/data/processed/human_matrix_proteome.tsv"
+    if os.path.exists(matrix_path):
+        matrix_df = pd.read_csv(matrix_path, sep="\t")
+        mat_acc_col = "accession" if "accession" in matrix_df.columns else matrix_df.columns[0]
+        matrix_acc_for_dssp = set(matrix_df[mat_acc_col].dropna().values)
+    else:
+        matrix_acc_for_dssp = set()
+
+    dssp_metrics = ["frac_helix", "frac_strand", "frac_coil"]
+    dssp_comparisons = [
+        ("GroEL_vs_ecoli_bg", groel_acc, ecoli_acc - groel_acc, "compartment-matched E. coli"),
+        ("HSP60_vs_matrix_bg", hsp60_acc, matrix_acc_for_dssp - hsp60_acc, "compartment-matched matrix"),
+    ]
+
+    for comp_name, sub_accs, bg_accs, bg_desc in dssp_comparisons:
+        sub_dssp = dssp[dssp[dssp_acc_col].isin(sub_accs)]
+        bg_dssp = dssp[dssp[dssp_acc_col].isin(bg_accs)]
+
+        if len(sub_dssp) < 10 or len(bg_dssp) < 10:
+            print(f"  {comp_name}: skipped (sub={len(sub_dssp)}, bg={len(bg_dssp)})")
+            continue
+
+        print(f"\n{comp_name} (sub={len(sub_dssp)}, bg={len(bg_dssp)}, {bg_desc}):")
+        for metric in dssp_metrics:
+            if metric not in sub_dssp.columns:
+                continue
+
+            g1 = sub_dssp[metric].dropna()
+            g2 = bg_dssp[metric].dropna()
+            if len(g1) < 10 or len(g2) < 10:
+                continue
+
+            stat, pval = stats.mannwhitneyu(g1, g2, alternative="two-sided")
+            r = rank_biserial_unpaired(stat, len(g1), len(g2))
+            direction = "substrate_higher" if g1.median() > g2.median() else "bg_higher"
+
+            print(f"  {metric}: sub_median={g1.median():.3f}, bg_median={g2.median():.3f}, "
+                  f"U={stat:.0f}, p={pval:.2e}, r={r:.3f}")
+
+            all_tests.append({
+                "family": "stability_asymmetry",
+                "hypothesis": f"H2.4_{comp_name}_{metric}",
+                "test": "Mann-Whitney U (DSSP)", "statistic": stat, "p_value": pval,
+                "effect_size": r, "ci_low": np.nan, "ci_high": np.nan,
+                "n1": len(g1), "n2": len(g2),
+                "direction": direction,
+            })
+else:
+    print("\n[DSSP data not available — DSSP tests skipped]")
+
+
+# ===========================================================================
 # FAMILY 3: MTS Targeting
 # ===========================================================================
 print("\n" + "=" * 70)
@@ -542,10 +627,13 @@ if all_tests:
 
         f.write("\n\n" + "=" * 70 + "\n")
         f.write("NOTES:\n")
-        f.write("  - pLDDT is model confidence, NOT thermodynamic stability\n")
-        f.write("  - Contact order is the primary folding kinetics proxy\n")
+        f.write("  - pLDDT reflects AlphaFold prediction confidence, NOT thermodynamic stability\n")
+        f.write("  - Contact order (r=-0.75 with folding rates; Plaxco et al. 1998) is the primary folding kinetics proxy\n")
+        f.write("  - FoldX was parameterized on experimental structures; applied to AlphaFold predictions with caution\n")
         f.write("  - Hierarchical BH: within-family + between-family correction\n")
         f.write("  - *** = significant at both levels, * = within-family only\n")
+        f.write("  - DSSP tests use compartment-matched backgrounds (E. coli for GroEL, matrix for HSP60)\n")
+        f.write("  - N-vs-C asymmetry is universal across all multi-domain proteins, NOT substrate-specific\n")
         f.write("=" * 70 + "\n")
 
     print(f"Saved: {report_path}")
