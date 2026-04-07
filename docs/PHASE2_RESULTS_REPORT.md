@@ -31,7 +31,7 @@ This report presents the full-scale structural proteomics analysis of chaperonin
 | 2 | Human proteome | UniProt UP000005640 | 20,416 proteins | `Entry` |
 | 3 | Human mitochondrial proteome | MitoCarta 3.0 | 1,136 proteins | `uniprot_id` |
 | 4 | GroEL substrates | Kerner et al. 2005 (standardized) | 252 proteins | `current_accession` |
-| 5 | HSP60 interactome (Tier 1) | Revised from Morten et al. 2020 | 266 proteins | `uniprot_id` |
+| 5 | HSP60 interactome (Tier 1) | Revised from Bruderer et al. 2020 | 266 proteins | `uniprot_id` |
 | 6 | Cross-species homologs | OrthoFinder + RBH | 69 pairs | `groel_accession` / `hsp60_accession` |
 | 7 | Mitochondrial matrix subset | MitoCarta 3.0 (matrix only) | 525 proteins | `uniprot_id` |
 

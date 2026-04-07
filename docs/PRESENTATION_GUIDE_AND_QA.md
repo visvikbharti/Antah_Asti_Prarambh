@@ -109,7 +109,7 @@
 **What to say:**
 - "Our two substrate datasets required substantial curation."
 - "GroEL: 252 substrates from Kerner et al. 2005, classified into three dependency classes. 149 of 252 accessions had been demerged in UniProt since publication -- we mapped each to the correct K-12 reference proteome entry."
-- "HSP60: 266 Tier-1 substrates from Morten et al. 2020 SILAC co-IP. Filtered from 325 raw hits by excluding baits, co-chaperones, and contaminants, and requiring SILAC enrichment above 5. Median enrichment for Tier-1 is 22.2."
+- "HSP60: 266 Tier-1 substrates from Bruderer et al. 2020 SILAC co-IP. Filtered from 325 raw hits by excluding baits, co-chaperones, and contaminants, and requiring SILAC enrichment above 5. Median enrichment for Tier-1 is 22.2."
 - "Class III GroEL substrates -- 84 proteins that absolutely require the chaperonin -- are a particularly interesting subgroup."
 
 ---

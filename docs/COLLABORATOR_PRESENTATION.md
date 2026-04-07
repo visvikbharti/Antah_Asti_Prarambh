@@ -35,7 +35,7 @@
 | 2 | Human proteome | UniProt UP000005640 | 20,416 proteins | HSP60 background |
 | 3 | Human mitochondrial proteome | MitoCarta 3.0 | 1,136 proteins | Compartment-matched control |
 | 4 | GroEL substrates | Kerner et al. 2005 | 252 proteins | Bacterial chaperonin substrates |
-| 5 | HSP60 interactome (Tier 1) | Revised from Morten et al. 2020 | 266 proteins | Human mitochondrial chaperonin substrates |
+| 5 | HSP60 interactome (Tier 1) | Revised from Bruderer et al. 2020 | 266 proteins | Human mitochondrial chaperonin substrates |
 | 6 | Cross-species homologs | OrthoFinder + RBH | 69 pairs | Conservation analysis |
 | 7 | Mitochondrial matrix subset | MitoCarta 3.0 | 525 proteins | Matrix-specific background |
 

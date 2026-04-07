@@ -34,7 +34,7 @@ These are the unmodified source files. The collaborator needs these to verify da
 ```
 kerner_2005_groel_interactors_table_s3.csv    — Original GroEL substrate table (Kerner et al. 2005)
 kerner_2005_groel_interactors_clean.csv       — Cleaned GroEL table
-12192_2020_1080_MOESM4_ESM.xlsx               — HSP60 interactome supplementary (Morten et al. 2020)
+12192_2020_1080_MOESM4_ESM.xlsx               — HSP60 interactome supplementary (Bruderer et al. 2020)
 hsp60_interactome_clean.tsv                   — Cleaned HSP60 interactome
 ```
 
