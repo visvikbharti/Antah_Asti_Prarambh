@@ -336,71 +336,79 @@ header(slide, "Computational Pipeline",
        "End-to-end workflow: 7 curated datasets to publication figures")
 footer(slide, sn)
 
-# Top-level: Data input
-add_rect(slide, Inches(4.2), Inches(1.25), Inches(4.9), Inches(0.5), MED_BLUE)
-tb(slide, Inches(4.2), Inches(1.28), Inches(4.9), Inches(0.45),
-   "7 Curated Datasets (25,007 proteins)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+# Row 1: Modules A+B — Data curation
+add_rect(slide, Inches(3.0), Inches(1.2), Inches(7.3), Inches(0.5), MED_BLUE)
+tb(slide, Inches(3.0), Inches(1.23), Inches(7.3), Inches(0.45),
+   "Modules A+B: Data Curation \u2192 7 Datasets (25,007 proteins)", sz=12, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
 
-tb(slide, Inches(6.3), Inches(1.75), Inches(0.8), Inches(0.3),
-   "|", sz=14, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+tb(slide, Inches(6.3), Inches(1.7), Inches(0.8), Inches(0.2),
+   "\u2193", sz=14, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
 
-# AlphaFold structures
-add_rect(slide, Inches(3.7), Inches(2.0), Inches(5.9), Inches(0.5), MED_BLUE)
-tb(slide, Inches(3.7), Inches(2.03), Inches(5.9), Inches(0.45),
-   "AlphaFold Structures (25,007 predicted 3D structures)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+# Row 2: Module C — Orthology
+add_rect(slide, Inches(3.5), Inches(1.88), Inches(6.3), Inches(0.42), MED_BLUE)
+tb(slide, Inches(3.5), Inches(1.9), Inches(6.3), Inches(0.4),
+   "Module C: Orthology (MMseqs2 RBH \u2192 69 homolog pairs)", sz=11, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
 
-tb(slide, Inches(6.3), Inches(2.5), Inches(0.8), Inches(0.3),
-   "|", sz=14, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+tb(slide, Inches(6.3), Inches(2.3), Inches(0.8), Inches(0.2),
+   "\u2193", sz=14, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
 
-# Four parallel analysis branches
+# Row 3: Module D — Structure acquisition
+add_rect(slide, Inches(2.5), Inches(2.48), Inches(8.3), Inches(0.42), MED_BLUE)
+tb(slide, Inches(2.5), Inches(2.5), Inches(8.3), Inches(0.4),
+   "Module D: AlphaFold Structures (25,007) + DSSP (24,530) + Quality Validation", sz=11, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+
+tb(slide, Inches(6.3), Inches(2.9), Inches(0.8), Inches(0.2),
+   "\u2193", sz=14, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+
+# Row 4: Module E — Domain architecture (4 parallel branches)
+tb(slide, Inches(0.3), Inches(3.05), Inches(3.5), Inches(0.3),
+   "Module E: Domain Architecture", sz=11, bold=True, color=DARK_BLUE, align=PP_ALIGN.LEFT)
 branch_items = [
-    ("CATH Gene3D\n(18,855 assigned)", Inches(0.5)),
-    ("Chainsaw ML\n(fallback domains)", Inches(3.5)),
-    ("Foldseek\n(16,193 clusters)", Inches(6.5)),
-    ("DSSP\n(secondary structure)", Inches(9.7)),
+    ("CATH Gene3D\n(18,855 proteins)", Inches(0.3)),
+    ("Chainsaw ML\n(6,164 fallback)", Inches(3.3)),
+    ("Foldseek\n(16,193 clusters)", Inches(6.3)),
+    ("FoldX 5.1\n(25,007 \u0394G)", Inches(9.3)),
 ]
 for label, left in branch_items:
-    add_rect(slide, left, Inches(2.85), Inches(2.8), Inches(0.7), VL_BLUE)
-    tb(slide, left, Inches(2.85), Inches(2.8), Inches(0.7),
-       label, sz=11, bold=False, color=DARK_BLUE, align=PP_ALIGN.CENTER)
-
-# Arrows from CATH + Chainsaw down to Unified
-tb(slide, Inches(2.5), Inches(3.55), Inches(0.8), Inches(0.25),
-   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+    add_rect(slide, left, Inches(3.3), Inches(2.8), Inches(0.6), VL_BLUE)
+    tb(slide, left, Inches(3.3), Inches(2.8), Inches(0.6),
+       label, sz=10, bold=False, color=DARK_BLUE, align=PP_ALIGN.CENTER)
 
 # Unified domains
-add_rect(slide, Inches(0.8), Inches(3.75), Inches(5.0), Inches(0.45), VL_BLUE)
-tb(slide, Inches(0.8), Inches(3.75), Inches(5.0), Inches(0.45),
-   "Unified Domains (25,019 proteins: CATH + Chainsaw)", sz=11, bold=True, color=DARK_BLUE, align=PP_ALIGN.CENTER)
+tb(slide, Inches(2.0), Inches(3.9), Inches(0.8), Inches(0.2),
+   "\u2193", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+add_rect(slide, Inches(0.3), Inches(4.08), Inches(5.5), Inches(0.4), VL_BLUE)
+tb(slide, Inches(0.3), Inches(4.08), Inches(5.5), Inches(0.4),
+   "Unified Domains (25,019 proteins: CATH + Chainsaw)", sz=10, bold=True, color=DARK_BLUE, align=PP_ALIGN.CENTER)
 
-# Three downstream modules
-tb(slide, Inches(4.2), Inches(4.2), Inches(5.0), Inches(0.25),
-   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+# Row 5: Modules F + G — Three analysis branches
+tb(slide, Inches(6.3), Inches(4.48), Inches(0.8), Inches(0.2),
+   "\u2193", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
 
 mod_items = [
-    ("Module F\nN-vs-C Stability\n(contact order, pLDDT)", ACCENT_ORANGE, VL_ORANGE, Inches(0.5)),
-    ("Module G\nMTS Targeting\n(transit peptides)", ACCENT_GREEN, VL_GREEN, Inches(4.5)),
-    ("FoldX 5.1\nThermodynamics\n(25,007 proteins)", ACCENT_RED, VL_RED, Inches(8.5)),
+    ("Module F: N-vs-C Stability\n(contact order, 2,648 pairs)", ACCENT_ORANGE, VL_ORANGE, Inches(0.3)),
+    ("Module G: MTS Targeting\n(transit peptides, 436 proteins)", ACCENT_GREEN, VL_GREEN, Inches(4.5)),
+    ("FoldX Thermodynamics\n(compartment-matched \u0394G)", ACCENT_RED, VL_RED, Inches(8.7)),
 ]
 for label, col, bg, left in mod_items:
-    add_rect(slide, left, Inches(4.4), Inches(3.5), Inches(0.85), bg)
-    tb(slide, left, Inches(4.4), Inches(3.5), Inches(0.85),
-       label, sz=11, bold=False, color=col, align=PP_ALIGN.CENTER)
+    add_rect(slide, left, Inches(4.65), Inches(3.8), Inches(0.7), bg)
+    tb(slide, left, Inches(4.65), Inches(3.8), Inches(0.7),
+       label, sz=10, bold=False, color=col, align=PP_ALIGN.CENTER)
 
 # Converge to statistics
-tb(slide, Inches(6.0), Inches(5.25), Inches(1.5), Inches(0.25),
-   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+tb(slide, Inches(6.3), Inches(5.35), Inches(0.8), Inches(0.2),
+   "\u2193", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
 
-add_rect(slide, Inches(2.5), Inches(5.45), Inches(8.3), Inches(0.5), DARK_BLUE)
-tb(slide, Inches(2.5), Inches(5.48), Inches(8.3), Inches(0.45),
-   "Module H: Hierarchical Statistics (62 tests, 3 families, BH correction)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+add_rect(slide, Inches(1.5), Inches(5.52), Inches(10.3), Inches(0.45), DARK_BLUE)
+tb(slide, Inches(1.5), Inches(5.55), Inches(10.3), Inches(0.42),
+   "Module H: Hierarchical Statistics (62 tests, 3 families, BH correction \u2192 45 significant)", sz=12, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
 
-tb(slide, Inches(6.0), Inches(5.95), Inches(1.5), Inches(0.25),
-   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+tb(slide, Inches(6.3), Inches(5.97), Inches(0.8), Inches(0.2),
+   "\u2193", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
 
-add_rect(slide, Inches(3.5), Inches(6.15), Inches(6.3), Inches(0.5), DARK_BLUE)
-tb(slide, Inches(3.5), Inches(6.18), Inches(6.3), Inches(0.45),
-   "Module I: Publication Figures (8 figures, 300 DPI)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+add_rect(slide, Inches(2.5), Inches(6.14), Inches(8.3), Inches(0.45), DARK_BLUE)
+tb(slide, Inches(2.5), Inches(6.17), Inches(8.3), Inches(0.42),
+   "Module I: Publication Figures (8 figures, PDF + PNG @ 300 DPI)", sz=12, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
 
 # ===================== SLIDE 6: ANALYSIS MODULES =====================
 sn += 1

@@ -643,31 +643,30 @@
 
 2. **The negative results are the story:** Many presenters are reluctant to highlight negative results. In this project, H2.2 (asymmetry not substrate-specific) and H2.3 (no class gradient) are the most publishable findings. Lead with confidence.
 
-3. **The figures speak:** All 6 figures are self-contained with p-values and sample sizes. Let the audience read them before explaining.
+3. **The figures speak:** All 8 figures are self-contained with p-values and sample sizes. Let the audience read them before explaining.
 
-4. **Time management:** Spend more time on Slides 14-16 (N-vs-C results and interpretation) — these are the most novel and surprising findings. The domain architecture results (Slides 12-13) are important but less surprising.
+4. **Time management:** Spend more time on Slides 16-18 (N-vs-C results, negative result, and interpretation) — these are the most novel and surprising findings. The domain architecture results (Slides 12-15) are important but less surprising.
 
-5. **Sanskrit title as a hook:** The name creates curiosity. Explain it early (Slide 4) and revisit it in the synthesis (Slide 20).
+5. **Sanskrit title as a hook:** The name creates curiosity. Explain it early (Slide 2) and revisit it in the synthesis (Slide 29-30).
 
 ### If Presenting to a Committee
-- Emphasize the pre-registered hypotheses framework (shows rigor)
-- Highlight the 9 methodological decisions (shows awareness)
-- Stress the full reproducibility of the pipeline
-- Mention the pilot-to-full-scale validation (Phase 1 confirmed by Phase 2)
+- Emphasize the pre-registered hypotheses framework (Slide 11, shows rigor)
+- Highlight the quality control slide (Slide 7, shows awareness)
+- Stress the full reproducibility of the pipeline (Slides 5-6)
+- Show the sensitivity analysis (Slides 27-28, robustness)
 
-### If Presenting at a Conference (shorter, ~30 min)
-- Skip Slides 8, 10-14, 16-18, 30-32 (too detailed for conference)
-- Focus on: 1-5, 6(brief), 7(brief), 19-26, 33-35
-- Spend more time on the biological synthesis (Slide 26)
-- Emphasize the "gravitational constant" metaphor
-- End with the conservation scatter plot (r = 0.84) — it's visually striking
+### If Presenting at a Conference (shorter, ~20 min)
+- Focus on: Slides 1-3, 5(brief), 8(brief), 12-13, 16-18, 21-22, 24, 29, 33
+- Skip: Slides 6-7, 9-10, 14-15, 19-20, 25-28, 30-32
+- Spend more time on the biological synthesis (Slide 29)
+- End with the key takeaways (Slide 33)
 
-### If Presenting to PI/Collaborators (full detail, ~60 min)
-- Present ALL 36 slides — they want to see exact parameters
-- Spend extra time on Slides 10-14 (tool parameters, rationale)
-- Emphasize Slides 16-17 (HPC resources, FoldX parameters)
-- Slide 31 (bug fixes) shows thoroughness and debugging rigor
-- Slide 34 (key numbers) is your Q&A reference card
+### If Presenting to PI/Collaborators (full detail, ~55 min)
+- Present ALL 34 slides — they want to see the complete pipeline
+- Spend extra time on Slides 5-7 (pipeline, modules, QC)
+- Emphasize Slides 16-18 (N-vs-C negative result — most novel finding)
+- Slides 27-28 (sensitivity analysis) shows thoroughness
+- Slide 33 (key takeaways) is your Q&A reference card
 
 ### Key Numbers to Remember
 - 25,007 proteins analyzed, 24,530 with DSSP, 18,855 with CATH domains
