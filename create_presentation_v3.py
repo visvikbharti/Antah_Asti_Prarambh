@@ -261,7 +261,7 @@ tb(slide, Inches(2.0), Inches(2.2), Inches(9.3), Inches(1.2),
    sz=26, bold=True, color=DARK_BLUE, align=PP_ALIGN.CENTER)
 
 bullets(slide, Inches(1.5), Inches(4.0), Inches(10.3), Inches(3.0), [
-    "Group I chaperonins (GroEL in bacteria, HSP60 in mitochondria) assist folding of ~10-15% of the proteome",
+    "Group I chaperonins assist folding of ~10% of the bacterial proteome (Kerner et al. 2005; Horwich et al. 2007)",
     "Both systems diverged ~2 billion years ago at the endosymbiotic origin of mitochondria",
     "If substrate properties are CONSERVED: fundamental constraints on what makes folding difficult",
     "If substrate properties have DIVERGED: co-evolution during the bacterium-to-organelle transition",
@@ -300,7 +300,7 @@ for i, (title, color, bg, items, lp) in enumerate([
 
 bullets(slide, Inches(0.5), Inches(4.2), Inches(12.3), Inches(2.8), [
     "Full-scale analysis: 25,007 proteins with AlphaFold structures across all 7 datasets",
-    "Pre-registered hypotheses with hierarchical Benjamini-Hochberg correction (59 tests, 3 families)",
+    "Pre-registered hypotheses with hierarchical Benjamini-Hochberg correction (62 tests, 3 families)",
     "Compartment-matched controls throughout: E. coli cytoplasm for GroEL, mitochondrial matrix for HSP60",
     "Multiple stability metrics: contact order (folding kinetics), FoldX DeltaG (thermodynamics), DSSP (secondary structure)",
 ], sz=14, sp=Pt(5))
@@ -317,13 +317,13 @@ methods = [
     ["Step", "Tool / Method", "Scale", "Key Parameters"],
     ["Structure acquisition", "AlphaFold DB v4/v6 (EBI FTP bulk)", "25,007 proteins (~22 GB)", "CIF format, CA atoms, B-factor=pLDDT"],
     ["Secondary structure", "mkDSSP 2.2.1 + DSSP on HPC", "25,007 proteins", "H/G/I=helix, E/B=strand, rest=coil"],
-    ["Domain boundaries", "CATH Gene3D API + Chainsaw v3 ML", "25,258 unified records (93.6%)", "CATH for known; Chainsaw for remaining"],
+    ["Domain boundaries", "CATH Gene3D API + Chainsaw v3 ML", "25,019 unified (75.3% CATH + 24.7% Chainsaw)", "CATH priority; Chainsaw fallback"],
     ["Structural clustering", "Foldseek v10.941cd33", "16,193 clusters", "3Di+AA, e-val 0.01, cov 50%, id 30%"],
     ["Contact order", "Plaxco et al. 1998 (CA-CA)", "11,824 region records", "8A cutoff, min_sep=6, per N/C region"],
     ["Thermodynamic stability", "FoldX 5.1 RepairPDB + Stability", "25,007 proteins (0 failures)", "298.15K, pH 7.0, ionic 0.05M"],
     ["Orthology", "MMseqs2 RBH + OrthoFinder-style", "69 homolog pairs", "e-val<1e-5, id>25%, cov>50%"],
     ["MTS analysis", "UniProt transit peptide + MitoCarta 3.0", "436 MTS-bearing proteins", "Gap = first_domain_start - transit_end"],
-    ["Statistics", "Hierarchical BH correction", "59 tests, 3 families", "alpha=0.05, within + across family FDR"],
+    ["Statistics", "Hierarchical BH correction", "62 tests, 3 families", "alpha=0.05, within + across family FDR"],
 ]
 make_table(slide, Inches(0.2), Inches(1.2), Inches(12.9), Inches(5.5), methods,
            cw=[Inches(1.8), Inches(2.8), Inches(2.8), Inches(5.5)])
@@ -512,7 +512,7 @@ add_rect(slide, Inches(7.0), Inches(1.3), Inches(6.0), Inches(5.5), VL_ORANGE)
 tb(slide, Inches(7.2), Inches(1.4), Inches(5.6), Inches(0.4),
    "HSP60/HSP10 (Human Mitochondria)", sz=20, bold=True, color=ACCENT_ORANGE)
 bullets(slide, Inches(7.2), Inches(1.9), Inches(5.6), Inches(4.8), [
-    "266 Tier-1 substrates (Morten et al., Mol Cell 2020)",
+    "266 Tier-1 substrates (Bruderer et al., Mol Cell Proteomics 2020)",
     "Identified by SILAC-quantified co-immunoprecipitation",
     "    Median SILAC enrichment > 5.0 + MitoCarta confirmation",
     "",
@@ -552,7 +552,7 @@ bullets(slide, Inches(0.5), Inches(4.3), Inches(12), Inches(2.5), [
     "Compartment confound: mitochondrial proteins differ from cytoplasmic in size, fold composition, and stability",
     "Our approach: GroEL vs E. coli cytoplasm; HSP60 vs mitochondrial matrix (tightest match)",
     "FoldX example: GroEL vs all backgrounds gives p=8.2e-47 (species effect), but GroEL vs E. coli gives p=2.9e-3 (true substrate effect)",
-    "All 59 tests use properly matched backgrounds throughout",
+    "All 62 tests use properly matched backgrounds throughout",
 ], sz=14, sp=Pt(5))
 
 # ===================== SLIDE 7: DATASETS — HOMOLOGS =====================
@@ -614,7 +614,7 @@ bullets(slide, Inches(0.5), Inches(1.8), Inches(5.8), Inches(2.2), [
     "",
     "Level 1: Within each family -> BH correction",
     "    Family 1 (Domain architecture): 24 tests",
-    "    Family 2 (N-vs-C asymmetry): 33 tests",
+    "    Family 2 (N-vs-C asymmetry): 36 tests",
     "    Family 3 (MTS targeting): 2 tests",
     "",
     "Level 2: Across families -> Simes method",
@@ -648,7 +648,7 @@ make_table(slide, Inches(0.3), Inches(4.3), Inches(12.7), Inches(1.6), test_summ
            cw=[Inches(2.2), Inches(0.6), Inches(4.0), Inches(5.9)])
 
 tb(slide, Inches(0.5), Inches(6.2), Inches(12.3), Inches(0.5),
-   "Total: 59 tests, 42 significant after hierarchical BH correction (71.2% discovery rate)",
+   "Total: 62 tests, 45 significant after hierarchical BH correction (72.6% discovery rate)",
    sz=14, bold=True, color=DARK_BLUE)
 
 # ===================== SLIDE 9: GOAL 1 — DOMAIN ARCHITECTURE FIGURE =====================
@@ -1160,7 +1160,7 @@ bullets(slide, Inches(7.0), Inches(4.7), Inches(5.8), Inches(2.0), [
 sn += 1
 slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, WHITE)
-header(slide, "Statistics Summary: 59 Tests, 42 Significant",
+header(slide, "Statistics Summary: 62 Tests, 45 Significant",
        "After hierarchical Benjamini-Hochberg correction (FDR < 0.05)")
 footer(slide, sn)
 
@@ -1181,11 +1181,11 @@ stat_data = [
     ["Family", "Total Tests", "Significant", "Rate", "Key Result"],
     ["Domain Architecture", "24", "24", "100%",
      "TIM barrel OR=22.6; CATH class distributions differ in both systems"],
-    ["N-vs-C Asymmetry", "33", "16", "48.5%",
-     "N>C universal (r=0.41-0.48); substrate vs bg = NS; no class effect"],
+    ["N-vs-C Asymmetry", "36", "19", "52.8%",
+     "N>C universal (r=0.41-0.48); substrate vs bg = NS; no class effect; DSSP tests"],
     ["MTS Targeting", "2", "2", "100%",
      "Matrix OR=3.29 (p=1.6e-16); pre-domain 84.4% (p=3.4e-51)"],
-    ["TOTAL", "59", "42", "71.2%",
+    ["TOTAL", "62", "45", "72.6%",
      "Hierarchical BH, within + across family correction"],
 ]
 make_table(slide, Inches(8.0), Inches(1.3), Inches(5.1), Inches(2.5), stat_data,
@@ -1301,7 +1301,7 @@ tb(slide, Inches(7.0), Inches(1.4), Inches(5.8), Inches(0.4),
    "CREATE: Specific Substrate Recognition", sz=16, bold=True, color=ACCENT_ORANGE)
 bullets(slide, Inches(7.0), Inches(1.9), Inches(5.8), Inches(2.2), [
     "Active recognition of specific fold topologies",
-    "    TIM barrels (OR=22.6), winged-helix (OR=3.6)",
+    "    TIM barrels (OR=22.6), winged-helix (OR=3.57, p=4.5e-5)",
     "    Not all 'complex' proteins — specific folds only",
     "",
     "Post-import folding assistance (HSP60 system)",
@@ -1520,8 +1520,8 @@ bullets(slide, Inches(2.0), Inches(2.5), Inches(9.3), Inches(4.5), [
     "    CATH/Gene3D (UCL)",
     "",
     "Tools & Software:",
-    "    Kerner et al. (2005) — GroEL substrate classification",
-    "    Morten et al. (2020) — HSP60 interactome data",
+    "    Kerner et al. (2005) Cell 122(2):209-220 — GroEL substrate classification",
+    "    Bruderer et al. (2020) Mol Cell Proteomics — HSP60 interactome data",
     "    FoldX Suite (CRG Barcelona)",
     "    Chainsaw (UCL / Wells et al. 2024)",
     "",
@@ -1567,7 +1567,7 @@ slide_titles = [
     "Datasets: Chaperonin Substrates (GroEL + HSP60)",
     "Datasets: Proteome Backgrounds",
     "Datasets: Cross-Species Homolog Pairs (69 pairs)",
-    "Statistical Framework (59 tests, hierarchical BH)",
+    "Statistical Framework (62 tests, hierarchical BH)",
     "Goal 1: CATH Class Distribution [fig1_domain_architecture]",
     "Goal 1: TIM Barrel Enrichment (OR=22.6)",
     "Goal 1: HSP60 Domain Enrichments + Cross-Species",
