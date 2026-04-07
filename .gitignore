@@ -73,3 +73,13 @@ environment.lock
 *.tmp
 *.bak
 *~
+
+# --- Internal development logs (not for sharing) ---
+docs/SESSION_CONTINUITY.md
+docs/SESSION4_DOCUMENTATION.md
+docs/SESSION5_DOCUMENTATION.md
+docs/SESSION6_DOCUMENTATION.md
+docs/PHASE1_VERIFICATION.md
+create_presentation.py
+create_presentation_v2.py
+results/phase2/domains/unified_domain_assignments_full_old_pilot_cath.tsv

@@ -325,9 +325,8 @@ bash scripts/download_external_data.sh
 | [`docs/RESULTS_NARRATIVE.md`](docs/RESULTS_NARRATIVE.md) | Manuscript-style results with all statistics |
 | [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md) | Master project documentation (~1,255 lines) |
 | [`docs/COMPREHENSIVE_PROJECT_DOCUMENT.md`](docs/COMPREHENSIVE_PROJECT_DOCUMENT.md) | Complete reference (~1,618 lines) |
-| **Verification** | |
-| [`docs/PHASE1_VERIFICATION.md`](docs/PHASE1_VERIFICATION.md) | Phase 1 success criteria (all 5 PASS) |
-| [`docs/PHASE2_RESULTS_REPORT.md`](docs/PHASE2_RESULTS_REPORT.md) | Full-scale Phase 2 results |
+| **Results** | |
+| [`docs/PHASE2_RESULTS_REPORT.md`](docs/PHASE2_RESULTS_REPORT.md) | Full-scale results report |
 | **Collaboration** | |
 | [`docs/COLLABORATOR_PRESENTATION.md`](docs/COLLABORATOR_PRESENTATION.md) | Meeting-ready presentation materials |
 | [`docs/DATA_HANDOVER_INDEX.md`](docs/DATA_HANDOVER_INDEX.md) | File-by-file result guide |
