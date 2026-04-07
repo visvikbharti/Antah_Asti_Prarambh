@@ -3,7 +3,7 @@
 Phase 2 PowerPoint Presentation for Antah Asti Prarambh project.
 V3: Phase 2-ONLY — full-scale results (25,007 proteins), no pilot references.
 
-Generates ~31 slides for collaborator presentation.
+Generates ~34 slides for collaborator presentation.
 """
 
 import os
@@ -96,7 +96,7 @@ def effect(hyp_id):
 prs = Presentation()
 prs.slide_width = Inches(13.333)
 prs.slide_height = Inches(7.5)
-TOTAL_SLIDES = 31
+TOTAL_SLIDES = 34
 
 
 # ===========================================================================
@@ -328,7 +328,156 @@ methods = [
 make_table(slide, Inches(0.2), Inches(1.2), Inches(12.9), Inches(5.5), methods,
            cw=[Inches(1.8), Inches(2.8), Inches(2.8), Inches(5.5)])
 
-# ===================== SLIDE 5: DATASETS — SUBSTRATES =====================
+# ===================== SLIDE 5: COMPUTATIONAL PIPELINE =====================
+sn += 1
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+add_bg(slide, WHITE)
+header(slide, "Computational Pipeline",
+       "End-to-end workflow: 7 curated datasets to publication figures")
+footer(slide, sn)
+
+# Top-level: Data input
+add_rect(slide, Inches(4.2), Inches(1.25), Inches(4.9), Inches(0.5), MED_BLUE)
+tb(slide, Inches(4.2), Inches(1.28), Inches(4.9), Inches(0.45),
+   "7 Curated Datasets (25,007 proteins)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+
+tb(slide, Inches(6.3), Inches(1.75), Inches(0.8), Inches(0.3),
+   "|", sz=14, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+
+# AlphaFold structures
+add_rect(slide, Inches(3.7), Inches(2.0), Inches(5.9), Inches(0.5), MED_BLUE)
+tb(slide, Inches(3.7), Inches(2.03), Inches(5.9), Inches(0.45),
+   "AlphaFold Structures (25,007 predicted 3D structures)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+
+tb(slide, Inches(6.3), Inches(2.5), Inches(0.8), Inches(0.3),
+   "|", sz=14, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+
+# Four parallel analysis branches
+branch_items = [
+    ("CATH Gene3D\n(18,855 assigned)", Inches(0.5)),
+    ("Chainsaw ML\n(fallback domains)", Inches(3.5)),
+    ("Foldseek\n(16,193 clusters)", Inches(6.5)),
+    ("DSSP\n(secondary structure)", Inches(9.7)),
+]
+for label, left in branch_items:
+    add_rect(slide, left, Inches(2.85), Inches(2.8), Inches(0.7), VL_BLUE)
+    tb(slide, left, Inches(2.85), Inches(2.8), Inches(0.7),
+       label, sz=11, bold=False, color=DARK_BLUE, align=PP_ALIGN.CENTER)
+
+# Arrows from CATH + Chainsaw down to Unified
+tb(slide, Inches(2.5), Inches(3.55), Inches(0.8), Inches(0.25),
+   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+
+# Unified domains
+add_rect(slide, Inches(0.8), Inches(3.75), Inches(5.0), Inches(0.45), VL_BLUE)
+tb(slide, Inches(0.8), Inches(3.75), Inches(5.0), Inches(0.45),
+   "Unified Domains (25,019 proteins: CATH + Chainsaw)", sz=11, bold=True, color=DARK_BLUE, align=PP_ALIGN.CENTER)
+
+# Three downstream modules
+tb(slide, Inches(4.2), Inches(4.2), Inches(5.0), Inches(0.25),
+   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+
+mod_items = [
+    ("Module F\nN-vs-C Stability\n(contact order, pLDDT)", ACCENT_ORANGE, VL_ORANGE, Inches(0.5)),
+    ("Module G\nMTS Targeting\n(transit peptides)", ACCENT_GREEN, VL_GREEN, Inches(4.5)),
+    ("FoldX 5.1\nThermodynamics\n(25,007 proteins)", ACCENT_RED, VL_RED, Inches(8.5)),
+]
+for label, col, bg, left in mod_items:
+    add_rect(slide, left, Inches(4.4), Inches(3.5), Inches(0.85), bg)
+    tb(slide, left, Inches(4.4), Inches(3.5), Inches(0.85),
+       label, sz=11, bold=False, color=col, align=PP_ALIGN.CENTER)
+
+# Converge to statistics
+tb(slide, Inches(6.0), Inches(5.25), Inches(1.5), Inches(0.25),
+   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+
+add_rect(slide, Inches(2.5), Inches(5.45), Inches(8.3), Inches(0.5), DARK_BLUE)
+tb(slide, Inches(2.5), Inches(5.48), Inches(8.3), Inches(0.45),
+   "Module H: Hierarchical Statistics (62 tests, 3 families, BH correction)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+
+tb(slide, Inches(6.0), Inches(5.95), Inches(1.5), Inches(0.25),
+   "|", sz=12, bold=True, color=GRAY, align=PP_ALIGN.CENTER)
+
+add_rect(slide, Inches(3.5), Inches(6.15), Inches(6.3), Inches(0.5), DARK_BLUE)
+tb(slide, Inches(3.5), Inches(6.18), Inches(6.3), Inches(0.45),
+   "Module I: Publication Figures (8 figures, 300 DPI)", sz=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+
+# ===================== SLIDE 6: ANALYSIS MODULES =====================
+sn += 1
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+add_bg(slide, WHITE)
+header(slide, "Analysis Modules",
+       "9 modular stages from raw data to publication figures")
+footer(slide, sn)
+
+module_data = [
+    ["Module", "Task", "Scale", "Key Output"],
+    ["A", "Data acquisition & cleaning", "7 datasets", "Curated substrate lists"],
+    ["B", "Dataset construction", "25,007 proteins", "Cross-referenced proteomes"],
+    ["C", "Orthology (MMseqs2 RBH)", "Full proteomes", "69 homolog pairs"],
+    ["D", "Structure acquisition", "25,007", "AlphaFold CIF + DSSP"],
+    ["E", "Domain architecture", "25,019", "CATH + Chainsaw unified"],
+    ["F", "N-vs-C stability", "2,648 paired", "Contact order, pLDDT"],
+    ["G", "MTS targeting", "266 HSP60", "Pre-domain classification"],
+    ["H", "Comparative statistics", "62 tests", "45 significant (BH)"],
+    ["I", "Publication figures", "8 figures", "PDF + PNG @ 300 DPI"],
+]
+make_table(slide, Inches(0.5), Inches(1.3), Inches(12.3), Inches(4.5), module_data,
+           cw=[Inches(1.0), Inches(3.5), Inches(2.5), Inches(5.3)])
+
+bullets(slide, Inches(0.5), Inches(6.0), Inches(12.3), Inches(1.0), [
+    "All modules scripted in Python 3.9 with full reproducibility (scripts in workflow/phase2/)",
+    "HPC deployment via SLURM for compute-intensive steps (Chainsaw, Foldseek, FoldX, DSSP, CATH)",
+    "Results verified with independent spot checks and cross-module consistency validation",
+], sz=13, sp=Pt(4))
+
+# ===================== SLIDE 7: QUALITY CONTROL & ROBUSTNESS =====================
+sn += 1
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+add_bg(slide, WHITE)
+header(slide, "Quality Control & Robustness",
+       "Guarding against false discoveries at every stage")
+footer(slide, sn)
+
+# Left panel: Pre-registration & correction
+add_rect(slide, Inches(0.3), Inches(1.3), Inches(6.2), Inches(2.8), VL_BLUE)
+tb(slide, Inches(0.5), Inches(1.4), Inches(5.8), Inches(0.3),
+   "Statistical Rigor", sz=16, bold=True, color=MED_BLUE)
+bullets(slide, Inches(0.5), Inches(1.8), Inches(5.8), Inches(2.2), [
+    "9 pre-registered hypotheses (prevents p-hacking)",
+    "Hierarchical Benjamini-Hochberg correction (3 families)",
+    "Compartment-matched backgrounds:",
+    "    E. coli cytoplasm for GroEL substrates",
+    "    Mitochondrial matrix for HSP60 substrates",
+    "Size-matched controls (10 kDa bins)",
+], sz=13, sp=Pt(3))
+
+# Right panel: Sensitivity & corrections
+add_rect(slide, Inches(6.8), Inches(1.3), Inches(6.2), Inches(2.8), VL_ORANGE)
+tb(slide, Inches(7.0), Inches(1.4), Inches(5.8), Inches(0.3),
+   "Sensitivity & Validation", sz=16, bold=True, color=ACCENT_ORANGE)
+bullets(slide, Inches(7.0), Inches(1.8), Inches(5.8), Inches(2.2), [
+    "All findings robust across:",
+    "    SILAC thresholds (3-10)",
+    "    Bin widths (5-20 kDa)",
+    "    Background multipliers (1-5x)",
+    "pLDDT = confidence metric only",
+    "    Contact order = folding kinetics proxy",
+], sz=13, sp=Pt(3))
+
+# Bottom panel: FoldX confound example
+add_rect(slide, Inches(0.3), Inches(4.4), Inches(12.7), Inches(2.6), VL_RED)
+tb(slide, Inches(0.5), Inches(4.5), Inches(12.3), Inches(0.3),
+   "Case Study: FoldX Species Confound Identified & Corrected", sz=15, bold=True, color=ACCENT_RED)
+bullets(slide, Inches(0.5), Inches(4.9), Inches(12.3), Inches(1.8), [
+    "Naive analysis: GroEL substrates vs all backgrounds -> p = 8.2e-47 (SPURIOUS - species effect)",
+    "Corrected analysis: GroEL substrates vs E. coli cytoplasm -> p = 2.9e-3, d = -0.07 (REAL but small)",
+    "HSP60 substrates vs mitochondrial matrix -> p = 0.80 (NOT significant -- no thermodynamic difference)",
+    "Lesson: Without compartment-matched controls, species differences masquerade as substrate effects",
+    "This correction applied CONSISTENTLY across all 62 statistical tests",
+], sz=13, sp=Pt(3))
+
+# ===================== SLIDE 8: DATASETS — SUBSTRATES =====================
 sn += 1
 slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, WHITE)
@@ -1404,6 +1553,9 @@ slide_titles = [
     "The Central Question",
     "Study Design (3 goals, 25,007 proteins)",
     "Methods Overview",
+    "Computational Pipeline",
+    "Analysis Modules (A-I)",
+    "Quality Control & Robustness",
     "Datasets: Chaperonin Substrates (GroEL + HSP60)",
     "Datasets: Proteome Backgrounds",
     "Datasets: Cross-Species Homolog Pairs (69 pairs)",

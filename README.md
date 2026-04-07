@@ -313,8 +313,13 @@ bash scripts/download_external_data.sh
 
 ## Documentation
 
+> **New here?** Start with the [Collaborator Onboarding Guide](docs/COLLABORATOR_ONBOARDING.md) — it tells you exactly what to read and in what order.
+
 | Document | Description |
 |----------|-------------|
+| **Start Here** | |
+| [`docs/COLLABORATOR_ONBOARDING.md`](docs/COLLABORATOR_ONBOARDING.md) | **Reading guide** — what to read, in what order |
+| [`docs/RESEARCH_FINDINGS_PHASE2.md`](docs/RESEARCH_FINDINGS_PHASE2.md) | **Complete research findings** (62 tests, 45 significant) |
 | **Setup & Guides** | |
 | [`docs/INSTALLATION.md`](docs/INSTALLATION.md) | Installation guide for all tools |
 | [`docs/HPC_DEPLOYMENT_GUIDE.md`](docs/HPC_DEPLOYMENT_GUIDE.md) | HPC deployment with SLURM |
