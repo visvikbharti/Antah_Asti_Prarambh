@@ -3,422 +3,395 @@
 ## "The End is the Beginning" — A Comparative Structural Proteomics Study of Chaperonin Substrates
 
 **Presenter:** Vishal Bharti, CSIR-IGIB, New Delhi
-**Estimated Presentation Time:** 55-65 minutes (+ 15-20 min Q&A)
-**Total Slides:** 36 (comprehensive version with all technical parameters)
+**Estimated Presentation Time:** 45-55 minutes (+ 15-20 min Q&A)
+**Total Slides:** 34
+**Presentation file:** Antah_Asti_Prarambh_Presentation_v3.pptx
 
 ---
 
 ## PART I: SLIDE-BY-SLIDE TALKING POINTS
 
 ### Presentation Structure
-- Slides 1-4: Introduction & Motivation
-- Slides 5-6: Goals, Hypotheses, Datasets
-- Slides 7-8: Methodological Decisions & Software Stack
-- Slides 9-14: Phase 1 Workflow with exact tool parameters
-- Slides 15-18: Module H Statistics, Phase 2 HPC Pipeline, FoldX, Figures
-- Slides 19-25: Results with publication figures
-- Slides 26-28: Synthesis, Limitations, Future Work
-- Slides 29-32: Reproducibility, Session History, Bug Fixes, File Inventory
-- Slides 33-36: Conclusions, Key Numbers, Thank You
+- Slides 1-4: Introduction, question, study design, methods
+- Slides 5-7: Pipeline, modules, quality control
+- Slides 8-11: Datasets and statistical framework
+- Slides 12-15: Goal 1 -- Domain architecture
+- Slides 16-20: Goal 2 -- N-vs-C stability (including key negative result)
+- Slides 21-23: Goal 3 -- MTS targeting
+- Slides 24-25: Cross-species conservation
+- Slides 26-28: Statistics summary + sensitivity analysis
+- Slides 29-30: Biological synthesis
+- Slides 31-32: Limitations + future directions
+- Slides 33-34: Takeaways + acknowledgments
 
 ---
 
-### Slide 1: Title Slide (~1 min)
+### Slide 1: Title (~1 min)
 
 **What to say:**
 - "Good [morning/afternoon]. My project is called Antah Asti Prarambh, which is Sanskrit for 'The End is the Beginning.'"
-- "This is a comparative structural proteomics study comparing the substrates of two evolutionary related chaperonin systems: GroEL in E. coli and HSP60 in human mitochondria."
+- "This is a comparative structural proteomics study of two evolutionary related chaperonin systems: GroEL in E. coli and HSP60 in human mitochondria."
 - "I'll explain why this name is meaningful as we go through the results."
 
-**Tip:** Pause briefly after the title — the Sanskrit name creates natural curiosity.
+**Tip:** Pause briefly after the Sanskrit title -- it creates natural curiosity.
 
 ---
 
-### Slide 2: Outline (~30 sec)
+### Slide 2: The Central Question (~2 min)
 
 **What to say:**
-- "Here's what I'll cover today. We'll start with the biology, move through the computational methods, and then focus on three main result areas: domain architecture, N-vs-C asymmetry, and mitochondrial targeting."
-- "I'll highlight both our positive findings AND our important negative results."
+- "Chaperonins are barrel-shaped complexes that help other proteins fold. About 10-15% of a cell's proteins need this help."
+- "GroEL in E. coli and HSP60 in the mitochondrial matrix are evolutionary homologs separated by roughly 2 billion years -- since the endosymbiotic event that gave rise to mitochondria."
+- "Our central question: what structural properties make a protein require chaperonin assistance, and are those properties conserved across this vast evolutionary distance?"
+- "The project name refers to the idea that the C-terminus -- the 'end' of translation -- may be the 'beginning' of the chaperonin's work. We'll see that the reality is more nuanced."
 
-**Tip:** Don't read the outline — just acknowledge its structure and move on quickly.
+**Key point:** The 2-billion-year evolutionary distance is a natural experiment in protein folding physics.
 
 ---
 
-### Slide 3: Background — Chaperonins (~3 min)
+### Slide 3: Study Design (~2 min)
 
 **What to say:**
-- "Chaperonins are barrel-shaped protein complexes that help other proteins fold correctly. About 10-15% of proteins in a typical cell need this help."
-- **Left column (GroEL):** "In E. coli, the GroEL/GroES system is the gold standard. Kerner et al. in 2005 classified 252 substrates into three dependency classes: Class I proteins can fold on their own but are accelerated by GroEL, Class II fold slowly without it, and Class III — 84 proteins — absolutely require GroEL and aggregate completely without it."
-- **Right column (HSP60):** "In human mitochondria, HSP60 performs the same function. We identified 266 high-confidence substrates from Morten et al. 2020 using SILAC quantitative proteomics. These are nuclear-encoded proteins that must be imported into the mitochondrial matrix in an unfolded state, then re-fold with HSP60's help."
-- "These two systems are evolutionary homologs separated by roughly 2 billion years — since the endosymbiotic event that gave rise to mitochondria."
+- "We address three scientific goals. Goal 1: do chaperonin substrates have distinctive structural fold architectures? Goal 2: is there an N-vs-C stability asymmetry? Goal 3: how do mitochondrial targeting signals relate to the first structural domain?"
+- "The study analyzes 25,007 proteins assembled into 7 curated datasets, with 62 pre-registered statistical tests grouped into 3 hypothesis families."
+- "A critical design choice: compartment-matched controls throughout. We compare HSP60 substrates to the mitochondrial matrix proteome, not to the entire human proteome."
 
-**Key point to emphasize:** The 2-billion-year evolutionary distance is a natural experiment.
+**Tip:** Emphasize the scale -- 25,007 proteins and 62 tests -- while noting that every test was planned in advance.
 
 ---
 
-### Slide 4: Why Compare / Project Name (~2 min)
+### Slide 4: Methods Overview (~1.5 min)
 
 **What to say:**
-- "Comparing these two systems tells us something fundamental. If the properties that make a protein need chaperonin help are conserved across 2 billion years, it means those properties are so fundamental to protein physics that evolution couldn't change them."
-- "The project name refers to our central question: proteins are synthesized from N-terminus to C-terminus. The N-terminal region emerges first and folds first. The C-terminus — the 'end' of translation — is the last part to fold. Is it also the 'beginning' of the chaperonin's work?"
-- "We'll see that the answer is more nuanced than we expected."
+- "Nine key methodological decisions were made upfront. Let me highlight three."
+- "First, we use CATH structural domains, not InterPro sequence domains. For a study about folding, we need boundaries that reflect independent folding units."
+- "Second, we do NOT use pLDDT as a stability metric. pLDDT is AlphaFold's confidence score, not thermodynamic stability. We use contact order for kinetics and FoldX for thermodynamics."
+- "Third, hierarchical Benjamini-Hochberg correction for multiple testing -- BH within each of 3 families, then Simes across families."
+
+**Key point:** This slide establishes rigor and credibility. Don't rush it.
 
 ---
 
-### Slide 5: Three Scientific Goals (~3 min)
+### Slide 5: Computational Pipeline (~2 min)
 
 **What to say:**
-- **Goal 1:** "First, do chaperonin substrates have distinctive structural fold architectures? Not all protein folds are equally difficult — TIM barrels, for example, have complex 8-fold symmetry."
-- **Goal 2:** "Second, is there an asymmetry between N-terminal and C-terminal regions? We measure this using contact order — a metric that captures how topologically complex a fold is."
-- **Goal 3:** "Third, for HSP60 substrates specifically, how do mitochondrial targeting signals relate to the first structural domain? After import and signal cleavage, what does the protein look like as it encounters HSP60?"
-- "We pre-registered 9 hypotheses across 3 families before running any tests, with hierarchical Benjamini-Hochberg correction for multiple testing."
-
-**Tip:** Point to the hypothesis table but don't read each row. Say: "The details are here for reference — the key point is that every test was planned in advance."
+- "The pipeline has 9 modules, A through I. This flowchart shows the data flow from raw proteome downloads through to publication figures."
+- "Starting from AlphaFold structure downloads, the pipeline branches: Foldseek for structural clustering, CATH plus Chainsaw for domain assignment, and FoldX for thermodynamic stability."
+- "The analysis chain -- Modules F through I -- runs sequentially after domains are unified: stability metrics, then MTS analysis, then statistics, then figures."
+- "All 25,007 proteins were processed: 24,530 by DSSP, 18,855 by CATH (51,667 domains), 6,164 by Chainsaw, and all 25,007 by FoldX."
 
 ---
 
-### Slide 6: Seven Datasets (~2 min)
+### Slide 6: Analysis Modules (~1.5 min)
 
 **What to say:**
-- "Our analysis assembles seven carefully curated datasets." [Point to table]
-- "The critical design choice is compartment-matched controls. We don't compare HSP60 substrates to the full human proteome — that would conflate 'properties of mitochondrial proteins' with 'properties of chaperonin substrates.' Instead, we compare within the mitochondrial matrix proteome."
-- "Data cleaning was substantial: 149 of 252 GroEL accessions had been demerged in UniProt since the 2005 paper. For HSP60, we filtered from 325 raw hits to 266 Tier-1 substrates by excluding baits, co-chaperones, and contaminants, and requiring SILAC enrichment above 5."
-- "A critical detail: between MitoCarta version 2 and 3, 52 respiratory chain subunits were reclassified from 'matrix' to 'inner membrane' — this significantly affects our background set."
+- "This table maps every module to its key tools, inputs, and outputs." [Point to table]
+- "Module A handles orthology -- MMseqs2 for reciprocal best hits and OrthoFinder-style all-vs-all search. Module B downloads and indexes AlphaFold structures."
+- "Module E unifies CATH and Chainsaw domain assignments. Module F computes 14 metrics per protein region, including contact order and FoldX delta-G."
+- "Module H runs all 62 statistical tests with hierarchical correction. Module I generates the 6 publication figures."
+
+**Tip:** Don't read every row. Point to the table and highlight 2-3 modules that are most relevant to the audience.
 
 ---
 
-### Slide 7: Critical Methodological Decisions (~2 min)
+### Slide 7: Quality Control & Robustness (~1.5 min)
 
 **What to say:**
-- "Nine key decisions were made upfront, each with explicit rationale. Let me highlight three:"
-- **Decision 2 (most important):** "We do NOT use pLDDT as a stability metric. pLDDT is AlphaFold's confidence score — it tells you how sure AlphaFold is about its prediction, not how thermodynamically stable the protein is. We use contact order for folding kinetics and FoldX for thermodynamics."
-- **Decision 1:** "We use CATH structural domains, not InterPro sequence domains. For a study about folding, we need boundaries that reflect where one independently folding unit ends and another begins."
-- **Decision 9:** "This one cost us hours of debugging: the bioconda package called 'stride' is a genomic variant caller, not the protein STRIDE program we needed. The correct one must be compiled from source."
-
-**Tip:** This slide shows thoroughness and rigor — important for establishing credibility.
+- "Quality control permeates the pipeline. Structure quality uses 5 tiers based on mean pLDDT, with automatic flags for potentially unreliable models. Only 4.6% of proteins are flagged."
+- "Domain assignment has two independent methods with clear priority: CATH first (75.3% coverage), Chainsaw for the remainder (24.7%)."
+- "Every DSSP run had a 30-second timeout. Every CATH API query was checkpointed. FoldX processed all 25,007 proteins with zero failures."
+- "We also performed sensitivity analyses across multiple parameter choices -- more on that later in Slides 27-28."
 
 ---
 
-### Slide 8: Software & Tools Stack (~1 min)
+### Slide 8: Datasets -- Chaperonin Substrates (~2 min)
 
 **What to say:**
-- "Here's our complete software stack. Everything is versioned and reproducible."
-- "Key tools: MMseqs2 for sequence search, Foldseek for structural clustering, Chainsaw for ML domain prediction, FoldX for thermodynamic stability."
-- "On the Mac, MMseqs2 and Foldseek run through Rosetta 2 emulation — x86_64 binaries on ARM."
-- "On HPC, FoldX 5.1 and Chainsaw are compiled natively."
+- "Our two substrate datasets required substantial curation."
+- "GroEL: 252 substrates from Kerner et al. 2005, classified into three dependency classes. 149 of 252 accessions had been demerged in UniProt since publication -- we mapped each to the correct K-12 reference proteome entry."
+- "HSP60: 266 Tier-1 substrates from Morten et al. 2020 SILAC co-IP. Filtered from 325 raw hits by excluding baits, co-chaperones, and contaminants, and requiring SILAC enrichment above 5. Median enrichment for Tier-1 is 22.2."
+- "Class III GroEL substrates -- 84 proteins that absolutely require the chaperonin -- are a particularly interesting subgroup."
 
 ---
 
-### Slide 9: Analysis Workflow (~2 min)
+### Slide 9: Datasets -- Proteome Backgrounds (~1.5 min)
 
 **What to say:**
-- "The analysis has 9 modules, A through I, developed at pilot scale and then scaled to full proteomes on HPC. This table shows every script, input, output, and key parameter."
-- "The full-scale analysis covers 25,007 proteins: 24,530 with DSSP, 18,855 with CATH domains, and all 25,007 processed by FoldX."
-- Highlight the key scripts and their roles.
+- "Backgrounds are compartment-matched. GroEL substrates are compared against the full E. coli K-12 cytoplasmic proteome (4,403 proteins). HSP60 substrates are compared against the mitochondrial matrix proteome (525 proteins), not the full human proteome."
+- "The mitochondrial proteome (1,136 proteins from MitoCarta 3.0) serves as the broader mito background."
+- "A critical detail: between MitoCarta versions 2 and 3, 52 respiratory chain subunits were reclassified from 'matrix' to 'inner membrane.' This significantly affects the background composition."
+- "All enrichment tests additionally use size-matched controls within 10 kDa bins."
 
 ---
 
-### Slide 10: Module C — Orthology Parameters (~2 min)
+### Slide 10: Datasets -- Cross-Species Homolog Pairs (~1.5 min)
 
 **What to say:**
-- "For RBH, we used MMseqs2 easy-rbh, which gave us 40 one-to-one pairs."
-- "For OrthoFinder-style orthology, we ran bidirectional all-vs-all search on the full proteomes — about 90 million comparisons — with specific cutoffs: E-value below 10^-5, identity above 25%, coverage above 50%, sensitivity 7.5."
-- "Union-Find connected components gave us 422 orthogroups. 34 contain both GroEL and HSP60 substrates."
-- "Merging both methods: 69 unique pairs, with evidence tracking which method found each pair."
+- "We identified 69 cross-species homolog pairs using two complementary methods: 40 from reciprocal best hits (MMseqs2 easy-rbh) and additional pairs from OrthoFinder-style analysis on full proteomes."
+- "The union of both methods -- with evidence tracking -- gives us 69 unique pairs across 34 orthogroups containing substrates from both organisms."
+- "An interesting observation: only 9.5% of Class III obligate substrates have HSP60 orthologs, versus ~19% for Classes I and II. The most GroEL-dependent proteins are the most evolutionarily divergent."
+- "These 69 pairs are our window into 2 billion years of conservation."
 
 ---
 
-### Slide 11: Module D — AlphaFold & DSSP Parameters (~1.5 min)
+### Slide 11: Statistical Framework (~2 min)
 
 **What to say:**
-- "AlphaFold download: we tried v6 first with v4 fallback. Batch size 50, 0.5 second delay between batches. 8 proteins had no AlphaFold model."
-- "DSSP: mkdssp v2.2.1 with 30-second timeout. 24,530 proteins processed at full scale. We group the 8 DSSP codes into 3 categories: helix (H,G,I), strand (E,B), and coil (everything else)."
-- "Quality validation uses 5 tiers based on mean pLDDT, with 3 automatic flags for potentially unreliable structures."
-- "For Phase 2, we used bulk FTP downloads — about 2 GB for E. coli and 20 GB for human."
+- "We run 62 pre-registered tests organized into 3 hypothesis families: domain architecture, N-vs-C stability asymmetry, and MTS targeting."
+- "Correction is hierarchical: Benjamini-Hochberg within each family, Simes method for family-level summaries, then BH across the 3 families. A test is significant only if it passes both levels."
+- "Effect sizes are always reported alongside p-values: rank-biserial r for Mann-Whitney, eta-squared for Kruskal-Wallis, odds ratios with 95% CIs for Fisher's exact."
+- "Result: 45 of 62 tests significant after hierarchical correction -- a 72.6% discovery rate."
+
+**Tip:** Point to the test-type mapping table but don't read each row. Emphasize: "Every test was planned before we saw any results."
 
 ---
 
-### Slide 12: Module E — Domain Assignment Parameters (~2 min)
+### Slide 12: Goal 1 -- CATH Class Distribution (~2 min)
 
 **What to say:**
-- "CATH domains queried through InterPro Gene3D API at 1 request per second with checkpointing every 50 proteins. At full scale, 18,855 proteins (75.3%) received CATH annotations."
-- "Chainsaw uses STRIDE secondary structure as input — and this is where we learned the hard way that bioconda's 'stride' is a different tool entirely. Chainsaw covers the remaining 24.7% of proteins."
-- "Foldseek parameters: sensitivity 7.5, E-value 0.001, 50% bidirectional coverage, 3Di+AA hybrid alignment. Phase 2 required 64 GB RAM for the all-vs-all search."
-- "The combined coverage is excellent: 75.3% CATH + 24.7% Chainsaw for near-complete structural domain assignment."
+- "This figure shows CATH class distributions across all groups. Alpha-beta proteins dominate at 60-71%, but the distributions differ significantly: GroEL chi-squared p=5.2e-21, HSP60 p=2.4e-24."
+- "GroEL substrates show higher beta-strand content (p=5.0e-7) and lower helix fraction (p=1.5e-5) compared to E. coli background. HSP60 substrates show higher helix fraction (p=1.7e-4)."
+- "The DSSP secondary structure compositions are consistent with these CATH class differences."
+
+**Key point:** The class distributions are significantly different from background, but the real story is the specific superfamily enrichments on the next slides.
 
 ---
 
-### Slide 13: Module F — Contact Order Parameters (~2.5 min)
+### Slide 13: Goal 1 -- TIM Barrel Enrichment (~2.5 min)
 
 **What to say:**
-- "This is the core method slide for Goal 2. Contact order follows the Plaxco-Simons-Baker 1998 definition exactly."
-- "We compute CA-CA distances with an 8 Angstrom cutoff, minimum 6 residues sequence separation. Relative contact order normalizes by protein length."
-- "The three-region decomposition is critical: pre-domain tail, N-domain (first structural domain), C-region (everything after). Minimum 5 residues per region."
-- "We compute 13 metrics per region: 7 sequence-based (charge, hydrophobicity, etc.), 3 structure-based (SS fractions, pLDDT), and 3 folding metrics (ACO, RCO, n_contacts)."
-- "FoldX DeltaG is included as the 14th metric, providing the thermodynamic stability dimension across all 25,007 proteins."
+- "The headline result for domain architecture: GroEL substrates are 22.6 times more likely to contain TIM barrels than expected from the E. coli proteome background (Fisher's exact p=2.4e-21)."
+- "Why TIM barrels? The barrel has 8-fold symmetry -- 8 beta-strands alternating with 8 alpha-helices. The barrel cannot form until ALL 8 strands are synthesized. This creates a vulnerable window during translation where the incomplete barrel can misfold or aggregate."
+- "GroEL provides the protective barrel environment where this complex folding topology can form correctly."
+- "This is not just about domain count -- neither substrate set is enriched for having MORE domains. It's about fold TYPE."
+
+**Key point:** OR=22.6 is a very large effect size. This is robust across all sensitivity analyses.
 
 ---
 
-### Slide 14: Module G — MTS Analysis Parameters (~1.5 min)
+### Slide 14: Goal 1 -- HSP60 Domain Enrichments + Cross-Species (~2 min)
 
 **What to say:**
-- "MTS analysis queries UniProt for transit peptide annotations using the REST API in batches of 100."
-- "The gap calculation is straightforward: first_domain_start minus transit_peptide_end. Positive gap means the MTS is a separate pre-domain extension."
-- "MitoCarta binary flags use case-insensitive string matching: 'Matrix' for is_matrix, 'MIM' or 'Membrane' for inner membrane."
-- "The targeting classification has a clear hierarchy from high-confidence matrix to non-mitochondrial."
+- "HSP60 shows its own distinct enrichment pattern: Rossmann-like folds (3.30.830.10, OR=5.4) and other matrix enzyme topologies (3.90.226.10, OR=4.8)."
+- "When we compare across species, 79.7% of homolog pairs share the same CATH superfamily. A TIM barrel GroEL substrate has a TIM barrel HSP60 ortholog."
+- "GroEL is also enriched in 1.10.10.10 folds (OR=50.9) -- mainly alpha-helical repeat structures that also have complex folding landscapes."
+- "The overall picture: chaperonin substrate identity is determined by fold topology, and the specific topologies are largely conserved across 2 billion years."
 
 ---
 
-### Slide 15: Module H — Statistical Framework (~2 min)
+### Slide 15: Goal 1 -- Domain Count Distribution (~1 min)
 
 **What to say:**
-- "This is where rigorous statistics matter. We run 62 pre-registered tests with hierarchical Benjamini-Hochberg: BH within each of the 3 families, then Simes method to get a family-level summary, then BH across families."
-- "Effect sizes are always reported: rank-biserial r for Wilcoxon and Mann-Whitney, eta-squared for Kruskal-Wallis, odds ratios with 95% CIs for Fisher's exact, Cramer's V for chi-squared."
-- "This table shows all test types mapped to specific hypotheses."
+- "This figure shows the distribution of domain counts per protein across substrate and background groups."
+- "Neither GroEL nor HSP60 substrates are enriched for multi-domain proteins relative to their respective backgrounds."
+- "The chaperonin dependence is about fold COMPLEXITY within individual domains, not about having more domains to fold."
+
+**Key point:** This is a quick slide -- the negative finding (no domain count enrichment) supports the topology-driven narrative.
 
 ---
 
-### Slide 16: Phase 2 HPC Pipeline — SLURM Resources (~2 min)
+### Slide 16: Goal 2 -- N-vs-C Violin Plots (~2.5 min)
 
 **What to say:**
-- "This table shows every SLURM job with exact resource allocations. The two critical bottlenecks are Foldseek search at 64 GB RAM / 24 hours and Chainsaw at 72 hours."
-- "Every script includes the LD_LIBRARY_PATH fix and python3 -u for unbuffered output — two hard-won lessons."
-- "FoldX runs as a 501-task array job, manually submitted after the generation script."
+- "These split violin plots show relative contact order for N-domains versus C-regions. In every group -- GroEL, HSP60, Matrix, Mito -- the N-domain distribution is shifted higher."
+- "N-terminal domains have significantly higher contact order -- more topologically complex folds -- across all groups tested."
+- "Effect sizes range from r=0.41 to r=0.48, all with p-values well below 10^-4."
+- "But notice something: the pattern is present in ALL groups, not just substrates. The mito background shows the strongest effect."
+
+**Key point:** Let the audience absorb the pattern across all groups before moving to the key result on the next slide.
 
 ---
 
-### Slide 17: Pipeline Dependencies & FoldX Parameters (~2 min)
+### Slide 17: Goal 2 -- KEY RESULT: Universal N>C Asymmetry (~3 min)
 
 **What to say:**
-- "The pipeline has three parallel branches after AlphaFold download: Foldseek, Chainsaw, and FoldX. The analysis chain is sequential: F -> H -> I."
-- "FoldX parameters: 298.15 K, pH 7.0, ionic strength 0.05 M. Each protein goes through CIF-to-PDB conversion, RepairPDB to optimize rotamers, then Stability calculation."
-- "Contact order gives us folding KINETICS; FoldX gives us folding THERMODYNAMICS. Together they provide the complete picture."
-
----
-
-### Slide 18: Figure Generation Parameters (~30 sec)
-
-**What to say:**
-- "All figures use colorblind-friendly palettes, 300 DPI, with real p-values and sample sizes annotated."
-
----
-
-### Slide 19-25: Results slides
-
-**What to say:**
-- "This is the Phase 2 dependency graph. Starting from AlphaFold download, the pipeline branches into three parallel tracks: Foldseek clustering, Chainsaw domain prediction, and FoldX stability calculations."
-- "The analysis chain — Modules F through I — runs sequentially after domains are unified."
-- "FoldX is the most resource-intensive: 501 array tasks, each processing 50 proteins at about 40 seconds per protein. All 25,007 proteins completed with 0 failures."
-- "The Foldseek search required 64 GB of RAM and 16 CPUs for the all-vs-all structural comparison of 25,000+ proteins."
-
----
-
-### Slide 10: Structural Domain Assignment Method (~2 min)
-
-**What to say:**
-- "Domain assignment combines two approaches. CATH domains from Gene3D are our gold standard — curated, experimentally validated structural classifications. They cover 18,855 proteins (75.3%) at full scale."
-- "For the remaining 24.7%, Chainsaw — a deep learning model trained on CATH — predicts boundaries from 3D coordinates. This gives us near-complete coverage."
-- "Foldseek provides structural clustering using a 3D structural alphabet, giving us 16,193 clusters across all proteins."
----
-
-### Slide 11: Stability Metrics (~2 min)
-
-**What to say:**
-- "Contact order is our primary metric. It measures how many long-range contacts exist in a fold. A TIM barrel has high contact order because distant parts of the sequence must come together. High contact order correlates with slow folding."
-- "FoldX provides the thermodynamic dimension — the actual stability of the folded state in kcal/mol."
-- **Point to the three-region diagram:** "Every multi-domain protein is decomposed into three regions: the pre-domain tail (which may include the transit peptide), the first structural domain (N-domain), and everything after it (C-region). We compare N-domain versus C-region within each protein."
-- "Critical note at the bottom: pLDDT is confidence, not stability. We report it but never equate it with thermodynamics."
-
----
-
-### Slide 12: Results — Domain Architecture (~3 min)
-
-**What to say:**
-- **Point to Figure 1:** "Panel A shows CATH class distributions — alpha-beta proteins dominate all groups at 60-71%. The distributions are highly significantly different from background: GroEL chi-squared p=5.2e-21, HSP60 p=2.4e-24. Panel B shows the top superfamilies with clear enrichments. Panel C shows domain count distributions."
-- "The key finding: GroEL substrates are 22.6 times more likely to contain TIM barrels than expected by chance (p=2.4e-21). These are not random — they are topologically complex folds."
-- "HSP60 shows different enrichments: Rossmann-like folds and other matrix enzyme topologies."
-- "Importantly, neither substrate set is enriched for having MORE domains. It's not about domain count — it's about fold type."
-
----
-
-### Slide 13: Domain Enrichment Details (~1.5 min)
-
-**What to say:**
-- "Here are the specific enrichments with Fisher's exact test p-values after BH correction."
-- **Point to TIM barrel explanation box:** "Why do TIM barrels need chaperonins? The barrel has 8-fold symmetry — 8 beta-strands alternating with 8 alpha-helices. The barrel cannot form until ALL 8 strands are present. This means the protein must be fully synthesized before it can fold, creating a vulnerable window where it can aggregate."
-- "GroEL provides the protective barrel environment where this complex folding can occur."
-
----
-
-### Slide 14: N-vs-C Contact Order Results (~3 min)
-
-**What to say:**
-- **Point to Figure 2:** "Panel A shows split violin plots of relative contact order for N-domains versus C-regions. In every group — GroEL, HSP60, Matrix, Mito — the N-domain distribution is shifted higher."
-- "The table shows this quantitatively. Effect sizes range from r = 0.41 to 0.48, all highly significant."
-- **THE KEY SURPRISE:** "But look at the pattern: the effect is present in ALL groups, not just substrates. The mito background — which includes proteins that have nothing to do with HSP60 — shows the STRONGEST effect at p = 7.1 times 10 to the minus 18."
-- "This tells us the N > C asymmetry is NOT a chaperonin-specific feature."
-
----
-
-### Slide 15: Crucial Negative Results (~3 min)
-
-**What to say:**
-- "This slide presents what I consider our most important and scientifically surprising findings."
-- **H2.2:** "When we compare the N-C difference BETWEEN substrates and background using Mann-Whitney U, there is NO significant difference. GroEL substrates have p = 0.058, HSP60 substrates have p = 0.536. Background proteins show the same asymmetry."
-- **H2.3:** "Similarly, within GroEL substrates, Class III obligate substrates do NOT show greater asymmetry than Class I spontaneous folders. Kruskal-Wallis p = 0.77 — essentially zero effect."
-- **Figure 3:** "These boxplots show the contact order difference by GroEL class. They're indistinguishable."
-- "These negative results reshape the interpretation entirely: N-vs-C asymmetry is universal, not driven by chaperonin biology."
+- "This is our most scientifically important finding, and it is a NEGATIVE result."
+- "The N>C contact order asymmetry is universal -- present in all protein groups -- with the strongest signal in the mitochondrial background at p=7.1e-18."
+- "When we test whether substrates show GREATER asymmetry than backgrounds using Mann-Whitney U: GroEL versus E. coli background gives p=0.058, HSP60 versus matrix gives p=0.536. Both non-significant."
+- "Within GroEL substrates, Class III obligate substrates do NOT show greater asymmetry than Class I (Kruskal-Wallis p=0.77)."
+- "This means chaperonins do not CREATE the asymmetry -- they EXPLOIT a pre-existing property of multi-domain protein architecture."
 
 **Tip:** Emphasize that negative results are publishable and scientifically important. Don't be apologetic about them.
 
 ---
 
-### Slide 16: Biological Interpretation of N-vs-C (~2 min)
+### Slide 18: Goal 2 -- Exploit vs Create (~2 min)
 
 **What to say:**
-- "So why does this asymmetry exist if it's not about chaperonins?"
-- "It's physics. Proteins are synthesized N-to-C on ribosomes. The N-terminus emerges first and has the most time to fold. Evolution has placed the most complex folds at the N-terminus, where co-translational folding has the best chance of working."
+- "So why does this universal asymmetry exist? It's physics."
+- "Proteins are synthesized N-to-C on ribosomes. The N-terminus emerges first and has the most time to fold co-translationally. Evolution has placed the most topologically complex folds at the N-terminus, where co-translational folding has the best chance of working."
 - "C-terminal regions, emerging last, adopt simpler folds or extend existing domains."
-- "This is a fundamental property of protein architecture — a 'gravitational constant' that's always present, conserved across all of life, and not caused by chaperonins."
+- "This is a fundamental property of protein architecture -- a 'gravitational constant' conserved across all of life, not caused by chaperonins. Chaperonins exploit this pre-existing landscape."
+
+**Key point:** This interpretation reframes the entire project title: "The End is the Beginning" refers to physics, not biology.
 
 ---
 
-### Slide 17: MTS Targeting Results (~2.5 min)
+### Slide 19: Goal 2 -- FoldX Thermodynamic Stability (~2 min)
 
 **What to say:**
-- **Figure 4, Panel A:** "HSP60 substrates are 3.3 times enriched for matrix localization compared to the general mitochondrial proteome. This makes biological sense — HSP60 is a matrix chaperonin."
-- "Interestingly, 21.1% of HSP60 substrates enter the matrix by non-canonical pathways — no detectable transit peptide."
-- **Panel B:** "The MTS gap histogram shows that most transit peptides end well before the first domain starts. The median gap is 18 residues."
-- **Panel C:** "The scatter plot confirms: transit peptide cleavage sites cluster below and to the left of first domain starts."
-- "84.4% of transit peptides are pre-domain extensions — overwhelmingly significant at p = 3.4 times 10 to the minus 51."
-- "We call this the 'landing pad' model: after import and MTS cleavage, the protein has a short unstructured linker followed by an unfolded first domain — perfectly positioned for HSP60 to grab."
+- "Contact order measures folding KINETICS. FoldX measures folding THERMODYNAMICS -- how stable the folded state is. Together they provide the complete picture."
+- "With FoldX complete across all 25,007 proteins, the key finding is that thermodynamic differences are modest."
+- "GroEL substrates show marginally lower stability than E. coli background (p=2.9e-3, Cohen's d=-0.07 -- a small effect). HSP60 substrates show no significant difference versus matrix background (p=0.80)."
+- "Chaperonin dependence is driven primarily by fold topology and kinetic complexity, not by thermodynamic fragility."
+
+**Key point:** The FoldX results reinforce the topology-driven narrative. Mention the species confound lesson if asked during Q&A.
 
 ---
 
-### Slide 18: Cross-Species Conservation (~2 min)
+### Slide 20: Goal 2 -- GroEL Class Comparison (~1.5 min)
 
 **What to say:**
-- **Panel A:** "We identified 69 cross-species homolog pairs using both RBH and OrthoFinder."
-- **Panel B — THE SHOWPIECE:** "N-domain contact order between GroEL substrates and their HSP60 orthologs shows Spearman r = 0.84, p = 5.3 times 10 to the minus 13. The topological complexity of the N-terminal domain has been conserved across 2 billion years of evolution."
-- "79.7% of homolog pairs share the same CATH superfamily. A TIM barrel substrate in E. coli has a TIM barrel ortholog that's also an HSP60 substrate in humans."
-- "An interesting observation: only 9.5% of Class III obligate substrates have HSP60 orthologs, versus ~19% for Classes I and II. The most GroEL-dependent proteins are the most divergent."
+- "This figure compares the N-vs-C contact order difference across GroEL dependency classes (I, II, III)."
+- "The boxplots are essentially indistinguishable. Kruskal-Wallis p=0.77 -- there is no class gradient."
+- "Class III obligate substrates do not show greater N-vs-C asymmetry than Class I proteins that can fold spontaneously."
+- "This further confirms that the asymmetry is a universal architectural property, not a marker of chaperonin dependence."
 
 ---
 
-### Slide 19: Results Summary (~1 min)
+### Slide 21: Goal 3 -- MTS Targeting (~2.5 min)
 
 **What to say:**
-- "Figure 6 provides the visual summary."
-- "Across 62 pre-registered tests with hierarchical BH correction, 45 were significant — a 72.6% discovery rate."
-- "All three families contributed with strong results across domain architecture, stability asymmetry, and MTS targeting."
+- "Shifting to Goal 3 -- how mitochondrial targeting signals relate to the first structural domain."
+- "When nuclear-encoded mitochondrial proteins are imported, they pass through the TOM and TIM complexes in an unfolded state. The N-terminal transit peptide is cleaved upon arrival in the matrix."
+- "This figure shows three panels: the targeting classification of HSP60 substrates, the gap histogram between MTS cleavage sites and first domain starts, and the scatter plot of MTS end versus domain start positions."
+- "The key observation: MTS cleavage sites cluster before the first domain, creating a short unstructured linker."
 
 ---
 
-### Slide 20: Biological Synthesis (~3 min)
+### Slide 22: Goal 3 -- Pre-Domain Extension (~2 min)
+
+**What to say:**
+- "84.4% of transit peptides are separate pre-domain extensions -- the MTS ends before the first structural domain begins. This is overwhelmingly significant at p=3.4e-51."
+- "The median gap is 18 residues. After import and cleavage, the protein has a short unstructured linker followed by an intact but unfolded first domain."
+- "We call this the 'landing pad' model: the unfolded first domain is perfectly positioned for HSP60 to capture."
+- "The 15.6% where MTS overlaps the first domain may have partially disrupted domains, making them even more dependent on chaperonin assistance."
+
+**Key point:** This is the most statistically significant result in the entire study (p=3.4e-51).
+
+---
+
+### Slide 23: Goal 3 -- Matrix Enrichment (~1.5 min)
+
+**What to say:**
+- "HSP60 substrates are 3.29 times enriched for matrix localization compared to the general mitochondrial proteome (Fisher's exact p=1.6e-16)."
+- "This makes biological sense -- HSP60 is a matrix chaperonin -- but the quantification is important: 46.6% are high-confidence matrix proteins, while 21.1% enter via non-canonical pathways without detectable transit peptides."
+- "The matrix enrichment is the strongest targeting signal, confirming that HSP60 substrate identity is tightly coupled to compartment."
+
+---
+
+### Slide 24: Cross-Species Orthology (~2 min)
+
+**What to say:**
+- "This figure shows the cross-species analysis. We identified 69 homolog pairs using two complementary methods: reciprocal best hits and OrthoFinder-style orthogroup clustering."
+- "422 orthogroups were identified across the full E. coli and human proteomes. 34 contain both GroEL and HSP60 substrates."
+- "79.7% of homolog pairs share the same CATH superfamily -- the same fold topology is a chaperonin substrate in both organisms."
+- "The limited cross-species overlap for Class III (9.5%) suggests the most dependent substrates are the most evolutionarily divergent."
+
+---
+
+### Slide 25: Cross-Species RCO Correlation (~2 min)
+
+**What to say:**
+- "This is the showpiece figure. N-domain relative contact order between GroEL substrates and their HSP60 orthologs shows Spearman r=0.82."
+- "The topological complexity of the first structural domain has been conserved across 2 billion years of evolution."
+- "Each point is a homolog pair. A TIM barrel in E. coli has a TIM barrel ortholog that is also an HSP60 substrate in humans."
+- "This conservation argues that the structural properties driving chaperonin dependence are fundamental to protein folding physics, not specific to any one organism."
+
+**Key point:** The r=0.82 correlation is the strongest evidence for evolutionary conservation of chaperonin substrate properties.
+
+---
+
+### Slide 26: Statistics Summary (~1.5 min)
+
+**What to say:**
+- "This figure summarizes all 62 statistical tests. 45 were significant after hierarchical BH correction -- a 72.6% discovery rate."
+- "Family 1 (domain architecture): strong enrichments in specific topologies. Family 2 (N-vs-C): universal asymmetry confirmed, but NOT substrate-specific -- key negative results. Family 3 (MTS): strong targeting signals."
+- "Effect sizes are reported for every test. The largest are MTS pre-domain (p=3.4e-51) and TIM barrel enrichment (OR=22.6, p=2.4e-21)."
+
+---
+
+### Slide 27: Sensitivity Analysis (text) (~1.5 min)
+
+**What to say:**
+- "We tested robustness across three key parameter choices."
+- "HSP60 SILAC enrichment threshold varied from 3 to 10: all major findings remain significant at every threshold. N>C asymmetry p-values range from 10^-12 to 10^-20."
+- "Size-matching bin width varied from 5 to 20 kDa: TIM barrel enrichment remains significant at all bin widths."
+- "Background multiplier varied from 1x to 5x: enrichment tests remain significant across all levels."
+- "No finding in this study depends on a particular parameter choice."
+
+---
+
+### Slide 28: Sensitivity Analysis -- Parameter Robustness (~1 min)
+
+**What to say:**
+- "This figure visualizes the parameter robustness. Each panel shows how a key result varies as one parameter changes."
+- "The key message is stability: all findings are robust across SILAC thresholds (3-10), bin widths (5-20 kDa), and multipliers (1-5x)."
+- "This is important for reviewers -- it demonstrates that our conclusions are not artifacts of arbitrary threshold choices."
+
+**Tip:** This is a reassurance slide. If time is short, summarize in one sentence and move on.
+
+---
+
+### Slide 29: Biological Synthesis -- Exploit vs Create (~3 min)
 
 **What to say:**
 - "The three goals converge into a coherent narrative."
-- **Box 1:** "What makes a protein a chaperonin substrate? It's the FOLD. Specific topologies like TIM barrels that can't fold co-translationally. Not domain count, not N-vs-C asymmetry, not obligate dependence."
-- **Box 2:** "How does the mitochondrial system work? HSP60 substrates are matrix proteins. The MTS creates a landing pad — after cleavage, the first domain emerges unfolded and HSP60 captures it."
-- **Box 3:** "What's conserved across 2 billion years? The fold itself. The N-domain complexity. The physics of vectorial translation."
-- **Blue box — The Title:** "So 'The End is the Beginning' has a nuanced meaning: the C-terminus IS where the chaperonin's work begins, but NOT because the C-terminus is more complex. The entire protein has its most complex domain at the N-terminus. The asymmetry is about translational physics, not chaperonin biology."
+- "What makes a protein a chaperonin substrate? It's the FOLD -- specific topologies like TIM barrels that cannot fold co-translationally. Not domain count, not N-vs-C asymmetry, not obligate dependence class."
+- "How does the mitochondrial system work? The MTS creates a landing pad -- after cleavage, the first domain emerges unfolded and HSP60 captures it. Matrix enrichment (OR=3.29) confirms compartment coupling."
+- "What's conserved across 2 billion years? The fold topology itself. The N-domain complexity (r=0.82). The physics of vectorial translation."
+- "So 'The End is the Beginning' has a nuanced meaning: the N>C asymmetry is real but UNIVERSAL. Chaperonins exploit a pre-existing biophysical landscape rather than creating substrate-specific features."
 
 ---
 
-### Slide 21: Limitations (~1 min)
+### Slide 30: Evolutionary Model -- 2 Billion Years (~2 min)
+
+**What to say:**
+- "This slide presents our evolutionary model. The ancestral bacterial chaperonin recognized proteins with complex fold topologies. After endosymbiosis, the mitochondrial HSP60 retained this specificity."
+- "The substrate-defining properties -- TIM barrel enrichment, N-domain complexity, the pre-domain landing pad -- are conserved because they reflect fundamental protein folding physics."
+- "The N>C asymmetry is a 'gravitational constant' of protein architecture. It exists because ribosomes synthesize proteins N-to-C, giving the N-terminus a co-translational folding advantage."
+- "Evolution placed the most complex folds at the N-terminus. This is true for ALL multi-domain proteins, not just chaperonin substrates."
+
+---
+
+### Slide 31: Limitations (~1.5 min)
 
 **What to say:**
 - "I want to be transparent about limitations."
-- "Methodologically: pLDDT as confidence (mitigated by CO + FoldX), co-IP as interaction not function (mitigated by SILAC), AlphaFold structures being predictions."
-- "Statistically: 62 tests carry some false positive risk despite correction. Our cross-species analysis has only 69 pairs."
-- "FoldX is complete across all 25,007 proteins but absolute delta-G values have limited accuracy — relative comparisons are more reliable."
+- "Methodologically: AlphaFold structures are predictions, not experimental. Co-IP captures interaction, not functional dependence. FoldX absolute delta-G values have limited accuracy -- relative comparisons are more reliable."
+- "Statistically: 62 tests carry some residual false positive risk despite correction. The cross-species analysis has only 69 pairs, limiting power for subtle effects."
+- "Biologically: we lack MTS prediction tools (TargetP, DeepMito) due to license constraints. 21.1% of HSP60 substrates enter the matrix by unknown mechanisms."
 
 **Tip:** Acknowledging limitations upfront builds credibility and preempts tough questions.
 
 ---
 
-### Slide 22: Future Directions (~1 min)
+### Slide 32: Future Directions (~1 min)
 
 **What to say:**
-- "With all analyses complete, the next step is manuscript preparation with all 62 statistical tests and 6 publication figures."
-- "Longer-term, we'd like to extend to Group II chaperonins (TRiC/CCT in the eukaryotic cytoplasm) and develop a predictive model for chaperonin substrate identification."
+- "With all analyses complete, the immediate next step is manuscript preparation with all 62 statistical tests and 6 publication figures."
+- "Longer-term, we'd like to extend to Group II chaperonins (TRiC/CCT in the eukaryotic cytoplasm), obtain TargetP/DeepMito licenses for comprehensive MTS prediction, and develop a predictive model for chaperonin substrate identification based on fold topology."
 
 ---
 
-### Slide 23: Software & Reproducibility (~30 sec)
-
-**What to say:**
-- "Everything is fully reproducible — 16 Python modules, 19 SLURM scripts, a central config file, and a deployment guide for the HPC pipeline."
-
----
-
-### Slide 24: Conclusions (~2 min)
+### Slide 33: Key Takeaways (~2 min)
 
 **What to say (slowly, one point at a time):**
-1. "Chaperonin substrates are enriched for specific complex fold topologies — TIM barrels for GroEL at odds ratio 22.6."
-2. "N-terminal domains universally have higher contact order — this is NOT substrate-specific."
-3. "Mitochondrial targeting signals create a 'landing pad' for post-import chaperonin engagement."
-4. "These properties are conserved across 2 billion years with remarkable correlation."
-5. "The N>C asymmetry is a gravitational constant of protein architecture, not a feature of chaperonin biology."
+1. "Chaperonin substrates are enriched for specific complex fold topologies -- TIM barrels for GroEL at odds ratio 22.6 (p=2.4e-21)."
+2. "N-terminal domains universally have higher contact order (p=7.1e-18), but this is NOT substrate-specific (p=0.058, p=0.536). Chaperonins exploit a pre-existing biophysical property."
+3. "Mitochondrial targeting signals create a 'landing pad' for post-import chaperonin engagement: 84.4% pre-domain extensions (p=3.4e-51), matrix enrichment OR=3.29 (p=1.6e-16)."
+
+**Key point:** These three takeaways are your Q&A reference card. Know these numbers cold.
 
 ---
 
-### Slide 29: Reproducibility & Data Inventory (~1 min)
+### Slide 34: Acknowledgments (~30 sec)
 
 **What to say:**
-- "Everything is organized in three code locations, with a central config.yaml for all parameters."
-- "All raw data is from public databases — no proprietary dependencies."
+- "Thank you. I'm grateful to my collaborators and to the developers of all the open-source tools that made this analysis possible."
+- "I'm happy to take questions."
 
----
-
-### Slide 30: Session History (~1 min)
-
-**What to say:**
-- "The project developed across 11 sessions. Session 4 was the most challenging — three major bugs discovered and fixed. Sessions 9-11 completed FoldX, full-proteome gap-closing (DSSP, CATH, contact order), and final figure regeneration."
-
----
-
-### Slide 31: Bug Fixes & Lessons (~2 min)
-
-**What to say:**
-- "These three bugs are worth highlighting because they represent real pitfalls in computational biology."
-- "The STRIDE bug cost hours because there was no error message — Chainsaw simply returned ndom=0 for everything."
-- "The column name bug affected 6 different lookups because each dataset uses different column names for the same field."
-- "The HPC-specific lessons — LD_LIBRARY_PATH and Python unbuffered — are critical for anyone deploying similar pipelines."
-
-**Tip:** These bugs show thorough debugging and build credibility with technical reviewers.
-
----
-
-### Slide 32: File Inventory (~30 sec)
-
-**What to say:**
-- "This is a reference slide — every major file in the project with record counts."
-
----
-
-### Slide 33: Conclusions (~2 min)
-
-**What to say (slowly, one point at a time):**
-1. "Chaperonin substrates are enriched for specific complex fold topologies — TIM barrels at odds ratio 22.6."
-2. "N-terminal domains universally have higher contact order — but this is NOT substrate-specific."
-3. "MTS creates a landing pad for post-import chaperonin engagement."
-4. "These properties are conserved across 2 billion years with r = 0.84."
-5. "The N>C asymmetry is a gravitational constant of protein architecture."
-
----
-
-### Slide 34: Key Numbers (~30 sec)
-
-**What to say:**
-- "This reference table has every key number you might need during Q&A."
-
----
-
-### Slide 35: Thank You (~30 sec)
-
-**What to say:**
-- "Thank you. I'm happy to take questions."
+**Tip:** Keep it brief and warm. Move directly to Q&A.
 
 ---
 
@@ -682,5 +655,5 @@
 
 ---
 
-*Guide prepared: March 25, 2026; updated April 7, 2026 with full-scale Phase 2 numbers and 5 new Q&As*
+*Guide prepared: March 25, 2026; updated April 7, 2026 for v3 presentation (34 slides)*
 *Project: Antah Asti Prarambh — Comparative Structural Proteomics of Chaperonin Substrates*
