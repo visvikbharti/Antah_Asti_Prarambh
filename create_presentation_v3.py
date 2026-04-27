@@ -512,7 +512,7 @@ add_rect(slide, Inches(7.0), Inches(1.3), Inches(6.0), Inches(5.5), VL_ORANGE)
 tb(slide, Inches(7.2), Inches(1.4), Inches(5.6), Inches(0.4),
    "HSP60/HSP10 (Human Mitochondria)", sz=20, bold=True, color=ACCENT_ORANGE)
 bullets(slide, Inches(7.2), Inches(1.9), Inches(5.6), Inches(4.8), [
-    "266 Tier-1 substrates (Bruderer et al., Mol Cell Proteomics 2020)",
+    "266 Tier-1 substrates (Bie et al., Cell Stress and Chaperones 2020)",
     "Identified by SILAC-quantified co-immunoprecipitation",
     "    Median SILAC enrichment > 5.0 + MitoCarta confirmation",
     "",
@@ -1521,7 +1521,7 @@ bullets(slide, Inches(2.0), Inches(2.5), Inches(9.3), Inches(4.5), [
     "",
     "Tools & Software:",
     "    Kerner et al. (2005) Cell 122(2):209-220 — GroEL substrate classification",
-    "    Bruderer et al. (2020) Mol Cell Proteomics — HSP60 interactome data",
+    "    Bie et al. (2020) Cell Stress Chaperones 25(3):407-416 — HSP60 interactome data",
     "    FoldX Suite (CRG Barcelona)",
     "    Chainsaw (UCL / Wells et al. 2024)",
     "",

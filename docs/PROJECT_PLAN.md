@@ -33,7 +33,7 @@
 This project performs a comparative structural proteomics analysis of chaperonin substrates across two organisms:
 
 - **GroEL** (E. coli chaperonin, Kerner et al. 2005)
-- **HSP60/HSPD1** (human mitochondrial chaperonin, Bruderer et al. 2020)
+- **HSP60/HSPD1** (human mitochondrial chaperonin, Bie et al. 2020)
 
 ### Three primary aims:
 
@@ -55,7 +55,7 @@ Seven datasets are required. Current status:
 | 2 | Human reference proteome | UniProt UP000005640 | ~20,600 | **TO DOWNLOAD** | `data/raw/uniprot/human_proteome.fasta` |
 | 3 | Human mito proteome | MitoCarta 3.0 | 1,136 | **DONE** | `data/processed/human_mito_proteome.tsv` |
 | 4 | GroEL substrates | Kerner 2005 Table S3 | 252 | **DONE** | `data/processed/groel_substrates_standardized.tsv` |
-| 5 | HSP60 interactome (Tier 1) | Bruderer 2020 + filtering | 266 | **DONE** | `data/processed/hsp60_tier1_substrates.tsv` |
+| 5 | HSP60 interactome (Tier 1) | Bie 2020 + filtering | 266 | **DONE** | `data/processed/hsp60_tier1_substrates.tsv` |
 | 6 | 2-way orthology map (4 vs 5) | OrthoFinder / MMseqs2 | TBD | **TO COMPUTE** | `results/homology/ortholog_pairs.tsv` |
 | 7 | Human mito matrix-only | MitoCarta 3.0 (is_matrix=1) | 525 | **DONE** | `data/processed/human_matrix_proteome.tsv` |
 
@@ -157,7 +157,7 @@ For single-domain proteins: Handled separately. Compare N-terminal quarter vs C-
 
 ### Decision 8: MitoCarta version
 
-- Re-derived all annotations from MitoCarta **3.0** (Rath et al. 2021), not 2.0 (used in the original Bruderer 2020 HSP60 paper).
+- Re-derived all annotations from MitoCarta **3.0** (Rath et al. 2021), not 2.0 (used in the original Bie 2020 HSP60 paper).
 - 70 localization changes affect HSP60 interactors: 52 proteins reclassified from Matrix to MIM (primarily OXPHOS subunits and respiratory chain components).
 - 6 proteins lost from MitoCarta entirely; 2 gained.
 - All downstream analysis uses 3.0 annotations exclusively.
@@ -227,7 +227,7 @@ Antah_Asti_Prarambh/
 │   │   │   ├── ecoli/               # E. coli structures
 │   │   │   └── human/               # Human structures
 │   │   ├── custom/
-│   │   │   ├── 12192_2020_1080_MOESM4_ESM.xlsx   # Bruderer 2020 supplement
+│   │   │   ├── 12192_2020_1080_MOESM4_ESM.xlsx   # Bie 2020 supplement
 │   │   │   ├── hsp60_interactome_clean.tsv        # Pre-cleaned HSP60 data
 │   │   │   ├── kerner_2005_groel_interactors_clean.csv
 │   │   │   └── kerner_2005_groel_interactors_table_s3.csv
@@ -314,7 +314,7 @@ Obtain and standardize all raw input datasets. Validate identifiers, resolve obs
 | Task | Status | Script | Notes |
 |------|--------|--------|-------|
 | GroEL substrates (Kerner 2005) | DONE | `scripts/validate_uniprot_accessions.py` | 252 proteins. All accessions resolved via UniProt REST API. Demerged accessions mapped to K-12 entries. |
-| HSP60 interactome (Bruderer 2020) | DONE | `scripts/filter_hsp60_interactome.py` | 325 total -> 266 Tier 1. NDIC imputation, tiered quality assignment. |
+| HSP60 interactome (Bie 2020) | DONE | `scripts/filter_hsp60_interactome.py` | 325 total -> 266 Tier 1. NDIC imputation, tiered quality assignment. |
 | MitoCarta 3.0 | DONE | `workflow/scripts/parse_mitocarta.py` | 1,136 mito proteins, 525 matrix. Cross-referenced with HSP60 file. |
 | UniProt E. coli proteome | TO DO | `scripts/download_uniprot_proteomes.py` | See Module B |
 | UniProt human proteome | TO DO | `scripts/download_uniprot_proteomes.py` | See Module B |
@@ -325,7 +325,7 @@ Obtain and standardize all raw input datasets. Validate identifiers, resolve obs
 |------|------|
 | Kerner 2005 clean CSV | `data/raw/custom/kerner_2005_groel_interactors_clean.csv` |
 | Kerner 2005 Table S3 CSV | `data/raw/custom/kerner_2005_groel_interactors_table_s3.csv` |
-| Bruderer 2020 supplement | `data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx` |
+| Bie 2020 supplement | `data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx` |
 | HSP60 interactome TSV | `data/raw/custom/hsp60_interactome_clean.tsv` |
 | MitoCarta 3.0 XLS | `data/raw/mitocarta/Human.MitoCarta3.0.xls` |
 
@@ -1081,7 +1081,7 @@ WEEK 6:
 | Reference | Use in project |
 |-----------|---------------|
 | Kerner MJ et al. (2005) Cell 122:209-220 | Source of GroEL substrate list (Dataset 4) |
-| Bruderer R et al. (2020) Cell Stress Chaperones 25:1073-1085 | Source of HSP60 interactome (Dataset 5) |
+| Bie AS, Cömert C, Körner R, Corydon TJ, Palmfeldt J, Hipp MS, Hartl FU, Bross P (2020) Cell Stress Chaperones 25(3):407-416 | Source of HSP60 interactome (Dataset 5) |
 | Rath S et al. (2021) Nucleic Acids Res 49:D1541-D1547 | MitoCarta 3.0 (Datasets 3, 7) |
 | Sillitoe I et al. (2021) Nucleic Acids Res 49:D266-D271 | CATH domain database (Module E) |
 | Jumper J et al. (2021) Nature 596:583-589 | AlphaFold (Module D) |

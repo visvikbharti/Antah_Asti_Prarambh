@@ -51,7 +51,7 @@ OUTPUT FILES
 CROSS-REFERENCE: HSP60 Interactome vs MitoCarta 3.0
 ======================================================================
 
-Total HSP60 interactors (from Bruderer et al.): 325
+Total HSP60 interactors (from Bie et al. 2020): 325
 
 MitoCarta membership comparison:
   In MitoCarta 2.0 (from HSP60 file):   278 / 325 (85.5%)

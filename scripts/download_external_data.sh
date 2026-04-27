@@ -90,19 +90,24 @@ else
 fi
 
 # -----------------------------------------------------------------------------
-# 4. Bruderer et al. 2020 — HSP60 SILAC supplementary data
+# 4. Bie et al. 2020 — HSP60/HSP10 SILAC interactome supplementary data
+#    Bie AS, Cömert C, Körner R, Corydon TJ, Palmfeldt J, Hipp MS, Hartl FU, Bross P
+#    "An inventory of interactors of the human HSP60/HSP10 chaperonin in the
+#    mitochondrial matrix space."
+#    Cell Stress and Chaperones 25(3):407-416 (2020).
+#    DOI: 10.1007/s12192-020-01080-6 · PMID: 32060690 · PMC: PMC7192978
 # -----------------------------------------------------------------------------
-BRUDERER="${PROJECT_DIR}/data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx"
+BIE_SUPPLEMENT="${PROJECT_DIR}/data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx"
 
-if [ -f "$BRUDERER" ]; then
-    echo "[SKIP] Bruderer 2020 supplement already exists"
+if [ -f "$BIE_SUPPLEMENT" ]; then
+    echo "[SKIP] Bie 2020 supplement already exists"
 else
-    echo "[DOWNLOAD] Bruderer et al. 2020 Supplementary Table 4..."
+    echo "[DOWNLOAD] Bie et al. 2020 Supplementary Table S1..."
     echo "  NOTE: This file must be downloaded manually from the publisher."
-    echo "  Source: Mol Cell Proteomics (2020) — DOI: 10.1007/s12192-020-01080-6"
+    echo "  Source: Cell Stress and Chaperones 25(3):407-416 (2020) — DOI: 10.1007/s12192-020-01080-6"
     echo "  Direct link (may require institutional access):"
     echo "    https://static-content.springer.com/esm/art%3A10.1007%2Fs12192-020-01080-6/MediaObjects/12192_2020_1080_MOESM4_ESM.xlsx"
-    echo "  Save to: ${BRUDERER}"
+    echo "  Save to: ${BIE_SUPPLEMENT}"
 fi
 
 # -----------------------------------------------------------------------------

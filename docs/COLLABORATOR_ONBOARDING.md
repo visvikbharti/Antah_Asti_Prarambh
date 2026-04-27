@@ -81,7 +81,7 @@ All figures available in both PDF (vector) and PNG (300 DPI raster).
 ```
 data/processed/
 ├── groel_substrates_standardized.tsv # 252 GroEL substrates (Kerner 2005)
-├── hsp60_tier1_substrates.tsv        # 266 HSP60 substrates (Bruderer 2020)
+├── hsp60_tier1_substrates.tsv        # 266 HSP60 substrates (Bie et al. 2020)
 ├── human_mito_proteome.tsv           # 1,136 mitochondrial proteins
 ├── human_matrix_proteome.tsv         # 525 matrix-only proteins
 └── groel_hsp60_homologs.tsv          # 69 cross-species homolog pairs

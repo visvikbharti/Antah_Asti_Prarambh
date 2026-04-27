@@ -37,7 +37,7 @@ Two central questions motivate this study:
 - **Class II** (126 proteins): Obligate substrates — cannot fold without GroEL under normal conditions
 - **Class III** (84 proteins): Stringently obligate — absolutely require GroEL for folding
 
-**HSP60/HSPD1 (human mitochondria):** The mitochondrial matrix chaperonin, homologous to GroEL. Bruderer et al. (2020) identified the HSP60 interactome via quantitative co-immunoprecipitation with SILAC labeling. We filtered to 266 Tier 1 substrates (MitoCarta-positive AND SILAC enrichment > 5-fold).
+**HSP60/HSPD1 (human mitochondria):** The mitochondrial matrix chaperonin, homologous to GroEL. Bie et al. (2020) identified the HSP60/HSP10 interactome via quantitative co-immunoprecipitation with SILAC labeling. We filtered to 266 Tier 1 substrates (MitoCarta-positive AND SILAC enrichment > 5-fold).
 
 ### 1.3 Three Scientific Goals
 
@@ -63,7 +63,7 @@ We assembled seven curated datasets for this study:
 | 2 | Human reference proteome | 20,416 | UniProt UP000005640 | HSP60 background (full) |
 | 3 | Human mito proteome | 1,136 | MitoCarta 3.0 | Compartment-matched background |
 | 4 | GroEL substrates | 252 | Kerner et al. 2005 (*Cell*) | Prokaryotic chaperonin substrates |
-| 5 | HSP60 interactome (Tier 1) | 266 | Bruderer et al. 2020 (*MCP*) | Eukaryotic chaperonin substrates |
+| 5 | HSP60 interactome (Tier 1) | 266 | Bie et al. 2020 (*Cell Stress Chaperones*) | Eukaryotic chaperonin substrates |
 | 6 | Homolog pairs | 69 | RBH + orthogroup intersection | Cross-species comparison |
 | 7 | Mito matrix-only | 525 | MitoCarta 3.0 sub-localization | Primary HSP60 compartment control |
 
@@ -476,7 +476,7 @@ All data, code, and results are available at:
 ## References
 
 - Anfinsen, C.B. (1973). Principles that govern the folding of protein chains. *Science* 181:223-230.
-- Bruderer, R. et al. (2020). The HSPD1 interactome. *Mol Cell Proteomics*.
+- Bie, A.S., Cömert, C., Körner, R., Corydon, T.J., Palmfeldt, J., Hipp, M.S., Hartl, F.U., & Bross, P. (2020). An inventory of interactors of the human HSP60/HSP10 chaperonin in the mitochondrial matrix space. *Cell Stress and Chaperones* 25(3):407-416. DOI: 10.1007/s12192-020-01080-6. PMID: 32060690.
 - Jumper, J. et al. (2021). Highly accurate protein structure prediction with AlphaFold. *Nature* 596:583-589.
 - Kerner, M.J. et al. (2005). Proteome-wide analysis of chaperonin-dependent protein folding in *Escherichia coli*. *Cell* 122(2):209-220.
 - Plaxco, K.W. et al. (1998). Contact order, transition state placement and the refolding rates of single domain proteins. *J Mol Biol* 277:985-994.

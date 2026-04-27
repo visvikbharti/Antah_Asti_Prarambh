@@ -9,7 +9,7 @@
 
 ## Overview
 
-This project investigates the structural properties of chaperonin substrates across two organisms: **GroEL** in *Escherichia coli* (Kerner et al. 2005) and **HSP60/HSPD1** in human mitochondria (Bruderer et al. 2020). Using AlphaFold-predicted structures, CATH/Chainsaw domain assignments, and curated orthology, we analyze whether chaperonin substrates share conserved structural features and how mitochondrial targeting peptides relate to the first structural domain.
+This project investigates the structural properties of chaperonin substrates across two organisms: **GroEL** in *Escherichia coli* (Kerner et al. 2005) and **HSP60/HSPD1** in human mitochondria (Bie et al. 2020). Using AlphaFold-predicted structures, CATH/Chainsaw domain assignments, and curated orthology, we analyze whether chaperonin substrates share conserved structural features and how mitochondrial targeting peptides relate to the first structural domain.
 
 ### Three Scientific Goals
 
@@ -40,7 +40,7 @@ This project investigates the structural properties of chaperonin substrates acr
               ▼                           ▼                           ▼
     ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────────┐
     │  GroEL (252)    │       │  HSP60 (266)    │       │  MitoCarta 3.0      │
-    │  Kerner 2005    │       │  Bruderer 2020  │       │  1,136 mito / 525   │
+    │  Kerner 2005    │       │  Bie 2020       │       │  1,136 mito / 525   │
     │  ID remapping   │       │  SILAC filter   │       │  matrix proteins    │
     └────────┬────────┘       └────────┬────────┘       └──────────┬──────────┘
              │                         │                           │
@@ -152,7 +152,7 @@ See [`docs/INSTALLATION.md`](docs/INSTALLATION.md) for detailed setup, including
 | 2 | Human reference proteome | 20,416 | UniProt UP000005640 |
 | 3 | Human mito proteome | 1,136 | MitoCarta 3.0 |
 | 4 | GroEL substrates | 252 | Kerner et al. 2005 |
-| 5 | HSP60 interactome (Tier 1) | 266 | Bruderer et al. 2020 |
+| 5 | HSP60 interactome (Tier 1) | 266 | Bie et al. 2020 |
 | 6 | Homolog pairs | 69 | RBH + orthogroup intersection |
 | 7 | Mito matrix-only | 525 | MitoCarta 3.0 sub-localization |
 
@@ -214,7 +214,7 @@ Antah_Asti_Prarambh/
 │       └── slurm_jobs/                  # 19 SLURM job scripts
 ├── data/
 │   ├── raw/                             # Source data (downloaded or provided)
-│   │   ├── custom/                      # Kerner 2005 + Bruderer 2020 tables
+│   │   ├── custom/                      # Kerner 2005 + Bie 2020 tables
 │   │   ├── uniprot/                     # Proteome FASTA + metadata
 │   │   └── mitocarta/                   # MitoCarta 3.0
 │   └── processed/                       # Curated datasets (7 files)
@@ -304,10 +304,10 @@ bash scripts/download_external_data.sh
 | Human proteome | [UniProt UP000005640](https://www.uniprot.org/proteomes/UP000005640) | 13 MB | Yes |
 | MitoCarta 3.0 | [Broad Institute](https://www.broadinstitute.org/mitocarta) | 9.7 MB | Yes |
 | GroEL substrates | Kerner et al. 2005, *Cell* 122(2):209-220 | Included | N/A |
-| HSP60 interactome | Bruderer et al. 2020, *Mol Cell Proteomics* | Manual | No* |
+| HSP60 interactome | Bie et al. 2020, *Cell Stress and Chaperones* 25(3):407-416 | Manual | No* |
 | AlphaFold structures | [AlphaFold DB](https://alphafold.ebi.ac.uk/) | 22 GB | Phase 2 only |
 
-*\*Bruderer 2020 supplement may require institutional access. See download script for URL.*
+*\*Bie 2020 supplement may require institutional access. See download script for URL.*
 
 ---
 
@@ -398,7 +398,7 @@ bash scripts/download_external_data.sh
 ## Citation
 And the key data sources:
 - Kerner et al. (2005) Proteome-wide analysis of chaperonin-dependent protein folding in *Escherichia coli*. *Cell* 122(2):209-220.
-- Bruderer et al. (2020) The HSPD1 interactome. *Mol Cell Proteomics*.
+- Bie AS, Cömert C, Körner R, Corydon TJ, Palmfeldt J, Hipp MS, Hartl FU, Bross P (2020) An inventory of interactors of the human HSP60/HSP10 chaperonin in the mitochondrial matrix space. *Cell Stress and Chaperones* 25(3):407-416. DOI: 10.1007/s12192-020-01080-6. PMID: 32060690.
 - Jumper et al. (2021) Highly accurate protein structure prediction with AlphaFold. *Nature* 596:583-589.
 
 ## License

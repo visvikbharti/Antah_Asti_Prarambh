@@ -91,8 +91,8 @@ conda install -c bioconda mmseqs2 foldseek
 | Data | Source | Download URL / Method |
 |------|--------|----------------------|
 | GroEL substrates (Kerner 2005) | Supplementary Table S3 | Already in `data/raw/custom/kerner_2005_groel_interactors_table_s3.csv` |
-| HSP60 interactome (Bruderer 2020) | MOESM4 supplement | Already in `data/raw/custom/hsp60_interactome_clean.tsv` |
-| Bruderer 2020 Excel supplement | Publisher | `data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx` |
+| HSP60 interactome (Bie et al. 2020) | MOESM4 supplement | Already in `data/raw/custom/hsp60_interactome_clean.tsv` |
+| Bie 2020 Excel supplement | Publisher (Cell Stress Chaperones, DOI 10.1007/s12192-020-01080-6) | `data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx` |
 | MitoCarta 3.0 | Broad Institute | `https://personal.broadinstitute.org/scalvo/MitoCarta3.0/Human.MitoCarta3.0.xls` -> `data/raw/mitocarta/Human.MitoCarta3.0.xls` |
 | E. coli K-12 proteome (FASTA) | UniProt UP000000625 | `data/raw/uniprot/ecoli_k12_proteome.fasta` |
 | E. coli K-12 proteome (TSV) | UniProt UP000000625 | `data/raw/uniprot/ecoli_k12_proteome.tsv` |
@@ -155,11 +155,11 @@ python3 scripts/validate_uniprot_accessions.py
 
 ---
 
-#### Step A2: Filter HSP60 interactome (Bruderer 2020)
+#### Step A2: Filter HSP60 interactome (Bie et al. 2020)
 
 **Script:** `scripts/filter_hsp60_interactome.py`
 
-**What it does:** Reads the 325-protein HSP60 interactome from Bruderer 2020, imputes NDIC (Not Detected In Control) values at 2x the 95th percentile per SILAC replicate, assigns quality tiers, excludes bait/co-chaperone/contaminant proteins, and produces Tier 1 substrates.
+**What it does:** Reads the 325-protein HSP60 interactome from Bie et al. 2020, imputes NDIC (Not Detected In Control) values at 2x the 95th percentile per SILAC replicate, assigns quality tiers, excludes bait/co-chaperone/contaminant proteins, and produces Tier 1 substrates.
 
 **Commands:**
 ```bash
@@ -887,7 +887,7 @@ python3 workflow/scripts/generate_figures.py
                              |
      +--------------------------------------------------+
      |                       |                           |
- Kerner 2005         Bruderer 2020              MitoCarta 3.0
+ Kerner 2005         Bie et al. 2020            MitoCarta 3.0
  GroEL Table S3      HSP60 interactome          Human.MitoCarta3.0.xls
      |                       |                           |
      v                       v                           v
@@ -1367,7 +1367,7 @@ Use this checklist to verify that the full pipeline ran correctly. All numbers a
 ## References
 
 1. Kerner MJ et al. (2005) "Proteome-wide analysis of chaperonin-dependent protein folding in Escherichia coli." *Cell* 122(2):209-220.
-2. Bruderer R et al. (2020) "Analysis of 1508 plasma samples by capillary-flow data-independent acquisition profiles proteomics of weight loss and maintenance." *Molecular & Cellular Proteomics* 19(2):368-384. (HSP60 interactome supplement)
+2. Bie AS, Cömert C, Körner R, Corydon TJ, Palmfeldt J, Hipp MS, Hartl FU, Bross P (2020) "An inventory of interactors of the human HSP60/HSP10 chaperonin in the mitochondrial matrix space." *Cell Stress and Chaperones* 25(3):407-416. DOI: 10.1007/s12192-020-01080-6. PMID: 32060690. (HSP60 interactome — supplement source for Dataset 5)
 3. Rath S et al. (2021) "MitoCarta3.0: an updated mitochondrial proteome now with sub-organelle localization and pathway annotations." *Nucleic Acids Research* 49(D1):D1541-D1547. PMID: 33174596.
 4. Steinegger M, Soding J (2017) "MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets." *Nature Biotechnology* 35:1026-1028.
 5. van Kempen M et al. (2024) "Fast and accurate protein structure search with Foldseek." *Nature Biotechnology* 42:243-246.

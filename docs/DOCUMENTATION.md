@@ -76,7 +76,7 @@ The comparison is motivated by the endosymbiotic origin of mitochondria. Mitocho
 | Reference | Citation | Relevance |
 |-----------|----------|-----------|
 | Kerner et al. 2005 | Cell 122:209-220 | Source of 252 GroEL substrates and class assignments (Dataset 4) |
-| Bruderer et al. 2020 | Cell Stress and Chaperones 25:1073-1085 | Source of HSP60 interactome (Dataset 5) |
+| Bie et al. 2020 | Cell Stress and Chaperones 25(3):407-416 | Source of HSP60 interactome (Dataset 5). DOI: 10.1007/s12192-020-01080-6. PMID: 32060690. |
 | Rath et al. 2021 | Nucleic Acids Res 49:D1541-D1547 | MitoCarta 3.0 -- mitochondrial proteome and sub-compartment annotations (Datasets 3, 7) |
 | Sillitoe et al. 2021 | Nucleic Acids Res 49:D266-D271 | CATH structural domain database (Module E) |
 | Jumper et al. 2021 | Nature 596:583-589 | AlphaFold protein structure prediction (Module D) |
@@ -153,7 +153,7 @@ Seven datasets underpin the project. Each is described below with its source, si
 
 | Attribute | Value |
 |-----------|-------|
-| **Source** | Bruderer et al. 2020 (Cell Stress and Chaperones 25:1073-1085), Supplementary Table |
+| **Source** | Bie et al. 2020 (Cell Stress and Chaperones 25(3):407-416, DOI 10.1007/s12192-020-01080-6, PMID 32060690), Supplementary Table S1 |
 | **Original interactors** | 325 |
 | **Tier 1 substrates** | 266 (after SILAC filtering) |
 | **File locations** | `data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx` (raw supplement) |
@@ -244,7 +244,7 @@ The raw HSP60 interactome contained 325 proteins. The filtering pipeline:
 
 ### 4.3 MitoCarta: Version 2.0 vs 3.0 Differences
 
-The original Bruderer 2020 study used MitoCarta 2.0 annotations. This project re-annotated all proteins using MitoCarta 3.0, revealing significant differences:
+The original Bie 2020 study used MitoCarta 2.0 annotations. This project re-annotated all proteins using MitoCarta 3.0, revealing significant differences:
 
 - **Membership changes**: 6 proteins lost from MitoCarta entirely (including GAPDH, P4HB); 2 proteins gained (CDK5RAP1, NSUN2).
 - **Localization reclassifications**: 70 proteins changed sub-mitochondrial localization between MC2 and MC3.
@@ -967,7 +967,7 @@ All three goal families passed the family-level BH gate.
 |------|------|-------------|
 | GroEL clean CSV | `data/raw/custom/kerner_2005_groel_interactors_clean.csv` | Manually cleaned GroEL substrate list from Kerner 2005 |
 | GroEL Table S3 | `data/raw/custom/kerner_2005_groel_interactors_table_s3.csv` | Full Table S3 with SCOP folds and other annotations |
-| HSP60 supplement | `data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx` | Bruderer 2020 supplementary Excel |
+| HSP60 supplement | `data/raw/custom/12192_2020_1080_MOESM4_ESM.xlsx` | Bie 2020 supplementary Excel (Cell Stress Chaperones 25(3):407-416) |
 | HSP60 clean TSV | `data/raw/custom/hsp60_interactome_clean.tsv` | Pre-cleaned HSP60 interactome (325 proteins) |
 | MitoCarta 3.0 | `data/raw/mitocarta/Human.MitoCarta3.0.xls` | Full MitoCarta 3.0 database for human |
 | E. coli proteome FASTA | `data/raw/uniprot/ecoli_k12_proteome.fasta` | 4,403 reviewed Swiss-Prot entries |
@@ -1528,7 +1528,7 @@ All full-proteome outputs are in `results/phase2/`:
 
 6. **8 proteins lack AlphaFold models:** P07203, P30042, P36969, Q16881, Q5THJ4, Q86UA3, Q9BVL4, Q9NNW7. These are excluded from all structural analyses.
 
-7. **HSP60 interactome is from a single study.** The Bruderer 2020 dataset is the only large-scale HSP60 interactome available. Cross-validation with independent datasets would strengthen confidence.
+7. **HSP60 interactome is from a single study.** The Bie 2020 dataset is the only large-scale HSP60 interactome available. Cross-validation with independent datasets would strengthen confidence.
 
 8. **SILAC threshold selection.** The threshold of 5 for Tier 1 classification is operationally defined. Sensitivity analysis at alternative thresholds was not performed.
 

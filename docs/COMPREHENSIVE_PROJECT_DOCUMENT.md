@@ -166,7 +166,7 @@ The canonical human proteome (one protein per gene). Used for OrthoFinder-based 
 
 | Property | Value |
 |----------|-------|
-| **Source** | Bruderer et al., Molecular Cell 2020 (co-immunoprecipitation + SILAC) |
+| **Source** | Bie et al., *Cell Stress and Chaperones* 25(3):407-416 (2020) (co-immunoprecipitation + SILAC). DOI: 10.1007/s12192-020-01080-6. PMID: 32060690. |
 | **Size** | 266 proteins (from 325 raw) |
 | **Files** | `data/processed/hsp60_tier1_substrates.tsv`, `data/processed/hsp60_tier1_substrates.fasta` |
 | **Purpose** | Primary substrate set for HSP60 analyses |
